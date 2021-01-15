@@ -1,11 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 // Navigation
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-
-// Components
-import Navbar from './components/navbar'
 
 // Pages
 import Home from "./pages/home";
@@ -17,7 +13,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/bookings" component={Bookings} />
