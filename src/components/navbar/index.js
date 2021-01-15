@@ -18,25 +18,35 @@ export default function index() {
       <nav>
         <ul class="nav-links">
           <li>
-            <Link class="nav-link" to="/bookings">
-              BOOKINGS
-            </Link>
+            <div>
+              <Link class="nav-link" to="/bookings">
+                <i class="fas fa-calendar-week fa-3x"></i>
+                {/* BOOKINGS */}
+              </Link>
+            </div>
+            <div className = "nav-text">BOOKINGS</div>
           </li>
           <li>
-            <Link class="nav-link" to="/gallery">
-              GALLERY
-            </Link>
+            <div>
+              <Link class="nav-link" to="/gallery">
+                <i class="fas fa-images fa-3x"></i>
+
+                {/* GALLERY */}
+              </Link>
+            </div>
+            <div className = "nav-text">GALLERY</div>
           </li>
           <li>
-            <Link class="nav-link" to="/contact">
-              CONTACT
-            </Link>
+            <div>
+              <Link class="nav-link" to="/contact">
+                <i class="fas fa-address-card fa-3x"></i>
+                {/* CONTACT */}
+              </Link>
+            </div>
+            <div className = "nav-text">CONTACT</div>
           </li>
         </ul>
       </nav>
-      <div class="cart">
-        <img src="./img/cart.svg" alt="cart" />
-      </div>
     </header>
   );
 }
