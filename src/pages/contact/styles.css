@@ -23,8 +23,11 @@
   padding: 10px;
 }
 .right {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 10px;
+  /* background-color: blueviolet; */
 }
 
 .form {
@@ -39,9 +42,47 @@
   opacity: 0.6;
 }
 
-.header-wrapper {
+.header-wrapper-contact {
+  /* background-color: red; */
+  background-color: #292929;
+  color: #fff;
+  opacity: 0.8;
+  justify-self: center;
+}
+
+.header-wrapper-contact h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.text-wrapper {
+  background-color: chocolate;
+  width: 20%;
+}
+
+
+.description {
   /* background-color: red; */
   display: flex;
-  justify-content: center;
-  color: #fff;
+  flex : 1;
+  flex-direction: column;
+}
+
+.header {
+  flex : 1;
+  /* background-color: blue; */
+}
+
+.header {
+  text-align: center;
+}
+
+.sub-header {
+  text-align: center;
+  /* background-color: brown; */
+}
+
+.main {
+  flex : 3;
+  background-color: chartreuse;
 }

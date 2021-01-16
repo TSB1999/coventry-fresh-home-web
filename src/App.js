@@ -2,6 +2,7 @@
 
 // Navigation
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import Navbar from './components/navbar'
 
 // Pages
 import Home from "./pages/home";
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+      <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/bookings" component={Bookings} />

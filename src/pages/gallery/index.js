@@ -13,14 +13,8 @@ import portfolio7 from "./images/instagram/IMG_1340.jpg";
 
 export default function index() {
   return (
-    <main>
-      <Navbar />
-
-      <div className="header-wrapper">
-        <div>
-          <h1>Gallery</h1>
-        </div>
-      </div>
+    <div className = "gallery-screen-wrapper">
+      {/* <Navbar /> */}
 
       <div className="gallery-items-wrapper">
         <div className="gallery-item-wrapper">
@@ -177,6 +171,6 @@ export default function index() {
             </div>
           </div> */}
       </div>
-    </main>
+    </div>
   );
 }

@@ -7,13 +7,7 @@ import Navbar from "../../components/navbar";
 export default function index() {
   return (
     <div className="contact-screen-wrapper">
-      <Navbar />
-
-      <div className="header-wrapper">
-        <div>
-          <h1>Contact Us</h1>
-        </div>
-      </div>
+      {/* <Navbar /> */}
 
       <div className="contact-items-wrapper">
         <div className="left">
@@ -61,23 +55,15 @@ export default function index() {
           </div>
         </div>
         <div className="right">
-          <div >
-            <div className="description">
-              <div className="header">
-                <h1>How can we Help</h1>
-              </div>
-              <div className="sub-header">
-                <h4>How can we Help</h4>
-              </div>
-              <div className="main">
-                {/* main content here */}
-                <div className = "image">
-                   image
-                </div>
-                <div className = "icons">
-                   icons
-                </div>
-              </div>
+          <div className="description">
+            <div className="header">
+              <h1>How can we Help</h1>
+              <h4>Laborum mollit aute adipisicing laborum laborum.</h4>
+            </div>
+            <div className="main">
+              {/* main content here */}
+              <div className="image">image</div>
+              <div className="icons">icons</div>
             </div>
           </div>
         </div>

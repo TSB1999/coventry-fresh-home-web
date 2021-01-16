@@ -1,16 +1,15 @@
-main {
-  /* font-family: "Satisfy"; */
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: cover;
-}
+
 
 /*  Application Level */
 
-main {
-    height: 100vh;
+.gallery-screen-wrapper {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .wrapper {
@@ -34,7 +33,7 @@ main {
 
 /* Gallery */
 .gallery-items-wrapper {
-  margin: 0 25px 0 25px;
+  margin: 20px;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(3, 1fr);

@@ -2,12 +2,16 @@ header {
   background-color: #fff;
   display: flex;
   height: 15vh;
+  width: 100%;
   margin: auto;
   align-items: center;
   color: green;
   font-weight: bold;
   opacity: 0.8;
   padding: 0 5rem 0 5rem;
+  position: fixed;
+  top : 0,
+
   /* justify-content: space-between; */
 }
 

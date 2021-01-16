@@ -8,6 +8,26 @@
   height: 100vh;
 }
 
+.home-screen-wrapper-2 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/image-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home-screen-wrapper-3 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
 .presentation {
   /* background-color: darkgoldenrod; */
   display: flex;
@@ -18,23 +38,34 @@
   background-color: #292929;
   flex: 0.6;
   order : 0;
-  margin-top: 12vh;
-  opacity: 0.56;
+  margin-top: 7.95vh;
+  opacity: 0.7;
   border-radius: 40px;
   padding : 35px;
   box-shadow: 15px 20px grey;
 }
 
-.header {
+.introduction-2 {
+  background-color: #292929;
+  flex: 0.6;
+  order : 1;
+  margin-top: 7.95vh;
+  opacity: 0.7;
+  border-radius: 40px;
+  padding : 35px;
+  box-shadow: 15px 20px grey;
+}
+
+.header-home {
   padding-left: 2%;
 }
 
-.sub-header {
+.sub-header-home {
   padding-left: 2%;
 }
 
 .intro-text h1 {
-  font-size:  2.65rem;
+  font-size:  2.8rem;
   /* text-align: center; */
   color: #3ab34a;
   text-shadow: 1px 1.5px #8cc540;
@@ -50,6 +81,12 @@
 .cover {
   flex : 1;
   order : 1;
+  /* background-color: dodgerblue; */
+}
+
+.cover-2 {
+  flex : 1;
+  order : 0;
   /* background-color: dodgerblue; */
 }
 

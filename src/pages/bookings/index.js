@@ -5,7 +5,7 @@ import Navbar from "../../components/navbar";
 export default function index() {
   return (
     <div className="bookings-screen-wrapper">
-      <Navbar />
+      {/* <Navbar /> */}
       bookings
     </div>
   );
