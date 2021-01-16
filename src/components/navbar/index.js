@@ -1,5 +1,7 @@
 import React from "react";
 
+import logo from './images/400dpiLogo2.jpeg'
+
 // Styling
 import "./styles.css";
 
@@ -11,42 +13,56 @@ export default function index() {
     <header>
       <div class="logo-container">
         <Link to="/">
-          <img src="./img/logo.svg" alt="logo" />
-          <h4 class="logo">Fresh Home</h4>
+          <img src = {logo} style = {{width : '80px'}} alt="logo" />
+          {/* <h4 class="logo">Fresh Home</h4> */}
         </Link>
       </div>
       <nav>
         <ul class="nav-links">
           <li>
-            <div>
-              <Link class="nav-link" to="/bookings">
-                <i class="fas fa-calendar-week fa-3x"></i>
-                {/* BOOKINGS */}
-              </Link>
+            <div className="item">
+              <div style={{ flex: 1 }}>
+                <div className="icon">
+                  <Link class="nav-link" to="/bookings">
+                    <i class="fas fa-calendar-week fa-2x"></i>
+                    {/* BOOKINGS */}
+                  </Link>
+                </div>
+              </div>
+              <div className="nav-text">BOOKINGS</div>
             </div>
-            <div className = "nav-text">BOOKINGS</div>
           </li>
           <li>
-            <div>
-              <Link class="nav-link" to="/gallery">
-                <i class="fas fa-images fa-3x"></i>
+            <div className="item">
+              <div style={{ flex: 1 }}>
+                <div className="icon">
+                  <Link class="nav-link" to="/gallery">
+                    <i class="fas fa-images fa-2x"></i>
 
-                {/* GALLERY */}
-              </Link>
+                    {/* GALLERY */}
+                  </Link>
+                </div>
+              </div>
+              <div className="nav-text">GALLERY</div>
             </div>
-            <div className = "nav-text">GALLERY</div>
           </li>
           <li>
-            <div>
-              <Link class="nav-link" to="/contact">
-                <i class="fas fa-address-card fa-3x"></i>
-                {/* CONTACT */}
-              </Link>
+            <div className="item">
+              <div className="icon">
+                <Link class="nav-link" to="/contact">
+                  <i class="fas fa-address-card fa-2x"></i>
+                  {/* CONTACT */}
+                </Link>
+              </div>
+              <div className="nav-text">CONTACT</div>
             </div>
-            <div className = "nav-text">CONTACT</div>
           </li>
         </ul>
       </nav>
+      <div class="cart">
+        {/* <img src="./img/cart.svg" alt="cart" /> */}
+        <i class="fas fa-donate fa-2x"></i>
+      </div>
     </header>
   );
 }

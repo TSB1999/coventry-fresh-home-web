@@ -1,9 +1,47 @@
 .contact-screen-wrapper {
-    /* font-family: "Satisfy"; */
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(./images/anton-SnKfmC1I9fU-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh
-  }
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/anton-SnKfmC1I9fU-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.contact-items-wrapper {
+  background-color: #F8F8FF;
+  /* height: 40px; */
+  display: flex;
+  margin: 20px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+}
+.right {
+  flex: 1;
+  padding: 10px;
+}
+
+.form {
+  flex: 1;
+  background-color: #292929;
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 15px 20px grey;
+  padding: 2rem;
+  opacity: 0.6;
+}
+
+.header-wrapper {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
