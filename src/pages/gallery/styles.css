@@ -1,15 +1,47 @@
-
-
 /*  Application Level */
 
 .gallery-screen-wrapper {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
-  /* background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg); */
+  background-image: url(./images/cleanoffice+pic.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
+  display: flex;
+}
+
+.gallery-header-wrapper {
+  margin: 20vh 5vh 5vh 5vh;
+  background-color: #292929;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.gallery-header-wrapper h1 {
+  text-align: center;
+  color: #3ab34a;
+  font-weight: bold;
+}
+
+.gallery-header-wrapper h2 {
+  text-align: center;
+  color: #3ab34a;
+}
+
+.gallery-preview {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 8vh 2vh 0vh 2vh;
+}
+
+.btn {
+  margin-top: 5vh;
+  justify-content: center;
+  /* background-color: aqua; */
+  display: flex;
 }
 
 .wrapper {
@@ -19,24 +51,27 @@
 }
 
 .header-wrapper {
-    /* background-color: red; */
-    display: flex;
-    justify-content: center;
-    color : #fff
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  color: #fff;
 }
 
 .header-wrapper h1 {
-    text-align: center;
-    font-size: 40px;
-    text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 /* Gallery */
 .gallery-items-wrapper {
-  margin: 20px;
+  margin-top: 15vh;
+  flex: 1;
+  padding: 20px 20px 20px 20px;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  /* background-color: crimson; */
 }
 
 .gallery-item-wrapper {
@@ -74,7 +109,7 @@
 }
 
 .item-content-wrapper:hover {
-    background-color: #000;
+  background-color: #000;
 }
 
 .item-content-wrapper h4 {

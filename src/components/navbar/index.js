@@ -1,6 +1,7 @@
 import React from "react";
 
-import logo from './images/400dpiLogo2.jpeg'
+import { Link as ScrollLink } from "react-scroll";
+import logo from "./images/400dpiLogo2.jpeg";
 
 // Styling
 import "./styles.css";
@@ -12,10 +13,22 @@ export default function index() {
   return (
     <header>
       <div class="logo-container">
-        <Link to="/">
-          <img src = {logo} style = {{width : '80px'}} alt="logo" />
-          {/* <h4 class="logo">Fresh Home</h4> */}
-        </Link>
+        <ScrollLink
+          activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          // offset={50}
+          duration={500}
+          // delay={1000}
+          isDynamic={true}
+          ignoreCancelEvents={false}
+        >
+          <Link to="/">
+            <img src={logo} style={{ width: "80px" }} alt="logo" />
+          </Link>
+        </ScrollLink>
       </div>
       <nav>
         <ul class="nav-links">
@@ -29,18 +42,31 @@ export default function index() {
                   </Link>
                 </div>
               </div>
-              <div className="nav-text">BOOKINGS</div>
+              <div className="nav-text">ENQUIRIES</div>
             </div>
           </li>
           <li>
             <div className="item">
               <div style={{ flex: 1 }}>
                 <div className="icon">
-                  <Link class="nav-link" to="/gallery">
-                    <i class="fas fa-images fa-2x"></i>
+                  <ScrollLink
+                    activeClass="active"
+                    to="top-gallery"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                  >
+                    <Link class="nav-link" to="/gallery">
+                      <i class="fas fa-images fa-2x"></i>
 
-                    {/* GALLERY */}
-                  </Link>
+                      {/* GALLERY */}
+                    </Link>
+                  </ScrollLink>
                 </div>
               </div>
               <div className="nav-text">GALLERY</div>
@@ -50,11 +76,11 @@ export default function index() {
             <div className="item">
               <div className="icon">
                 <Link class="nav-link" to="/contact">
-                  <i class="fas fa-address-card fa-2x"></i>
+                  <i class="fas fa-info fa-2x"></i>
                   {/* CONTACT */}
                 </Link>
               </div>
-              <div className="nav-text">CONTACT</div>
+              <div className="nav-text">INFO</div>
             </div>
           </li>
         </ul>

@@ -6,83 +6,78 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
+  display: flex;
 }
 
 .contact-items-wrapper {
-  background-color: #F8F8FF;
-  /* height: 40px; */
-  display: flex;
-  margin: 20px;
-  border-radius: 10px;
-  opacity: 0.9;
+  flex: 1;
+  /* background-color: crimson; */
+  margin-top: 15vh;
+  display: grid;
+  grid-template-areas:
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . container"
+    ". . . . .";
+  padding: 20px 40px 0 0;
 }
 
-.left {
-  flex: 1;
-  display: flex;
-  padding: 10px;
-}
-.right {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 10px;
-  /* background-color: blueviolet; */
-}
-
-.form {
-  flex: 1;
+.contact-container {
   background-color: #292929;
-  border-radius: 10px;
-}
-
-.shadow {
-  box-shadow: 15px 20px grey;
-  padding: 2rem;
-  opacity: 0.6;
-}
-
-.header-wrapper-contact {
-  /* background-color: red; */
-  background-color: #292929;
-  color: #fff;
+  grid-area: container;
+  border-radius: 15px;
   opacity: 0.8;
-  justify-self: center;
-}
-
-.header-wrapper-contact h1 {
-  text-align: center;
-  padding: 1rem;
-}
-
-.text-wrapper {
-  background-color: chocolate;
-  width: 20%;
-}
-
-
-.description {
-  /* background-color: red; */
   display: flex;
-  flex : 1;
   flex-direction: column;
+  justify-content: center;
+  box-shadow: 8px 8px grey;
 }
 
-.header {
-  flex : 1;
-  /* background-color: blue; */
+.contact-header {
+  align-items: center;
+  margin: 10px;
+  /* background-color: hotpink; */
 }
 
-.header {
+/* .contact-header h2 {
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+} */
+
+.contact-description {
+  flex: 1;
+  /* background-color: indianred; */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
 }
 
-.sub-header {
-  text-align: center;
-  /* background-color: brown; */
+.contact-description i {
+  color: #3ab34a;
 }
 
-.main {
-  flex : 3;
-  background-color: chartreuse;
+.contact-description h5 {
+  color: #3ab34a;
+  font-weight: 550;
+  text-transform: uppercase;
+  /* font-style: italic; */
+}
+
+/* .content h2 {
+  color : grey
+} */
+
+.box {
+  width: 80%;
+  height: 90%;
+  /* background-color: indigo; */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
 }

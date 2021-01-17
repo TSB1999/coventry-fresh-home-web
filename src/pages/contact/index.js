@@ -7,63 +7,36 @@ import Navbar from "../../components/navbar";
 export default function index() {
   return (
     <div className="contact-screen-wrapper">
-      {/* <Navbar /> */}
-
       <div className="contact-items-wrapper">
-        <div className="left">
-          <div className="form shadow">
-            <Form style={{ color: "grey", fontWeight: "bold", fontSize: 20 }}>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>name</Form.Label>
-                <Form.Control type="text" placeholder="David Keys" />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>email address</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>property type</Form.Label>
-                <Form.Control as="select">
-                  <option>House</option>
-                  <option>Flat / Apartment</option>
-                  <option>Bungalow</option>
-                  <option>Office</option>
-                  {/* <option>5</option>
-                  <option>6+</option> */}
-                </Form.Control>
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>number of rooms</Form.Label>
-                <Form.Control as="select">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6+</option>
-                </Form.Control>
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>send us a message</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  placeholder="Make your enquiry"
-                />
-              </Form.Group>
-            </Form>
+        <div className="contact-container">
+          <div className="contact-header">
+            {/* <h2>Get in Contact...</h2> */}
+            
           </div>
-        </div>
-        <div className="right">
-          <div className="description">
-            <div className="header">
-              <h1>How can we Help</h1>
-              <h4>Laborum mollit aute adipisicing laborum laborum.</h4>
+          <div className="contact-description">
+            <div className="email box">
+              <div className="icon">
+                <i class="fas fa-envelope-open-text fa-3x"></i>
+              </div>
+              <div className="content">
+                <h5>coventryfreshhome@gmail.com</h5>
+              </div>
             </div>
-            <div className="main">
-              {/* main content here */}
-              <div className="image">image</div>
-              <div className="icons">icons</div>
+            <div className="phone box">
+              <div className="icon">
+                <i class="fas fa-phone fa-3x"></i>
+              </div>
+              <div className="content">
+                <h5>+44 (0) 7457 396 153</h5>
+              </div>
+            </div>
+            <div className="phone box">
+              <div className="icon">
+                <i class="fas fa-map-marker-alt fa-3x"></i>
+              </div>
+              <div className="content">
+                <h5>Coventry</h5>
+              </div>
             </div>
           </div>
         </div>
