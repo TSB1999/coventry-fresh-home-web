@@ -9,7 +9,7 @@
   display: grid;
   padding-top: 15vh;
   grid-template-areas:
-    ". . . . box4 box4 box3"
+    ". . . . box0 box4 box3"
     ". . . . . . box3"
     ". . . . . . box2"
     ". . . . . . box1";
@@ -53,6 +53,17 @@
   justify-items: center;
 }
 
+.box0 {
+  grid-area: box0;
+  flex: 1;
+  padding: 0 0 10px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px;
+  opacity: 0.9;
+}
 .box1 {
   grid-area: box1;
   flex: 1;

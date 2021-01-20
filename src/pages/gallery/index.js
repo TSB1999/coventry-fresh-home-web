@@ -46,7 +46,18 @@ export default function index() {
                 isDynamic={true}
                 ignoreCancelEvents={false}
               >
-                <button>See Gallery</button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style={{
+                    width: "100%",
+                    fontWeight: "700",
+                    backgroundColor: "#8cc540",
+                    fontSize: 13,
+                  }}
+                >
+                  See Gallery
+                </button>
               </Link>
             </div>
           </div>
