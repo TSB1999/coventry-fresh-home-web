@@ -68,18 +68,54 @@ export default function index() {
       <div className="home-screen-wrapper-2" id="gardening">
         <section class="presentation">
           <div class="introduction-2">
-            <Form style={{ color: "grey", fontWeight: "bold", fontSize: 20 }}>
+            <Form
+              style={{
+                color: "#3ab34a",
+                fontWeight: "bold",
+                fontSize: 15,
+                textTransform: "uppercase",
+              }}
+            >
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>name</Form.Label>
-                <Form.Control type="text" placeholder="David Keys" />
+                <Form.Control
+                  type="text"
+                  placeholder="David Keys"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                />
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>email address</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
+                <Form.Control
+                  type="email"
+                  placeholder="name@example.com"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                />
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>property type</Form.Label>
-                <Form.Control as="select">
+                <Form.Label>Garden Job</Form.Label>
+                <Form.Control
+                  as="select"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                >
                   <option>House</option>
                   <option>Flat / Apartment</option>
                   <option>Bungalow</option>
@@ -89,8 +125,17 @@ export default function index() {
                 </Form.Control>
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>number of rooms</Form.Label>
-                <Form.Control as="select">
+                <Form.Label>Garden Size</Form.Label>
+                <Form.Control
+                  as="select"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                >
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -105,8 +150,58 @@ export default function index() {
                   as="textarea"
                   rows={3}
                   placeholder="Make your enquiry"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
                 />
               </Form.Group>
+              <div className="button-wrapper">
+                <div>
+                  <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                  >
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style={{
+                      width: "100%",
+                      fontWeight: "bold",
+                      backgroundColor: "#8cc540",
+                      fontSize: 13,
+                    }}
+                  >
+                    HOME
+                  </button>
+                  </Link>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style={{
+                      width: "100%",
+                      fontWeight: "bold",
+                      backgroundColor: "#3ab34a",
+                      fontSize: 13,
+                    }}
+                  >
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
             </Form>
           </div>
           <div class="cover-2">
@@ -132,18 +227,54 @@ export default function index() {
       <div className="home-screen-wrapper-3" id="cleaning">
         <section class="presentation">
           <div class="introduction">
-            <Form style={{ color: "grey", fontWeight: "bold", fontSize: 20 }}>
-              <Form.Group controlId="exampleForm.ControlInput1">
+            <Form
+              style={{
+                color: "#3ab34a",
+                fontWeight: "bold",
+                fontSize: 15,
+                textTransform: "uppercase",
+              }}
+            >
+              <Form.Group controlId="exampleForm.ControlInput2">
                 <Form.Label>name</Form.Label>
-                <Form.Control type="text" placeholder="David Keys" />
+                <Form.Control
+                  type="text"
+                  placeholder="David Keys"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                />
               </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
+              <Form.Group controlId="exampleForm.ControlInput2">
                 <Form.Label>email address</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
+                <Form.Control
+                  type="email"
+                  placeholder="name@example.com"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                />
               </Form.Group>
-              <Form.Group controlId="exampleForm.ControlSelect1">
+              <Form.Group controlId="exampleForm.ControlSelect2">
                 <Form.Label>property type</Form.Label>
-                <Form.Control as="select">
+                <Form.Control
+                  as="select"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                >
                   <option>House</option>
                   <option>Flat / Apartment</option>
                   <option>Bungalow</option>
@@ -152,9 +283,18 @@ export default function index() {
                   <option>6+</option> */}
                 </Form.Control>
               </Form.Group>
-              <Form.Group controlId="exampleForm.ControlSelect1">
+              <Form.Group controlId="exampleForm.ControlSelect2">
                 <Form.Label>number of rooms</Form.Label>
-                <Form.Control as="select">
+                <Form.Control
+                  as="select"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
+                >
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -163,14 +303,64 @@ export default function index() {
                   <option>6+</option>
                 </Form.Control>
               </Form.Group>
-              <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Group controlId="exampleForm.ControlTextarea2">
                 <Form.Label>send us a message</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}
                   placeholder="Make your enquiry"
+                  style={{
+                    backgroundColor: "grey",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                  }}
                 />
               </Form.Group>
+              <div className="button-wrapper">
+                <div>
+                  <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                  >
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        backgroundColor: "#8cc540",
+                        fontSize: 13,
+                      }}
+                    >
+                      HOME
+                    </button>
+                  </Link>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style={{
+                      width: "100%",
+                      fontWeight: "bold",
+                      backgroundColor: "#3ab34a",
+                      fontSize: 13,
+                    }}
+                  >
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
             </Form>
           </div>
           <div class="cover"></div>

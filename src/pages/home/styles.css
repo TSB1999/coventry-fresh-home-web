@@ -1,4 +1,3 @@
-
 .home-screen-wrapper {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
@@ -38,22 +37,22 @@
 .introduction {
   background-color: #292929;
   flex: 0.6;
-  order : 0;
+  order: 0;
   margin-top: 23vh;
-  opacity: 0.8;
-  border-radius: 40px;
-  padding : 35px;
+  opacity: 0.9;
+  border-radius: 20px;
+  padding: 35px;
   box-shadow: 15px 15px grey;
 }
 
 .introduction-2 {
   background-color: #292929;
   flex: 0.6;
-  order : 1;
-  margin-top: 23vh;
-  opacity: 0.8;
-  border-radius: 40px;
-  padding : 35px;
+  order: 1;
+  margin: 22vh 3vh 0 0;
+  opacity: 0.9;
+  border-radius: 20px;
+  padding: 35px;
   box-shadow: 15px 15px grey;
 }
 
@@ -66,29 +65,48 @@
 }
 
 .intro-text h1 {
-  font-size:  2.8rem;
+  font-size: 2.8rem;
   /* text-align: center; */
   color: #3ab34a;
   text-shadow: 1px 1.5px #8cc540;
 }
 
+.form-items {
+  text-shadow: 1px 1.5px #8cc540;
+  color: "#3ab34a";
+  font-weight: "bold";
+  font-size: 20;
+}
+
+
+
 .intro-text h3 {
-  font-size:  1.3rem;
+  font-size: 1.3rem;
   /* text-align: center; */
   color: #8cc540;
   text-shadow: 1px 1px grey;
 }
 
 .cover {
-  flex : 1;
-  order : 1;
+  flex: 1;
+  order: 1;
   /* background-color: dodgerblue; */
 }
 
 .cover-2 {
-  flex : 1;
-  order : 0;
+  flex: 1;
+  order: 0;
   /* background-color: dodgerblue; */
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-wrapper > div {
+  flex : 1;
+  margin : 0 0 0 5px;
 }
 
 
@@ -98,10 +116,10 @@
   /* background-color: blue; */
 }
 .cta-select {
-  border: 2px solid green;
+  border: 2px solid #3ab34a;
   background: transparent;
   font-weight: bold;
-  color: green;
+  color: #3ab34a;
   width: 150px;
   height: 50px;
   cursor: pointer;

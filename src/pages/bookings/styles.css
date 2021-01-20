@@ -1,9 +1,111 @@
 .bookings-screen-wrapper {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(./images/image.png);
+  background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
+  display: grid;
+  padding-top: 15vh;
+  grid-template-areas:
+    ". . . . box4 box4 box3"
+    ". . . . . . box3"
+    ". . . . . . box2"
+    ". . . . . . box1";
+}
+
+.title-container {
+  background-color: #292929;
+  margin: 0 50px 0 50px;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: 13px 13px grey;
+}
+
+.title-container h1 {
+  font-size: 2.8rem;
+  /* text-align: center; */
+  color: #3ab34a;
+  text-shadow: 1px 1.5px #8cc540;
+}
+
+.title-container h3 {
+  /* font-size: 2.8rem; */
+  /* text-align: center; */
+  color: grey;
+  text-shadow: 1px 1.5px #000;
+}
+
+.bookings-header-wrapper {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.plans-wrapper {
+  /* background-color: aqua; */
+  margin-top: 18vh;
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  height: 300px;
+  align-items: center;
+  justify-items: center;
+}
+
+.box1 {
+  grid-area: box1;
+  flex: 1;
+  padding: 0 0 10px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px;
+  opacity: 0.9;
+}
+.box2 {
+  grid-area: box2;
+  flex: 1;
+  padding: 0 0 10px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px;
+  opacity: 0.9;
+}
+
+.box3 {
+  grid-area: box3;
+  flex: 1;
+  padding: 0 0 10px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px;
+  opacity: 0.9;
+}
+
+.box4 {
+  grid-area: box4;
+  flex: 1;
+  padding: 0 0 10px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px;
+  opacity: 0.9;
+}
+
+.button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  margin: 0 5px 0 5px;
 }

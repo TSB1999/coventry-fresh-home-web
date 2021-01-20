@@ -3,30 +3,54 @@
 .gallery-screen-wrapper {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(./images/cleanoffice+pic.jpg);
+  /* background-image: url(./images/cleanoffice+pic.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url("./images/cleanoffice+pic.jpg");
+  height: 100vh;
+  display: flex;
+}
+
+.gallery-screen-wrapper-2 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   display: flex;
 }
 
 .gallery-header-wrapper {
-  margin: 20vh 5vh 5vh 5vh;
-  background-color: #292929;
+  margin: 17vh 5vh 5vh 5vh;
   border-radius: 10px;
   opacity: 0.8;
 }
 
+.gallery-header-background {
+  background-color: #292929;
+  opacity: 1;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 10px 10px grey;
+}
+
 .gallery-header-wrapper h1 {
   text-align: center;
+  /* background-color: #292929; */
+  font-size: 2.8rem;
+  /* text-align: center; */
   color: #3ab34a;
+  text-shadow: 1px 1.5px #8cc540;
   font-weight: bold;
 }
 
-.gallery-header-wrapper h2 {
+.gallery-header-wrapper h4 {
   text-align: center;
-  color: #3ab34a;
+  color: grey;
+  text-shadow: 1px 1.5px #000;
+  font-weight: 400;
+  font-style: italic;
+  
 }
 
 .gallery-preview {
@@ -38,7 +62,7 @@
 }
 
 .btn {
-  margin-top: 5vh;
+  margin-top: 3vh;
   justify-content: center;
   /* background-color: aqua; */
   display: flex;
@@ -65,11 +89,11 @@
 
 /* Gallery */
 .gallery-items-wrapper {
-  margin-top: 15vh;
+  margin-top: 17.5vh;
   flex: 1;
   padding: 20px 20px 20px 20px;
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
   /* background-color: crimson; */
 }
