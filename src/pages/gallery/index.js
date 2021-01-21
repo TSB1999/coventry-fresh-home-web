@@ -24,13 +24,13 @@ export default function index() {
               <h1>Call on Fresh Home for a Fresh Home</h1>
             </div>
             <div className="gallery-sub-header">
-              <h4>
+              <h3>
                 At Fresh Home, our mission is to provide excellent sanitiary
                 services to all our customers located in the Midlands. Our
                 employees are dilligent, hard-working citizens of the UK, who
                 share our core-values and are determined to provide you with the
                 best service for your money.
-              </h4>
+              </h3>
             </div>
 
             <div className="btn">
@@ -52,8 +52,9 @@ export default function index() {
                   style={{
                     width: "100%",
                     fontWeight: "700",
-                    backgroundColor: "#8cc540",
+                    backgroundColor: "green",
                     fontSize: 13,
+                    textTransform : "uppercase"
                   }}
                 >
                   See Gallery

@@ -36,10 +36,23 @@ export default function index() {
             <div className="item">
               <div style={{ flex: 1 }}>
                 <div className="icon">
-                  <Link class="nav-link" to="/bookings">
-                    <i class="fas fa-calendar-week fa-2x"></i>
-                    {/* BOOKINGS */}
-                  </Link>
+                  <ScrollLink
+                    activeClass="active"
+                    to="bookings"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                  >
+                    <Link class="nav-link" to="/bookings">
+                      <i class="fas fa-calendar-week fa-2x"></i>
+                      {/* BOOKINGS */}
+                    </Link>
+                  </ScrollLink>
                 </div>
               </div>
               <div className="nav-text">ENQUIRIES</div>

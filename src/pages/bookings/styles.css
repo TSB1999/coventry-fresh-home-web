@@ -7,12 +7,84 @@
   background-size: cover;
   height: 100vh;
   display: grid;
-  padding-top: 15vh;
+  padding: 19vh 0 5vh 0;
   grid-template-areas:
     ". . . . box0 box4 box3"
     ". . . . . . box3"
     ". . . . . . box2"
     ". . . . . . box1";
+}
+
+.button > button  {
+  background-color: green;
+  border-radius: 5px;
+  color : #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.title {
+  /* text-align: center; */
+  color: #3ab34a;
+  text-shadow: 1px 1.5px #8cc540;
+  text-transform: uppercase;
+  margin: 4vh 0 0 0;
+}
+
+.title h5 {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.bookings-screen-wrapper-2 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15vh;
+}
+
+.description {
+  flex: 1;
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  flex: 1;
+  /* background-color: #3ab34a; */
+  padding: 30px;
+  display: flex;
+}
+
+.right {
+  flex: 1;
+  /* background-color: red; */
+  padding: 30px;
+  display: flex;
+}
+
+.payment-info {
+  flex: 3;
+  background-color: purple;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.payment-button-wrapper {
+  flex: 1;
+  background-color: blue;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .title-container {
@@ -61,9 +133,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 1px;
+  /* border: solid 1px; */
   opacity: 0.9;
+  background-color: #292929;
+  box-shadow: 8px 8px grey;
+  /* background-image: url(./images/12565.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("./images/image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
 .box1 {
   grid-area: box1;
   flex: 1;
@@ -72,8 +156,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 1px;
+  /* border: solid 5px green; */
   opacity: 0.9;
+  background-color: #292929;
+  box-shadow: 8px 8px grey;
+  /* background-image: url(./images/download\ \(1\).jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("./images/12565.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .box2 {
   grid-area: box2;
@@ -83,8 +179,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 1px;
+  /* border: solid 1px; */
   opacity: 0.9;
+  background-color: #292929;
+  box-shadow: 8px 8px grey;
+  /* background-image: url(./images/download.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("./images/download\ \(1\).jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .box3 {
@@ -95,8 +203,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 1px;
+  /* border: solid 1px; */
   opacity: 0.9;
+  background-color: #292929;
+  box-shadow: 8px 8px grey;
+  /* background-image: url(./images/cleanroom-big.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("./images/cleanroom-big.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .box4 {
@@ -107,8 +227,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 1px;
+  /* border: solid 1px; */
   opacity: 0.9;
+  background-color: #292929;
+  box-shadow: 8px 8px grey;
+  /* background-image: url(./images/image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    /**3ab34a*/ url("./images/download.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .button-section {

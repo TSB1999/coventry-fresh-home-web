@@ -8,6 +8,7 @@ import Navbar from "../../components/navbar";
 export default function index() {
   return (
     <div className="page">
+      
       <div className="home-screen-wrapper" id="home">
         {/* <Navbar /> */}
 

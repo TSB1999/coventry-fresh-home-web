@@ -27,7 +27,7 @@
 }
 
 .gallery-header-wrapper {
-  margin: 17vh 5vh 5vh 5vh;
+  margin: 21vh 5vh 5vh 5vh;
   border-radius: 10px;
   opacity: 0.8;
 }
@@ -48,16 +48,21 @@
   /* text-align: center; */
   color: #3ab34a;
   text-shadow: 1px 1.5px #8cc540;
-  font-weight: bold;
+
 }
 
-.gallery-header-wrapper h4 {
+.gallery-header-wrapper h3 {
   text-align: center;
-  color: grey;
-  text-shadow: 1px 1.5px #000;
-  font-weight: 400;
-  font-style: italic;
+  color: #8cc540;
+  /* text-shadow: 1px 1.5px #000; */
+  /* font-weight: 400; */
+  /* font-style: italic; */
   padding : 0 10vh 0 10vh;
+
+  font-size: 1.1rem;
+  /* text-align: center; */
+  text-shadow: 1px 1px grey;
+  text-transform: uppercase;
   
 }
 
