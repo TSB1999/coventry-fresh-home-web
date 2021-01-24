@@ -15,10 +15,10 @@
     ". . . . . . box1";
 }
 
-.button > button  {
+.button > button {
   background-color: green;
   border-radius: 5px;
-  color : #fff;
+  color: #fff;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: bold;
@@ -30,6 +30,7 @@
   text-shadow: 1px 1.5px #8cc540;
   text-transform: uppercase;
   margin: 4vh 0 0 0;
+  flex: 1;
 }
 
 .title h5 {
@@ -40,7 +41,59 @@
 .bookings-screen-wrapper-2 {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
-  /* background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg); */
+  background-image: url(./images/image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15vh;
+}
+
+.bookings-screen-wrapper-3 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/markus-spiske-g5ZIXjzRGds-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15vh;
+}
+
+.bookings-screen-wrapper-4 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/cleanroom-big\ copy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15vh;
+}
+
+.bookings-screen-wrapper-5 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/rhema-kallianpur-uocSnWMhnAs-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15vh;
+}
+
+.bookings-screen-wrapper-6 {
+  /* font-family: "Satisfy"; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/joseph-greve-Xdk7tFHP6kU-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -128,19 +181,13 @@
 .box0 {
   grid-area: box0;
   flex: 1;
-  padding: 0 0 10px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: solid 1px; */
   opacity: 0.9;
   background-color: #292929;
   box-shadow: 8px 8px grey;
-  /* background-image: url(./images/12565.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
     url("./images/image.png");
   background-repeat: no-repeat;
@@ -151,22 +198,16 @@
 .box1 {
   grid-area: box1;
   flex: 1;
-  padding: 0 0 10px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: solid 5px green; */
   opacity: 0.9;
   background-color: #292929;
   box-shadow: 8px 8px grey;
-  /* background-image: url(./images/download\ \(1\).jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
 
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-    url("./images/12565.jpg");
+    url("./images/joseph-greve-Xdk7tFHP6kU-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -174,22 +215,16 @@
 .box2 {
   grid-area: box2;
   flex: 1;
-  padding: 0 0 10px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: solid 1px; */
   opacity: 0.9;
   background-color: #292929;
   box-shadow: 8px 8px grey;
-  /* background-image: url(./images/download.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
 
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-    url("./images/download\ \(1\).jpeg");
+    url("./images/rhema-kallianpur-uocSnWMhnAs-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -198,19 +233,14 @@
 .box3 {
   grid-area: box3;
   flex: 1;
-  padding: 0 0 10px 0;
+  width: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: solid 1px; */
   opacity: 0.9;
   background-color: #292929;
   box-shadow: 8px 8px grey;
-  /* background-image: url(./images/cleanroom-big.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
 
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
     url("./images/cleanroom-big.jpg");
@@ -222,22 +252,16 @@
 .box4 {
   grid-area: box4;
   flex: 1;
-  padding: 0 0 10px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: solid 1px; */
   opacity: 0.9;
   background-color: #292929;
   box-shadow: 8px 8px grey;
-  /* background-image: url(./images/image.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
 
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-    /**3ab34a*/ url("./images/download.jpeg");
+    /**3ab34a*/ url("./images/markus-spiske-g5ZIXjzRGds-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -246,9 +270,24 @@
 .button-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  background-color: #292929;
+  width: 100%;
+  flex: 0.4;
+  border-radius: 0px 0 10px 10px;
+  justify-items: center;
 }
 
 .button {
-  margin: 0 5px 0 5px;
+  padding: 8px 5px 5px 15px;
+  flex: 1;
+}
+
+.button h5 {
+  color: #8cc540;
+  text-shadow: 1px 1px grey;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: right;
+  opacity: 0.9;
+  font-size: 1rem;
 }
