@@ -1,14 +1,46 @@
 import React from "react";
 import "./styles.css";
 import Form from "react-bootstrap/Form";
+import emailjs from "emailjs-com";
 
 import { Link } from "react-scroll";
-import Navbar from "../../components/navbar";
 
 export default function index() {
+  
+  
+  function sendGardeningEmail(e) {
+    e.preventDefault();
+    // console.log(e.target, 'vbreou')
+
+    emailjs
+      .sendForm("gmail", "template_ua349no", e.target, "user_9Sc8vdXTbOS9xDXaHCNvq")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
+  function sendCleaningEmail(e) {
+    e.preventDefault();
+    // console.log(e.target, 'vbreou')
+
+    emailjs
+      .sendForm("gmail", "template_6j1arch", e.target, "user_9Sc8vdXTbOS9xDXaHCNvq")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
   return (
     <div className="page">
-      
       <div className="home-screen-wrapper" id="home">
         {/* <Navbar /> */}
 
@@ -76,11 +108,13 @@ export default function index() {
                 fontSize: 15,
                 textTransform: "uppercase",
               }}
+              onSubmit={sendGardeningEmail}
             >
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>name</Form.Label>
                 <Form.Control
                   type="text"
+                  name="name"
                   placeholder="David Keys"
                   style={{
                     backgroundColor: "grey",
@@ -95,6 +129,7 @@ export default function index() {
                 <Form.Label>email address</Form.Label>
                 <Form.Control
                   type="email"
+                  name="email"
                   placeholder="name@example.com"
                   style={{
                     backgroundColor: "grey",
@@ -109,6 +144,7 @@ export default function index() {
                 <Form.Label>Garden Job</Form.Label>
                 <Form.Control
                   as="select"
+                  name="garden-job"
                   style={{
                     backgroundColor: "grey",
                     color: "#fff",
@@ -117,10 +153,10 @@ export default function index() {
                     fontSize: 12,
                   }}
                 >
-                  <option>House</option>
-                  <option>Flat / Apartment</option>
-                  <option>Bungalow</option>
-                  <option>Office</option>
+                  <option>Planting</option>
+                  <option>Shrub Trimming</option>
+                  <option>Lawn-Mow</option>
+                  <option>Disposal</option>
                   {/* <option>5</option>
                   <option>6+</option> */}
                 </Form.Control>
@@ -129,6 +165,7 @@ export default function index() {
                 <Form.Label>Garden Size</Form.Label>
                 <Form.Control
                   as="select"
+                  name="garden-size"
                   style={{
                     backgroundColor: "grey",
                     color: "#fff",
@@ -149,6 +186,7 @@ export default function index() {
                 <Form.Label>send us a message</Form.Label>
                 <Form.Control
                   as="textarea"
+                  name="message"
                   rows={3}
                   placeholder="Make your enquiry"
                   style={{
@@ -174,18 +212,18 @@ export default function index() {
                     isDynamic={true}
                     ignoreCancelEvents={false}
                   >
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    style={{
-                      width: "100%",
-                      fontWeight: "bold",
-                      backgroundColor: "#8cc540",
-                      fontSize: 13,
-                    }}
-                  >
-                    HOME
-                  </button>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        backgroundColor: "#8cc540",
+                        fontSize: 13,
+                      }}
+                    >
+                      HOME
+                    </button>
                   </Link>
                 </div>
                 <div>
@@ -235,11 +273,13 @@ export default function index() {
                 fontSize: 15,
                 textTransform: "uppercase",
               }}
+              onSubmit = {sendCleaningEmail}
             >
               <Form.Group controlId="exampleForm.ControlInput2">
                 <Form.Label>name</Form.Label>
                 <Form.Control
                   type="text"
+                  name="name1"
                   placeholder="David Keys"
                   style={{
                     backgroundColor: "grey",
@@ -254,6 +294,7 @@ export default function index() {
                 <Form.Label>email address</Form.Label>
                 <Form.Control
                   type="email"
+                  name="email1"
                   placeholder="name@example.com"
                   style={{
                     backgroundColor: "grey",
@@ -268,6 +309,7 @@ export default function index() {
                 <Form.Label>property type</Form.Label>
                 <Form.Control
                   as="select"
+                  name="property-type"
                   style={{
                     backgroundColor: "grey",
                     color: "#fff",
@@ -288,6 +330,7 @@ export default function index() {
                 <Form.Label>number of rooms</Form.Label>
                 <Form.Control
                   as="select"
+                  name="no-rooms"
                   style={{
                     backgroundColor: "grey",
                     color: "#fff",
@@ -308,6 +351,7 @@ export default function index() {
                 <Form.Label>send us a message</Form.Label>
                 <Form.Control
                   as="textarea"
+                  name="message1"
                   rows={3}
                   placeholder="Make your enquiry"
                   style={{
