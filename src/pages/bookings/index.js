@@ -13,35 +13,33 @@ import "react-toastify/dist/ReactToastify.css";
 toast.configure();
 
 export default function Index() {
-  const [product, setProduct] = React.useState([
-    {
-      name: "Custom Package",
-      price: 20,
-      quantity: 0
-    },
-    {
-      name: "Premium Package",
-      price: 20,
-      quantity: 0
-    },
-    {
-      name: "Deluxe Package",
-      price: 20,
-      quantity: 0
-    },
-    {
-      name: "Economy Package",
-      price: 20,
-      quantity: 0
-    },
-    {
-      name: "Standard Package",
-      price: 20,
-      quantity: 0
-    },
-  ]);
+  const [customProduct, setCustomProduct] = React.useState({
+    name: "Custom Package",
+    price: 20,
+    quantity: 1,
+  });
+  const [premiumProduct, setPremiumProduct] = React.useState({
+    name: "Premium Package",
+    price: 20,
+    quantity: 1,
+  });
+  const [deluxeProduct, setDeluxeProduct] = React.useState({
+    name: "Deluxe Package",
+    price: 20,
+    quantity: 1,
+  });
+  const [economyProduct, setEconomyProduct] = React.useState({
+    name: "Economy Package",
+    price: 20,
+    quantity: 1,
+  });
+  const [standardProduct, setStandardProduct] = React.useState({
+    name: "Standard Package",
+    price: 20,
+    quantity: 1,
+  });
 
-  async function handleToken(token, addresses) {
+  async function handleToken(token, product) {
     const response = await axios.post(
       "https://j3m2f.sse.codesandbox.io/checkout",
       {
@@ -101,7 +99,7 @@ export default function Index() {
               ignoreCancelEvents={false}
             >
               <div className="button">
-                <h5>discover. </h5>
+                <h5>discover.</h5>
               </div>
             </Link>
           </div>
@@ -124,7 +122,7 @@ export default function Index() {
               ignoreCancelEvents={false}
             >
               <div className="button">
-                <h5>discover. </h5>
+                <h5>discover.</h5>
               </div>
             </Link>
           </div>
@@ -147,7 +145,7 @@ export default function Index() {
               ignoreCancelEvents={false}
             >
               <div className="button">
-                <h5 style={{ marginTop: "8px" }}>discover. </h5>
+                <h5 style={{ marginTop: "8px" }}>discover.</h5>
               </div>
             </Link>
           </div>
@@ -170,7 +168,7 @@ export default function Index() {
               ignoreCancelEvents={false}
             >
               <div className="button">
-                <h5>discover. </h5>
+                <h5>discover.</h5>
               </div>
             </Link>
           </div>
@@ -187,26 +185,44 @@ export default function Index() {
               <div className="payment-title">custom package</div>
               <div className="payment-table">table</div>
               <div className="payment">
-                <div className="payment-section-1">
-                  
-                </div>
+                <div className="payment-section-1"></div>
                 <div className="payment-section-2">
-                <div className="subtract circle">
+                  <div
+                    className="subtract circle"
+                    onClick={() =>
+                      setCustomProduct({
+                        name: "Custom Package",
+                        price: 20,
+                        quantity: customProduct.quantity - 1,
+                      })
+                    }
+                  >
                     <button>-1</button>
                   </div>
-                  <div className="quantity circle">{product[0].quantity}</div>
-                  {/* <div className="add circle" onClick = {() => }> */}
+                  <div className="quantity circle">
+                    {customProduct.quantity}
+                  </div>
+                  <div
+                    className="add circle"
+                    onClick={() =>
+                      setCustomProduct({
+                        name: "Custom Package",
+                        price: 20,
+                        quantity: customProduct.quantity + 1,
+                      })
+                    }
+                  >
                     <button>+1</button>
                   </div>
                 </div>
                 <div className="payment-section-3">
                   <StripeCheckout
                     stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                    token={handleToken}
+                    token={(token) => handleToken(token, customProduct)}
                     billingAddress
                     shippingAddress
-                    amount={product[0].price * 100}
-                    name={product[0].name}
+                    amount={customProduct.price * customProduct.quantity * 100}
+                    name={customProduct.name}
                   />
                 </div>
               </div>
@@ -223,14 +239,48 @@ export default function Index() {
               <div className="payment-title">premium package</div>
               <div className="payment-table">table</div>
               <div className="payment">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={handleToken}
-                  billingAddress
-                  shippingAddress
-                  amount={product[1].price * 100}
-                  name={product[1].name}
-                />
+                <div className="payment-section-1"></div>
+                <div className="payment-section-2">
+                  <div
+                    className="subtract circle"
+                    onClick={() =>
+                      setPremiumProduct({
+                        name: "Premium Package",
+                        price: 20,
+                        quantity: premiumProduct.quantity - 1,
+                      })
+                    }
+                  >
+                    <button>-1</button>
+                  </div>
+                  <div className="quantity circle">
+                    {premiumProduct.quantity}
+                  </div>
+                  <div
+                    className="add circle"
+                    onClick={() =>
+                      setPremiumProduct({
+                        name: "Premium Package",
+                        price: 20,
+                        quantity: premiumProduct.quantity + 1,
+                      })
+                    }
+                  >
+                    <button>+1</button>
+                  </div>
+                </div>
+                <div className="payment-section-3">
+                  <StripeCheckout
+                    stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                    token={(token) => handleToken(token, customProduct)}
+                    billingAddress
+                    shippingAddress
+                    amount={
+                      premiumProduct.price * premiumProduct.quantity * 100
+                    }
+                    name={premiumProduct.name}
+                  />
+                </div>
               </div>
             </div>
             <div className="payment-button-wrapper"></div>
@@ -251,14 +301,46 @@ export default function Index() {
               <div className="payment-title">deluxe package</div>
               <div className="payment-table">table</div>
               <div className="payment">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={handleToken}
-                  billingAddress
-                  shippingAddress
-                  amount={product[2].price * 100}
-                  name={product[2].name}
-                />
+                <div className="payment-section-1"></div>
+                <div className="payment-section-2">
+                  <div
+                    className="subtract circle"
+                    onClick={() =>
+                      setDeluxeProduct({
+                        name: "Deluxe Package",
+                        price: 20,
+                        quantity: deluxeProduct.quantity - 1,
+                      })
+                    }
+                  >
+                    <button>-1</button>
+                  </div>
+                  <div className="quantity circle">
+                    {deluxeProduct.quantity}
+                  </div>
+                  <div
+                    className="add circle"
+                    onClick={() =>
+                      setDeluxeProduct({
+                        name: "Deluxe Package",
+                        price: 20,
+                        quantity: deluxeProduct.quantity + 1,
+                      })
+                    }
+                  >
+                    <button>+1</button>
+                  </div>
+                </div>
+                <div className="payment-section-3">
+                  <StripeCheckout
+                    stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                    token={(token) => handleToken(token, deluxeProduct)}
+                    billingAddress
+                    shippingAddress
+                    amount={deluxeProduct.price * deluxeProduct.quantity * 100}
+                    name={deluxeProduct.name}
+                  />
+                </div>
               </div>
             </div>
             <div className="payment-button-wrapper">f</div>
@@ -273,14 +355,48 @@ export default function Index() {
               <div className="payment-title">economy package</div>
               <div className="payment-table">table</div>
               <div className="payment">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={handleToken}
-                  billingAddress
-                  shippingAddress
-                  amount={product[3].price * 100}
-                  name={product[3].name}
-                />
+                <div className="payment-section-1"></div>
+                <div className="payment-section-2">
+                  <div
+                    className="subtract circle"
+                    onClick={() =>
+                      setEconomyProduct({
+                        name: "Economy Package",
+                        price: 20,
+                        quantity: economyProduct.quantity - 1,
+                      })
+                    }
+                  >
+                    <button>-1</button>
+                  </div>
+                  <div className="quantity circle">
+                    {economyProduct.quantity}
+                  </div>
+                  <div
+                    className="add circle"
+                    onClick={() =>
+                      setEconomyProduct({
+                        name: "Economy Package",
+                        price: 20,
+                        quantity: economyProduct.quantity + 1,
+                      })
+                    }
+                  >
+                    <button>+1</button>
+                  </div>
+                </div>
+                <div className="payment-section-3">
+                  <StripeCheckout
+                    stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                    token={(token) => handleToken(token, economyProduct)}
+                    billingAddress
+                    shippingAddress
+                    amount={
+                      economyProduct.price * economyProduct.quantity * 100
+                    }
+                    name={economyProduct.name}
+                  />
+                </div>
               </div>
             </div>
             <div className="payment-button-wrapper"></div>
@@ -301,14 +417,48 @@ export default function Index() {
               <div className="payment-title">standard package</div>
               <div className="payment-table">table</div>
               <div className="payment">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={handleToken}
-                  billingAddress
-                  shippingAddress
-                  amount={product[4].price * 100}
-                  name={product[4].name}
-                />
+                <div className="payment-section-1"></div>
+                <div className="payment-section-2">
+                  <div
+                    className="subtract circle"
+                    onClick={() =>
+                      setStandardProduct({
+                        name: "Standard Package",
+                        price: 20,
+                        quantity: standardProduct.quantity - 1,
+                      })
+                    }
+                  >
+                    <button>-1</button>
+                  </div>
+                  <div className="quantity circle">
+                    {standardProduct.quantity}
+                  </div>
+                  <div
+                    className="add circle"
+                    onClick={() =>
+                      setPremiumProduct({
+                        name: "Premium Package",
+                        price: 20,
+                        quantity: standardProduct.quantity + 1,
+                      })
+                    }
+                  >
+                    <button>+1</button>
+                  </div>
+                </div>
+                <div className="payment-section-3">
+                  <StripeCheckout
+                    stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                    token={(token) => handleToken(token, standardProduct)}
+                    billingAddress
+                    shippingAddress
+                    amount={
+                      standardProduct.price * standardProduct.quantity * 100
+                    }
+                    name={setStandardProduct.name}
+                  />
+                </div>
               </div>
             </div>
             <div className="payment-button-wrapper"></div>
