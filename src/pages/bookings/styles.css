@@ -13,6 +13,8 @@
     ". . . . . . box3"
     ". . . . . . box2"
     ". . . . . . box1";
+  /* background-color: #84d78f;
+  background-blend-mode: hard-light; */
 }
 
 .button > button {
@@ -38,10 +40,10 @@
   font-size: 1.3rem;
 }
 
-.bookings-screen-wrapper-2 {
+.custom-screen-wrapper-2 {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(./images/image.png);
+  background-image: url(./images/volha-flaxeco-jCPL0oxBhB0-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -49,9 +51,11 @@
   display: flex;
   flex-direction: row;
   padding-top: 15vh;
+  /* background-color: #84D78F;
+  background-blend-mode: hard-light; */
 }
 
-.bookings-screen-wrapper-3 {
+.premium-screen-wrapper-3 {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(./images/markus-spiske-g5ZIXjzRGds-unsplash.jpg);
@@ -62,9 +66,11 @@
   display: flex;
   flex-direction: row;
   padding-top: 15vh;
+  /* background-color: #84D78F;
+  background-blend-mode: hard-light; */
 }
 
-.bookings-screen-wrapper-4 {
+.deluxe-screen-wrapper-4 {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(./images/cleanroom-big\ copy.jpg);
@@ -75,9 +81,11 @@
   display: flex;
   flex-direction: row;
   padding-top: 15vh;
+  /* background-color: #84D78F;
+  background-blend-mode: hard-light; */
 }
 
-.bookings-screen-wrapper-5 {
+.economy-screen-wrapper-5 {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(./images/rhema-kallianpur-uocSnWMhnAs-unsplash.jpg);
@@ -88,12 +96,14 @@
   display: flex;
   flex-direction: row;
   padding-top: 15vh;
+  /* background-color: #84D78F;
+  background-blend-mode: hard-light; */
 }
 
-.bookings-screen-wrapper-6 {
+.standard-screen-wrapper-6 {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(./images/joseph-greve-Xdk7tFHP6kU-unsplash.jpg);
+  background-image: url(./images/image.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -101,11 +111,13 @@
   display: flex;
   flex-direction: row;
   padding-top: 15vh;
+  /* background-color: #84D78F;
+  background-blend-mode: hard-light; */
 }
 
 .description {
   flex: 1;
-  background-color: yellow;
+  background-color: transparent;
   border-radius: 10px;
   padding: 30px;
   display: flex;
@@ -128,14 +140,91 @@
 
 .payment-info {
   flex: 3;
-  background-color: purple;
+  background-color: #292929;
   margin: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  opacity: 0.85;
+  /* box-shadow: 13px 13px grey; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 15px 0 0 0;
+  box-shadow: 8px 8px grey;
+}
+
+.payment-title {
+  flex: 2;
+  /* background-color: red; */
+  text-align: center;
+  font-size: 3rem;
+  color: #3ab34a;
+  text-shadow: 1px 1.5px #8cc540;
+  text-transform: capitalize;
+  border-bottom: green 4px solid;
+}
+
+.payment-table {
+  flex: 6;
+  /* background-color: pink; */
+}
+
+.payment {
+  flex: 1;
+  /* background-color: green; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* border-radius: 15px; */
+}
+
+.payment-section-1 {
+  flex: 1;
+  display: flex;
+}
+
+.circle {
+  flex: 1;
+  background-color: grey;
+  margin: 10px;
+  /* box-shadow: 5px 5px grey; */
+  /* border-radius: 30px; */
+}
+
+.quantity {
+  justify-content: center;
+  display: flex;
+}
+
+.add {
+  justify-content: center;
+  display: flex;
+}
+.subtract {
+  justify-content: center;
+  display: flex;
+}
+
+.circle button {
+  background-color: transparent;
+  border: none;
+}
+
+.payment-section-2 {
+  display: flex;
+  flex: 1;
+}
+
+.payment-section-3 {
+  flex: 1;
+  justify-content: center;
+  display: flex;
 }
 
 .payment-button-wrapper {
   flex: 1;
-  background-color: blue;
+  /* background-color: blue; */
   margin: 10px;
   border-radius: 10px;
 }
@@ -207,7 +296,7 @@
   box-shadow: 8px 8px grey;
 
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-    url("./images/joseph-greve-Xdk7tFHP6kU-unsplash.jpg");
+    url("./images/image.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

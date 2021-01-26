@@ -13,10 +13,33 @@ import "react-toastify/dist/ReactToastify.css";
 toast.configure();
 
 export default function Index() {
-  const [product] = React.useState({
-    name: "Standard",
-    price: 20,
-  });
+  const [product, setProduct] = React.useState([
+    {
+      name: "Custom Package",
+      price: 20,
+      quantity: 0
+    },
+    {
+      name: "Premium Package",
+      price: 20,
+      quantity: 0
+    },
+    {
+      name: "Deluxe Package",
+      price: 20,
+      quantity: 0
+    },
+    {
+      name: "Economy Package",
+      price: 20,
+      quantity: 0
+    },
+    {
+      name: "Standard Package",
+      price: 20,
+      quantity: 0
+    },
+  ]);
 
   async function handleToken(token, addresses) {
     const response = await axios.post(
@@ -124,7 +147,7 @@ export default function Index() {
               ignoreCancelEvents={false}
             >
               <div className="button">
-                <h5 style = {{marginTop : '8px'}}>discover. </h5>
+                <h5 style={{ marginTop: "8px" }}>discover. </h5>
               </div>
             </Link>
           </div>
@@ -154,23 +177,63 @@ export default function Index() {
         </div>
       </div>
       {/* Screen 2 */}
-      <div className="bookings-screen-wrapper-2" id="custom">
+      <div className="custom-screen-wrapper-2" id="custom">
         <div className="left">
           <div className="description">dre</div>
         </div>
         <div className="right">
           <div className="description">
-            <div className="payment-info">f</div>
-            <div className="payment-button-wrapper">f</div>
+            <div className="payment-info">
+              <div className="payment-title">custom package</div>
+              <div className="payment-table">table</div>
+              <div className="payment">
+                <div className="payment-section-1">
+                  
+                </div>
+                <div className="payment-section-2">
+                <div className="subtract circle">
+                    <button>-1</button>
+                  </div>
+                  <div className="quantity circle">{product[0].quantity}</div>
+                  {/* <div className="add circle" onClick = {() => }> */}
+                    <button>+1</button>
+                  </div>
+                </div>
+                <div className="payment-section-3">
+                  <StripeCheckout
+                    stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                    token={handleToken}
+                    billingAddress
+                    shippingAddress
+                    amount={product[0].price * 100}
+                    name={product[0].name}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="payment-button-wrapper"></div>
           </div>
         </div>
       </div>
       {/* Screen 3 */}
-      <div className="bookings-screen-wrapper-3" id="premium">
+      <div className="premium-screen-wrapper-3" id="premium">
         <div className="right">
           <div className="description">
-            <div className="payment-info">f</div>
-            <div className="payment-button-wrapper">f</div>
+            <div className="payment-info">
+              <div className="payment-title">premium package</div>
+              <div className="payment-table">table</div>
+              <div className="payment">
+                <StripeCheckout
+                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                  token={handleToken}
+                  billingAddress
+                  shippingAddress
+                  amount={product[1].price * 100}
+                  name={product[1].name}
+                />
+              </div>
+            </div>
+            <div className="payment-button-wrapper"></div>
           </div>
         </div>
         <div className="left">
@@ -178,33 +241,49 @@ export default function Index() {
         </div>
       </div>
       {/* Screen 4 */}
-      <div className="bookings-screen-wrapper-4" id="deluxe">
+      <div className="deluxe-screen-wrapper-4" id="deluxe">
         <div className="left">
           <div className="description">dre</div>
         </div>
         <div className="right">
           <div className="description">
-            <div className="payment-info">f</div>
-            <div className="payment-button-wrapper">
-              <button>Pay £20</button>
-              <StripeCheckout
-                stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                token={handleToken}
-                billingAddress
-                shippingAddress
-                amount={product.price * 100}
-                name={product.name}
-              />
+            <div className="payment-info">
+              <div className="payment-title">deluxe package</div>
+              <div className="payment-table">table</div>
+              <div className="payment">
+                <StripeCheckout
+                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                  token={handleToken}
+                  billingAddress
+                  shippingAddress
+                  amount={product[2].price * 100}
+                  name={product[2].name}
+                />
+              </div>
             </div>
+            <div className="payment-button-wrapper">f</div>
           </div>
         </div>
       </div>
       Ì{/* Screen 5 */}
-      <div className="bookings-screen-wrapper-5" id="economy">
+      <div className="economy-screen-wrapper-5" id="economy">
         <div className="right">
           <div className="description">
-            <div className="payment-info">f</div>
-            <div className="payment-button-wrapper">f</div>
+            <div className="payment-info">
+              <div className="payment-title">economy package</div>
+              <div className="payment-table">table</div>
+              <div className="payment">
+                <StripeCheckout
+                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                  token={handleToken}
+                  billingAddress
+                  shippingAddress
+                  amount={product[3].price * 100}
+                  name={product[3].name}
+                />
+              </div>
+            </div>
+            <div className="payment-button-wrapper"></div>
           </div>
         </div>
         <div className="left">
@@ -212,14 +291,27 @@ export default function Index() {
         </div>
       </div>
       {/* Screen 6 */}
-      <div className="bookings-screen-wrapper-6" id="standard">
+      <div className="standard-screen-wrapper-6" id="standard">
         <div className="left">
           <div className="description">dre</div>
         </div>
         <div className="right">
           <div className="description">
-            <div className="payment-info">f</div>
-            <div className="payment-button-wrapper">f</div>
+            <div className="payment-info">
+              <div className="payment-title">standard package</div>
+              <div className="payment-table">table</div>
+              <div className="payment">
+                <StripeCheckout
+                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                  token={handleToken}
+                  billingAddress
+                  shippingAddress
+                  amount={product[4].price * 100}
+                  name={product[4].name}
+                />
+              </div>
+            </div>
+            <div className="payment-button-wrapper"></div>
           </div>
         </div>
       </div>

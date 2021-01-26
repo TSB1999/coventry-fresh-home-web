@@ -6,14 +6,17 @@ import emailjs from "emailjs-com";
 import { Link } from "react-scroll";
 
 export default function index() {
-  
-  
   function sendGardeningEmail(e) {
     e.preventDefault();
     // console.log(e.target, 'vbreou')
 
     emailjs
-      .sendForm("gmail", "template_ua349no", e.target, "user_9Sc8vdXTbOS9xDXaHCNvq")
+      .sendForm(
+        "gmail",
+        "template_ua349no",
+        e.target,
+        "user_9Sc8vdXTbOS9xDXaHCNvq"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -29,7 +32,12 @@ export default function index() {
     // console.log(e.target, 'vbreou')
 
     emailjs
-      .sendForm("gmail", "template_6j1arch", e.target, "user_9Sc8vdXTbOS9xDXaHCNvq")
+      .sendForm(
+        "gmail",
+        "template_6j1arch",
+        e.target,
+        "user_9Sc8vdXTbOS9xDXaHCNvq"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -218,11 +226,13 @@ export default function index() {
                       style={{
                         width: "100%",
                         fontWeight: "bold",
-                        backgroundColor: "#8cc540",
+                        borderColor : '#3ab34a',
+                        backgroundColor: "transparent",
                         fontSize: 13,
+                        color : '#3ab34a'
                       }}
                     >
-                      HOME
+                      BACK TO TOP
                     </button>
                   </Link>
                 </div>
@@ -233,8 +243,9 @@ export default function index() {
                     style={{
                       width: "100%",
                       fontWeight: "bold",
-                      backgroundColor: "#3ab34a",
+                      backgroundColor: "green",
                       fontSize: 13,
+                      borderColor: "green",
                     }}
                   >
                     SUBMIT
@@ -273,7 +284,7 @@ export default function index() {
                 fontSize: 15,
                 textTransform: "uppercase",
               }}
-              onSubmit = {sendCleaningEmail}
+              onSubmit={sendCleaningEmail}
             >
               <Form.Group controlId="exampleForm.ControlInput2">
                 <Form.Label>name</Form.Label>
@@ -383,11 +394,13 @@ export default function index() {
                       style={{
                         width: "100%",
                         fontWeight: "bold",
-                        backgroundColor: "#8cc540",
+                        backgroundColor: "transparent",
+                        borderColor: "#3ab34a",
                         fontSize: 13,
+                        color: "#3ab34a",
                       }}
                     >
-                      HOME
+                      BACK TO TOP
                     </button>
                   </Link>
                 </div>
@@ -398,8 +411,10 @@ export default function index() {
                     style={{
                       width: "100%",
                       fontWeight: "bold",
-                      backgroundColor: "#3ab34a",
+                      backgroundColor: "green",
+                      color: "#fff",
                       fontSize: 13,
+                      borderColor: "green",
                     }}
                   >
                     SUBMIT

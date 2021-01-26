@@ -7,6 +7,8 @@
   background-size: cover;
   height: 100vh;
   display: flex;
+  /* background-color: #84D78F;
+  background-blend-mode: hard-light; */
 }
 
 .contact-items-wrapper {
