@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 
 import { Link } from "react-scroll";
-
+import Spinner from "react-bootstrap/Spinner";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -11,6 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 toast.configure();
 
 export default function Index() {
+  const [loading, setLoading] = React.useState(false);
+
   const [customProduct, setCustomProduct] = React.useState({
     name: "Custom Package",
     price: 20,
@@ -38,6 +40,8 @@ export default function Index() {
   });
 
   async function handleToken(token, product) {
+    setLoading(true);
+    console.log("start");
     const response = await axios.post(
       "https://j3m2f.sse.codesandbox.io/checkout",
       {
@@ -47,8 +51,10 @@ export default function Index() {
     );
     const { status } = response.data;
     if (status === "success") {
+      setLoading(false);
       toast("Success! Check email for details", { type: "success" });
     } else {
+      setLoading(false);
       toast("Something went wrong", { type: "error" });
     }
   }
@@ -203,7 +209,13 @@ export default function Index() {
               </table> */}
             </div>
             <div className="payment">
-              <div className="payment-section-1"></div>
+              <div className="payment-section-1">
+                {loading ? (
+                  <Spinner animation="border" role="status" variant="success">
+                    <span className="sr-only">Loading...</span>
+                  </Spinner>
+                ) : null}
+              </div>
               <div className="payment-section-2">
                 <div
                   className="subtract circle"
@@ -236,7 +248,14 @@ export default function Index() {
               <div className="payment-section-3">
                 <StripeCheckout
                   stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => handleToken(token, customProduct)}
+                  token={(token) => {
+                    handleToken(token, customProduct);
+                    setCustomProduct({
+                      name: "Custom Package",
+                      price: 20,
+                      quantity: 1,
+                    });
+                  }}
                   billingAddress
                   shippingAddress
                   amount={customProduct.price * customProduct.quantity * 100}
@@ -245,6 +264,7 @@ export default function Index() {
               </div>
             </div>
           </div>
+          {/* {loading ? <div className="loader">rvjkbce</div> : null} */}
         </div>
       </div>
       {/* Screen 3 */}
@@ -257,7 +277,13 @@ export default function Index() {
             </div>
             <div className="payment-table">table</div>
             <div className="payment">
-              <div className="payment-section-1"></div>
+              <div className="payment-section-1">
+                {loading ? (
+                  <Spinner animation="border" role="status" variant="success">
+                    <span className="sr-only">Loading...</span>
+                  </Spinner>
+                ) : null}
+              </div>
               <div className="payment-section-2">
                 <div
                   className="subtract circle"
@@ -265,9 +291,9 @@ export default function Index() {
                     setPremiumProduct({
                       name: "Premium Package",
                       price: 20,
-                      quantity: customProduct.quantity
-                        ? customProduct.quantity - 1
-                        : customProduct.quantity,
+                      quantity: premiumProduct.quantity
+                        ? premiumProduct.quantity - 1
+                        : premiumProduct.quantity,
                     })
                   }
                 >
@@ -290,7 +316,14 @@ export default function Index() {
               <div className="payment-section-3">
                 <StripeCheckout
                   stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => handleToken(token, customProduct)}
+                  token={(token) => {
+                    handleToken(token, premiumProduct);
+                    setPremiumProduct({
+                      name: "Premium Package",
+                      price: 20,
+                      quantity: 1,
+                    });
+                  }}
                   billingAddress
                   shippingAddress
                   amount={premiumProduct.price * premiumProduct.quantity * 100}
@@ -311,13 +344,19 @@ export default function Index() {
         </div>
         <div className="right">
           <div className="payment-info">
-          <div className="payment-title">
+            <div className="payment-title">
               <h1>Deluxe Package</h1>
               <h4>A deluxe service for our deluxe customers.</h4>
             </div>
             <div className="payment-table">table</div>
             <div className="payment">
-              <div className="payment-section-1"></div>
+              <div className="payment-section-1">
+                {loading ? (
+                  <Spinner animation="border" role="status" variant="success">
+                    <span className="sr-only">Loading...</span>
+                  </Spinner>
+                ) : null}
+              </div>
               <div className="payment-section-2">
                 <div
                   className="subtract circle"
@@ -325,9 +364,9 @@ export default function Index() {
                     setDeluxeProduct({
                       name: "Deluxe Package",
                       price: 20,
-                      quantity: customProduct.quantity
-                        ? customProduct.quantity - 1
-                        : customProduct.quantity,
+                      quantity: deluxeProduct.quantity
+                        ? deluxeProduct.quantity - 1
+                        : deluxeProduct.quantity,
                     })
                   }
                 >
@@ -350,7 +389,14 @@ export default function Index() {
               <div className="payment-section-3">
                 <StripeCheckout
                   stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => handleToken(token, deluxeProduct)}
+                  token={(token) => {
+                    handleToken(token, deluxeProduct);
+                    setDeluxeProduct({
+                      name: "Deluxe Package",
+                      price: 20,
+                      quantity: 1,
+                    });
+                  }}
                   billingAddress
                   shippingAddress
                   amount={deluxeProduct.price * deluxeProduct.quantity * 100}
@@ -365,13 +411,19 @@ export default function Index() {
       <div className="economy-screen-wrapper-5" id="economy">
         <div className="right">
           <div className="payment-info">
-          <div className="payment-title">
+            <div className="payment-title">
               <h1>Economy Package</h1>
               <h4>An Economic service for our economy customers.</h4>
             </div>
             <div className="payment-table">table</div>
             <div className="payment">
-              <div className="payment-section-1"></div>
+              <div className="payment-section-1">
+                {loading ? (
+                  <Spinner animation="border" role="status" variant="success">
+                    <span className="sr-only">Loading...</span>
+                  </Spinner>
+                ) : null}
+              </div>
               <div className="payment-section-2">
                 <div
                   className="subtract circle"
@@ -379,9 +431,9 @@ export default function Index() {
                     setEconomyProduct({
                       name: "Economy Package",
                       price: 20,
-                      quantity: customProduct.quantity
-                        ? customProduct.quantity - 1
-                        : customProduct.quantity,
+                      quantity: economyProduct.quantity
+                        ? economyProduct.quantity - 1
+                        : economyProduct.quantity,
                     })
                   }
                 >
@@ -404,7 +456,14 @@ export default function Index() {
               <div className="payment-section-3">
                 <StripeCheckout
                   stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => handleToken(token, economyProduct)}
+                  token={(token) => {
+                    handleToken(token, economyProduct);
+                    setEconomyProduct({
+                      name: "Economy Package",
+                      price: 20,
+                      quantity: 1,
+                    });
+                  }}
                   billingAddress
                   shippingAddress
                   amount={economyProduct.price * economyProduct.quantity * 100}
@@ -425,13 +484,19 @@ export default function Index() {
         </div>
         <div className="right">
           <div className="payment-info">
-          <div className="payment-title">
+            <div className="payment-title">
               <h1>Standard Package</h1>
               <h4>A standard service for our standard customers.</h4>
             </div>
             <div className="payment-table">table</div>
             <div className="payment">
-              <div className="payment-section-1"></div>
+              <div className="payment-section-1">
+                {loading ? (
+                  <Spinner animation="border" role="status" variant="success">
+                    <span className="sr-only">Loading...</span>
+                  </Spinner>
+                ) : null}
+              </div>
               <div className="payment-section-2">
                 <div
                   className="subtract circle"
@@ -439,9 +504,9 @@ export default function Index() {
                     setStandardProduct({
                       name: "Standard Package",
                       price: 20,
-                      quantity: customProduct.quantity
-                        ? customProduct.quantity - 1
-                        : customProduct.quantity,
+                      quantity: standardProduct.quantity
+                        ? standardProduct.quantity - 1
+                        : standardProduct.quantity,
                     })
                   }
                 >
@@ -453,8 +518,8 @@ export default function Index() {
                 <div
                   className="add circle"
                   onClick={() =>
-                    setPremiumProduct({
-                      name: "Premium Package",
+                    setStandardProduct({
+                      name: "Standard Package",
                       price: 20,
                       quantity: standardProduct.quantity + 1,
                     })
@@ -466,13 +531,20 @@ export default function Index() {
               <div className="payment-section-3">
                 <StripeCheckout
                   stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => handleToken(token, standardProduct)}
+                  token={(token) => {
+                    handleToken(token, standardProduct);
+                    setStandardProduct({
+                      name: "Standard Package",
+                      price: 20,
+                      quantity: 1,
+                    })
+                  }}
                   billingAddress
                   shippingAddress
                   amount={
                     standardProduct.price * standardProduct.quantity * 100
                   }
-                  name={setStandardProduct.name}
+                  name={standardProduct.name}
                 />
               </div>
             </div>

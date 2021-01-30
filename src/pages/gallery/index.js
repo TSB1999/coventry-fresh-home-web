@@ -69,7 +69,7 @@ export default function index() {
         {/* <Navbar /> */}
 
         <div className="gallery-items-wrapper">
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper one">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio1})` }}
@@ -81,7 +81,7 @@ export default function index() {
               </h4>
             </div>
           </div>
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper two">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio2})` }}
@@ -93,7 +93,7 @@ export default function index() {
               </h4>
             </div>
           </div>
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper three">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio3})` }}
@@ -105,7 +105,7 @@ export default function index() {
               </h4>
             </div>
           </div>
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper four">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio4})` }}
@@ -117,7 +117,7 @@ export default function index() {
               </h4>
             </div>
           </div>
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper five">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio5})` }}
@@ -129,7 +129,7 @@ export default function index() {
               </h4>
             </div>
           </div>
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper six">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio6})` }}
@@ -141,7 +141,7 @@ export default function index() {
               </h4>
             </div>
           </div>
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper seven">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio7})` }}
@@ -153,7 +153,7 @@ export default function index() {
               </h4>
             </div>
           </div>
-          <div className="gallery-item-wrapper">
+          <div className="gallery-item-wrapper eight">
             <div
               className="item-img"
               style={{ backgroundImage: `url(${portfolio7})` }}
