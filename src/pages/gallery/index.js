@@ -3,7 +3,6 @@ import "./styles.css";
 import { Link } from "react-scroll";
 
 // Components
-import Navbar from "../../components/navbar";
 import portfolio1 from "./images/instagram/IMG_1333.jpg";
 import portfolio2 from "./images/instagram/IMG_1334.jpg";
 import portfolio3 from "./images/instagram/IMG_1335.jpg";
@@ -57,7 +56,7 @@ export default function index() {
                     textTransform : "uppercase"
                   }}
                 >
-                  See Gallery
+                  Enter Gallery
                 </button>
               </Link>
             </div>

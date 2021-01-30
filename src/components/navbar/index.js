@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link as ScrollLink } from "react-scroll";
-import logo from "./images/400dpiLogo2.jpeg";
+import logo from "./images/editedlogo.jpeg";
 
 // Styling
 import "./styles.css";
@@ -26,7 +26,7 @@ export default function index() {
           ignoreCancelEvents={false}
         >
           <Link to="/">
-            <img src={logo} style={{ width: "80px" }} alt="logo" />
+            <img src={logo} style={{ width: "8rem" }} alt="logo" />
           </Link>
         </ScrollLink>
       </div>

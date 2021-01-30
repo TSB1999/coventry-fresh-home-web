@@ -54,6 +54,8 @@
   border-radius: 15px;
   padding: 35px;
   box-shadow: 8px 8px grey;
+  /* filter: drop-shadow(0pc 5px 3px black); */
+  animation: drop 1.3s ease;
 }
 
 .introduction-2 {
@@ -64,7 +66,8 @@
   opacity: 0.9;
   border-radius: 20px;
   padding: 35px;
-  box-shadow: 15px 15px grey;
+  box-shadow: 8px 8px grey;
+  animation: drop 1.3s ease;
 }
 
 .header-home {
@@ -155,4 +158,15 @@
   margin: 10px 20px 10px 20px;
   opacity: 0.7;
   border-radius: 20px;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
