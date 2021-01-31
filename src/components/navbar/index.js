@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 
 export default function index() {
   return (
-    <header>
-      <div class="logo-container">
+    <div className="navbar-wrapper">
+      <div className="logo-wrapper">
         <ScrollLink
           activeClass="active"
           to="home"
@@ -26,82 +26,170 @@ export default function index() {
           ignoreCancelEvents={false}
         >
           <Link to="/">
-            <img src={logo} style={{ width: "8rem" }} alt="logo" />
+            <img src={logo} style={{ width: "10rem" }} alt="logo" />
           </Link>
         </ScrollLink>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li>
+      <div className="main-wrapper">
+        <div class="nav-links">
+          <div>
             <div className="item">
-              <div style={{ flex: 1 }}>
-                <div className="icon">
-                  <ScrollLink
-                    activeClass="active"
-                    to="bookings"
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                    // offset={50}
-                    duration={500}
-                    // delay={1000}
-                    isDynamic={true}
-                    ignoreCancelEvents={false}
-                  >
-                    <Link class="nav-link" to="/bookings">
-                      <i class="fas fa-calendar-week fa-2x"></i>
-                      {/* BOOKINGS */}
-                    </Link>
-                  </ScrollLink>
-                </div>
+              <div className="icon">
+                <ScrollLink
+                  activeClass="active"
+                  to="bookings"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  // offset={50}
+                  duration={500}
+                  // delay={1000}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <Link class="nav-link" to="/bookings">
+                    <i class="fas fa-calendar-week fa-2x size"></i>
+                    {/* BOOKINGS */}
+                  </Link>
+                </ScrollLink>
               </div>
               <div className="nav-text">ENQUIRIES</div>
             </div>
-          </li>
-          <li>
+          </div>
+          <div>
             <div className="item">
-              <div style={{ flex: 1 }}>
-                <div className="icon">
-                  <ScrollLink
-                    activeClass="active"
-                    to="top-gallery"
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                    // offset={50}
-                    duration={500}
-                    // delay={1000}
-                    isDynamic={true}
-                    ignoreCancelEvents={false}
-                  >
-                    <Link class="nav-link" to="/gallery">
-                      <i class="fas fa-images fa-2x"></i>
+              <div className="icon">
+                <ScrollLink
+                  activeClass="active"
+                  to="top-gallery"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  // offset={50}
+                  duration={500}
+                  // delay={1000}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <Link class="nav-link" to="/gallery">
+                    <i class="fas fa-images fa-2x size"></i>
 
-                      {/* GALLERY */}
-                    </Link>
-                  </ScrollLink>
-                </div>
+                    {/* GALLERY */}
+                  </Link>
+                </ScrollLink>
               </div>
               <div className="nav-text">GALLERY</div>
             </div>
-          </li>
-          <li>
+          </div>
+          <div>
             <div className="item">
               <div className="icon">
                 <Link class="nav-link" to="/contact">
-                  <i class="fas fa-info fa-2x"></i>
+                  <i class="fas fa-info fa-2x size"></i>
                   {/* CONTACT */}
                 </Link>
               </div>
               <div className="nav-text">INFO</div>
             </div>
-          </li>
-        </ul>
-      </nav>
-      <div class="cart">
-        {/* <img src="./img/cart.svg" alt="cart" /> */}
+          </div>
+        </div>
+      </div>
+      <div className="donation-wrapper">
         <i class="fas fa-donate fa-2x"></i>
       </div>
-    </header>
+    </div>
+
+    // <header>
+    //   <div class="logo-container">
+    //     <ScrollLink
+    //       activeClass="active"
+    //       to="home"
+    //       spy={true}
+    //       smooth={true}
+    //       hashSpy={true}
+    //       // offset={50}
+    //       duration={500}
+    //       // delay={1000}
+    //       isDynamic={true}
+    //       ignoreCancelEvents={false}
+    //     >
+    //       <Link to="/">
+    //         <img src={logo} style={{ width: "10rem" }} alt="logo" />
+    //       </Link>
+    //     </ScrollLink>
+    //   </div>
+    //   <nav>
+    //     <ul class="nav-links">
+    //       <li>
+    //         <div className="item">
+    //           <div style={{ flex: 1 }}>
+    //             <div className="icon">
+    //               <ScrollLink
+    //                 activeClass="active"
+    //                 to="bookings"
+    //                 spy={true}
+    //                 smooth={true}
+    //                 hashSpy={true}
+    //                 // offset={50}
+    //                 duration={500}
+    //                 // delay={1000}
+    //                 isDynamic={true}
+    //                 ignoreCancelEvents={false}
+    //               >
+    //                 <Link class="nav-link" to="/bookings">
+    //                   <i class="fas fa-calendar-week fa-2x"></i>
+    //                   {/* BOOKINGS */}
+    //                 </Link>
+    //               </ScrollLink>
+    //             </div>
+    //           </div>
+    //           <div className="nav-text">ENQUIRIES</div>
+    //         </div>
+    //       </li>
+    //       <li>
+    //         <div className="item">
+    //           <div style={{ flex: 1 }}>
+    //             <div className="icon">
+    //               <ScrollLink
+    //                 activeClass="active"
+    //                 to="top-gallery"
+    //                 spy={true}
+    //                 smooth={true}
+    //                 hashSpy={true}
+    //                 // offset={50}
+    //                 duration={500}
+    //                 // delay={1000}
+    //                 isDynamic={true}
+    //                 ignoreCancelEvents={false}
+    //               >
+    //                 <Link class="nav-link" to="/gallery">
+    //                   <i class="fas fa-images fa-2x"></i>
+
+    //                   {/* GALLERY */}
+    //                 </Link>
+    //               </ScrollLink>
+    //             </div>
+    //           </div>
+    //           <div className="nav-text">GALLERY</div>
+    //         </div>
+    //       </li>
+    //       <li>
+    //         <div className="item">
+    //           <div className="icon">
+    //             <Link class="nav-link" to="/contact">
+    //               <i class="fas fa-info fa-2x"></i>
+    //               {/* CONTACT */}
+    //             </Link>
+    //           </div>
+    //           <div className="nav-text">INFO</div>
+    //         </div>
+    //       </li>
+    //     </ul>
+    //   </nav>
+    //   <div class="cart">
+    //     {/* <img src="./img/cart.svg" alt="cart" /> */}
+    //     <i class="fas fa-donate fa-2x"></i>
+    //   </div>
+    // </header>
   );
 }

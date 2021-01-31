@@ -57,11 +57,11 @@ export default function index() {
             <div class="intro-text">
               <div className="header-home">
                 <h1>
-                  Professional Sanitary <br /> and Gardening Services
+                  Domestic Cleaning & Gardening Services
                 </h1>
               </div>
               <div className="sub-header-home">
-                <h3>GET YOUR SAME DAY QUOTE NOW!</h3>
+                <h3>Get Started With Your Same Day Quote Now!</h3>
               </div>
             </div>
 
@@ -96,7 +96,6 @@ export default function index() {
               </Link>
             </div>
           </div>
-          <div class="cover"></div>
         </section>
 
         <img class="big-circle" src="./img/big-eclipse.svg" alt="" />
@@ -108,7 +107,7 @@ export default function index() {
 
       <div className="home-screen-wrapper-2" id="gardening">
         <section class="presentation">
-          <div class="introduction-2">
+          <div class="introduction-2 height">
             <Form
               style={{
                 color: "#3ab34a",
@@ -123,10 +122,9 @@ export default function index() {
                 <Form.Control
                   type="text"
                   name="name"
-                  placeholder="David Keys"
+                  // placeholder="David Keys"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -138,10 +136,9 @@ export default function index() {
                 <Form.Control
                   type="email"
                   name="email"
-                  placeholder="name@example.com"
+                  // placeholder="name@example.com"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -154,8 +151,7 @@ export default function index() {
                   as="select"
                   name="garden-job"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -175,8 +171,7 @@ export default function index() {
                   as="select"
                   name="garden-size"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -196,10 +191,9 @@ export default function index() {
                   as="textarea"
                   name="message"
                   rows={3}
-                  placeholder="Make your enquiry"
+                  // placeholder="Make your enquiry"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -276,7 +270,7 @@ export default function index() {
 
       <div className="home-screen-wrapper-3" id="cleaning">
         <section class="presentation">
-          <div class="introduction">
+          <div class="introduction height">
             <Form
               style={{
                 color: "#3ab34a",
@@ -291,10 +285,9 @@ export default function index() {
                 <Form.Control
                   type="text"
                   name="name1"
-                  placeholder="David Keys"
+                  // placeholder="David Keys"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -306,10 +299,9 @@ export default function index() {
                 <Form.Control
                   type="email"
                   name="email1"
-                  placeholder="name@example.com"
+                  // placeholder="name@example.com"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -322,8 +314,7 @@ export default function index() {
                   as="select"
                   name="property-type"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -343,8 +334,7 @@ export default function index() {
                   as="select"
                   name="no-rooms"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
@@ -364,10 +354,9 @@ export default function index() {
                   as="textarea"
                   name="message1"
                   rows={3}
-                  placeholder="Make your enquiry"
+                  // placeholder="Make your enquiry"
                   style={{
-                    backgroundColor: "grey",
-                    color: "#fff",
+                    color: "#979F8B",
                     fontWeight: "bold",
                     textTransform: "uppercase",
                     fontSize: 12,
