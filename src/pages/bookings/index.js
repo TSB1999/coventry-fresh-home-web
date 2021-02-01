@@ -3,10 +3,20 @@ import "./styles.css";
 
 import { Link } from "react-scroll";
 import Spinner from "react-bootstrap/Spinner";
+import Form from "react-bootstrap/Form";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
+import image from "./images/clean.jpeg";
+import image1 from "./images/garden.jpeg";
+import small from "./images/small-eclipse.svg";
+import medium from "./images/mid-eclipse.svg";
+import large from "./images/big-eclipse.svg";
 
 toast.configure();
 
@@ -62,494 +72,288 @@ export default function Index() {
   return (
     <div className="page">
       {/* Screen 1 */}
-      <div className="bookings-screen-wrapper" id="bookings">
-        <div className="box0 box">
-          <div className="title">
-            <h5>Custom</h5>
+      <div className="plans-screen-wrapper" id="bookings">
+        <div className="silver-clean">
+          <div className="top-silver">
+            <h1>SILVER</h1>
           </div>
+          <div className="body-silver">
+            <div>
+              <h3>suggest a date...</h3>
+            </div>
+            <Calendar
+              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
+            />
+            <div>
+              <Form.Group controlId="exampleForm.ControlSelect2">
+                <Form.Check
+                  inline
+                  label="Dishes"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
+                />
+                <Form.Check
+                  inline
+                  label="Vaccuming"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  // disabled
+                  label="Mopping / Sweeping "
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-3`}
+                />
 
-          <div className="button-section">
-            <Link
-              activeClass="active"
-              to="custom"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              duration={500}
-              isDynamic={true}
-              ignoreCancelEvents={false}
-            >
-              <div className="button">
-                <h5>discover. </h5>
-              </div>
-            </Link>
+                <Form.Check
+                  inline
+                  label="Bins"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
+                />
+                <Form.Check
+                  inline
+                  label="Surfaces"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  // disabled
+                  label="Mirrors "
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-3`}
+                />
+              </Form.Group>
+            </div>
+          </div>
+          <div className="footer-silver">
+            <StripeCheckout
+              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+              token={(token) => {
+                handleToken(token, customProduct);
+                setCustomProduct({
+                  name: "Custom Package",
+                  price: 20,
+                  quantity: 1,
+                });
+              }}
+              billingAddress
+              shippingAddress
+              amount={customProduct.price * customProduct.quantity * 100}
+              name={customProduct.name}
+            />
           </div>
         </div>
-
-        <div className="box1 box">
-          <div className="title">
-            <h5>STANDARD</h5>
+        <div className="gold-clean">
+          <div className="top-silver">
+            <h1>GOLD</h1>
           </div>
+          <div className="body-silver">
+            <div>
+              <h3>suggest a date...</h3>
+            </div>
+            <Calendar
+              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
+            />
+            <div>
+              <Form.Group controlId="exampleForm.ControlSelect2">
+                <Form.Check
+                  inline
+                  label="Oven Clean"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
+                />
+                <Form.Check
+                  inline
+                  label="Fridge Clean"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  // disabled
+                  label="Organizing "
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-3`}
+                />
+                <Form.Check
+                  inline
+                  label="Folding"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
+                />
+                <Form.Check
+                  inline
+                  label="Beddings"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  // disabled
+                  label="Windows "
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-3`}
+                />
 
-          <div className="button-section">
-            <Link
-              activeClass="active"
-              to="standard"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              duration={500}
-              isDynamic={true}
-              ignoreCancelEvents={false}
-            >
-              <div className="button">
-                <h5>discover.</h5>
-              </div>
-            </Link>
+                <Form.Check
+                  inline
+                  label="Cupboard Clean"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
+                />
+              </Form.Group>
+            </div>
           </div>
-        </div>
-
-        <div className="box2 box">
-          <div className="title">
-            <h5>Economy</h5>
-          </div>
-
-          <div className="button-section">
-            <Link
-              activeClass="active"
-              to="economy"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              duration={500}
-              isDynamic={true}
-              ignoreCancelEvents={false}
-            >
-              <div className="button">
-                <h5>discover.</h5>
-              </div>
-            </Link>
-          </div>
-        </div>
-
-        <div className="box3 box">
-          <div className="title">
-            <h5>DELUXE</h5>
-          </div>
-
-          <div className="button-section">
-            <Link
-              activeClass="active"
-              to="deluxe"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              duration={500}
-              isDynamic={true}
-              ignoreCancelEvents={false}
-            >
-              <div className="button">
-                <h5 style={{ marginTop: "8px" }}>discover.</h5>
-              </div>
-            </Link>
-          </div>
-        </div>
-
-        <div className="box4 box">
-          <div className="title">
-            <h5>PREMIUM</h5>
-          </div>
-
-          <div className="button-section">
-            <Link
-              activeClass="active"
-              to="premium"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              duration={500}
-              isDynamic={true}
-              ignoreCancelEvents={false}
-            >
-              <div className="button">
-                <h5>discover.</h5>
-              </div>
-            </Link>
+          <div className="footer-silver">
+            <StripeCheckout
+              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+              token={(token) => {
+                handleToken(token, customProduct);
+                setCustomProduct({
+                  name: "Custom Package",
+                  price: 20,
+                  quantity: 1,
+                });
+              }}
+              billingAddress
+              shippingAddress
+              amount={customProduct.price * customProduct.quantity * 100}
+              name={customProduct.name}
+            />
           </div>
         </div>
+        <div className="poster">
+          <img src={image} style={{ height: "70%", borderRadius: "20px" }} />
+        </div>
+
+        <div className="to-gardening">Looking For Gardening Services?</div>
+        {/* <div className="silver-garden">x</div>
+        <div className="gold-garden">x</div> */}
+        {/* <img className="big-circle" src={large} alt="" />
+        <img className="medium-circle" src={medium} alt="" />
+        <img className="small-circle" src={small} alt="" /> */}
       </div>
       {/* Screen 2 */}
-      <div className="custom-screen-wrapper-2" id="custom">
-        <div className="left">
-          <div className="description">dre</div>
-        </div>
-        <div className="right">
-          <div className="payment-info">
-            <div className="payment-title">
-              <h1>custom package</h1>
-              <h4>A custom package for custom needs.</h4>
+      <div className="plans-screen-wrapper" id="custom">
+        <div className="silver-clean">
+          <div className="top-silver">
+            <h1>SILVER</h1>
+          </div>
+          <div className="body-silver">
+            <div>
+              <h3>suggest a date...</h3>
             </div>
-            <div className="payment-table">
-              {/* <table style = {{width : '100%',}}>
-                <tr>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Age</th>
-                </tr>
-                <tr>
-                  <td>Jill</td>
-                  <td>Smith</td>
-                  <td>50</td>
-                </tr>
-                <tr>
-                  <td>Eve</td>
-                  <td>Jackson</td>
-                  <td>94</td>
-                </tr>
-              </table> */}
-            </div>
-            <div className="payment">
-              <div className="payment-section-1">
-                {loading ? (
-                  <Spinner animation="border" role="status" variant="success">
-                    <span className="sr-only">Loading...</span>
-                  </Spinner>
-                ) : null}
-              </div>
-              <div className="payment-section-2">
-                <div
-                  className="subtract circle"
-                  onClick={() =>
-                    setCustomProduct({
-                      name: "Custom Package",
-                      price: 20,
-                      quantity: customProduct.quantity
-                        ? customProduct.quantity - 1
-                        : customProduct.quantity,
-                    })
-                  }
-                >
-                  <button>-1</button>
-                </div>
-                <div className="quantity circle">{customProduct.quantity}</div>
-                <div
-                  className="add circle"
-                  onClick={() =>
-                    setCustomProduct({
-                      name: "Custom Package",
-                      price: 20,
-                      quantity: customProduct.quantity + 1,
-                    })
-                  }
-                >
-                  <button>+1</button>
-                </div>
-              </div>
-              <div className="payment-section-3">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => {
-                    handleToken(token, customProduct);
-                    setCustomProduct({
-                      name: "Custom Package",
-                      price: 20,
-                      quantity: 1,
-                    });
-                  }}
-                  billingAddress
-                  shippingAddress
-                  amount={customProduct.price * customProduct.quantity * 100}
-                  name={customProduct.name}
+            <Calendar
+              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
+            />
+            <div>
+              <Form.Group controlId="exampleForm.ControlSelect2">
+                <Form.Check
+                  inline
+                  label="Lawn Mowing"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
                 />
-              </div>
+                <Form.Check
+                  inline
+                  label="Garden Litter"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  // disabled
+                  label="General Garden Care"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-3`}
+                />
+              </Form.Group>
             </div>
           </div>
-          {/* {loading ? <div className="loader">rvjkbce</div> : null} */}
-        </div>
-      </div>
-      {/* Screen 3 */}
-      <div className="premium-screen-wrapper-3" id="premium">
-        <div className="right">
-          <div className="payment-info">
-            <div className="payment-title">
-              <h1>Premium Package</h1>
-              <h4>A premium service for our premuim customers.</h4>
-            </div>
-            <div className="payment-table">table</div>
-            <div className="payment">
-              <div className="payment-section-1">
-                {loading ? (
-                  <Spinner animation="border" role="status" variant="success">
-                    <span className="sr-only">Loading...</span>
-                  </Spinner>
-                ) : null}
-              </div>
-              <div className="payment-section-2">
-                <div
-                  className="subtract circle"
-                  onClick={() =>
-                    setPremiumProduct({
-                      name: "Premium Package",
-                      price: 20,
-                      quantity: premiumProduct.quantity
-                        ? premiumProduct.quantity - 1
-                        : premiumProduct.quantity,
-                    })
-                  }
-                >
-                  <button>-1</button>
-                </div>
-                <div className="quantity circle">{premiumProduct.quantity}</div>
-                <div
-                  className="add circle"
-                  onClick={() =>
-                    setPremiumProduct({
-                      name: "Premium Package",
-                      price: 20,
-                      quantity: premiumProduct.quantity + 1,
-                    })
-                  }
-                >
-                  <button>+1</button>
-                </div>
-              </div>
-              <div className="payment-section-3">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => {
-                    handleToken(token, premiumProduct);
-                    setPremiumProduct({
-                      name: "Premium Package",
-                      price: 20,
-                      quantity: 1,
-                    });
-                  }}
-                  billingAddress
-                  shippingAddress
-                  amount={premiumProduct.price * premiumProduct.quantity * 100}
-                  name={premiumProduct.name}
-                />
-              </div>
-            </div>
+          <div className="footer-silver">
+            <StripeCheckout
+              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+              token={(token) => {
+                handleToken(token, customProduct);
+                setCustomProduct({
+                  name: "Custom Package",
+                  price: 20,
+                  quantity: 1,
+                });
+              }}
+              billingAddress
+              shippingAddress
+              amount={customProduct.price * customProduct.quantity * 100}
+              name={customProduct.name}
+            />
           </div>
         </div>
-        <div className="left">
-          <div className="description">dre</div>
-        </div>
-      </div>
-      {/* Screen 4 */}
-      <div className="deluxe-screen-wrapper-4" id="deluxe">
-        <div className="left">
-          <div className="description">dre</div>
-        </div>
-        <div className="right">
-          <div className="payment-info">
-            <div className="payment-title">
-              <h1>Deluxe Package</h1>
-              <h4>A deluxe service for our deluxe customers.</h4>
+        <div className="gold-clean">
+          <div className="top-silver">
+            <h1>GOLD</h1>
+          </div>
+          <div className="body-silver">
+            <div>
+              <h3>suggest a date...</h3>
             </div>
-            <div className="payment-table">table</div>
-            <div className="payment">
-              <div className="payment-section-1">
-                {loading ? (
-                  <Spinner animation="border" role="status" variant="success">
-                    <span className="sr-only">Loading...</span>
-                  </Spinner>
-                ) : null}
-              </div>
-              <div className="payment-section-2">
-                <div
-                  className="subtract circle"
-                  onClick={() =>
-                    setDeluxeProduct({
-                      name: "Deluxe Package",
-                      price: 20,
-                      quantity: deluxeProduct.quantity
-                        ? deluxeProduct.quantity - 1
-                        : deluxeProduct.quantity,
-                    })
-                  }
-                >
-                  <button>-1</button>
-                </div>
-                <div className="quantity circle">{deluxeProduct.quantity}</div>
-                <div
-                  className="add circle"
-                  onClick={() =>
-                    setDeluxeProduct({
-                      name: "Deluxe Package",
-                      price: 20,
-                      quantity: deluxeProduct.quantity + 1,
-                    })
-                  }
-                >
-                  <button>+1</button>
-                </div>
-              </div>
-              <div className="payment-section-3">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => {
-                    handleToken(token, deluxeProduct);
-                    setDeluxeProduct({
-                      name: "Deluxe Package",
-                      price: 20,
-                      quantity: 1,
-                    });
-                  }}
-                  billingAddress
-                  shippingAddress
-                  amount={deluxeProduct.price * deluxeProduct.quantity * 100}
-                  name={deluxeProduct.name}
+            <Calendar
+              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
+            />
+            <div>
+              <Form.Group controlId="exampleForm.ControlSelect2">
+                <Form.Check
+                  inline
+                  label="Flower Bed Weeding"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
                 />
-              </div>
+                <Form.Check
+                  inline
+                  label="Branch and bush Trimmings"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  // disabled
+                  label="Sidewalk / Driveway Weeding "
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-3`}
+                />
+              </Form.Group>
             </div>
           </div>
-        </div>
-      </div>
-      Ì{/* Screen 5 */}
-      <div className="economy-screen-wrapper-5" id="economy">
-        <div className="right">
-          <div className="payment-info">
-            <div className="payment-title">
-              <h1>Economy Package</h1>
-              <h4>An Economic service for our economy customers.</h4>
-            </div>
-            <div className="payment-table">table</div>
-            <div className="payment">
-              <div className="payment-section-1">
-                {loading ? (
-                  <Spinner animation="border" role="status" variant="success">
-                    <span className="sr-only">Loading...</span>
-                  </Spinner>
-                ) : null}
-              </div>
-              <div className="payment-section-2">
-                <div
-                  className="subtract circle"
-                  onClick={() =>
-                    setEconomyProduct({
-                      name: "Economy Package",
-                      price: 20,
-                      quantity: economyProduct.quantity
-                        ? economyProduct.quantity - 1
-                        : economyProduct.quantity,
-                    })
-                  }
-                >
-                  <button>-1</button>
-                </div>
-                <div className="quantity circle">{economyProduct.quantity}</div>
-                <div
-                  className="add circle"
-                  onClick={() =>
-                    setEconomyProduct({
-                      name: "Economy Package",
-                      price: 20,
-                      quantity: economyProduct.quantity + 1,
-                    })
-                  }
-                >
-                  <button>+1</button>
-                </div>
-              </div>
-              <div className="payment-section-3">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => {
-                    handleToken(token, economyProduct);
-                    setEconomyProduct({
-                      name: "Economy Package",
-                      price: 20,
-                      quantity: 1,
-                    });
-                  }}
-                  billingAddress
-                  shippingAddress
-                  amount={economyProduct.price * economyProduct.quantity * 100}
-                  name={economyProduct.name}
-                />
-              </div>
-            </div>
+          <div className="footer-silver">
+            <StripeCheckout
+              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+              token={(token) => {
+                handleToken(token, customProduct);
+                setCustomProduct({
+                  name: "Custom Package",
+                  price: 20,
+                  quantity: 1,
+                });
+              }}
+              billingAddress
+              shippingAddress
+              amount={customProduct.price * customProduct.quantity * 100}
+              name={customProduct.name}
+            />
           </div>
         </div>
-        <div className="left">
-          <div className="description">dre</div>
+        <div className="poster">
+          <img src={image1} style={{ height: "70%", borderRadius: "20px" }} />
         </div>
-      </div>
-      {/* Screen 6 */}
-      <div className="standard-screen-wrapper-6" id="standard">
-        <div className="left">
-          <div className="description">dre</div>
-        </div>
-        <div className="right">
-          <div className="payment-info">
-            <div className="payment-title">
-              <h1>Standard Package</h1>
-              <h4>A standard service for our standard customers.</h4>
-            </div>
-            <div className="payment-table">table</div>
-            <div className="payment">
-              <div className="payment-section-1">
-                {loading ? (
-                  <Spinner animation="border" role="status" variant="success">
-                    <span className="sr-only">Loading...</span>
-                  </Spinner>
-                ) : null}
-              </div>
-              <div className="payment-section-2">
-                <div
-                  className="subtract circle"
-                  onClick={() =>
-                    setStandardProduct({
-                      name: "Standard Package",
-                      price: 20,
-                      quantity: standardProduct.quantity
-                        ? standardProduct.quantity - 1
-                        : standardProduct.quantity,
-                    })
-                  }
-                >
-                  <button>-1</button>
-                </div>
-                <div className="quantity circle">
-                  {standardProduct.quantity}
-                </div>
-                <div
-                  className="add circle"
-                  onClick={() =>
-                    setStandardProduct({
-                      name: "Standard Package",
-                      price: 20,
-                      quantity: standardProduct.quantity + 1,
-                    })
-                  }
-                >
-                  <button>+1</button>
-                </div>
-              </div>
-              <div className="payment-section-3">
-                <StripeCheckout
-                  stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                  token={(token) => {
-                    handleToken(token, standardProduct);
-                    setStandardProduct({
-                      name: "Standard Package",
-                      price: 20,
-                      quantity: 1,
-                    })
-                  }}
-                  billingAddress
-                  shippingAddress
-                  amount={
-                    standardProduct.price * standardProduct.quantity * 100
-                  }
-                  name={standardProduct.name}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <div className="to-gardening">Looking For Cleaning Services?</div>
+        {/* <div className="silver-garden">x</div>
+        <div className="gold-garden">x</div> */}
+        {/* <img className="big-circle" src={large} alt="" />
+        <img className="medium-circle" src={medium} alt="" />
+        <img className="small-circle" src={small} alt="" /> */}
       </div>
     </div>
   );

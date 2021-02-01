@@ -17,6 +17,141 @@
   background-blend-mode: hard-light; */
 }
 
+.silver-clean {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-silver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: red;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.body-silver {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 6;
+  background-color: green;
+  width: 100%;
+}
+
+.footer-silver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: blue;
+  width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.plans-screen-wrapper {
+  /* background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 19vh 5vh 5vh 5vh;
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "clean-s plan clean-g"
+    ". to-gardening .";
+  /* background-color: #e6e6e6 */
+}
+
+.big-circle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  opacity: 0.8;
+  height: 80%;
+}
+
+.medium-circle {
+  position: absolute;
+  top: 32%;
+  right: 40%;
+  z-index: -1;
+  opacity: 0.8;
+  height: 60%;
+}
+
+.small-circle {
+  position: absolute;
+  bottom: 0px;
+  left: 3%;
+  opacity: 1;
+  z-index: -1;
+}
+
+.silver-clean {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  grid-area: clean-s;
+  /* background-color: #3ab34a; */
+  border: 2px solid #3ab34a;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5vh 0 2.5vh 0;
+  border-radius: 2.5vh;
+  text-align: center;
+}
+
+.gold-clean {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  grid-area: clean-g;
+  border: 2px solid #3ab34a;
+  /* background-color: #3ab34a; */
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 2.5vh 0 2.5vh 0;
+  border-radius: 2.5vh;
+  text-align: center;
+}
+
+.poster {
+  display: flex;
+  grid-area: plan;
+  /* background-color: #292929; */
+  justify-content: center;
+}
+
+.to-gardening {
+  grid-area: to-gardening;
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  padding : 5px 10px 5px 10px;
+  display : flex;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  font-weight: bold;
+}
+
+.silver-garden {
+  grid-area: garden-s;
+  background-color: yellow;
+}
+
+.gold-garden {
+  grid-area: garden-g;
+  background-color: blue;
+}
+
 .loader {
   height: 200px;
   background-color: #8cc540;

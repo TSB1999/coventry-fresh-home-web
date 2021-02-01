@@ -37,6 +37,10 @@ header {
   min-width: 10rem;
 }
 
+.home-1 {
+  display: none
+}
+
 .main-wrapper {
   display: flex;
   flex: 2;
@@ -45,6 +49,7 @@ header {
   list-style: none;
   /* background-color: red; */
   /* padding-top: 20px; */
+  padding : 20px 0 20px 0
 }
 
 .donation-wrapper {
@@ -106,7 +111,7 @@ nav {
   /* justify-items: center; */
   list-style: none;
   /* background-color: red; */
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 .nav-link {
@@ -123,10 +128,10 @@ nav {
   /* align-items: center; */
 }
 
-/* .icon {
+.icon {
   margin: 5px;
   flex: 1;
-} */
+}
 
 .cart {
   /* background: lightgray; */

@@ -32,6 +32,30 @@ export default function index() {
       </div>
       <div className="main-wrapper">
         <div class="nav-links">
+          <div className="home-1">
+            <div className="item">
+              <div className="icon">
+                <ScrollLink
+                  activeClass="active"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  // offset={50}
+                  duration={500}
+                  // delay={1000}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <Link class="nav-link" to="/bookings">
+                    <i class="fas fa-home fa-2x size"></i>
+                    {/* BOOKINGS */}
+                  </Link>
+                </ScrollLink>
+              </div>
+              <div className="nav-text">HOME</div>
+            </div>
+          </div>
           <div>
             <div className="item">
               <div className="icon">
@@ -81,7 +105,7 @@ export default function index() {
               <div className="nav-text">GALLERY</div>
             </div>
           </div>
-          <div>
+          <div className="info">
             <div className="item">
               <div className="icon">
                 <Link class="nav-link" to="/contact">

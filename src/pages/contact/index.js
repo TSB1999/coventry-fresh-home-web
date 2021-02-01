@@ -11,9 +11,9 @@ export default function index() {
         <div className="contact-container">
           <div className="contact-header">
             {/* <h2>Get in Contact...</h2> */}
-            
           </div>
           <div className="contact-description">
+
             <div className="email box">
               <div className="icon">
                 <i class="fas fa-envelope-open-text fa-3x"></i>
@@ -22,12 +22,20 @@ export default function index() {
                 <h5>coventryfreshhome@gmail.com</h5>
               </div>
             </div>
+            <div className="insta box">
+              <div className="icon">
+                <i class="fab fa-instagram fa-3x"></i>
+              </div>
+              <div className="content">
+                <h5>coventryfreshhome</h5>
+              </div>
+            </div>
             <div className="phone box">
               <div className="icon">
                 <i class="fas fa-phone fa-3x"></i>
               </div>
               <div className="content">
-                <h5>+44 (0) 7457 396 153</h5>
+                <h5>+44 (0) 737 987 5115</h5>
               </div>
             </div>
             <div className="phone box">
