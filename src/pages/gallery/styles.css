@@ -4,11 +4,11 @@
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
   /* background-image: url(./images/cleanoffice+pic.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url("./images/philipp-berndt-5i0GnoTTjSE-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-    url("./images/cleanoffice+pic.jpg");
   height: 100vh;
   display: flex;
   /* background-color: #84D78F;
@@ -28,15 +28,61 @@
   display: flex;
 }
 
+.bedrooms {
+  display: flex;
+  flex: 1;
+  /* background-color: red; */
+}
+
+.button-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 13px;
+}
+
+.inline-styles {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  color: #3ab34a;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: "white";
+  text-transform: uppercase;
+  align-items: "center";
+  border: "none";
+}
+
+.kitchen {
+  display: flex;
+  flex: 1;
+  /* background-color: blue; */
+}
+.bathrooms {
+  display: flex;
+  flex: 1;
+  /* background-color: yellow; */
+}
+.gardens {
+  display: flex;
+  flex: 1;
+  /* background-color: green; */
+}
+
 .gallery-header-wrapper {
-  margin: 21vh 5vh 5vh 5vh;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  /* background-color:purple; */
+  margin: 16vh 5vh 5vh 5vh;
   border-radius: 10px;
   opacity: 0.8;
   animation: drop 1.3s ease;
 }
 
 .gallery-header-background {
-  background-color: #292929;
+  background-color: #fff;
   opacity: 1;
   padding: 15px;
   margin: 0 15vh 0 15vh;
@@ -73,6 +119,10 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   margin: 8vh 2vh 0vh 2vh;
+}
+
+.button-row {
+  display: flex;
 }
 
 .btn {

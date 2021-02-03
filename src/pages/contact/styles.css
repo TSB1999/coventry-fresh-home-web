@@ -29,7 +29,7 @@
 }
 
 .contact-container {
-  background-color: #292929;
+  background-color: #fff;
   grid-area: container;
   border-radius: 15px;
   opacity: 0.8;
@@ -68,6 +68,7 @@
 .contact-description h5 {
   color: #3ab34a;
   text-shadow: 1px 1.5px #8cc540;
+  font-size: 18px;
   font-weight: 550;
   text-transform: uppercase;
   /* font-style: italic; */

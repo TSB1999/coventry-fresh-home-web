@@ -105,13 +105,15 @@ export default function index() {
 
       <div className="home-screen-wrapper-2" id="gardening">
         <section class="presentation">
-          <div class="introduction-2 height">
+          <div class="introduction-2 height non">
             <div className="form-section">
               <Form
                 style={{
                   color: "#3ab34a",
                   fontWeight: "bold",
                   fontSize: 15,
+                  textShadow: '1px 1.5px #8cc540',
+                  textAlign : 'center',
                   textTransform: "uppercase",
                 }}
                 onSubmit={sendGardeningEmail}
@@ -127,6 +129,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
+                      textAlign : 'center',
                     }}
                   />
                 </Form.Group>
@@ -141,10 +144,11 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
+                      textAlign : 'center',
                     }}
                   />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlSelect1">
+                <Form.Group controlId="exampleForm.ControlSelect1" style = {{margin: '40px 0 40px 0'}}>
                   <Form.Check
                     inline
                     label="Lawn Mowing"
@@ -196,6 +200,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
+                      textAlign : 'center',
                     }}
                   />
                 </Form.Group>
@@ -276,14 +281,17 @@ export default function index() {
 
       <div className="home-screen-wrapper-3" id="cleaning">
         <section class="presentation">
-          <div class="introduction height">
+          <div class="introduction height non" style = {{ border : '4px solid whitesmoke', boxShadow : 'none'}}>
             <div className="form-section">
               <Form
                 style={{
                   color: "#3ab34a",
                   fontWeight: "bold",
                   fontSize: 15,
+                  textShadow: '1px 1.5px #8cc540',
+                  fontWeight: "bold",
                   textTransform: "uppercase",
+                  textAlign : 'center'
                 }}
                 onSubmit={sendCleaningEmail}
               >
@@ -298,6 +306,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
+                      textAlign : 'center'
                     }}
                   />
                 </Form.Group>
@@ -312,6 +321,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
+                      textAlign : 'center'
                     }}
                   />
                 </Form.Group>
@@ -405,20 +415,17 @@ export default function index() {
                 <Form.Group controlId="exampleForm.ControlSelect2">
                   <Form.Label>property type</Form.Label>
                   <Form.Control
-                    as="select"
+                    type="text"
                     name="property-type"
+                    // placeholder="name@example.com"
                     style={{
                       color: "#979F8B",
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
+                      textAlign : 'center'
                     }}
-                  >
-                    <option>House</option>
-                    <option>Flat / Apartment</option>
-                    <option>Bungalow</option>
-                    <option>Office</option>
-                  </Form.Control>
+                  />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea2">
                   <Form.Label>send us a message</Form.Label>
@@ -432,6 +439,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
+                      textAlign : 'center'
                     }}
                   />
                 </Form.Group>

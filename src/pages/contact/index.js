@@ -16,7 +16,7 @@ export default function index() {
 
             <div className="email box">
               <div className="icon">
-                <i class="fas fa-envelope-open-text fa-3x"></i>
+                <i class="fas fa-envelope-open-text fa-2x"></i>
               </div>
               <div className="content">
                 <h5>coventryfreshhome@gmail.com</h5>
@@ -24,7 +24,7 @@ export default function index() {
             </div>
             <div className="insta box">
               <div className="icon">
-                <i class="fab fa-instagram fa-3x"></i>
+                <i class="fab fa-instagram fa-2x"></i>
               </div>
               <div className="content">
                 <h5>coventryfreshhome</h5>
@@ -32,7 +32,7 @@ export default function index() {
             </div>
             <div className="phone box">
               <div className="icon">
-                <i class="fas fa-phone fa-3x"></i>
+                <i class="fas fa-phone fa-2x"></i>
               </div>
               <div className="content">
                 <h5>+44 (0) 737 987 5115</h5>
@@ -40,7 +40,7 @@ export default function index() {
             </div>
             <div className="phone box">
               <div className="icon">
-                <i class="fas fa-map-marker-alt fa-3x"></i>
+                <i class="fas fa-map-marker-alt fa-2x"></i>
               </div>
               <div className="content">
                 <h5>Coventry</h5>

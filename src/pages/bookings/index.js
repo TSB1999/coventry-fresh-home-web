@@ -14,6 +14,8 @@ import "react-calendar/dist/Calendar.css";
 
 import image from "./images/clean.jpeg";
 import image1 from "./images/garden.jpeg";
+import preview from "./images/cdc-wz3ijPHvL54-unsplash.jpg";
+import preview1 from "./images/volha-flaxeco-jCPL0oxBhB0-unsplash.jpg";
 import small from "./images/small-eclipse.svg";
 import medium from "./images/mid-eclipse.svg";
 import large from "./images/big-eclipse.svg";
@@ -73,285 +75,251 @@ export default function Index() {
     <div className="page">
       {/* Screen 1 */}
       <div className="plans-screen-wrapper" id="bookings">
-        <div className="silver-clean">
+        <div className="gold-clean bs-right">
           <div className="top-silver">
-            <h1>SILVER</h1>
+            <h1>CLEANING</h1>
+          </div>
+          <div className="preview-image">
+            <img
+              src={preview1}
+              style={{ width: "80%", borderRadius: "20px" }}
+            />
+          </div>
+          <div className="top-subtitle">
+            {/* <h4>CHOOSE YOUR USE CASES...</h4> */}
           </div>
           <div className="body-silver">
-            <div>
-              <h3>suggest a date...</h3>
-            </div>
-            <Calendar
-              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
-            />
-            <div>
-              <Form.Group controlId="exampleForm.ControlSelect2">
-                <Form.Check
-                  inline
-                  label="Dishes"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-1`}
-                />
-                <Form.Check
-                  inline
-                  label="Vaccuming"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-2`}
-                />
-                <Form.Check
-                  inline
-                  // disabled
-                  label="Mopping / Sweeping "
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-3`}
-                />
+            <Form.Group
+              controlId="exampleForm.ControlSelect2"
+              style={{ marginTop: "20px" }}
+            >
+              <Form.Check
+                inline
+                label="DISHES"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-1`}
+              />
+              <Form.Check
+                inline
+                label="VACUUMING"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-2`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="MOPPING / SWEEPING"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                label="EMPTYING BINS"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-2`}
+              />
+              <Form.Check
+                inline
+                label="SURFACES"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-2`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="CLEANING MIRRORS"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="OVEN CLEAN"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="FRIDGE CLEAN"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="ORGANIZING"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="FOLDING CLOTHES"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="WINDOW CLEAN"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="CUPBOARD CLEAN"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+            </Form.Group>
+          </div>
 
-                <Form.Check
-                  inline
-                  label="Bins"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-1`}
-                />
-                <Form.Check
-                  inline
-                  label="Surfaces"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-2`}
-                />
-                <Form.Check
-                  inline
-                  // disabled
-                  label="Mirrors "
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-3`}
-                />
-              </Form.Group>
-            </div>
-          </div>
+          <div className="payment-calculator">$50</div>
           <div className="footer-silver">
-            <StripeCheckout
-              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-              token={(token) => {
-                handleToken(token, customProduct);
-                setCustomProduct({
-                  name: "Custom Package",
-                  price: 20,
-                  quantity: 1,
-                });
-              }}
-              billingAddress
-              shippingAddress
-              amount={customProduct.price * customProduct.quantity * 100}
-              name={customProduct.name}
-            />
-          </div>
-        </div>
-        <div className="gold-clean">
-          <div className="top-silver">
-            <h1>GOLD</h1>
-          </div>
-          <div className="body-silver">
-            <div>
-              <h3>suggest a date...</h3>
+            <div className="final-payment-calculator">$50</div>
+            <div className="final-payment-stripe">
+              <StripeCheckout
+                stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                token={(token) => {
+                  handleToken(token, customProduct);
+                  setCustomProduct({
+                    name: "Custom Package",
+                    price: 20,
+                    quantity: 1,
+                  });
+                }}
+                billingAddress
+                shippingAddress
+                amount={customProduct.price * customProduct.quantity * 100}
+                name={customProduct.name}
+              />
             </div>
-            <Calendar
-              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
-            />
-            <div>
-              <Form.Group controlId="exampleForm.ControlSelect2">
-                <Form.Check
-                  inline
-                  label="Oven Clean"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-1`}
-                />
-                <Form.Check
-                  inline
-                  label="Fridge Clean"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-2`}
-                />
-                <Form.Check
-                  inline
-                  // disabled
-                  label="Organizing "
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-3`}
-                />
-                <Form.Check
-                  inline
-                  label="Folding"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-1`}
-                />
-                <Form.Check
-                  inline
-                  label="Beddings"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-2`}
-                />
-                <Form.Check
-                  inline
-                  // disabled
-                  label="Windows "
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-3`}
-                />
-
-                <Form.Check
-                  inline
-                  label="Cupboard Clean"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-1`}
-                />
-              </Form.Group>
-            </div>
-          </div>
-          <div className="footer-silver">
-            <StripeCheckout
-              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-              token={(token) => {
-                handleToken(token, customProduct);
-                setCustomProduct({
-                  name: "Custom Package",
-                  price: 20,
-                  quantity: 1,
-                });
-              }}
-              billingAddress
-              shippingAddress
-              amount={customProduct.price * customProduct.quantity * 100}
-              name={customProduct.name}
-            />
           </div>
         </div>
         <div className="poster">
-          <img src={image} style={{ height: "70%", borderRadius: "20px" }} />
+          <div style={{ flex: 1 }}>
+            <Calendar
+              /*onChange={onChange} value={value}*/ style={{ height: "20px" }}
+            />
+          </div>
+          <div style={{ flex: 1 }}></div>
+          {/* <img src={image} style={{ height: "70%", borderRadius: "20px" }} /> */}
         </div>
-
-        <div className="to-gardening">Looking For Gardening Services?</div>
-        {/* <div className="silver-garden">x</div>
-        <div className="gold-garden">x</div> */}
-        {/* <img className="big-circle" src={large} alt="" />
-        <img className="medium-circle" src={medium} alt="" />
-        <img className="small-circle" src={small} alt="" /> */}
-      </div>
-      {/* Screen 2 */}
-      <div className="plans-screen-wrapper" id="custom">
-        <div className="silver-clean">
+        <div className="gold-clean bs-left">
           <div className="top-silver">
-            <h1>SILVER</h1>
+            <h1>GARDENING</h1>
+          </div>
+          <div className="preview-image">
+            <img src={preview} style={{ width: "80%", borderRadius: "20px" }} />
+          </div>
+          <div className="top-subtitle">
+            {/* <h4>CHOOSE YOUR USE CASES...</h4> */}
           </div>
           <div className="body-silver">
-            <div>
-              <h3>suggest a date...</h3>
-            </div>
-            <Calendar
-              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
-            />
-            <div>
-              <Form.Group controlId="exampleForm.ControlSelect2">
-                <Form.Check
-                  inline
-                  label="Lawn Mowing"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-1`}
-                />
-                <Form.Check
-                  inline
-                  label="Garden Litter"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-2`}
-                />
-                <Form.Check
-                  inline
-                  // disabled
-                  label="General Garden Care"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-3`}
-                />
-              </Form.Group>
-            </div>
+            <Form.Group
+              controlId="exampleForm.ControlSelect2"
+              style={{ marginTop: "20px" }}
+            >
+              <Form.Check
+                inline
+                label="LAWN MOWING"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-1`}
+              />
+              <Form.Check
+                inline
+                label="GARDEN LITTER"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-2`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="GENERAL GARDEN CARE"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                label="FLOWER BED CARE"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-1`}
+              />
+              <Form.Check
+                inline
+                label="BRANCH TRIMMINGS"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-2`}
+              />
+              <Form.Check
+                inline
+                label="BUSH TRIMMINGS"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-2`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="SIDEWALK WEEDING"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="DRIVEWAY WEEEDING"
+                style={{ color: "#979f8b", fontWeight: "bold" }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+            </Form.Group>
           </div>
+          <div className="payment-calculator">$50</div>
           <div className="footer-silver">
-            <StripeCheckout
-              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-              token={(token) => {
-                handleToken(token, customProduct);
-                setCustomProduct({
-                  name: "Custom Package",
-                  price: 20,
-                  quantity: 1,
-                });
-              }}
-              billingAddress
-              shippingAddress
-              amount={customProduct.price * customProduct.quantity * 100}
-              name={customProduct.name}
-            />
-          </div>
-        </div>
-        <div className="gold-clean">
-          <div className="top-silver">
-            <h1>GOLD</h1>
-          </div>
-          <div className="body-silver">
-            <div>
-              <h3>suggest a date...</h3>
-            </div>
-            <Calendar
-              /*onChange={onChange} value={value} */ style={{ flex: 1 }}
-            />
-            <div>
-              <Form.Group controlId="exampleForm.ControlSelect2">
-                <Form.Check
-                  inline
-                  label="Flower Bed Weeding"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-1`}
-                />
-                <Form.Check
-                  inline
-                  label="Branch and bush Trimmings"
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-2`}
-                />
-                <Form.Check
-                  inline
-                  // disabled
-                  label="Sidewalk / Driveway Weeding "
-                  type={"checkbox"}
-                  id={`inline-${"checkbox"}-3`}
-                />
-              </Form.Group>
+            <div className="final-payment-calculator cta">$50</div>
+            <div className="final-payment-stripe">
+              <StripeCheckout
+                stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
+                token={(token) => {
+                  handleToken(token, customProduct);
+                  setCustomProduct({
+                    name: "Custom Package",
+                    price: 20,
+                    quantity: 1,
+                  });
+                }}
+                billingAddress
+                shippingAddress
+                amount={customProduct.price * customProduct.quantity * 100}
+                name={customProduct.name}
+              />
             </div>
           </div>
-          <div className="footer-silver">
-            <StripeCheckout
-              stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-              token={(token) => {
-                handleToken(token, customProduct);
-                setCustomProduct({
-                  name: "Custom Package",
-                  price: 20,
-                  quantity: 1,
-                });
-              }}
-              billingAddress
-              shippingAddress
-              amount={customProduct.price * customProduct.quantity * 100}
-              name={customProduct.name}
-            />
-          </div>
-        </div>
-        <div className="poster">
-          <img src={image1} style={{ height: "70%", borderRadius: "20px" }} />
         </div>
 
-        <div className="to-gardening">Looking For Cleaning Services?</div>
-        {/* <div className="silver-garden">x</div>
-        <div className="gold-garden">x</div> */}
-        {/* <img className="big-circle" src={large} alt="" />
+        {/* <div className="to-gardening">Looking For Gardening Services?</div>
+        <img className="big-circle" src={large} alt="" />
         <img className="medium-circle" src={medium} alt="" />
         <img className="small-circle" src={small} alt="" /> */}
       </div>
