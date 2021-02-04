@@ -74,7 +74,7 @@ export default function index() {
                 duration={500}
                 // delay={1000}
                 isDynamic={true}
-                ignoreCancelEvents={false}
+                ignoreCancelEvents={true}
               >
                 <button class="cta-select">CLEANING</button>
               </Link>
@@ -88,7 +88,7 @@ export default function index() {
                 duration={500}
                 // delay={1000}
                 isDynamic={true}
-                ignoreCancelEvents={false}
+                ignoreCancelEvents={true}
               >
                 <button class="cta-add">GARDENING</button>
               </Link>
@@ -110,14 +110,15 @@ export default function index() {
               <Form
                 style={{
                   color: "#3ab34a",
-                  fontWeight: "bold",
-                  fontSize: 15,
-                  textShadow: '1px 1.5px #8cc540',
-                  textAlign : 'center',
+                  fontWeight: "300",
+                  fontSize: 18,
+                  textShadow: "1px 1px #8cc540",
+                  textAlign: "center",
                   textTransform: "uppercase",
                 }}
                 onSubmit={sendGardeningEmail}
               >
+
                 <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Label>name</Form.Label>
                   <Form.Control
@@ -129,11 +130,17 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
-                      textAlign : 'center',
+                      textAlign: "center",
                     }}
                   />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Group
+                  controlId="exampleForm.ControlInput1"
+                  style={{
+                    borderTop: "1.5px solid #8cc540",
+                    paddingTop: "10px",
+                  }}
+                >
                   <Form.Label>email address</Form.Label>
                   <Form.Control
                     type="email"
@@ -144,11 +151,19 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
-                      textAlign : 'center',
+                      textAlign: "center",
                     }}
                   />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlSelect1" style = {{margin: '40px 0 40px 0'}}>
+                <Form.Group
+                  controlId="exampleForm.ControlSelect1"
+                  style={{ margin: "40px 0 40px 0" }}
+                  style={{
+                    borderTop: "1.5px solid #8cc540",
+                    borderBottom: "1.5px solid #8cc540",
+                    padding: "10px 0 10px 0",
+                  }}
+                >
                   <Form.Check
                     inline
                     label="Lawn Mowing"
@@ -200,7 +215,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
-                      textAlign : 'center',
+                      textAlign: "center",
                     }}
                   />
                 </Form.Group>
@@ -219,7 +234,8 @@ export default function index() {
                   duration={500}
                   // delay={1000}
                   isDynamic={true}
-                  ignoreCancelEvents={false}
+                  ignoreCancelEvents={true}
+                  style={{ width: "80%" }}
                 >
                   <button
                     type="submit"
@@ -249,7 +265,8 @@ export default function index() {
                   duration={500}
                   // delay={1000}
                   isDynamic={true}
-                  ignoreCancelEvents={false}
+                  ignoreCancelEvents={true}
+                  style={{ width: "80%" }}
                 >
                   <button
                     type="submit"
@@ -281,17 +298,19 @@ export default function index() {
 
       <div className="home-screen-wrapper-3" id="cleaning">
         <section class="presentation">
-          <div class="introduction height non" style = {{ border : '4px solid whitesmoke', boxShadow : 'none'}}>
+          <div
+            class="introduction height non"
+            style={{ border: "4px solid whitesmoke", boxShadow: "none" }}
+          >
             <div className="form-section">
               <Form
                 style={{
                   color: "#3ab34a",
-                  fontWeight: "bold",
-                  fontSize: 15,
-                  textShadow: '1px 1.5px #8cc540',
-                  fontWeight: "bold",
+                  fontWeight: "300",
+                  fontSize: 18,
+                  textShadow: "1px 1.5px #8cc540",
+                  textAlign: "center",
                   textTransform: "uppercase",
-                  textAlign : 'center'
                 }}
                 onSubmit={sendCleaningEmail}
               >
@@ -306,7 +325,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
-                      textAlign : 'center'
+                      textAlign: "center",
                     }}
                   />
                 </Form.Group>
@@ -321,7 +340,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
-                      textAlign : 'center'
+                      textAlign: "center",
                     }}
                   />
                 </Form.Group>
@@ -423,7 +442,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
-                      textAlign : 'center'
+                      textAlign: "center",
                     }}
                   />
                 </Form.Group>
@@ -439,7 +458,7 @@ export default function index() {
                       fontWeight: "bold",
                       textTransform: "uppercase",
                       fontSize: 12,
-                      textAlign : 'center'
+                      textAlign: "center",
                     }}
                   />
                 </Form.Group>
@@ -458,7 +477,8 @@ export default function index() {
                   duration={500}
                   // delay={1000}
                   isDynamic={true}
-                  ignoreCancelEvents={false}
+                  ignoreCancelEvents={true}
+                  style={{ width: "80%" }}
                 >
                   <button
                     type="submit"
@@ -488,7 +508,8 @@ export default function index() {
                   duration={500}
                   // delay={1000}
                   isDynamic={true}
-                  ignoreCancelEvents={false}
+                  ignoreCancelEvents={true}
+                  style={{ width: "80%" }}
                 >
                   <button
                     type="submit"
