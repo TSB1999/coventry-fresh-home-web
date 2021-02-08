@@ -55,17 +55,17 @@ export default function Index() {
     <div className="page">
       {/* Screen 1 */}
       <div className="plans-screen-wrapper" id="bookings">
-        <div className="gold-clean">
-          <div className="top-silver">
+        <div className="card">
+          <div className="heading">
             <h1>CLEANING</h1>
           </div>
           <div className="preview-image">
             <img
               src={preview1}
-              style={{ width: "80%", borderRadius: "20px"}}
+              style={{ width: "100%", borderRadius: "20px" }}
             />
           </div>
-          <div className="body-silver">
+          <div className="body">
             <Form.Group
               controlId="exampleForm.ControlSelect2"
               style={{ marginTop: "20px" }}
@@ -73,36 +73,68 @@ export default function Index() {
               <Form.Check
                 inline
                 label="DISHES"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-1`}
               />
               <Form.Check
                 inline
                 label="VACUUMING"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
               />
               <Form.Check
                 inline
                 // disabled
-                label="MOPPING / SWEEPING"
-                style={{ color: "#292929", fontWeight: "600" }}
+                label="MOPPING"
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
+                type={"checkbox"}
+                id={`inline-${"checkbox"}-3`}
+              />
+              <Form.Check
+                inline
+                // disabled
+                label="SWEEPING"
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
               <Form.Check
                 inline
                 label="EMPTYING BINS"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
               />
               <Form.Check
                 inline
                 label="SURFACES"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
               />
@@ -110,7 +142,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="CLEANING MIRRORS"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
@@ -118,7 +154,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="OVEN CLEAN"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
@@ -126,7 +166,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="FRIDGE CLEAN"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
@@ -134,7 +178,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="ORGANIZING"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
@@ -142,7 +190,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="FOLDING CLOTHES"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
@@ -150,7 +202,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="WINDOW CLEAN"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
@@ -158,13 +214,16 @@ export default function Index() {
                 inline
                 // disabled
                 label="CUPBOARD CLEAN"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
             </Form.Group>
           </div>
-
           <div className="payment-calculator">50</div>
           <div className="footer-silver">
             <div className="final-payment-calculator">$50</div>
@@ -196,14 +255,17 @@ export default function Index() {
           <div style={{ flex: 1 }}></div>
           {/* <img src={image} style={{ height: "70%", borderRadius: "20px" }} /> */}
         </div>
-        <div className="gold-clean">
-          <div className="top-silver">
+        <div className="card">
+          <div className="heading">
             <h1>GARDENING</h1>
           </div>
           <div className="preview-image">
-            <img src={preview} style={{ width: "80%", borderRadius: "20px" }} />
+            <img
+              src={preview}
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
-          <div className="body-silver">
+          <div className="body">
             <Form.Group
               controlId="exampleForm.ControlSelect2"
               style={{ marginTop: "20px" }}
@@ -211,14 +273,22 @@ export default function Index() {
               <Form.Check
                 inline
                 label="LAWN MOWING"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px ##525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-1`}
               />
               <Form.Check
                 inline
                 label="GARDEN LITTER"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
               />
@@ -226,28 +296,44 @@ export default function Index() {
                 inline
                 // disabled
                 label="GENERAL GARDEN CARE"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
               <Form.Check
                 inline
                 label="FLOWER BED CARE"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-1`}
               />
               <Form.Check
                 inline
                 label="BRANCH TRIMMINGS"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
               />
               <Form.Check
                 inline
                 label="BUSH TRIMMINGS"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
               />
@@ -255,7 +341,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="SIDEWALK WEEDING"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
@@ -263,7 +353,11 @@ export default function Index() {
                 inline
                 // disabled
                 label="DRIVEWAY WEEEDING"
-                style={{ color: "#292929", fontWeight: "600" }}
+                style={{
+                  color: "#525252",
+                  fontWeight: "bold",
+                  // textShadow: "1px 1px #525252",
+                }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
               />
