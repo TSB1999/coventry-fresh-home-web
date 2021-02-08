@@ -52,16 +52,15 @@ export default function index() {
       <div className="home-screen-wrapper" id="home">
         {/* <Navbar /> */}
 
-        <section class="presentation">
+        <div class="top">
           <div class="introduction">
-            <div class="intro-text">
-              <div className="header-home">
-                <h1>Domestic Cleaning & Gardening Services</h1>
-              </div>
-              <div className="sub-header-home">
-                <h3>Get Started With Your Same Day Quote Now!</h3>
-              </div>
+            <div class="heading-text">
+              <h1>Domestic Cleaning and Gardening Services</h1>
             </div>
+
+            {/* <div class="sub-heading-text">
+              <h3>Get Started With Your Same Day Quote Now!</h3>
+            </div> */}
 
             <div class="cta">
               <Link
@@ -94,7 +93,8 @@ export default function index() {
               </Link>
             </div>
           </div>
-        </section>
+        </div>
+        <div className="bottom"></div>
 
         <img class="big-circle" src="./img/big-eclipse.svg" alt="" />
         <img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
@@ -118,7 +118,6 @@ export default function index() {
                 }}
                 onSubmit={sendGardeningEmail}
               >
-
                 <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Label>name</Form.Label>
                   <Form.Control
