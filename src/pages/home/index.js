@@ -50,8 +50,6 @@ export default function index() {
   return (
     <div className="page">
       <div className="home-screen-wrapper" id="home">
-        {/* <Navbar /> */}
-
         <div class="top">
           <div class="introduction">
             <div class="heading-text">
@@ -104,121 +102,229 @@ export default function index() {
       {/* Screen 2 */}
 
       <div className="home-screen-wrapper-2" id="gardening">
-        <section class="presentation">
-          <div class="introduction-2 height non">
-            <div className="form-section">
-              <Form
+        <div class="garden-container">
+          <div className="left"></div>
+          <div className="right">
+            <Form
+              style={{
+                display: "flex",
+                flex: "1",
+                flexDirection: "column",
+                color: "#919d5d",
+                fontWeight: "bold",
+                fontSize: 18,
+                textShadow: "1px 1px #a87c3d",
+                textAlign: "center",
+                textTransform: "uppercase",
+                backgroundColor: "#fff",
+                opacity: 0.8,
+                borderRadius: "20px",
+                padding: "5rem",
+                // border: "0.35rem solid #979f8b",
+              }}
+              onSubmit={sendGardeningEmail}
+            >
+              <Form.Group
+                controlId="exampleForm.ControlInput1"
                 style={{
-                  color: "#3ab34a",
-                  fontWeight: "300",
-                  fontSize: 18,
-                  textShadow: "1px 1px #8cc540",
-                  textAlign: "center",
-                  textTransform: "uppercase",
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1,
+                  // backgroundColor: "red",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-                onSubmit={sendGardeningEmail}
               >
-                <Form.Group controlId="exampleForm.ControlInput1">
-                  <Form.Label>name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="name"
-                    // placeholder="David Keys"
-                    style={{
-                      color: "#979F8B",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                      fontSize: 12,
-                      textAlign: "center",
-                    }}
-                  />
-                </Form.Group>
-                <Form.Group
-                  controlId="exampleForm.ControlInput1"
+                <Form.Label>name</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="name"
+                  // placeholder="David Keys"
                   style={{
-                    borderTop: "1.5px solid #8cc540",
-                    paddingTop: "10px",
+                    color: "#979F8B",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                    textAlign: "center",
                   }}
-                >
-                  <Form.Label>email address</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    // placeholder="name@example.com"
-                    style={{
-                      color: "#979F8B",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                      fontSize: 12,
-                      textAlign: "center",
-                    }}
-                  />
-                </Form.Group>
-                <Form.Group
-                  controlId="exampleForm.ControlSelect1"
-                  style={{ margin: "40px 0 40px 0" }}
+                />
+              </Form.Group>
+              <Form.Group
+                controlId="exampleForm.ControlInput1"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  // borderTop: "1.5px solid #8cc540",
+                  // paddingTop: "10px",
+                  flex: 1,
+                }}
+              >
+                <Form.Label>email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  // placeholder="name@example.com"
                   style={{
-                    borderTop: "1.5px solid #8cc540",
-                    borderBottom: "1.5px solid #8cc540",
-                    padding: "10px 0 10px 0",
+                    color: "#979F8B",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                    textAlign: "center",
                   }}
-                >
-                  <Form.Check
-                    inline
-                    label="Lawn Mowing"
-                    type={"checkbox"}
-                    id={`inline-${"checkbox"}-1`}
-                  />
-                  <Form.Check
-                    inline
-                    label="Garden Litter"
-                    type={"checkbox"}
-                    id={`inline-${"checkbox"}-2`}
-                  />
-                  <Form.Check
-                    inline
-                    // disabled
-                    label="Garden Care"
-                    type={"checkbox"}
-                    id={`inline-${"checkbox"}-3`}
-                  />
+                />
+              </Form.Group>
+              <Form.Group
+                controlId="exampleForm.ControlSelect1"
+                style={{
+                  // display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flex: "1",
+                  // borderTop: "1.5px solid #8cc540",
+                  // borderBottom: "1.5px solid #8cc540",
+                }}
+              >
+                <Form.Check
+                  inline
+                  label="Lawn Mowing"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
+                />
+                <Form.Check
+                  inline
+                  label="Garden Litter"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  // disabled
+                  label="Garden Care"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-3`}
+                />
 
-                  <Form.Check
-                    inline
-                    label="Flower Bed / Plant Weeding"
-                    type={"checkbox"}
-                    id={`inline-${"checkbox"}-1`}
-                  />
-                  <Form.Check
-                    inline
-                    label="Tree Branch / Bush Trimming"
-                    type={"checkbox"}
-                    id={`inline-${"checkbox"}-2`}
-                  />
-                  <Form.Check
-                    inline
-                    label="Driveway / Sidewalk Weed Removal"
-                    type={"checkbox"}
-                    id={`inline-${"checkbox"}-2`}
-                  />
-                </Form.Group>
-                <Form.Group controlId="exampleForm.ControlTextarea1">
-                  <Form.Label>send us a message</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    name="message"
-                    rows={3}
-                    // placeholder="Make your enquiry"
-                    style={{
-                      color: "#979F8B",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                      fontSize: 12,
-                      textAlign: "center",
-                    }}
-                  />
-                </Form.Group>
-              </Form>
+                <Form.Check
+                  inline
+                  label="Flower Bed / Plant Weeding"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-1`}
+                />
+                <Form.Check
+                  inline
+                  label="Tree Branch / Bush Trimming"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  label="Sidewalk Weed Removal"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+                <Form.Check
+                  inline
+                  label="Driveway Weed Removal"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-2`}
+                />
+              </Form.Group>
+              <Form.Group
+                controlId="exampleForm.ControlTextarea1"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flex: "1",
+                }}
+              >
+                <Form.Label>send us a message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  name="message"
+                  rows={3}
+                  // placeholder="Make your enquiry"
+                  style={{
+                    color: "#979F8B",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    fontSize: 12,
+                    textAlign: "center",
+                  }}
+                />
+              </Form.Group>
+              <div className="button-wrapper">
+                <div className="left-button">
+                  <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={true}
+                    style={{ width: "80%" }}
+                  >
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        backgroundColor: "transparent",
+                        borderColor: "#919d5d",
+                        fontSize: 13,
+                        color: "#919d5d",
+                      }}
+                    >
+                      BACK TO TOP
+                    </button>
+                  </Link>
+                </div>
+
+                <div className="right-button">
+                  <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={true}
+                    style={{ width: "80%" }}
+                  >
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        backgroundColor: "#919d5d",
+                        color: "#fff",
+                        fontSize: 13,
+                        borderColor: "#919d5d",
+                      }}
+                    >
+                      SUBMIT
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </Form>
+          </div>
+          {/* <div class="introduction-2 height non">
+            <div className="form-section">
+              
             </div>
 
             <div className="button-wrapper">
@@ -284,9 +390,9 @@ export default function index() {
                 </Link>
               </div>
             </div>
-          </div>
-          <div class="cover-2"></div>
-        </section>
+          </div> */}
+          {/* <div class="cover-2"></div> */}
+        </div>
 
         <img class="big-circle" src="./img/big-eclipse.svg" alt="" />
         <img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
