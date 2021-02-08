@@ -224,26 +224,42 @@ export default function Index() {
               />
             </Form.Group>
           </div>
-          <div className="payment-calculator">50</div>
-          <div className="footer-silver">
-            <div className="final-payment-calculator">$50</div>
-            <div className="final-payment-stripe">
-              <StripeCheckout
-                stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                token={(token) => {
-                  handleToken(token, customProduct);
+          <div className="payment-calculator">
+            <div style={{ display: "flex", flex: 1 }}>
+              <div
+                className="subtract circle"
+                onClick={() =>
                   setCustomProduct({
                     name: "Custom Package",
                     price: 20,
-                    quantity: 1,
-                  });
-                }}
-                billingAddress
-                shippingAddress
-                amount={customProduct.price * customProduct.quantity * 100}
-                name={customProduct.name}
-              />
+                    quantity: customProduct.quantity
+                      ? customProduct.quantity - 1
+                      : customProduct.quantity,
+                  })
+                }
+              >
+                <button>-1</button>
+              </div>
+              <div className="quantity">
+                <div style={{ fontSize: "15px" }}>{customProduct.quantity}</div>
+                <div style={{ fontSize: "15px" }}>hours</div>
+              </div>
+              <div
+                className="add circle"
+                onClick={() =>
+                  setCustomProduct({
+                    name: "Custom Package",
+                    price: 20,
+                    quantity: customProduct.quantity + 1,
+                  })
+                }
+              >
+                <button>+1</button>
+              </div>
             </div>
+          </div>
+          <div className="card-footer">
+            <div className="final-payment-calculator">SUBMIT</div>
           </div>
         </div>
         <div className="poster">
@@ -363,26 +379,43 @@ export default function Index() {
               />
             </Form.Group>
           </div>
-          <div className="payment-calculator">$50</div>
-          <div className="footer-silver">
-            <div className="final-payment-calculator cta">$50</div>
-            <div className="final-payment-stripe">
-              <StripeCheckout
-                stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
-                token={(token) => {
-                  handleToken(token, customProduct);
+
+          <div className="payment-calculator">
+            <div style={{ display: "flex", flex: 1 }}>
+              <div
+                className="subtract circle"
+                onClick={() =>
                   setCustomProduct({
                     name: "Custom Package",
                     price: 20,
-                    quantity: 1,
-                  });
-                }}
-                billingAddress
-                shippingAddress
-                amount={customProduct.price * customProduct.quantity * 100}
-                name={customProduct.name}
-              />
+                    quantity: customProduct.quantity
+                      ? customProduct.quantity - 1
+                      : customProduct.quantity,
+                  })
+                }
+              >
+                <button>-1</button>
+              </div>
+              <div className="quantity">
+                <div style={{ fontSize: "15px" }}>{customProduct.quantity}</div>
+                <div style={{ fontSize: "15px" }}>hours</div>
+              </div>
+              <div
+                className="add circle"
+                onClick={() =>
+                  setCustomProduct({
+                    name: "Custom Package",
+                    price: 20,
+                    quantity: customProduct.quantity + 1,
+                  })
+                }
+              >
+                <button>+1</button>
+              </div>
             </div>
+          </div>
+          <div className="card-footer">
+            <div className="final-payment-calculator cta">SUBMIT</div>
           </div>
         </div>
 

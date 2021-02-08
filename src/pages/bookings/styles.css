@@ -1,3 +1,5 @@
+/*  SCREEN LEVEL */
+
 .bookings-screen-wrapper {
   /* font-family: "Satisfy"; */
   font-family: Arial, Helvetica, sans-serif;
@@ -17,6 +19,8 @@
   background-blend-mode: hard-light; */
 }
 
+/* CARD STYLES */
+
 .card {
   background-color: #f7f3f2;
   display: flex;
@@ -24,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 2.5vh;
+  border-radius: 2.1vh;
   text-align: center;
   animation: drop 1.3s ease;
   border: 0.35rem solid #bcb3a4;
@@ -42,6 +46,12 @@
   border-top-right-radius: 15px;
 }
 
+.heading h1 {
+  color: #f7f3f2;
+  text-shadow: 2px 2px #525252;
+  font-weight: bold;
+}
+
 .preview-image {
   /* margin-top : 5px; */
   display: flex;
@@ -53,7 +63,7 @@
 }
 
 .body {
-  margin: 1vh 0 0 0;
+  /* margin: 1vh 0 0 0; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,14 +84,10 @@
   width: 100%;
   font-weight: bold;
   font-size: 30px;
+  padding: 2rem;
 }
 
-.silver-clean {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-silver {
+.card-footer {
   display: flex;
   flex: 1;
   align-items: center;
@@ -90,27 +96,6 @@
   width: 100%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-}
-
-.heading h1 {
-  color: #f7f3f2;
-  text-shadow: 2px 2px #525252;
-  font-weight: bold;
-}
-
-.top-subtitle {
-  padding-bottom: 10px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-radius: 2px;
-}
-.top-subtitle > h4 {
-  flex: 1;
-  background-color: "pink";
-  margin: 1vh 0 0 0;
-  font-size: 18px;
-  color: #8cc540;
-  font-weight: 500;
 }
 
 .final-payment-calculator {
@@ -131,6 +116,8 @@
   border-radius: 5px;
   /* margin-right: 10px; */
 }
+
+/* MISC. */
 
 .plans-screen-wrapper {
   background-image: url(./images/bench-accounting-nvzvOPQW0gc-unsplash.jpg);
@@ -415,7 +402,8 @@
 
 .circle {
   flex: 1;
-  background-color: grey;
+  /* background-color: grey; */
+  border: 1px solid grey;
   margin: 10px;
   /* box-shadow: 5px 5px grey; */
   height: 40px;
@@ -424,10 +412,13 @@
 }
 
 .quantity {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: flex;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .add {
@@ -440,8 +431,12 @@
 }
 
 .circle button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
+  font-size: 20px;
   font-weight: bold;
 }
 
