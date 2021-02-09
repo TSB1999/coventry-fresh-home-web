@@ -402,10 +402,7 @@
 
 .circle {
   flex: 1;
-  /* background-color: grey; */
-  border: 1px solid grey;
   margin: 10px;
-  /* box-shadow: 5px 5px grey; */
   height: 40px;
   width: 40px;
   border-radius: 8px;
@@ -419,6 +416,8 @@
   align-items: center;
   font-weight: bold;
   font-size: 18px;
+  color: #aca18e;
+  /* font-weight: bold; */
 }
 
 .add {
@@ -434,10 +433,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: #aca18e;
+  color: #fff;
+  border-radius: 40px;
   border: none;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
+  height: 45px;
+  width: 45px;
 }
 
 .payment-section-2 {

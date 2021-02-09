@@ -31,6 +31,9 @@ export default function Index() {
     quantity: 1,
   });
 
+  const [cleanHour, setCleanHour] = React.useState(1);
+  const [gardenHour, setGardenHour] = React.useState(1);
+
   async function handleToken(token, product) {
     setLoading(true);
     console.log("start");
@@ -74,9 +77,9 @@ export default function Index() {
                 inline
                 label="DISHES"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-1`}
@@ -85,9 +88,9 @@ export default function Index() {
                 inline
                 label="VACUUMING"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
@@ -97,9 +100,9 @@ export default function Index() {
                 // disabled
                 label="MOPPING"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -109,9 +112,9 @@ export default function Index() {
                 // disabled
                 label="SWEEPING"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -120,9 +123,9 @@ export default function Index() {
                 inline
                 label="EMPTYING BINS"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
@@ -131,9 +134,9 @@ export default function Index() {
                 inline
                 label="SURFACES"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
@@ -143,9 +146,9 @@ export default function Index() {
                 // disabled
                 label="CLEANING MIRRORS"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -155,9 +158,9 @@ export default function Index() {
                 // disabled
                 label="OVEN CLEAN"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -167,9 +170,9 @@ export default function Index() {
                 // disabled
                 label="FRIDGE CLEAN"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -179,9 +182,9 @@ export default function Index() {
                 // disabled
                 label="ORGANIZING"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -191,9 +194,9 @@ export default function Index() {
                 // disabled
                 label="FOLDING CLOTHES"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -203,9 +206,9 @@ export default function Index() {
                 // disabled
                 label="WINDOW CLEAN"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -215,9 +218,9 @@ export default function Index() {
                 // disabled
                 label="CUPBOARD CLEAN"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -228,31 +231,19 @@ export default function Index() {
             <div style={{ display: "flex", flex: 1 }}>
               <div
                 className="subtract circle"
-                onClick={() =>
-                  setCustomProduct({
-                    name: "Custom Package",
-                    price: 20,
-                    quantity: customProduct.quantity
-                      ? customProduct.quantity - 1
-                      : customProduct.quantity,
-                  })
-                }
+                onClick={() => setCleanHour(cleanHour - 1)}
               >
                 <button>-1</button>
               </div>
               <div className="quantity">
-                <div style={{ fontSize: "15px" }}>{customProduct.quantity}</div>
-                <div style={{ fontSize: "15px" }}>hours</div>
+                <div style={{ fontSize: "15px", fontWeight: "700" }}>
+                  {cleanHour}
+                </div>
+                <div style={{ fontSize: "15px", fontWeight: "500" }}>hours</div>
               </div>
               <div
                 className="add circle"
-                onClick={() =>
-                  setCustomProduct({
-                    name: "Custom Package",
-                    price: 20,
-                    quantity: customProduct.quantity + 1,
-                  })
-                }
+                onClick={() => setCleanHour(cleanHour + 1)}
               >
                 <button>+1</button>
               </div>
@@ -290,9 +281,9 @@ export default function Index() {
                 inline
                 label="LAWN MOWING"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px ##525252",
+                  // textShadow: "1px 1px ##aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-1`}
@@ -301,9 +292,9 @@ export default function Index() {
                 inline
                 label="GARDEN LITTER"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
@@ -313,9 +304,9 @@ export default function Index() {
                 // disabled
                 label="GENERAL GARDEN CARE"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -324,9 +315,9 @@ export default function Index() {
                 inline
                 label="FLOWER BED CARE"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-1`}
@@ -335,9 +326,9 @@ export default function Index() {
                 inline
                 label="BRANCH TRIMMINGS"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
@@ -346,9 +337,9 @@ export default function Index() {
                 inline
                 label="BUSH TRIMMINGS"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-2`}
@@ -358,9 +349,9 @@ export default function Index() {
                 // disabled
                 label="SIDEWALK WEEDING"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -370,9 +361,9 @@ export default function Index() {
                 // disabled
                 label="DRIVEWAY WEEEDING"
                 style={{
-                  color: "#525252",
+                  color: "#aca18e",
                   fontWeight: "bold",
-                  // textShadow: "1px 1px #525252",
+                  // textShadow: "1px 1px #aca18e",
                 }}
                 type={"checkbox"}
                 id={`inline-${"checkbox"}-3`}
@@ -384,31 +375,19 @@ export default function Index() {
             <div style={{ display: "flex", flex: 1 }}>
               <div
                 className="subtract circle"
-                onClick={() =>
-                  setCustomProduct({
-                    name: "Custom Package",
-                    price: 20,
-                    quantity: customProduct.quantity
-                      ? customProduct.quantity - 1
-                      : customProduct.quantity,
-                  })
-                }
+                onClick={() => setGardenHour(gardenHour - 1)}
               >
                 <button>-1</button>
               </div>
               <div className="quantity">
-                <div style={{ fontSize: "15px" }}>{customProduct.quantity}</div>
-                <div style={{ fontSize: "15px" }}>hours</div>
+                <div style={{ fontSize: "15px", fontWeight: "700" }}>
+                  {gardenHour}
+                </div>
+                <div style={{ fontSize: "15px", fontWeight: "700" }}>hours</div>
               </div>
               <div
                 className="add circle"
-                onClick={() =>
-                  setCustomProduct({
-                    name: "Custom Package",
-                    price: 20,
-                    quantity: customProduct.quantity + 1,
-                  })
-                }
+                onClick={() => setGardenHour(gardenHour + 1)}
               >
                 <button>+1</button>
               </div>
