@@ -38,7 +38,7 @@ header {
 }
 
 .home-1 {
-  display: none
+  display: none;
 }
 
 .main-wrapper {
@@ -49,7 +49,7 @@ header {
   list-style: none;
   /* background-color: red; */
   /* padding-top: 20px; */
-  padding : 20px 0 20px 0
+  padding: 20px 0 20px 0;
 }
 
 .donation-wrapper {
@@ -58,6 +58,7 @@ header {
   min-width: 10rem;
   justify-content: center;
   display: flex;
+  color: #3ab34a;
 }
 
 .logo-container,
@@ -88,7 +89,7 @@ header {
   align-self: center;
   color: #3ab34a;
   font-weight: bold;
-  text-align:  center;
+  text-align: center;
 }
 
 .logo-container {

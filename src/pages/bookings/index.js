@@ -25,34 +25,8 @@ toast.configure();
 export default function Index() {
   const [loading, setLoading] = React.useState(false);
 
-  const [customProduct, setCustomProduct] = React.useState({
-    name: "Custom Package",
-    price: 20,
-    quantity: 1,
-  });
-
   const [cleanHour, setCleanHour] = React.useState(1);
   const [gardenHour, setGardenHour] = React.useState(1);
-
-  async function handleToken(token, product) {
-    setLoading(true);
-    console.log("start");
-    const response = await axios.post(
-      "https://j3m2f.sse.codesandbox.io/checkout",
-      {
-        token,
-        product,
-      }
-    );
-    const { status } = response.data;
-    if (status === "success") {
-      setLoading(false);
-      toast("Success! Check email for details", { type: "success" });
-    } else {
-      setLoading(false);
-      toast("Something went wrong", { type: "error" });
-    }
-  }
 
   return (
     <div className="page">
