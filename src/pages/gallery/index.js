@@ -3,20 +3,30 @@ import "./styles.css";
 import { Link } from "react-scroll";
 
 // Kitchen
+import showcase_k1 from "./images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg";
 import kitchen1 from "./images/kitchens/IMG_1335.jpg";
 import kitchen2 from "./images/kitchens/IMG_1336.jpg";
 import kitchen3 from "./images/kitchens/IMG_1338.jpg";
 import kitchen4 from "./images/kitchens/IMG_1340.jpg";
 
 // Bathroom
+import showcase_b1 from "./images/john-cameron-_RKgdOuNzY0-unsplash.jpg";
+import showcase_b2 from "./images/pawel-czerwinski-FZAoIQ0vTqg-unsplash.jpg";
+import showcase_b3 from "./images/shawn-ang-dB_usTnVQJE-unsplash.jpg";
 import bathroom1 from "./images/bathrooms/IMG_1333.jpg";
 import bathroom2 from "./images/bathrooms/IMG_1334.jpg";
 
 // Bedroom
+import showcase_bd1 from "./images/12565.jpg";
+import showcase_bd2 from "./images/download.jpeg";
+import showcase_bd3 from "./images/download (1).jpeg";
 import bedroom1 from "./images/bedrooms/IMG_1337.jpg";
 import bedroom2 from "./images/bedrooms/bedroom2.jpg";
 
 // Garden
+import showcase_g1 from "./images/hunt-han-4QdIiHPLnfI-unsplash.jpg";
+import showcase_g2 from "./images/markus-spiske-sFydXGrt5OA-unsplash.jpg";
+import showcase_g3 from "./images/mio-ito-DaGIjXNl5oA-unsplash.jpg";
 import garden1 from "./images/gardens/gardem-4.jpg";
 import garden2 from "./images/gardens/garden-2.jpg";
 import garden3 from "./images/gardens/garden-4.jpg";
@@ -36,20 +46,24 @@ export default function index() {
           <div
             style={{
               display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              alignSelf: "center",
               flexDirection: "column",
               backgroundColor: "#fff",
-              marginLeft: "50px",
+              marginLeft: "60px",
               marginRight: "50px",
-              padding : '15px',
+              padding: "15px",
               height: "20vh",
-              alignSelf: "center",
-              borderRadius: "20px", 
-              // border : '5px solid #979f8b'    
-              boxShadow: '5px 5px #8cc540'
+              width: "20vw",
+              borderRadius: "20px",
+              opacity: 1,
+              // border : '5px solid #979f8b'
+              // boxShadow: "5px 5px #8cc540",
             }}
           >
-            <h1>Come Check Out Our Work</h1>
-            <h2>select one of the four options.</h2>
+            <h1>GALLERY</h1>
+            <h2>select an option</h2>
           </div>
           <div style={{ display: "flex", flex: 1, marginTop: "2vh" }}>
             <div
@@ -90,13 +104,18 @@ export default function index() {
                         width: "80%",
                         color: "#3ab34a",
                         textShadow: "1px 1.4px #838383",
-                        height: "100px",
+                        height: "200px",
                         fontWeight: "700",
-                        fontSize: "27px",
+                        fontSize: "30px",
                         backgroundColor: "white",
                         textTransform: "uppercase",
                         alignItems: "center",
                         border: "none",
+                        borderRadius: "20px",
+                        backgroundImage: `url(${showcase_b2})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
                         // opacity : '0.7',
                         // boxShadow: "4px 4px #8cc540",
                       }}
@@ -134,15 +153,20 @@ export default function index() {
                       style={{
                         display: "flex",
                         width: "80%",
-                        height: "100px",
+                        height: "200px",
                         color: "#3ab34a",
                         textShadow: "1px 1.4px #838383",
                         fontWeight: "700",
-                        fontSize: "27px",
+                        fontSize: "30px",
                         backgroundColor: "white",
                         textTransform: "uppercase",
                         alignItems: "center",
                         border: "none",
+                        borderRadius: "20px",
+                        backgroundImage: `url(${showcase_g1})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
                       }}
                     >
                       Gardens
@@ -199,13 +223,18 @@ export default function index() {
                         width: "80%",
                         color: "#3ab34a",
                         textShadow: "1px 1.4px #838383",
-                        height: "100px",
+                        height: "200px",
                         fontWeight: "700",
-                        fontSize: "27px",
+                        fontSize: "30px",
                         backgroundColor: "white",
                         textTransform: "uppercase",
                         alignItems: "center",
                         border: "none",
+                        borderRadius: "20px",
+                        backgroundImage: `url(${showcase_k1})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
                       }}
                     >
                       Kitchens
@@ -244,15 +273,20 @@ export default function index() {
                       style={{
                         display: "flex",
                         width: "80%",
-                        height: "100px",
+                        height: "200px",
                         color: "#3ab34a",
                         textShadow: "1px 1.4px #838383",
                         fontWeight: "700",
-                        fontSize: "27px",
+                        fontSize: "30px",
                         backgroundColor: "white",
                         textTransform: "uppercase",
                         alignItems: "center",
                         border: "none",
+                        borderRadius: "20px",
+                        backgroundImage: `url(${showcase_bd3})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
                       }}
                     >
                       Bedrooms
