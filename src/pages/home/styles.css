@@ -2,6 +2,9 @@
 
 .page {
   /* background-color: #3ab34a; */
+  height: 100vh;
+  /* overflow: auto; */
+  /* scroll-snap-type: y mandatory; */
 }
 
 /* SCREEN LEVEL */
@@ -20,6 +23,7 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
+  scroll-snap-align: center;
 }
 
 .top {
@@ -137,6 +141,7 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
+  scroll-snap-align: center;
   /* background-color: #84D78F;
   background-blend-mode: hard-light; */
 }
@@ -205,6 +210,7 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
+  scroll-snap-align: center;
   /* background-color: #84D78F;
   background-blend-mode: hard-light; */
 }

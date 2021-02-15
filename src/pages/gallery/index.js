@@ -50,7 +50,7 @@ export default function index() {
               justifyContent: "center",
               alignSelf: "center",
               flexDirection: "column",
-              backgroundColor: "#fff",
+              // backgroundColor: "#fff",
               marginLeft: "60px",
               marginRight: "50px",
               padding: "15px",
@@ -58,7 +58,7 @@ export default function index() {
               width: "20vw",
               borderRadius: "20px",
               opacity: 1,
-              // border : '5px solid #979f8b'
+              border: "3.5px solid #C2C2C2",
               // boxShadow: "5px 5px #8cc540",
             }}
           >
@@ -120,7 +120,7 @@ export default function index() {
                         // boxShadow: "4px 4px #8cc540",
                       }}
                     >
-                      Bathrooms
+                      {/* Bathrooms */}
                     </button>
                   </div>
                 </Link>
@@ -169,7 +169,7 @@ export default function index() {
                         backgroundSize: "cover",
                       }}
                     >
-                      Gardens
+                      {/* Gardens */}
                     </button>
                   </div>
                 </Link>
@@ -237,7 +237,7 @@ export default function index() {
                         backgroundSize: "cover",
                       }}
                     >
-                      Kitchens
+                      {/* Kitchens */}
                     </button>
                   </div>
                 </Link>
@@ -289,7 +289,7 @@ export default function index() {
                         backgroundSize: "cover",
                       }}
                     >
-                      Bedrooms
+                      {/* Bedrooms */}
                     </button>
                   </div>
                 </Link>

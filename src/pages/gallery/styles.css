@@ -32,6 +32,7 @@
 .bedrooms {
   display: flex;
   flex: 1;
+  opacity: 0.75;
   /* background-color: red; */
 }
 
@@ -58,16 +59,19 @@
 .kitchen {
   display: flex;
   flex: 1;
+  opacity: 0.75;
   /* background-color: blue; */
 }
 .bathrooms {
   display: flex;
   flex: 1;
+  opacity: 0.75;
   /* background-color: yellow; */
 }
 .gardens {
   display: flex;
   flex: 1;
+  opacity: 0.75;
   /* background-color: green; */
 }
 
