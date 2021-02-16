@@ -110,13 +110,14 @@ export default function index() {
                 display: "flex",
                 flexDirection: "column",
                 flex: "1",
-                padding: "0 5rem 0 8rem",
+                padding: "0 0rem 0 8rem",
                 borderRadius: "20px",
                 // backgroundColor: "green",
               }}
             >
               <div className="form-header">
-                <h1>CLEANING</h1>
+                <h1>GARDENING</h1>
+                <h5>sumbit the form for your same day quote</h5>
               </div>
 
               <div className="form-body">
@@ -125,10 +126,10 @@ export default function index() {
                     display: "flex",
                     flex: "1",
                     flexDirection: "column",
-                    color: "#919d5d",
+                    color: "grey",
                     fontWeight: "bold",
-                    fontSize: 18,
-                    textShadow: "1px 1px #a87c3d",
+                    // fontSize: 18,
+                    // textShadow: "1.5px 1.5px #000",
                     textAlign: "center",
                     textTransform: "uppercase",
                     backgroundColor: "#fff",
@@ -143,23 +144,28 @@ export default function index() {
                     controlId="exampleForm.ControlInput1"
                     style={{
                       display: "flex",
-                      flexDirection: "column",
+                      flexDirection: "row",
                       flex: 1,
                       // backgroundColor: "red",
+                      borderBottom: "1.5px solid grey",
                       alignItems: "center",
                       justifyContent: "center",
                     }}
                   >
-                    <Form.Label>name</Form.Label>
+                    <Form.Label
+                      style={{ marginRight: "2rem", paddingTop: "2%" }}
+                    >
+                      name
+                    </Form.Label>
                     <Form.Control
                       type="text"
                       name="name"
                       // placeholder="David Keys"
                       style={{
-                        color: "#979F8B",
+                        color: "#C0C0C0",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        fontSize: 12,
+                        // fontSize: 12,
                         textAlign: "center",
                       }}
                     />
@@ -168,23 +174,28 @@ export default function index() {
                     controlId="exampleForm.ControlInput1"
                     style={{
                       display: "flex",
-                      flexDirection: "column",
+                      flexDirection: "row",
                       alignItems: "center",
                       justifyContent: "center",
                       flex: 1,
                       // backgroundColor: "blue",
+                      borderBottom: "1.5px solid grey",
                     }}
                   >
-                    <Form.Label>email address</Form.Label>
+                    <Form.Label
+                      style={{ marginRight: "2rem", paddingTop: "2%" }}
+                    >
+                      email
+                    </Form.Label>
                     <Form.Control
                       type="email"
                       name="email"
                       // placeholder="name@example.com"
                       style={{
-                        color: "#979F8B",
+                        color: "#C0C0C0",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        fontSize: 12,
+                        // fontSize: 12,
                         textAlign: "center",
                       }}
                     />
@@ -193,23 +204,29 @@ export default function index() {
                     controlId="exampleForm.ControlTextarea1"
                     style={{
                       display: "flex",
-                      flexDirection: "column",
+                      flexDirection: "row",
                       alignItems: "center",
                       justifyContent: "center",
-                      flex: "1",
+                      // backgroundColor: "red",
+                      flex: 1,
+                      borderBottom: "1.5px solid grey",
                     }}
                   >
-                    <Form.Label>notes</Form.Label>
+                    <Form.Label
+                      style={{ marginRight: "2rem", paddingTop: "2%" }}
+                    >
+                      notes
+                    </Form.Label>
                     <Form.Control
                       as="textarea"
                       name="message"
                       rows={3}
                       // placeholder="Make your enquiry"
                       style={{
-                        color: "#979F8B",
+                        color: "#C0C0C0",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        fontSize: 12,
+                        // fontSize: 12,
                         textAlign: "center",
                       }}
                     />
@@ -218,57 +235,83 @@ export default function index() {
                     controlId="exampleForm.ControlSelect1"
                     style={{
                       display: "flex",
-                      flexDirection: "column",
+                      flexDirection: "row",
                       alignItems: "center",
-                      justifyContent: "center",
-                      flex: "2",
+                      // justifyContent: "center",
+                      flex: 1,
                       // backgroundColor: "pink",
+                      // borderBottom: "1.5px solid grey",
                     }}
                   >
-                    <Form.Check
-                      inline
-                      label="Lawn Mowing"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-1`}
-                    />
-                    <Form.Check
-                      inline
-                      label="Garden Litter"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-2`}
-                    />
-                    <Form.Check
-                      inline
-                      // disabled
-                      label="Garden Care"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-3`}
-                    />
+                    <Form.Label
+                      style={{ marginRight: "1.6rem", paddingTop: "2%" }}
+                    >
+                      select
+                    </Form.Label>
+                    <div
+                      style={{
+                        // display: "flex",
+                        flexDirection: "column",
+                        // textAlign: "center",
+                        // justifyContent: "flex-end",
+                        border: "solid 1px #c3ccc3",
+                        borderRadius: "5px",
+                        padding: "8px",
+                        width: "100%",
+                      }}
+                    >
+                      <Form.Check
+                        inline
+                        label="Lawn Mowing"
+                        type={"checkbox"}
+                        id={`inline-${"checkbox"}-1`}
+                        style={{ color: "#C0C0C0", fontSize: "0.9rem" }}
+                      />
+                      <Form.Check
+                        inline
+                        label="Garden Litter"
+                        type={"checkbox"}
+                        id={`inline-${"checkbox"}-2`}
+                        style={{ color: "#C0C0C0", fontSize: "0.9rem" }}
+                      />
+                      <Form.Check
+                        inline
+                        // disabled
+                        label="Garden Care"
+                        type={"checkbox"}
+                        id={`inline-${"checkbox"}-3`}
+                        style={{ color: "#C0C0C0", fontSize: "0.9rem" }}
+                      />
 
-                    <Form.Check
-                      inline
-                      label="Flower Bed / Plant Weeding"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-1`}
-                    />
-                    <Form.Check
-                      inline
-                      label="Tree Branch / Bush Trimming"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-2`}
-                    />
-                    <Form.Check
-                      inline
-                      label="Sidewalk Weed Removal"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-2`}
-                    />
-                    <Form.Check
-                      inline
-                      label="Driveway Weed Removal"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-2`}
-                    />
+                      <Form.Check
+                        inline
+                        label="Flower Bed / Plant Weeding"
+                        type={"checkbox"}
+                        id={`inline-${"checkbox"}-1`}
+                        style={{ color: "#C0C0C0", fontSize: "0.9rem" }}
+                      />
+                      <Form.Check
+                        inline
+                        label="Tree Branch / Bush Trimming"
+                        type={"checkbox"}
+                        id={`inline-${"checkbox"}-2`}
+                        style={{ color: "#C0C0C0", fontSize: "0.9rem" }}
+                      />
+                      <Form.Check
+                        inline
+                        label="Sidewalk Weed Removal"
+                        type={"checkbox"}
+                        id={`inline-${"checkbox"}-2`}
+                        style={{ color: "#C0C0C0", fontSize: "0.9rem" }}
+                      />
+                      <Form.Check
+                        inline
+                        label="Driveway Weed Removal"
+                        type={"checkbox"}
+                        id={`inline-${"checkbox"}-2`}
+                        style={{ color: "#C0C0C0", fontSize: "0.9rem" }}
+                      />
+                    </div>
                   </Form.Group>
                 </Form>
               </div>
@@ -298,7 +341,10 @@ export default function index() {
                           backgroundColor: "transparent",
                           borderColor: "#fff",
                           fontSize: 13,
-                          color: "#fff",
+                          color: "grey",
+                          borderColor: "grey",
+                          borderWidth: "2px",
+                          // textShadow: "2px 2px #000",
                         }}
                       >
                         BACK TO TOP
@@ -326,10 +372,11 @@ export default function index() {
                         style={{
                           width: "100%",
                           fontWeight: "bold",
-                          backgroundColor: "#fff",
-                          color: "#919d5d",
+                          backgroundColor: "grey",
+                          color: "#",
                           fontSize: 13,
-                          borderColor: "#fff",
+                          // borderColor: "#000",
+                          borderWidth: "0px",
                         }}
                       >
                         SUBMIT

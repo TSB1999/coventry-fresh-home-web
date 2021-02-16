@@ -39,14 +39,11 @@ export default function Index() {
           <div className="preview-image">
             <img
               src={preview1}
-              style={{ width: "100%", borderRadius: "20px" }}
+              style={{ width: "100%", borderRadius: "8px" }}
             />
           </div>
           <div className="body">
-            <Form.Group
-              controlId="exampleForm.ControlSelect2"
-              style={{ marginTop: "20px" }}
-            >
+            <Form.Group controlId="exampleForm.ControlSelect2">
               <Form.Check
                 inline
                 label="DISHES"
@@ -205,15 +202,24 @@ export default function Index() {
             <div style={{ display: "flex", flex: 1 }}>
               <div
                 className="subtract circle"
-                onClick={() => setCleanHour(cleanHour - 1)}
+                onClick={() =>
+                  cleanHour !== 1 ? setCleanHour(cleanHour - 1) : null
+                }
               >
                 <button>-1</button>
               </div>
               <div className="quantity">
-                <div style={{ fontSize: "15px", fontWeight: "700" }}>
+                <div
+                  style={{
+                    fontSize: "1.4rem",
+                    fontWeight: "700",
+                  }}
+                >
                   {cleanHour}
                 </div>
-                <div style={{ fontSize: "15px", fontWeight: "500" }}>hours</div>
+                <div style={{ fontSize: "1.1rem", fontWeight: "500" }}>
+                  hours
+                </div>
               </div>
               <div
                 className="add circle"
@@ -349,15 +355,24 @@ export default function Index() {
             <div style={{ display: "flex", flex: 1 }}>
               <div
                 className="subtract circle"
-                onClick={() => setGardenHour(gardenHour - 1)}
+                onClick={() =>
+                  gardenHour !== 1 ? setGardenHour(gardenHour - 1) : null
+                }
               >
                 <button>-1</button>
               </div>
               <div className="quantity">
-                <div style={{ fontSize: "15px", fontWeight: "700" }}>
+                <div
+                  style={{
+                    fontSize: "1.4rem",
+                    fontWeight: "700",
+                  }}
+                >
                   {gardenHour}
                 </div>
-                <div style={{ fontSize: "15px", fontWeight: "700" }}>hours</div>
+                <div style={{ fontSize: "1.1rem", fontWeight: "500" }}>
+                  hours
+                </div>
               </div>
               <div
                 className="add circle"
