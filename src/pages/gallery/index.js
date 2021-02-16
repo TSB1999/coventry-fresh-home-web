@@ -50,28 +50,41 @@ export default function index() {
               justifyContent: "center",
               alignSelf: "center",
               flexDirection: "column",
-              // backgroundColor: "#fff",
+              // backgroundColor: "grey",
               marginLeft: "60px",
               marginRight: "50px",
-              padding: "15px",
-              height: "20vh",
+              padding: "6.5rem",
+              height: "15vh",
               width: "20vw",
-              borderRadius: "20px",
+              borderRadius: "1rem",
               opacity: 1,
-              border: "3.5px solid #C2C2C2",
-              // boxShadow: "5px 5px #8cc540",
+              // border: "4px solid #b6b6ad",
+              boxShadow: "5px 5px #b6b6ad",
             }}
           >
-            <h1>GALLERY</h1>
-            <h2>select an option</h2>
+            <h1 style={{ fontSize: "4.5rem" }}>GALLERY</h1>
+            <h2
+              style={{
+                fontSize: "1rem",
+                color: "grey",
+                fontWeight: "bold",
+                backgroundColor: "#b6b6ad",
+                borderRadius: "0.5rem",
+                padding: "0.4rem 0.5rem",
+              }}
+            >
+              select an option
+            </h2>
           </div>
-          <div style={{ display: "flex", flex: 1, marginTop: "2vh" }}>
+          <div
+            style={{ display: "flex", flex: 1, backgroundColor: "transparent" }}
+          >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
-                backgroundColor: "transparent",
+                // backgroundColor: "red",
               }}
             >
               <div className="bathrooms">
@@ -98,29 +111,23 @@ export default function index() {
                   >
                     <button
                       type="submit"
-                      class="btn btn-primary"
-                      style={{
-                        display: "flex",
-                        width: "80%",
-                        color: "#3ab34a",
-                        textShadow: "1px 1.4px #838383",
-                        height: "200px",
-                        fontWeight: "700",
-                        fontSize: "30px",
-                        backgroundColor: "white",
-                        textTransform: "uppercase",
-                        alignItems: "center",
-                        border: "none",
-                        borderRadius: "20px",
-                        backgroundImage: `url(${showcase_b2})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        // opacity : '0.7',
-                        // boxShadow: "4px 4px #8cc540",
-                      }}
+                      class="btn btn-primary bath-image"
+                      style={{ border: "5px solid grey" }}
                     >
-                      {/* Bathrooms */}
+                      <h1
+                        style={{
+                          fontSize: "2.1rem",
+                          // backgroundColor: "#fff",
+                          borderRadius: "0.8rem",
+                          padding: "7.9rem 5rem 0rem 0rem",
+                          // opacity: 0.9,
+                          color: "grey",
+                          textShadow: "1.6px 1.6px #292929",
+                          // paddingBottom: "3rem",
+                        }}
+                      >
+                        Bathrooms
+                      </h1>
                     </button>
                   </div>
                 </Link>
@@ -149,27 +156,23 @@ export default function index() {
                   >
                     <button
                       type="submit"
-                      class="btn btn-primary"
-                      style={{
-                        display: "flex",
-                        width: "80%",
-                        height: "200px",
-                        color: "#3ab34a",
-                        textShadow: "1px 1.4px #838383",
-                        fontWeight: "700",
-                        fontSize: "30px",
-                        backgroundColor: "white",
-                        textTransform: "uppercase",
-                        alignItems: "center",
-                        border: "none",
-                        borderRadius: "20px",
-                        backgroundImage: `url(${showcase_g1})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                      }}
+                      class="btn btn-primary gard-image"
+                      style={{ border: "5px solid grey" }}
                     >
-                      {/* Gardens */}
+                      <h1
+                        style={{
+                          fontSize: "2.1rem",
+                          // backgroundColor: "#fff",
+                          borderRadius: "0.8rem",
+                          padding: "1rem 1.5rem",
+                          // opacity: 0.9,
+                          color: "grey",
+                          textShadow: "1.6px 1.6px #292929",
+                          padding: "3rem 4rem 0 0",
+                        }}
+                      >
+                        Gardens
+                      </h1>
                     </button>
                   </div>
                 </Link>
@@ -181,19 +184,10 @@ export default function index() {
                 flex: 1,
                 display: "flex",
                 flexDirection: "column",
-                backgroundColor: "transparent",
-              }}
-            ></div>
-
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                flex: 1,
-                backgroundColor: "transparent",
+                // backgroundColor: "red",
               }}
             >
-              <div className="kitchens">
+              {/* <div className="kitchens">
                 <Link
                   activeClass="active"
                   to="kitchens"
@@ -205,94 +199,141 @@ export default function index() {
                   // delay={1000}
                   isDynamic={true}
                   ignoreCancelEvents={false}
-                  style={{ flex: 1 }}
+                  style={{
+                    flex: 1,
+                  }}
                 >
                   <div
                     className="button-1"
                     style={{
-                      margin: "10px 10px 10px 130px",
+                      margin: "0 4rem",
                       // backgroundColor: "white",
                       flex: 1,
                     }}
                   >
                     <button
                       type="submit"
-                      class="btn btn-primary"
-                      style={{
-                        display: "flex",
-                        width: "80%",
-                        color: "#3ab34a",
-                        textShadow: "1px 1.4px #838383",
-                        height: "200px",
-                        fontWeight: "700",
-                        fontSize: "30px",
-                        backgroundColor: "white",
-                        textTransform: "uppercase",
-                        alignItems: "center",
-                        border: "none",
-                        borderRadius: "20px",
-                        backgroundImage: `url(${showcase_k1})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                      }}
+                      class="btn btn-primary any-image"
+                      style={{ border: "5px solid grey" }}
                     >
-                      {/* Kitchens */}
+                      <h1
+                        style={{
+                          fontSize: "2.1rem",
+                          // backgroundColor: "#3ab34a",
+                          borderRadius: "0.8rem",
+                          padding: "2.8rem",
+                          // opacity: 0.7,
+                          color: "#fff",
+                        }}
+                      >
+                        ALL IMAGES
+                      </h1>
                     </button>
                   </div>
                 </Link>
-              </div>
+              </div> */}
+            </div>
+            <div style={{ display: "flex", flex: 1 }}>
               <div
-                className="gardens"
-                style={{ display: "flex", alignItems: "center" }}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1,
+                  // backgroundColor: "red",
+                }}
               >
-                <Link
-                  activeClass="active"
-                  to="bedrooms"
-                  spy={true}
-                  smooth={true}
-                  hashSpy={true}
-                  // offset={50}
-                  duration={500}
-                  // delay={1000}
-                  isDynamic={true}
-                  ignoreCancelEvents={false}
-                  style={{ flex: 1 }}
-                >
-                  <div
-                    className="button-1"
-                    style={{
-                      margin: "10px 10px 10px 130px",
-                      // backgroundColor: "white",
-                      flex: 1,
-                    }}
+                <div className="kitchens">
+                  <Link
+                    activeClass="active"
+                    to="kitchens"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                    style={{ flex: 1 }}
                   >
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
+                    <div
+                      className="button-1"
                       style={{
-                        display: "flex",
-                        width: "80%",
-                        height: "200px",
-                        color: "#3ab34a",
-                        textShadow: "1px 1.4px #838383",
-                        fontWeight: "700",
-                        fontSize: "30px",
-                        backgroundColor: "white",
-                        textTransform: "uppercase",
-                        alignItems: "center",
-                        border: "none",
-                        borderRadius: "20px",
-                        backgroundImage: `url(${showcase_bd3})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
+                        margin: "10px 10px 10px 130px",
+                        // backgroundColor: "white",
+                        flex: 1,
                       }}
                     >
-                      {/* Bedrooms */}
-                    </button>
-                  </div>
-                </Link>
+                      <button
+                        type="submit"
+                        class="btn btn-primary kitch-image"
+                        style={{ border: "5px solid grey" }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "2.5rem",
+                            // backgroundColor: "#fff",
+                            borderRadius: "0.8rem",
+                            padding: "1rem 1.5rem",
+                            // opacity: 0.9,
+                            color: "grey",
+                            textShadow: "1.6px 1.6px #292929",
+                            padding: "0 0",
+                          }}
+                        >
+                          Kitchens
+                        </h1>
+                      </button>
+                    </div>
+                  </Link>
+                </div>
+                <div
+                  className="bedrooms"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <Link
+                    activeClass="active"
+                    to="bedrooms"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                    style={{ flex: 1 }}
+                  >
+                    <div
+                      className="button-1"
+                      style={{
+                        margin: "10px 10px 10px 130px",
+                        // backgroundColor: "white",
+                        flex: 1,
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        class="btn btn-primary bed-image"
+                        style={{ border: "5px solid grey" }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "2.1rem",
+                            // backgroundColor: "#fff",
+                            borderRadius: "0.8rem",
+                            padding: "0 0 4rem 8.2rem",
+                            opacity: 0.9,
+                            color: "grey",
+                            textShadow: "1.6px 1.6px #292929",
+                          }}
+                        >
+                          Bedrooms
+                        </h1>
+                      </button>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

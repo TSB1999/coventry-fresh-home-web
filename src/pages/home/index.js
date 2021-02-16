@@ -147,7 +147,7 @@ export default function index() {
                       flexDirection: "row",
                       flex: 1,
                       // backgroundColor: "red",
-                      borderBottom: "1.5px solid grey",
+                      borderBottom: "1.5px solid #b6b6ad",
                       alignItems: "center",
                       justifyContent: "center",
                     }}
@@ -179,7 +179,7 @@ export default function index() {
                       justifyContent: "center",
                       flex: 1,
                       // backgroundColor: "blue",
-                      borderBottom: "1.5px solid grey",
+                      borderBottom: "1.5px solid #b6b6ad",
                     }}
                   >
                     <Form.Label
@@ -209,7 +209,7 @@ export default function index() {
                       justifyContent: "center",
                       // backgroundColor: "red",
                       flex: 1,
-                      borderBottom: "1.5px solid grey",
+                      borderBottom: "1.5px solid #b6b6ad",
                     }}
                   >
                     <Form.Label

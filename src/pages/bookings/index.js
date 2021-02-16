@@ -43,7 +43,14 @@ export default function Index() {
             />
           </div>
           <div className="body">
-            <Form.Group controlId="exampleForm.ControlSelect2">
+            <Form.Group
+              controlId="exampleForm.ControlSelect2"
+              style={
+                {
+                  // backgroundColor: "red",
+                }
+              }
+            >
               <Form.Check
                 inline
                 label="DISHES"

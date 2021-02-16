@@ -29,11 +29,43 @@
   display: flex;
 }
 
+.kitchens {
+  display: flex;
+  flex: 1;
+  opacity: 0.75;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
 .bedrooms {
   display: flex;
   flex: 1;
   opacity: 0.75;
+
+  /* transition: 1s; */
   /* background-color: red; */
+}
+
+/* .bedrooms:hover {
+  background-color: "black";
+} */
+
+.bathrooms {
+  display: flex;
+  flex: 1;
+  opacity: 0.75;
+  align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+.gardens {
+  display: flex;
+  flex: 1;
+  opacity: 0.75;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
 }
 
 .button-1 {
@@ -41,7 +73,75 @@
   align-items: center;
   justify-content: center;
   padding-left: 13px;
+  /* background-color: red; */
 }
+
+.button-1 > button {
+  display: flex;
+  width: 80%;
+  color: #3ab34a;
+  text-shadow: 1px 1.4px #838383;
+  height: 200px;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #3ab34a;
+  transition: 1s;
+}
+
+.bath-image {
+  display: flex;
+  /* justify-content: flex-end;
+  height: 100px;
+  width: 100px; */
+  background-image: url(./images/soap-dispenser-2337697_640.jpg);
+
+  background-color: #3ab34a;
+  /* background-blend-mode: lighten; */
+}
+
+.bed-image {
+  background-image: url(./images/liana-mikah-WMcitUcSgEg-unsplash.jpg);
+  background-color: #3ab34a;
+  /* background-blend-mode: lighten; */
+}
+
+.kitch-image {
+  background-image: url(./images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+  background-color: #3ab34a;
+  /* background-blend-mode: lighten; */
+}
+
+.gard-image {
+  background-image: url(./images/hunt-han-4QdIiHPLnfI-unsplash.jpg);
+  background-color: #3ab34a;
+  background-blend-mode: lighten;
+}
+
+.any-image {
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  background-image: url(./images/cleanroom-big.jpg);
+  background-color: #3ab34a;
+  margin-bottom: 5rem;
+  /* background-blend-mode: lighten; */
+}
+
+.button-1 > button:hover {
+  background-color: white;
+  background-image: none;
+}
+
+/* .bd-transition {
+  background-color: red;
+} */
 
 .inline-styles {
   display: flex;
@@ -54,25 +154,6 @@
   text-transform: uppercase;
   align-items: "center";
   border: "none";
-}
-
-.kitchen {
-  display: flex;
-  flex: 1;
-  opacity: 0.75;
-  /* background-color: blue; */
-}
-.bathrooms {
-  display: flex;
-  flex: 1;
-  opacity: 0.75;
-  /* background-color: yellow; */
-}
-.gardens {
-  display: flex;
-  flex: 1;
-  opacity: 0.75;
-  /* background-color: green; */
 }
 
 .gallery-header-wrapper {
@@ -102,7 +183,7 @@
   /* background-color: #292929; */
   /* font-size: 2.8rem; */
   /* text-align: center; */
-  color: #3ab34a;
+  color: #b6b6ad;
   text-shadow: 2px 2px grey;
 }
 
@@ -139,9 +220,9 @@
 
 .btn {
   /* margin-top: 3vh; */
+  display: flex;
   justify-content: center;
   /* background-color: aqua; */
-  display: flex;
   width: 100%;
 }
 
