@@ -244,6 +244,7 @@ export default function Home() {
                         color: "grey",
                         borderColor: "grey",
                         borderWidth: "2px",
+                        borderRadius: "0",
                         // textShadow: "2px 2px #000",
                       }}
                     >
@@ -277,6 +278,7 @@ export default function Home() {
                         fontSize: 13,
                         // borderColor: "#000",
                         borderWidth: "0px",
+                        borderRadius: "0",
                       }}
                     >
                       SUBMIT

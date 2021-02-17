@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="left">
         <div>
           <img src={logo} style={{ width: "6rem", backgroundColor: "red" }} />
-          <h4>home</h4>
+          {/* <h4>home</h4> */}
         </div>
       </div>
       <div className="main">
@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="right">
         <div>
           <i class="fas fa-donate fa-3x"></i>
-          <h4>donate</h4>
+          {/* <h4>donate</h4> */}
         </div>
       </div>
     </nav>

@@ -1,339 +1,114 @@
-/*  Application Level */
-
-.gallery-screen-wrapper {
-  /* font-family: "Satisfy"; */
-  font-family: Arial, Helvetica, sans-serif;
-  /* background-image: url(./images/cleanoffice+pic.jpg); */
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-    url("./images/philipp-berndt-5i0GnoTTjSE-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.screen {
   height: 100vh;
-  display: flex;
-  padding: 5vh 0 0 0;
-  background-color: #84d78f;
-  /* background-blend-mode: hard-light; */
 }
 
-.gallery-screen-wrapper-2 {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-    url("./images/Clean-office.png"); */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #3ab34a;
-  /* font-family: "Satisfy"; */
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
-  display: flex;
+.navbar-placeholder {
+  height: 15vh;
 }
 
-.kitchens {
+.screen-container {
+  display: flex;
+  margin: 0vh 2vh 0 2vh;
+  padding: 2vh 0 2vh 0;
+  height: 85vh;
+}
+
+.gallery-landing {
+  background-color: #edefea;
+  /* background-image: url(./images/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery-header {
   display: flex;
   flex: 1;
-  opacity: 0.75;
+  /* background-color: red; */
+  text-align: center;
   align-items: center;
   justify-content: center;
+  border-bottom: 2px solid grey;
+  margin: 0rem 20%;
+}
+.gallery-header > h4 {
+  font-weight: 500;
+  color: grey;
+  /* background-color: grey; */
+  padding: 0.5rem;
+  /* border-radius: 0.7rem; */
+  border-bottom: 2px solid grey;
+}
+
+.gallery-grid-container {
+  display: flex;
+  flex: 7;
   /* background-color: blue; */
 }
 
-.bedrooms {
-  display: flex;
+.showcase-grid {
   flex: 1;
-  opacity: 0.75;
-
-  /* transition: 1s; */
-  /* background-color: red; */
+  display: grid;
+  grid-gap: 20px;
+  padding: 1rem 5rem;
+  /* border: 5px solid aqua; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0.3rem;
 }
-
-/* .bedrooms:hover {
-  background-color: "black";
-} */
-
-.bathrooms {
-  display: flex;
-  flex: 1;
-  opacity: 0.75;
-  align-items: center;
-  justify-content: center;
-  /* background-color: yellow; */
-}
-.gardens {
-  display: flex;
-  flex: 1;
-  opacity: 0.75;
-  align-items: center;
-  justify-content: center;
-  /* background-color: green; */
-}
-
-.button-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 13px;
-  /* background-color: red; */
-}
-
-.button-1 > button {
-  display: flex;
-  width: 80%;
-  color: #3ab34a;
-  text-shadow: 1px 1.4px #838383;
-  height: 200px;
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-  align-items: center;
-  border: none;
-  border-radius: 20px;
+.bathroom {
+  border-radius: 5px;
+  /* height: 135px; */
+  /* width: 135px; */
+  background-image: url(./images/soap-dispenser-2337697_640.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #3ab34a;
-  transition: 1s;
+  border: none;
+  margin: 0.8rem;
+  /* box-shadow: 7px 7px grey; */
+  border: 2px solid grey;
 }
-
-.bath-image {
-  display: flex;
-  /* justify-content: flex-end;
-  height: 100px;
-  width: 100px; */
-  background-image: url(./images/soap-dispenser-2337697_640.jpg);
-
-  background-color: #3ab34a;
-  /* background-blend-mode: lighten; */
-}
-
-.bed-image {
+.bedroom {
+  display: block;
+  /* height: 135px; */
+  /* width: 135px; */
+  border-radius: 5px;
+  /* margin: auto; */
   background-image: url(./images/liana-mikah-WMcitUcSgEg-unsplash.jpg);
-  background-color: #3ab34a;
-  /* background-blend-mode: lighten; */
-}
-
-.kitch-image {
-  background-image: url(./images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
-  background-color: #3ab34a;
-  /* background-blend-mode: lighten; */
-}
-
-.gard-image {
-  background-image: url(./images/hunt-han-4QdIiHPLnfI-unsplash.jpg);
-  background-color: #3ab34a;
-  background-blend-mode: lighten;
-}
-
-.any-image {
-  display: "flex";
-  align-items: "center";
-  justify-content: "center";
-  background-image: url(./images/cleanroom-big.jpg);
-  background-color: #3ab34a;
-  margin-bottom: 5rem;
-  /* background-blend-mode: lighten; */
-}
-
-.button-1 > button:hover {
-  background-color: white;
-  background-image: none;
-}
-
-/* .bd-transition {
-  background-color: red;
-} */
-
-.inline-styles {
-  display: flex;
-  width: 100%;
-  height: 100px;
-  color: #3ab34a;
-  font-weight: 700;
-  font-size: 30px;
-  background-color: "white";
-  text-transform: uppercase;
-  align-items: "center";
-  border: "none";
-}
-
-.gallery-header-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  /* background-color: purple; */
-  margin: 12vh 5vh 5vh 5vh;
-  border-radius: 10px;
-  opacity: 0.8;
-  animation: drop 1.3s ease;
-}
-
-.gallery-header-background {
-  background-color: #fff;
-  opacity: 1;
-  padding: 15px;
-  margin: 0 15vh 0 15vh;
-  border-radius: 15px;
-  box-shadow: 10px 10px grey;
-}
-
-.gallery-header-wrapper h1 {
-  font-size: 3.5rem;
-  text-align: center;
-  font-weight: bold;
-  /* background-color: #292929; */
-  /* font-size: 2.8rem; */
-  /* text-align: center; */
-  color: #b6b6ad;
-  text-shadow: 2px 2px grey;
-}
-
-.gallery-header-wrapper h2 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.gallery-header-wrapper h3 {
-  text-align: center;
-  color: #8cc540;
-  /* text-shadow: 1px 1.5px #000; */
-  /* font-weight: 400; */
-  /* font-style: italic; */
-  padding: 0 10vh 0 10vh;
-
-  font-size: 1.1rem;
-  /* text-align: center; */
-  text-shadow: 1px 1px grey;
-  text-transform: uppercase;
-}
-
-.gallery-preview {
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin: 8vh 2vh 0vh 2vh;
-}
-
-.button-row {
-  display: flex;
-}
-
-.btn {
-  /* margin-top: 3vh; */
-  display: flex;
-  justify-content: center;
-  /* background-color: aqua; */
-  width: 100%;
-}
-
-.wrapper {
-  display: grid;
-  margin: 0 2rem 0 2rem;
-  grid-gap: 20px;
-}
-
-.header-wrapper {
-  /* background-color: red; */
-  display: flex;
-  justify-content: center;
-  color: #fff;
-}
-
-.header-wrapper h1 {
-  text-align: center;
-  font-size: 40px;
-  text-transform: uppercase;
-}
-
-/* Gallery */
-.gallery-items-wrapper {
-  margin-top: 17.5vh;
-  flex: 1;
-  display: grid;
-  padding: 20px 20px 20px 20px;
-  grid-gap: 25px;
-  grid-template-columns: repeat(4, 1fr);
-
-  /* background-color: crimson; */
-}
-
-.gallery-item-wrapper {
-  justify-content: center;
-  display: flex;
-  position: relative;
-  height: 280px;
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 10px 10px #8cc540;
-  /* animation: drop 1.3s ease; */
-}
-
-.one {
-  animation: drop 0.6s ease;
-}
-.two {
-  animation: drop 0.8s ease;
-}
-.three {
-  animation: drop 0.9s ease;
-}
-.four {
-  animation: drop 1.1s ease;
-}
-.five {
-  animation: drop 0.7s ease;
-}
-.six {
-  animation: drop 0.9s ease;
-}
-.seven {
-  animation: drop 1.1s ease;
-}
-.eight {
-  animation: drop 1.3s ease;
-}
-
-.item-img {
-  display: flex;
-  height: 350;
-  width: 100%;
-  border-radius: 15px;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border: none;
+  margin: 0.8rem;
+  /* box-shadow: 7px 7px grey; */
+  border: 2px solid grey;
 }
-
-.item-content-wrapper {
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
-  width: 100%;
-  border-radius: 10px;
-  background-color: transparent;
-  transition: 1s;
+.kitchen {
+  /* height: 135px; */
+  /* width: 135px; */
+  border-radius: 5px;
+  /* justify-self: end; */
+  background-image: url(./images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  margin: 0.8rem;
+  /* box-shadow: 7px 7px grey; */
+  border: 2px solid grey;
 }
+.garden {
+  border-radius: 0.5rem;
+  /* height: 135px; */
+  /* width: 135px; */
 
-.item-content-wrapper:hover {
-  background-color: #000;
-}
-
-.item-content-wrapper h4 {
-  background-color: transparent;
-  transition: 1s;
-  color: transparent;
-}
-
-.item-content-wrapper:hover h4 {
-  font-weight: 600;
-  color: lightseagreen;
-}
-
-.img-darken {
-  transition: 1s;
-  filter: brightness(10%);
+  /* justify-self: end; */
+  background-image: url(./images/hunt-han-4QdIiHPLnfI-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  margin: 0.8rem;
+  /* box-shadow: 7px 7px grey; */
+  border: 2px solid grey;
 }
