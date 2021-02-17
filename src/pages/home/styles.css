@@ -8,16 +8,21 @@
 
 .navbar-placeholder {
   height: 13vh;
-  background-color: aqua;
 }
 
 .screen-container {
   display: flex;
-  flex-direction: column;
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
-  /* background-color: purple; */
   height: 85vh;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
 }
 
 .landing {
@@ -31,23 +36,36 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   flex: 1.2;
-  /* background-color: red; */
-  border: 2px solid red;
 }
 
 .landing-top > h1 {
   grid-column: 2/4;
   grid-row: 2/3;
-  margin: auto;
+  font-size: calc(1.5rem + 1.8vw);
+  text-align: center;
 }
 
 .landing-bottom {
   flex: 1;
-  /* background-color: blue; */
 }
 
 .gardening {
-  background-color: yellow;
+  background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.landing-left {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);*/
+  flex: 1;
+  border: 5px solid red;
+}
+
+.landing-right {
+  flex: 1.35;
+  /* background-color: yellow; */
 }
 
 .cleaning {
