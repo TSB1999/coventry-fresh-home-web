@@ -6,8 +6,44 @@
   height: 100vh;
 }
 
+.navbar-placeholder {
+  height: 13vh;
+  background-color: aqua;
+}
+
+.screen-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0vh 2vh 0 2vh;
+  padding: 2vh 0 2vh 0;
+  /* background-color: purple; */
+  height: 85vh;
+}
+
 .landing {
-  background-color: red;
+  background-image: url(./images/hutomo-abrianto-X5BWooeO4Cw-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.landing-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  flex: 1.2;
+  /* background-color: red; */
+  border: 2px solid red;
+}
+
+.landing-top > h1 {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  margin: auto;
+}
+
+.landing-bottom {
+  flex: 1;
+  /* background-color: blue; */
 }
 
 .gardening {
@@ -16,15 +52,4 @@
 
 .cleaning {
   background-color: blue;
-}
-
-.navbar-placeholder {
-  height: 13vh;
-  /* background-color: aqua; */
-}
-
-.screen-container {
-  margin: 2vh;
-  background-color: white;
-  height: 100%;
 }
