@@ -44,39 +44,6 @@ export default function index() {
       <div className="gallery-screen-wrapper" id="top-gallery">
         <div className="gallery-header-wrapper">
           <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              alignSelf: "center",
-              flexDirection: "column",
-              // backgroundColor: "grey",
-              marginLeft: "60px",
-              marginRight: "50px",
-              padding: "6.5rem",
-              height: "15vh",
-              width: "20vw",
-              borderRadius: "1rem",
-              opacity: 1,
-              // border: "4px solid #b6b6ad",
-              boxShadow: "5px 5px #b6b6ad",
-            }}
-          >
-            <h1 style={{ fontSize: "4.5rem" }}>GALLERY</h1>
-            <h2
-              style={{
-                fontSize: "1rem",
-                color: "grey",
-                fontWeight: "bold",
-                backgroundColor: "#b6b6ad",
-                borderRadius: "0.5rem",
-                padding: "0.4rem 0.5rem",
-              }}
-            >
-              select an option
-            </h2>
-          </div>
-          <div
             style={{ display: "flex", flex: 1, backgroundColor: "transparent" }}
           >
             <div
@@ -181,57 +148,36 @@ export default function index() {
 
             <div
               style={{
-                flex: 1,
                 display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                alignSelf: "center",
                 flexDirection: "column",
-                // backgroundColor: "red",
+                // backgroundColor: "grey",
+                marginLeft: "60px",
+                marginRight: "50px",
+                padding: "6.5rem",
+                height: "15vh",
+                width: "20vw",
+                borderRadius: "1rem",
+                opacity: 1,
+                // border: "4px solid #b6b6ad",
+                boxShadow: "5px 5px #b6b6ad",
               }}
             >
-              {/* <div className="kitchens">
-                <Link
-                  activeClass="active"
-                  to="kitchens"
-                  spy={true}
-                  smooth={true}
-                  hashSpy={true}
-                  // offset={50}
-                  duration={500}
-                  // delay={1000}
-                  isDynamic={true}
-                  ignoreCancelEvents={false}
-                  style={{
-                    flex: 1,
-                  }}
-                >
-                  <div
-                    className="button-1"
-                    style={{
-                      margin: "0 4rem",
-                      // backgroundColor: "white",
-                      flex: 1,
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      class="btn btn-primary any-image"
-                      style={{ border: "5px solid grey" }}
-                    >
-                      <h1
-                        style={{
-                          fontSize: "2.1rem",
-                          // backgroundColor: "#3ab34a",
-                          borderRadius: "0.8rem",
-                          padding: "2.8rem",
-                          // opacity: 0.7,
-                          color: "#fff",
-                        }}
-                      >
-                        ALL IMAGES
-                      </h1>
-                    </button>
-                  </div>
-                </Link>
-              </div> */}
+              <h1 style={{ fontSize: "4.5rem" }}>GALLERY</h1>
+              <h2
+                style={{
+                  fontSize: "1rem",
+                  color: "grey",
+                  fontWeight: "bold",
+                  backgroundColor: "#b6b6ad",
+                  borderRadius: "0.5rem",
+                  padding: "0.4rem 0.5rem",
+                }}
+              >
+                select an option
+              </h2>
             </div>
             <div style={{ display: "flex", flex: 1 }}>
               <div

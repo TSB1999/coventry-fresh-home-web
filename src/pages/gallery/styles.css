@@ -249,8 +249,8 @@
 .gallery-items-wrapper {
   margin-top: 17.5vh;
   flex: 1;
-  padding: 20px 20px 20px 20px;
   display: grid;
+  padding: 20px 20px 20px 20px;
   grid-gap: 25px;
   grid-template-columns: repeat(4, 1fr);
 
