@@ -53,7 +53,7 @@ export default function index() {
         <div class="top">
           <div class="introduction">
             <div class="heading-text">
-              <h1>Domestic Cleaning and Gardening Services</h1>
+              <h1>Domestic Cleaning and Gardening Services1</h1>
             </div>
 
             {/* <div class="sub-heading-text">
