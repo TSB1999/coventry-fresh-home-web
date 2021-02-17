@@ -1,143 +1,31 @@
-.navbar-wrapper {
-  position: fixed;
-  top: 0;
-  opacity: 0.8;
-  display: flex;
-  width: 100%;
+.navbar-container {
   height: 13vh;
-  background-color: #ffffff;
-  align-items: center;
-}
-
-header {
-  background-color: #fff;
-  display: flex;
-  height: 15vh;
   width: 100%;
-  margin: auto;
-  align-items: center;
-  color: green;
-  font-weight: bold;
-  opacity: 0.8;
-  padding: 0 5rem 0 5rem;
+  background-color: white;
   position: fixed;
   top: 0;
-  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
 }
 
-.navbar-wrapper {
+.left {
   display: flex;
-}
-
-.logo-wrapper {
   flex: 1;
-  display: flex;
-  /* background-color: blue; */
-  align-self: center;
+  background-color: yellow;
+  align-items: center;
   justify-content: center;
-  min-width: 10rem;
 }
-
-.home-1 {
-  display: none;
-}
-
-.main-wrapper {
+.main {
   display: flex;
-  flex: 2;
-  /* background-color: red; */
-  justify-content: space-evenly;
-  list-style: none;
-  /* background-color: red; */
-  /* padding-top: 20px; */
-  padding: 20px 0 20px 0;
-}
-
-.donation-wrapper {
   flex: 1;
-  /* background-color: yellow; */
-  min-width: 10rem;
+  background-color: blue;
+  align-items: center;
   justify-content: center;
+}
+.right {
   display: flex;
-  color: #3ab34a;
-}
-
-.logo-container,
-.nav-links,
-.cart {
-  display: flex;
-}
-
-.nav-links {
-  /* background-color: red; */
-}
-
-.nav-links > div {
-  /* background-color: blue; */
-  /* margin : 0 5px 0 5px; */
-}
-
-.nav-links > div > .item {
-  /* background-color: green */
-}
-
-.nav-link {
-  margin: 0 2rem 0 2rem;
-}
-
-.nav-text {
   flex: 1;
-  align-self: center;
-  color: #3ab34a;
-  font-weight: bold;
-  text-align: center;
-}
-
-.logo-container {
-  background: lightblue;
-  flex: 1;
-}
-
-.logo {
-  font-weight: 400;
-  margin: 5px;
-}
-
-nav {
-  /* background: lightcoral; */
-  flex: 2;
-  align-self: center;
-}
-
-.nav-links {
-  /* justify-items: center; */
-  list-style: none;
-  /* background-color: red; */
-  /* padding-top: 20px; */
-}
-
-.nav-link {
-  color: #3ab34a;
-  font-size: 18px;
-  text-decoration: none;
-  /* background-color: coral; */
-}
-
-.item {
-  /* display: flex; */
-  /* flex: 1; */
-  flex-direction: column;
-  /* align-items: center; */
-}
-
-.icon {
-  margin: 5px;
-  flex: 1;
-}
-
-.cart {
-  /* background: lightgray; */
-  flex: 1;
-  justify-content: flex-end;
-  min-width: 10rem;
+  background-color: red;
+  align-items: center;
+  justify-content: center;
 }
