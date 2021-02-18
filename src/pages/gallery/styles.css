@@ -11,6 +11,14 @@
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
   height: 85vh;
+  /* background-color: red; */
+}
+
+.misc-container {
+  display: flex;
+  flex: 4;
+  align-items: center;
+  /* background-color: yellow; */
 }
 
 .gallery-landing {
@@ -111,4 +119,86 @@
   margin: 0.8rem;
   /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
+}
+
+/* Garden Screen */
+
+.gardening-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  /* background-color: red; */
+  border-bottom: 2px solid grey;
+  margin: 0rem 20%;
+}
+
+.gardening-header > h2 {
+  padding: 0.4rem;
+  border-bottom: 2px solid grey;
+  text-transform: uppercase;
+  color : grey
+}
+
+.gallery-items-wrapper {
+  flex: 1;
+  display: grid;
+  padding: 20px 20px 20px 20px;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  /* background-color: crimson; */
+}
+
+.gallery-item-wrapper {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  height: 280px;
+  width: 100%;
+  /* border-radius: 15px; */
+  border: 2px solid grey;
+  /* box-shadow: 10px 10px #8cc540; */
+  /* animation: drop 1.3s ease; */
+}
+
+.item-img {
+  display: flex;
+  height: 350;
+  width: 100%;
+  /* border-radius: 15px; */
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+}
+
+.item-content-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: 1s;
+}
+
+.item-content-wrapper:hover {
+  background-color: #000;
+}
+
+.item-content-wrapper h4 {
+  background-color: transparent;
+  transition: 1s;
+  color: transparent;
+}
+
+.item-content-wrapper:hover h4 {
+  font-weight: 600;
+  color: lightseagreen;
 }
