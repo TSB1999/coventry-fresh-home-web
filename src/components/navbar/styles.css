@@ -83,3 +83,17 @@
   padding: 0.4rem;
   text-transform: uppercase;
 }
+
+.left {
+  flex: 1;
+  /* background-color: #3ab34a; */
+  padding: 30px;
+  display: flex;
+}
+
+.right {
+  flex: 1;
+  /* background-color: red; */
+  /* padding: 30px; */
+  display: flex;
+}

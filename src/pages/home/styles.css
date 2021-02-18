@@ -2,6 +2,9 @@
 
 } */
 
+.home-container {
+}
+
 .screen {
   height: 100vh;
 }
@@ -36,13 +39,21 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   flex: 1.2;
+  /* background-color: red; */
 }
 
 .landing-top > h1 {
   grid-column: 2/4;
   grid-row: 2/3;
-  font-size: calc(1.5rem + 1.8vw);
+  font-size: calc(2.3rem + 1.8vw);
   text-align: center;
+  font-weight: 600;
+  /* line-height: 5rem; */
+  margin-top: 0.5rem;
+  color: #636c59;
+  text-shadow: 3px 3px #bfbab0;
+  /* background-color: red; */
+  /* padding: 2rem rem; */
 }
 
 .landing-bottom {
