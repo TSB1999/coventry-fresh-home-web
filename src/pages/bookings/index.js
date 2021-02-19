@@ -49,7 +49,13 @@ export default function Index() {
                 <div className="option-3">ewf</div>
               </div>
             </div>
-            <div className="workflow"></div>
+            <div className="workflow">
+              <div className="step-1">step-1</div>
+              <div className="arrow-1">arrow</div>
+              <div className="step-2">step-2</div>
+              <div className="arrow-2">arrow</div>
+              <div className="step-3">step-3</div>
+            </div>
           </div>
         </div>
       </div>
