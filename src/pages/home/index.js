@@ -13,6 +13,12 @@ export default function Home() {
         <div className="screen-container column">
           <div className="landing-top">
             <h1>Domestic Cleaning and Gardening Services</h1>
+            <div className="cleaning-button">
+              <button>cleaning</button>
+            </div>
+            <div className="gardening-button">
+              <button>gardening</button>
+            </div>
           </div>
           <div className="landing-bottom" />
         </div>
