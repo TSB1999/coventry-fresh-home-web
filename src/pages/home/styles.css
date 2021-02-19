@@ -212,10 +212,29 @@
 
 .cleaning {
   background-color: blue;
+  background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
+  background-position: 80% 87%;
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 0);
 }
 
 .form-info {
   align-items: center;
   /* background-color: yellow; */
   padding: 0rem 5rem 0 5rem;
+}
+
+.cleaning-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1.3;
+  justify-content: center;
+}
+
+.cleaning-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  /* background-color: red */
 }
