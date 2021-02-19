@@ -48,7 +48,7 @@
   font-size: calc(2.3rem + 1.8vw);
   text-align: center;
   font-weight: 600;
-  /* line-height: 5rem; */
+  line-height: 4.9rem;
   margin-top: 0rem;
   color: #636c59;
   text-shadow: 3px 3px #bfbab0;
@@ -66,6 +66,14 @@
   justify-content: flex-end;
 }
 
+.cleaning-button > button {
+  padding: 0.6rem 2rem;
+  font-weight: bold;
+  /* background-color: #636c59; */
+  color: #636c59;
+  border: none;
+}
+
 .gardening-button {
   display: flex;
   padding: 1.5rem;
@@ -74,6 +82,14 @@
   /* background-color: yellow; */
   align-items: start;
   justify-content: flex-start;
+}
+
+.gardening-button > button {
+  padding: 0.6rem 2rem;
+  font-weight: bold;
+  background-color: #636c59;
+  color: white;
+  border: none;
 }
 
 .landing-bottom {
