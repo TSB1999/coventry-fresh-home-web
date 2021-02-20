@@ -13,13 +13,13 @@
 
 .bookings-options-container > div {
   margin: 0vh 0vh 5vh 0vh;
-  background-color: yellow;
+  /* background-color: yellow; */
   flex: 1;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  background-color: #292929;
+  /* background-color: #292929; */
   /* background-image: url(./images/bench-accounting-nvzvOPQW0gc-unsplash.jpg); */
   /* mar: 2vh; */
   /* margin-bottom: 2vh; */
@@ -27,9 +27,10 @@
 
 .bookings-header {
   grid-column: 2/5;
+  /* font-size: 2rem; */
   justify-self: center;
   padding-top: 1rem;
-  color: whitesmoke;
+  color: #636c59;
 }
 
 .bookings-sub-header {

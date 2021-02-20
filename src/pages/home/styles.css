@@ -67,7 +67,7 @@
   font-size: 1.1rem;
 }
 
-.cleaning-button > div > button {
+.cleaning-button > div > .scroll-link > button {
   padding: 0.5rem 2rem;
   /* margin-top: 1rem; */
   font-weight: bold;
@@ -88,7 +88,7 @@
   justify-content: flex-start;
 }
 
-.gardening-button > div > button {
+.gardening-button > div > .scroll-link > button {
   padding: 0.5rem 2rem;
   font-weight: bold;
   background-color: #636c59;

@@ -4,23 +4,50 @@ import "./styles.css";
 import Form from "react-bootstrap/Form";
 
 import { Link } from "react-scroll";
-
 export default function Home() {
   return (
     <div className="home-container">
-      <div className="screen landing">
+      <div className="screen landing" id="home-landing">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="landing-top">
             <h1>Domestic Cleaning and Gardening Services</h1>
             <div className="cleaning-button">
-              <div style={{ padding: "0.28rem", backgroundColor: "#636c59" }}>
-                <button>cleaning</button>
+              <div style={{ padding: "0.2rem", backgroundColor: "#636c59" }}>
+                <Link
+                  className="scroll-link"
+                  activeClass="active"
+                  to="home-clean"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  // offset={50}
+                  duration={500}
+                  // delay={1000}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <button>cleaning</button>
+                </Link>
               </div>
             </div>
             <div className="gardening-button">
-              <div style={{ padding: "0.28rem", backgroundColor: "white" }}>
-                <button>gardening</button>
+              <div style={{ padding: "0.2rem", backgroundColor: "white" }}>
+                <Link
+                  className="scroll-link"
+                  activeClass="active"
+                  to="home-gard"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  // offset={50}
+                  duration={500}
+                  // delay={1000}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <button>gardening</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -28,7 +55,7 @@ export default function Home() {
         </div>
       </div>
       {/*  */}
-      <div className="screen gardening">
+      <div className="screen gardening" id="home-gard">
         <div className="navbar-placeholder" />
         <div className="screen-container row">
           <div className="landing-left">
@@ -237,7 +264,7 @@ export default function Home() {
                   <div className="left-button">
                     <Link
                       activeClass="active"
-                      to="home"
+                      to="home-landing"
                       spy={true}
                       smooth={true}
                       hashSpy={true}
@@ -310,10 +337,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="screen cleaning">
+      {/*  */}
+      <div className="screen cleaning" id="home-clean">
         <div className="navbar-placeholder" />
         <div className="screen-container">
-          <div className="cleaning-left">ewc</div>
+          <div className="cleaning-left"></div>
           <div className="cleaning-right">
             <div className="garden-form">
               <div className="form-header">
@@ -555,7 +583,7 @@ export default function Home() {
                   <div className="left-button">
                     <Link
                       activeClass="active"
-                      to="home"
+                      to="home-landing"
                       spy={true}
                       smooth={true}
                       hashSpy={true}

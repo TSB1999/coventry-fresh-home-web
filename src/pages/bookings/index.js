@@ -35,7 +35,7 @@ export default function Index() {
         <div className="screen-container column">
           <div className="bookings-options-container">
             <div className="bookings-content">
-              <h1 className="bookings-header">make a booking</h1>
+              <h1 className="bookings-header">Make a Booking</h1>
               <h4 className="bookings-sub-header">
                 In order to make your booking, please select the service that
                 you require below and follow the instructions. We aim to process
@@ -90,7 +90,7 @@ export default function Index() {
             }}
           >
             <div className="form-header">
-              <h1>Gardening</h1>
+              <h1>Home</h1>
               {/* <h5>sumbit the form for your same day quote</h5> */}
             </div>
 
@@ -228,14 +228,14 @@ export default function Index() {
                   >
                     <Form.Check
                       inline
-                      label="Lawn Mowing"
+                      label="Dish Washing"
                       type={"checkbox"}
                       id={`inline-${"checkbox"}-1`}
                       style={{ color: "grey", fontSize: "0.9rem" }}
                     />
                     <Form.Check
                       inline
-                      label="Garden Litter"
+                      label="Vacuumc Cleaning"
                       type={"checkbox"}
                       id={`inline-${"checkbox"}-2`}
                       style={{ color: "grey", fontSize: "0.9rem" }}
@@ -243,7 +243,7 @@ export default function Index() {
                     <Form.Check
                       inline
                       // disabled
-                      label="Garden Care"
+                      label="Mopping & Sweeping"
                       type={"checkbox"}
                       id={`inline-${"checkbox"}-3`}
                       style={{ color: "grey", fontSize: "0.9rem" }}
@@ -251,28 +251,63 @@ export default function Index() {
 
                     <Form.Check
                       inline
-                      label="Flower Bed / Plant Weeding"
+                      label="Emptying Bins"
                       type={"checkbox"}
                       id={`inline-${"checkbox"}-1`}
                       style={{ color: "grey", fontSize: "0.9rem" }}
                     />
                     <Form.Check
                       inline
-                      label="Tree Branch / Bush Trimming"
+                      label="Surface Cleaning"
                       type={"checkbox"}
                       id={`inline-${"checkbox"}-2`}
                       style={{ color: "grey", fontSize: "0.9rem" }}
                     />
                     <Form.Check
                       inline
-                      label="Sidewalk Weed Removal"
+                      label="Mirror Cleaning"
                       type={"checkbox"}
                       id={`inline-${"checkbox"}-2`}
                       style={{ color: "grey", fontSize: "0.9rem" }}
                     />
                     <Form.Check
                       inline
-                      label="Driveway Weed Removal"
+                      label="Oven Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-2`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      inline
+                      label="Fridge Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-2`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      inline
+                      label="Cupboard Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-2`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      inline
+                      label="Organizing"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-2`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      inline
+                      label="Folding Clothes"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-2`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      inline
+                      label="Window Clean"
                       type={"checkbox"}
                       id={`inline-${"checkbox"}-2`}
                       style={{ color: "grey", fontSize: "0.9rem" }}
