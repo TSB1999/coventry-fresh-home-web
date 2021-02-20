@@ -31,8 +31,9 @@ export default function Index() {
   return (
     <div className="home-container">
       <div className="screen gallery-landing">
-        <div className="navbar-placeholder" />
-        <div className="screen-container column">
+        <div className="navbar-placeholder-gallery" />
+        <div className="screen-container-gallery column">
+          {/* <div style={{ backgroundColor: "yellow", flex: 1 }}>d</div> */}
           <div className="bookings-options-container">
             <div className="bookings-content">
               <h1 className="bookings-header">Make a Booking</h1>
@@ -41,33 +42,39 @@ export default function Index() {
                 you require below and follow the instructions. We aim to process
                 your enquiry and provide you with a quote within the hour.
               </h4>
-              <div className="option-1">etg</div>
-              <div className="option-2">efw</div>
-              <div className="option-3">ewf</div>
+              <button className="option-1">cleaning</button>
+              <button className="option-2">all</button>
+              <button className="option-3">gardening</button>
             </div>
           </div>
           <div className="workflow">
             <div className="step-1">
-              <div className="circle-step">Select your service</div>
+              <div className="circle-step" style={{ borderColor: "#a39a8e" }}>
+                Select your service
+              </div>
             </div>
             <div className="arrow-1">
               <i class="fas fa-arrow-right fa-4x"></i>
             </div>
             <div className="step-2">
-              <div className="circle-step">Make an Enquiry</div>
+              <div className="circle-step" style={{ borderColor: "#e9d1b1" }}>
+                Make an Enquiry
+              </div>
             </div>
             <div className="arrow-2">
               <i class="fas fa-arrow-right fa-4x"></i>
             </div>
             <div className="step-3">
-              <div className="circle-step">Sit tight for your quote</div>
+              <div className="circle-step" style={{ borderColor: "#999e29" }}>
+                Sit tight for your quote
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="screen gallery-cleaning">
-        <div className="navbar-placeholder" />
+        <div className="navbar-placeholder-gallery" />
         <div
           className="screen-container row"
           style={{
@@ -400,7 +407,7 @@ export default function Index() {
       </div>
 
       <div className="screen gardening">
-        <div className="navbar-placeholder" />
+        <div className="navbar-placeholder-gallery" />
         <div
           className="screen-container row"
           style={{

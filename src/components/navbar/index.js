@@ -34,17 +34,17 @@ export default function Navbar() {
           </Link>
         </div>
         <div>
-          <Link to="/contact" style={{ color: "#636c59" }}>
-            <i class="fas fa-info fa-3x size"></i>
-            {/* <h4>info</h4> */}
+          <Link to="/payment-portal" style={{ color: "#636c59" }}>
+            <i class="fas fa-donate fa-3x"></i>
+            {/* <h4>donate</h4> */}
           </Link>
         </div>
       </div>
       <div className="right">
         <div>
-          <Link to="/payment-portal" style={{ color: "#636c59" }}>
-            <i class="fas fa-donate fa-3x"></i>
-            {/* <h4>donate</h4> */}
+          <Link to="/contact" style={{ color: "#636c59" }}>
+            <i class="fas fa-info fa-3x size"></i>
+            {/* <h4>info</h4> */}
           </Link>
         </div>
       </div>
