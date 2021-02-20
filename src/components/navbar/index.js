@@ -8,22 +8,22 @@ export default function Navbar() {
     <nav className="navbar-container">
       <div className="left">
         <div>
-          <img src={logo} style={{ width: "6rem", backgroundColor: "red" }} />
+          <img src={logo} style={{ width: "5.5rem", backgroundColor: "red" }} />
           {/* <h4>home</h4> */}
         </div>
       </div>
       <div className="main">
         <div>
           <i class="fas fa-calendar-week fa-3x size"></i>
-          <h4>enquiries</h4>
+          {/* <h4>enquiries</h4> */}
         </div>
         <div>
           <i class="fas fa-images fa-3x size"></i>
-          <h4>gallery</h4>
+          {/* <h4>gallery</h4> */}
         </div>
         <div>
           <i class="fas fa-info fa-3x size"></i>
-          <h4>info</h4>
+          {/* <h4>info</h4> */}
         </div>
       </div>
       <div className="right">

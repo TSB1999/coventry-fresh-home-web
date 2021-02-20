@@ -1,14 +1,15 @@
 .navbar-container {
   display: grid;
-  height: 15vh;
+  height: 10vh;
   width: 100%;
   background-color: #ffffff;
   position: fixed;
   z-index: 1000;
   top: 0;
-  opacity: 0.75;
-  /* border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem; */
+  opacity: 0.87;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom: 0.31rem solid #636c59;
   grid-template-columns: 2fr 3fr 2fr;
 }
 
@@ -43,11 +44,30 @@
   align-items: center;
   justify-self: center;
   text-align: center;
+  padding: 0rem 5vw;
+}
+
+.main > div:nth-child(1) {
+  border-left: 0.3rem solid #636c59;
+  border-right: 0.3rem solid #636c59;
+  border-radius: 0.2rem;
+}
+
+.main > div:nth-child(2) {
+  border-left: 0.3rem solid #636c59;
+  border-right: 0.3rem solid #636c59;
+  border-radius: 0.2rem;
+}
+
+.main > div:nth-child(3) {
+  border-left: 0.3rem solid #636c59;
+  border-right: 0.3rem solid #636c59;
+  border-radius: 0.2rem;
 }
 
 .main > div > i {
-  color: #3ab34a;
-  margin-bottom: 0.6rem;
+  color: #636c59;
+  /* margin-bottom: 0.6rem; */
 }
 
 .main > div > h4 {
@@ -87,7 +107,7 @@
 .left {
   flex: 1;
   /* background-color: #3ab34a; */
-  padding: 30px;
+  /* padding: 30px; */
   display: flex;
 }
 

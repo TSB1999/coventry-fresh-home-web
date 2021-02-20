@@ -14,10 +14,14 @@ export default function Home() {
           <div className="landing-top">
             <h1>Domestic Cleaning and Gardening Services</h1>
             <div className="cleaning-button">
-              <button>cleaning</button>
+              <div style={{ padding: "0.28rem", backgroundColor: "#636c59" }}>
+                <button>cleaning</button>
+              </div>
             </div>
             <div className="gardening-button">
-              <button>gardening</button>
+              <div style={{ padding: "0.28rem", backgroundColor: "white" }}>
+                <button>gardening</button>
+              </div>
             </div>
           </div>
           <div className="landing-bottom" />
