@@ -12,12 +12,14 @@
 }
 
 .bookings-options-container > div {
-  margin: 1vh 1vh 5vh 1vh;
-  /* background-color: yellow; */
+  margin: 0vh 0vh 5vh 0vh;
+  background-color: yellow;
   flex: 1;
   display: grid;
+  grid-gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  background-image: url(./images/bench-accounting-nvzvOPQW0gc-unsplash.jpg);
   /* mar: 2vh; */
   /* margin-bottom: 2vh; */
 }
@@ -36,15 +38,10 @@
   grid-row: 2/3;
 }*/
 
-.bookings-content {
-  flex: 1;
-  /* background-color: yellow; */
-  /* margin: -2vh -2vh; */
-}
-
 .bookings-header {
   grid-column: 2/5;
   justify-self: center;
+  padding-top: 1rem;
 }
 
 .bookings-sub-header {
@@ -62,6 +59,10 @@
   height: 100%;
   background-color: black;
   padding: 1rem;
+  background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
 }
 .option-2 {
   grid-column: 3/4;
@@ -70,6 +71,10 @@
   width: 100%;
   height: 100%;
   background-color: blue;
+  background-image: url(./images/todd-kent-178j8tJrNlc-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
 }
 .option-3 {
   grid-column: 4/5;
@@ -78,6 +83,10 @@
   width: 100%;
   height: 100%;
   background-color: pink;
+  background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
 }
 
 .workflow {
@@ -90,29 +99,48 @@
 }
 
 .arrow-1 {
-  background-color: aquamarine;
+  flex: display;
+  margin: auto;
+  /* background-color: aquamarine; */
   grid-column: 3/4;
   grid-row: 2/4;
 }
 
 .arrow-2 {
-  background-color: aquamarine;
+  flex: display;
+  margin: auto;
+  /* background-color: aquamarine; */
   grid-column: 5/6;
   grid-row: 2/4;
 }
 
 .step-1 {
-  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
   grid-column: 2/3;
   grid-row: 2/4;
 }
 .step-2 {
-  background-color: green;
+  /* background-color: green; */
   grid-column: 4/5;
   grid-row: 2/4;
 }
 .step-3 {
-  background-color: green;
+  /* background-color: green; */
   grid-column: 6/7;
   grid-row: 2/4;
+}
+
+.circle-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 0.2rem solid grey;
+  border-radius: 5rem;
+  height: 25vh;
+  width: 25vh;
+  font-weight: bold;
 }

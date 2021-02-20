@@ -29,35 +29,46 @@ export default function Index() {
   const [gardenHour, setGardenHour] = React.useState(1);
 
   return (
-    <div>
-      <div className="home-container">
-        <div className="screen gallery-landing">
-          <div className="navbar-placeholder" />
-          <div className="screen-container column">
-            <div className="bookings-options-container">
-              <div className="bookings-content">
-                <h1 className="bookings-header">
-                  Nulla ex minim do veniam labore amet
-                </h1>
-                <h4 className="bookings-sub-header">
-                  Laborum nulla et exercitation non qui qui et tempor.
-                  Consectetur esse minim exercitation adipisicing Lorem laboris
-                  nostrud. Et quis sit duis sit veniam cupidatat.
-                </h4>
-                <div className="option-1">etg</div>
-                <div className="option-2">efw</div>
-                <div className="option-3">ewf</div>
-              </div>
+    <div className="home-container">
+      <div className="screen gallery-landing">
+        <div className="navbar-placeholder" />
+        <div className="screen-container column">
+          <div className="bookings-options-container">
+            <div className="bookings-content">
+              <h1 className="bookings-header">make a booking</h1>
+              <h4 className="bookings-sub-header">
+                In order to make your booking, please select the service that
+                you require below and follow the instructions. We aim to process
+                your enquiry and provide you with a quote within the hour.
+              </h4>
+              <div className="option-1">etg</div>
+              <div className="option-2">efw</div>
+              <div className="option-3">ewf</div>
             </div>
-            <div className="workflow">
-              <div className="step-1">step-1</div>
-              <div className="arrow-1">arrow</div>
-              <div className="step-2">step-2</div>
-              <div className="arrow-2">arrow</div>
-              <div className="step-3">step-3</div>
+          </div>
+          <div className="workflow">
+            <div className="step-1">
+              <div className="circle-step">Select your service</div>
+            </div>
+            <div className="arrow-1">
+              <i class="fas fa-arrow-right fa-4x"></i>
+            </div>
+            <div className="step-2">
+              <div className="circle-step">Make an Enquiry</div>
+            </div>
+            <div className="arrow-2">
+              <i class="fas fa-arrow-right fa-4x"></i>
+            </div>
+            <div className="step-3">
+              <div className="circle-step">Sit tight for your quote</div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="screen gallery-landing">
+        <div className="navbar-placeholder" />
+        <div className="screen-container column">erf</div>
       </div>
     </div>
   );
