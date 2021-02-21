@@ -10,11 +10,13 @@ import Bookings from "./pages/bookings";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Payment from "./pages/payment-portal";
+import ScrollToTop from "./components/scroll-to-top";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />

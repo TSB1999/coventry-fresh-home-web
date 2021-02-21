@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 import { Link } from "react-router-dom";
-
+import { Link as SLink } from "react-scroll";
 import logo from "./images/400dpiLogo2.jpeg";
 
 export default function Navbar() {
@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="navbar-container">
       <div className="left">
         <div>
-          <Link to="/" style={{ color: "#fff" }}>
+          <Link to="/#home-landing" style={{ color: "#fff" }}>
             {/* <img
               src={logo}
               style={{ width: "5.5rem", backgroundColor: "red" }}

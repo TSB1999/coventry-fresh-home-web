@@ -30,18 +30,18 @@ export default function Index() {
 
   return (
     <div>
-      <div className="screen gallery-landing" id="book-land">
+      <div className="screen bookings-landing" id="book-land">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
           {/* <div style={{ backgroundColor: "yellow", flex: 1 }}>d</div> */}
           <div className="bookings-options-container">
             <div className="bookings-content">
               <h1 className="bookings-header">make a booking</h1>
-              <h4 className="bookings-sub-header">
+              {/* <h4 className="bookings-sub-header">
                 In order to make your booking, please select the service that
                 you require below and follow the instructions. We aim to process
                 your enquiry and provide you with a quote within the hour.
-              </h4>
+              </h4> */}
               <Link
                 className="option-1"
                 activeClass="active"
@@ -54,9 +54,7 @@ export default function Index() {
                 // delay={1000}
                 isDynamic={true}
                 ignoreCancelEvents={false}
-              >
-                {/* <button>cleaning</button> */}
-              </Link>
+              ></Link>
               <Link
                 className="option-2"
                 activeClass="active"
@@ -69,9 +67,7 @@ export default function Index() {
                 // delay={1000}
                 isDynamic={true}
                 ignoreCancelEvents={false}
-              >
-                {/* <button>all</button> */}
-              </Link>
+              ></Link>
               <Link
                 className="option-3"
                 activeClass="active"
@@ -84,12 +80,10 @@ export default function Index() {
                 // delay={1000}
                 isDynamic={true}
                 ignoreCancelEvents={false}
-              >
-                {/* <button>gardening</button> */}
-              </Link>
+              ></Link>
             </div>
           </div>
-          <div className="workflow">
+          {/* <div className="workflow">
             <div className="step-1">
               <div
                 className="circle-step"
@@ -120,7 +114,7 @@ export default function Index() {
                 sit tight for your quote.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
