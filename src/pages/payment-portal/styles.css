@@ -1,3 +1,54 @@
-.payment-portal {
+/* .payment-portal {
   margin: 16vh 0;
+} */
+
+.portal-form {
+  display: grid;
+  flex: 1;
+  /* border: 2px solid grey; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
+
+.admin-form {
+  margin: auto;
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+
+.url-code {
+  /* background-color: red; */
+  grid-column: 1/4;
+  grid-row: 4/5;
+}
+
+/* <Form onSubmit={sendGardeningEmail}>
+<Form.Group controlId="exampleForm.ControlInput1">
+  <Form.Label> cutomer name (paste here)</Form.Label>
+  <Form.Control
+    type="text"
+    name="name"
+    // placeholder="David Keys"
+  />
+</Form.Group>
+<Form.Group controlId="exampleForm.ControlInput1">
+  <Form.Label>package</Form.Label>
+  <Form.Control as="select">
+    <option>Silver</option>
+    <option>Gold</option>
+  </Form.Control>
+</Form.Group>
+<Form.Group controlId="exampleForm.ControlTextarea1">
+  <Form.Label>price (number only - without currency sign)</Form.Label>
+  <Form.Control
+    as="textarea"
+    name="message"
+    rows={3}
+    // placeholder="Make your enquiry"
+  />
+</Form.Group>
+
+<button type="submit" class="btn btn-primary">
+  GENERATE
+</button>
+</Form> */
