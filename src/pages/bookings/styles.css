@@ -5,20 +5,16 @@
   /* background-color: red; */
 }
 
-.navbar-placeholder-gallery {
-  height: 10vh;
-}
-
 .screen-container-gallery {
   display: flex;
-  margin: 0vh 2vh 0 2vh;
-  padding: 2vh 0 2vh 0;
+  /* margin: 0vh 2vh 0 2vh;
+  padding: 2vh 0 2vh 0; */
   height: 90vh;
 }
 
-.bookings-content {
-  /* background-color: yellow; */
-}
+/* .bookings-content {
+  background-color: yellow;
+} */
 
 .bookings-options-container {
   display: flex;
@@ -120,7 +116,7 @@
 }
 
 .arrow-1 {
-  flex: display;
+  /* display: flex; */
   margin: auto;
   /* background-color: aquamarine; */
   grid-column: 3/4;
@@ -129,7 +125,7 @@
 }
 
 .arrow-2 {
-  flex: display;
+  /* display: flex; */
   margin: auto;
   /* background-color: aquamarine; */
   grid-column: 5/6;

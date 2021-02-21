@@ -1,6 +1,6 @@
-.home-container {
+/* .home-container {
   background-color: #636c59;
-}
+} */
 
 .screen {
   height: 100vh;
@@ -8,13 +8,15 @@
 
 .navbar-placeholder {
   height: 10vh;
+  /* background-color: red; */
 }
 
 .screen-container {
   display: flex;
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
-  height: 85vh;
+  height: 90vh;
+  /* background-color: blue; */
 }
 
 .row {
@@ -36,7 +38,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  flex: 1.2;
+  /* flex: 1.2; */
   margin-top: 3rem;
   /* background-color: red; */
 }

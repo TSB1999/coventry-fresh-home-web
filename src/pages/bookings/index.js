@@ -29,10 +29,10 @@ export default function Index() {
   const [gardenHour, setGardenHour] = React.useState(1);
 
   return (
-    <div className="home-container">
+    <div>
       <div className="screen gallery-landing" id="book-land">
-        <div className="navbar-placeholder-gallery" />
-        <div className="screen-container-gallery column">
+        <div className="navbar-placeholder" />
+        <div className="screen-container column">
           {/* <div style={{ backgroundColor: "yellow", flex: 1 }}>d</div> */}
           <div className="bookings-options-container">
             <div className="bookings-content">
