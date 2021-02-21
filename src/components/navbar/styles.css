@@ -11,6 +11,7 @@
   border-bottom-right-radius: 0.8rem;
   border-bottom: 0.25rem solid #ffffff;
   grid-template-columns: 2fr 3fr 2fr;
+  transition: 1s;
 }
 
 .left {
