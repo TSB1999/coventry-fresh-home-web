@@ -12,7 +12,18 @@ export default function Navbar() {
   const [theme, setTheme] = useState(1);
 
   useEffect(() => {
-    console.log(theme);
+    console.log(window.location.href);
+    switch (window.location.href) {
+      case "http://localhost:3000/#home-landing":
+        setTheme("#636c59");
+        break;
+      case "http://localhost:3000/bookings#book-land":
+        setTheme("#184739");
+        // case "http://localhost:3000/gallery":
+        break;
+      default:
+      // code block
+    }
   }, [theme]);
 
   return (
@@ -39,7 +50,7 @@ export default function Navbar() {
           <Link
             to="/bookings"
             style={{ color: "#fff" }}
-            onClick={() => setTheme("#048cc4")}
+            onClick={() => setTheme("#184739")}
           >
             <i class="fas fa-calendar-week fa-3x size"></i>
           </Link>

@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.css";
 
+import { Link } from "react-scroll";
+
 // Kitchen
 import showcase_k1 from "./images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg";
 import kitchen1 from "./images/kitchens/IMG_1335.jpg";
@@ -42,22 +44,68 @@ export default function index() {
         <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gallery-header">
-            <h4>
-              Culpa consequat aute esse do adipisicing minim in quis labore do.
-            </h4>
+            <h1>Our Work</h1>
           </div>
           <div className="gallery-grid-container">
             <div className="showcase-grid">
-              <button className="bathroom" />
-              <button className="bedroom" />
-              <button className="kitchen" />
-              <button className="garden" />
+              <Link
+                className="bathroom"
+                activeClass="active"
+                to="gallery-bathroom"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                // offset={50}
+                duration={500}
+                // delay={1000}
+                isDynamic={true}
+                ignoreCancelEvents={false}
+              ></Link>
+              <Link
+                className="bedroom"
+                activeClass="active"
+                to="gallery-bedroom"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                // offset={50}
+                duration={500}
+                // delay={1000}
+                isDynamic={true}
+                ignoreCancelEvents={false}
+              ></Link>
+              <Link
+                className="kitchen"
+                activeClass="active"
+                to="gallery-kitchen"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                // offset={50}
+                duration={500}
+                // delay={1000}
+                isDynamic={true}
+                ignoreCancelEvents={false}
+              ></Link>
+              <Link
+                className="garden"
+                activeClass="active"
+                to="gallery-gardening"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                // offset={50}
+                duration={500}
+                // delay={1000}
+                isDynamic={true}
+                ignoreCancelEvents={false}
+              ></Link>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="screen gallery-landing">
+      <div className="screen gallery-gardening" id="gallery-gardening">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">
@@ -166,7 +214,7 @@ export default function index() {
         </div>
       </div>
 
-      <div className="screen gallery-landing">
+      <div className="screen gallery-kitchen" id="gallery-kitchen">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">
@@ -275,7 +323,7 @@ export default function index() {
         </div>
       </div>
 
-      <div className="screen gallery-landing">
+      <div className="screen gallery-bathroom" id="gallery-bathroom">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">
@@ -384,7 +432,7 @@ export default function index() {
         </div>
       </div>
 
-      <div className="screen gallery-landing">
+      <div className="screen gallery-bedroom" id="gallery-bedroom">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">

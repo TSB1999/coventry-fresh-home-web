@@ -19,9 +19,51 @@
 
 .gallery-landing {
   background-color: #edefea;
-  /* background-image: url(./images/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg); */
+  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
   background-position: center;
   background-size: cover;
+  /* rgba(255, 255, 255, 1) */
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.6)),
+    url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg);
+}
+
+.gallery-bathroom {
+  background-color: #edefea;
+  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery-bedroom {
+  background-color: #edefea;
+  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery-kitchen {
+  background-color: #edefea;
+  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery-gardening {
+  background-color: #edefea;
+  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery-cleaning {
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery-all {
+  background-position: center;
+  background-size: cover;
+  /* background-color: red; */
 }
 
 .gallery-header {
@@ -34,13 +76,18 @@
   border-bottom: 2px solid grey;
   margin: 0rem 20%;
 }
-.gallery-header > h4 {
-  font-weight: 500;
+.gallery-header > h1 {
+  /* font-weight: 500; */
   color: grey;
   /* background-color: grey; */
   padding: 0.5rem;
   /* border-radius: 0.7rem; */
   border-bottom: 2px solid grey;
+
+  text-shadow: 2px 2px #292929;
+  /* background-color: #184739; */
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .gallery-grid-container {
@@ -71,6 +118,7 @@
   margin: 0.8rem;
   /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
+  opacity: 0.8;
 }
 .bedroom {
   display: block;
@@ -86,6 +134,7 @@
   margin: 0.8rem;
   /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
+  opacity: 0.8;
 }
 .kitchen {
   /* height: 135px; */
@@ -100,6 +149,7 @@
   margin: 0.8rem;
   /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
+  opacity: 0.8;
 }
 .garden {
   border-radius: 0.5rem;
@@ -115,6 +165,7 @@
   margin: 0.8rem;
   /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
+  opacity: 0.8;
 }
 
 /* Garden Screen */
