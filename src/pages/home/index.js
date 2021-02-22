@@ -4,29 +4,49 @@ import "./styles.css";
 import Form from "react-bootstrap/Form";
 
 import { Link } from "react-scroll";
+import emailjs from "emailjs-com";
+
 export default function Home() {
   
   // Garden Checkbox State
-  const [lawnMow, setLawnMow] = useState(false)
-  const [gardenLitter, setGardenLitter] = useState(false)
-  const [gardenCare, setGardenCare] = useState(false)
-  const [weeding, setWeeding] = useState(false)
-  const [trimming, setTrimming] = useState(false)
-  const [sidewalkWeeding, setSidewalkWeeding] = useState(false)
-  const [drivewayWeeding, setDrivewayWeeding] = useState(false)
+  const [gardenCheckState, setGardenCheckState] = useState({
+    lawnmow : false,
+    gardenLitter : false,
+    gardenCare : false,
+    weeding : false,
+    trimming : false,
+    sidewalkWeeding : false,
+    drivewayWeeding : false,
+  })
 
  // Cleaning Checkbox State
-//  const [lawnMow, setLawnMow] = useState(false)
-//  const [gardenLitter, setGardenLitter] = useState(false)
-//  const [gardenCare, setGardenCare] = useState(false)
-//  const [weeding, setWeeding] = useState(false)
-//  const [trimming, setTrimming] = useState(false)
-//  const [sidewalkWeeding, setSidewalkWeeding] = useState(false)
-//  const [drivewayWeeding, setDrivewayWeeding] = useState(false)
 
-  useEffect(() => {
-    console.log(lawnMow, gardenLitter, gardenCare, weeding, trimming, sidewalkWeeding, drivewayWeeding)
-  }, [lawnMow])
+  // useEffect(() => {
+  //   console.log(gardenCheckState)
+  // }, [gardenCheckState])
+
+  function sendGardeningEmail(e) {
+    e.preventDefault();
+    console.log(e.target, 'vbreou')
+
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_ua349no",
+        e.target,
+        // gardenCheckState,
+        "user_9Sc8vdXTbOS9xDXaHCNvq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
   return (
     <div style = {{backgroundColor : '#636c59'}}>
       <div className="screen landing" id="home-landing">
@@ -104,10 +124,10 @@ export default function Home() {
                     padding: "0 5rem 0 5rem",
                     // border: "0.35rem solid #979f8b",
                   }}
-                  // onSubmit={sendGardeningEmail}
+                  onSubmit={(e) => sendGardeningEmail(e)}
                 >
                   <Form.Group
-                    controlId="exampleForm.ControlInput1"
+                    controlId="exampleForm.ControlInput2"
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -136,7 +156,7 @@ export default function Home() {
                     />
                   </Form.Group>
                   <Form.Group
-                    controlId="exampleForm.ControlInput1"
+                    controlId="exampleForm.ControlInput2"
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -165,7 +185,7 @@ export default function Home() {
                     />
                   </Form.Group>
                   <Form.Group
-                    controlId="exampleForm.ControlTextarea1"
+                    controlId="exampleForm.ControlTextarea2"
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -196,7 +216,7 @@ export default function Home() {
                     />
                   </Form.Group>
                   <Form.Group
-                    controlId="exampleForm.ControlSelect1"
+                    controlId="exampleForm.ControlSelect2"
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -225,7 +245,14 @@ export default function Home() {
                       }}
                     >
                       <Form.Check
-                        onChange = {() => setLawnMow(!lawnMow)}
+                        onChange = {() => setGardenCheckState(
+                          // gardenCheckState['lawnmow'] = !gardenCheckState['lawnmow']
+                          {
+                            ...gardenCheckState,
+                            lawnmow: !gardenCheckState['lawnmow']
+                          }
+                        )}
+                        // onChange = {() => setLawnMow(!lawnMow)}
                         inline
                         label="Lawn Mowing"
                         type={"checkbox"}
@@ -233,7 +260,10 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                      onChange = {() => setGardenLitter(!gardenLitter)}
+                      onChange = {() => setGardenCheckState({
+                        ...gardenCheckState,
+                        gardenLitter: !gardenCheckState['gardenLitter']
+                      })}
                         inline
                         label="Garden Litter"
                         type={"checkbox"}
@@ -241,7 +271,11 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                        onChange = {() => setGardenCare(!gardenCare)}
+                        // onChange = {() => setGardenCare(!gardenCare)}
+                        onChange = {() => setGardenCheckState({
+                          ...gardenCheckState,
+                          gardenCare: !gardenCheckState['gardenCare']
+                        })}
                         inline
                         label="Garden Care"
                         type={"checkbox"}
@@ -250,7 +284,11 @@ export default function Home() {
                       />
 
                       <Form.Check
-                        onChange = {() => setWeeding(!weeding)}
+                        // onChange = {() => setWeeding(!weeding)}
+                        onChange = {() => setGardenCheckState({
+                          ...gardenCheckState,
+                          weeding: !gardenCheckState['weeding']
+                        })}
                         inline
                         label="Flower Bed / Plant Weeding"
                         type={"checkbox"}
@@ -258,7 +296,11 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                        onChange = {() => setTrimming(!trimming)}
+                        // onChange = {() => setTrimming(!trimming)}
+                        onChange = {() => setGardenCheckState({
+                          ...gardenCheckState,
+                          trimming: !gardenCheckState['trimming']
+                        })}
                         inline
                         label="Tree Branch / Bush Trimming"
                         type={"checkbox"}
@@ -266,7 +308,11 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                      onChange = {() => setSidewalkWeeding(!sidewalkWeeding)}
+                      // onChange = {() => setSidewalkWeeding(!sidewalkWeeding)}
+                      onChange = {() => setGardenCheckState({
+                        ...gardenCheckState,
+                        sidewalkWeeding: !gardenCheckState['sidewalkWeeding']
+                      })}
                         inline
                         label="Sidewalk Weed Removal"
                         type={"checkbox"}
@@ -274,7 +320,11 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                      onChange = {() => setDrivewayWeeding(!drivewayWeeding)}
+                      // onChange = {() => setDrivewayWeeding(!drivewayWeeding)}
+                      onChange = {() => setGardenCheckState({
+                        ...gardenCheckState,
+                        drivewayWeeding: !gardenCheckState['drivewayWeeding']
+                      })}
                         inline
                         label="Driveway Weed Removal"
                         type={"checkbox"}
@@ -283,10 +333,18 @@ export default function Home() {
                       />
                     </div>
                   </Form.Group>
-                </Form>
-              </div>
+                  
+                  <input name = "lawnmow" value = {gardenCheckState.lawnmow} style  = {{display : 'none'}}/>
+                  <input name = "gardenLitter" value = {gardenCheckState.gardenLitter} style  = {{display : 'none'}}/>
+                  <input name = "gardenCare" value = {gardenCheckState.gardenCare} style  = {{display : 'none'}}/>
+                  <input name = "weeding" value = {gardenCheckState.weeding} style  = {{display : 'none'}}/>
+                  <input name = "trimming" value = {gardenCheckState.trimming} style  = {{display : 'none'}}/>
+                  <input name = "sidewalkWeeding" value = {gardenCheckState.sidewalkWeeding} style  = {{display : 'none'}}/>
+                  <input name = "drivewayWeeding" value = {gardenCheckState.drivewayWeeding} style  = {{display : 'none'}}/>
 
-              <div className="form-footer">
+               
+
+                  <div className="form-footer">
                 <div className="button-wrapper">
                   <div className="left-button">
                     <Link
@@ -324,21 +382,8 @@ export default function Home() {
                   </div>
 
                   <div className="right-button">
-                    <Link
-                      activeClass="active"
-                      to="home"
-                      spy={true}
-                      smooth={true}
-                      hashSpy={true}
-                      // offset={50}
-                      duration={500}
-                      // delay={1000}
-                      isDynamic={true}
-                      ignoreCancelEvents={true}
-                      style={{ width: "80%" }}
-                    >
                       <button
-                        type="submit"
+                        // type="submit"
                         class="btn btn-primary"
                         style={{
                           width: "100%",
@@ -353,10 +398,15 @@ export default function Home() {
                       >
                         SUBMIT
                       </button>
-                    </Link>
                   </div>
                 </div>
               </div>
+                </Form>
+
+
+              </div>
+
+              
             </div>
           </div>
           <div className="landing-right">

@@ -180,9 +180,9 @@
   background-color: #fff;
   padding: 1.3rem 2.3rem 1.3rem 2.3rem;
   opacity: 0.9;
-  border-left: 0.35rem solid #636c59;
+  /* border-left: 0.35rem solid #636c59;
   border-right: 0.35rem solid #636c59;
-  border-bottom: 0.3rem solid #636c59;
+  border-bottom: 0.3rem solid #636c59; */
 }
 
 .button-wrapper {
