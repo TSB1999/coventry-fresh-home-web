@@ -6,9 +6,9 @@
   position: fixed;
   z-index: 1000;
   top: 0;
-  opacity: 0.87;
-  border-bottom-left-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
+  opacity: 0.95;
+  /* border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem; */
   border-bottom: 0.25rem solid #ffffff;
   grid-template-columns: 2fr 3fr 2fr;
   transition: 1s;

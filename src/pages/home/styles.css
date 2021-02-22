@@ -1,6 +1,4 @@
-/* .home-container {
-  background-color: #636c59;
-} */
+
 
 .screen {
   height: 100vh;
@@ -109,7 +107,7 @@
   background-position: center;
   background-size: cover;
   /* clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 0); */
-  clip-path: polygon(100% 0, 100% 85%, 23% 100%, 0 90%, 0 0);
+  clip-path: polygon(100% 0, 100% 85%, 23% 100%, 0 95%, 0 0);
 }
 
 .landing-left {
@@ -125,9 +123,9 @@
 }
 
 .garden-form {
-  align-items: center;
+  /* align-items: center; */
   /* background-color: yellow; */
-  margin: 0rem 4rem 0 4rem;
+  /* margin: 0rem 4rem 0 4rem; */
   border-radius: 1rem;
   /* box-shadow: 0.45rem 0.45rem #636c59; */
 }
@@ -167,8 +165,8 @@
 }
 
 .form-body {
-  display: flex;
-  flex: 8;
+  /* display: flex; */
+  /* flex: 8; */
   opacity: 0.95;
   border-left: 0.3rem solid #636c59;
   border-right: 0.3rem solid #636c59;
@@ -219,7 +217,7 @@
   background-position: 80% 87%;
   background-size: cover;
   /* clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 0); */
-  clip-path: polygon(100% 0, 100% 93%, 78% 100%, 0 90%, 0 0);
+  clip-path: polygon(100% 0, 100% 95%, 78% 100%, 0 90%, 0 0);
 }
 
 .form-info {

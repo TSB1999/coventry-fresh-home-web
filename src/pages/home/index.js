@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import { Link } from "react-scroll";
 export default function Home() {
   return (
-    <div className="home-container">
+    <div style = {{backgroundColor : '#636c59'}}>
       <div className="screen landing" id="home-landing">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
