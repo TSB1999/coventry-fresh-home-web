@@ -12,13 +12,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-import image from "./images/clean.jpeg";
-import image1 from "./images/garden.jpeg";
-import preview from "./images/cdc-wz3ijPHvL54-unsplash.jpg";
-import preview1 from "./images/volha-flaxeco-jCPL0oxBhB0-unsplash.jpg";
-import small from "./images/small-eclipse.svg";
-import medium from "./images/mid-eclipse.svg";
-import large from "./images/big-eclipse.svg";
 
 toast.configure();
 

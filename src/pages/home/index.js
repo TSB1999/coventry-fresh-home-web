@@ -1,10 +1,32 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./styles.css";
 
 import Form from "react-bootstrap/Form";
 
 import { Link } from "react-scroll";
 export default function Home() {
+  
+  // Garden Checkbox State
+  const [lawnMow, setLawnMow] = useState(false)
+  const [gardenLitter, setGardenLitter] = useState(false)
+  const [gardenCare, setGardenCare] = useState(false)
+  const [weeding, setWeeding] = useState(false)
+  const [trimming, setTrimming] = useState(false)
+  const [sidewalkWeeding, setSidewalkWeeding] = useState(false)
+  const [drivewayWeeding, setDrivewayWeeding] = useState(false)
+
+ // Cleaning Checkbox State
+//  const [lawnMow, setLawnMow] = useState(false)
+//  const [gardenLitter, setGardenLitter] = useState(false)
+//  const [gardenCare, setGardenCare] = useState(false)
+//  const [weeding, setWeeding] = useState(false)
+//  const [trimming, setTrimming] = useState(false)
+//  const [sidewalkWeeding, setSidewalkWeeding] = useState(false)
+//  const [drivewayWeeding, setDrivewayWeeding] = useState(false)
+
+  useEffect(() => {
+    console.log(lawnMow, gardenLitter, gardenCare, weeding, trimming, sidewalkWeeding, drivewayWeeding)
+  }, [lawnMow])
   return (
     <div style = {{backgroundColor : '#636c59'}}>
       <div className="screen landing" id="home-landing">
@@ -203,6 +225,7 @@ export default function Home() {
                       }}
                     >
                       <Form.Check
+                        onChange = {() => setLawnMow(!lawnMow)}
                         inline
                         label="Lawn Mowing"
                         type={"checkbox"}
@@ -210,6 +233,7 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
+                      onChange = {() => setGardenLitter(!gardenLitter)}
                         inline
                         label="Garden Litter"
                         type={"checkbox"}
@@ -217,8 +241,8 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
+                        onChange = {() => setGardenCare(!gardenCare)}
                         inline
-                        // disabled
                         label="Garden Care"
                         type={"checkbox"}
                         id={`inline-${"checkbox"}-3`}
@@ -226,6 +250,7 @@ export default function Home() {
                       />
 
                       <Form.Check
+                        onChange = {() => setWeeding(!weeding)}
                         inline
                         label="Flower Bed / Plant Weeding"
                         type={"checkbox"}
@@ -233,6 +258,7 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
+                        onChange = {() => setTrimming(!trimming)}
                         inline
                         label="Tree Branch / Bush Trimming"
                         type={"checkbox"}
@@ -240,6 +266,7 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
+                      onChange = {() => setSidewalkWeeding(!sidewalkWeeding)}
                         inline
                         label="Sidewalk Weed Removal"
                         type={"checkbox"}
@@ -247,6 +274,7 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
+                      onChange = {() => setDrivewayWeeding(!drivewayWeeding)}
                         inline
                         label="Driveway Weed Removal"
                         type={"checkbox"}
