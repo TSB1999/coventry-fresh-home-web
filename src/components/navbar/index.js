@@ -40,7 +40,7 @@ export default function Navbar() {
               src={logo}
               style={{ width: "5.5rem", backgroundColor: "red" }}
             /> */}
-            <i class="fas fa-home fa-3x size"></i>
+            <i class="fas fa-home fa-2x"></i>
           </Link>
           {/* <h4>home</h4> */}
         </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
             style={{ color: "#fff" }}
             onClick={() => setTheme("#184739")}
           >
-            <i class="fas fa-calendar-week fa-3x size"></i>
+            <i class="fas fa-calendar-week fa-2x"></i>
           </Link>
           {/* <h4>enquiries</h4> */}
         </div>
@@ -62,7 +62,7 @@ export default function Navbar() {
             style={{ color: "#fff" }}
             onClick={() => setTheme(3)}
           >
-            <i class="fas fa-images fa-3x size"></i>
+            <i class="fas fa-images fa-2x"></i>
             {/* <h4>gallery</h4> */}
           </Link>
         </div>
@@ -72,7 +72,7 @@ export default function Navbar() {
             style={{ color: "#fff" }}
             onClick={() => setTheme(4)}
           >
-            <i class="fas fa-donate fa-3x"></i>
+            <i class="fas fa-donate fa-2x"></i>
             {/* <h4>donate</h4> */}
           </Link>
         </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
             style={{ color: "#fff" }}
             onClick={() => setTheme(5)}
           >
-            <i class="fas fa-info fa-3x size"></i>
+            <i class="fas fa-info fa-2x"></i>
             {/* <h4>info</h4> */}
           </Link>
         </div>
