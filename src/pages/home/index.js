@@ -53,6 +53,8 @@ export default function Home() {
       .then(
         (result) => {
           console.log(result.text);
+          // loading done
+          // alert and scroll to top
         },
         (error) => {
           console.log(error.text);
@@ -64,22 +66,24 @@ export default function Home() {
     e.preventDefault();
     console.log(e.target, "vbreo1u");
 
-    // emailjs
-    //   .sendForm(
-    //     "gmail",
-    //     "template_ua349no",
-    //     e.target,
-    //     // gardenCheckState,
-    //     "user_9Sc8vdXTbOS9xDXaHCNvq"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_6j1arch",
+        e.target,
+        // gardenCheckState,
+        "user_9Sc8vdXTbOS9xDXaHCNvq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // loading done
+          // alert and scroll to top
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
   return (
@@ -181,7 +185,7 @@ export default function Home() {
                     </Form.Label>
                     <Form.Control
                       type="text"
-                      name="name"
+                      name="name1"
                       // placeholder="David Keys"
                       style={{
                         color: "grey",
@@ -210,7 +214,7 @@ export default function Home() {
                     </Form.Label>
                     <Form.Control
                       type="email"
-                      name="email"
+                      name="email1"
                       // placeholder="name@example.com"
                       style={{
                         color: "grey",
@@ -240,7 +244,7 @@ export default function Home() {
                     </Form.Label>
                     <Form.Control
                       as="textarea"
-                      name="message"
+                      name="message1"
                       rows={3}
                       // placeholder="Make your enquiry"
                       style={{
