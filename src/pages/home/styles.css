@@ -1,5 +1,3 @@
-
-
 .screen {
   height: 100vh;
 }
@@ -114,14 +112,14 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  order : 1;
+  order: 1;
   justify-content: center;
 }
 .garden-right {
   display: flex;
   flex-direction: column;
   flex: 1.35;
-  order : 0;
+  order: 0;
   justify-content: center;
 }
 
@@ -185,7 +183,6 @@
   opacity: 0.95;
   border-left: 0.3rem solid #636c59;
   border-right: 0.3rem solid #636c59;
-  
 }
 
 .form-footer {
@@ -243,7 +240,7 @@
 }
 
 .cleaning-left {
-  order : 1;
+  order: 1;
   display: flex;
   flex-direction: column;
   flex: 1.3;
@@ -251,7 +248,7 @@
 }
 
 .cleaning-right {
-  order : 0;
+  order: 0;
   display: flex;
   flex-direction: column;
   flex: 1;

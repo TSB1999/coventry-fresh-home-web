@@ -31,17 +31,31 @@ export default function Navbar() {
       <div className="left">
         {/* <button onClick={doSumn}>sd</button> */}
         <div>
-          <Link
-            to="/"
-            style={{ color: "#fff" }}
-            onClick={() => setTheme("#636c59")}
+          <SLink
+            activeClass="active"
+            to="home-landing"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            // offset={50}
+            duration={500}
+            // delay={1000}
+            isDynamic={true}
+            ignoreCancelEvents={true}
+            style={{ width: "80%" }}
           >
-            {/* <img
+            <Link
+              to="/"
+              style={{ color: "#fff" }}
+              onClick={() => setTheme("#636c59")}
+            >
+              {/* <img
               src={logo}
               style={{ width: "5.5rem", backgroundColor: "red" }}
             /> */}
-            <i class="fas fa-home fa-2x"></i>
-          </Link>
+              <i class="fas fa-home fa-2x"></i>
+            </Link>
+          </SLink>
           {/* <h4>home</h4> */}
         </div>
       </div>
