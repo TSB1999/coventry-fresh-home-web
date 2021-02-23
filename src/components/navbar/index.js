@@ -63,13 +63,27 @@ export default function Navbar() {
       </div>
       <div className="main">
         <div>
-          <Link
-            to="/bookings"
-            style={{ color: "#fff" }}
-            onClick={() => setTheme("#184739")}
+          <SLink
+            activeClass="active"
+            to="book-land"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            // offset={50}
+            duration={500}
+            // delay={1000}
+            isDynamic={true}
+            ignoreCancelEvents={true}
+            style={{ width: "80%" }}
           >
-            <i class="fas fa-calendar-week fa-2x"></i>
-          </Link>
+            <Link
+              to="/bookings"
+              style={{ color: "#fff" }}
+              onClick={() => setTheme("#184739")}
+            >
+              <i class="fas fa-calendar-week fa-2x"></i>
+            </Link>
+          </SLink>
           {/* <h4>enquiries</h4> */}
         </div>
         <div>
@@ -84,7 +98,7 @@ export default function Navbar() {
         </div>
         <div>
           <Link
-            to="/payment-portal"
+            to="/payment"
             style={{ color: "#fff" }}
             onClick={() => setTheme(4)}
           >

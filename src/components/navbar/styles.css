@@ -118,3 +118,11 @@
   /* padding: 30px; */
   display: flex;
 }
+
+i {
+  transition: 0.5s;
+}
+
+i:hover {
+  color: #3ab34a;
+}
