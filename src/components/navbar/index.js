@@ -19,7 +19,9 @@ export default function Navbar() {
         break;
       case "http://localhost:3000/bookings#book-land":
         setTheme("#184739");
-        // case "http://localhost:3000/gallery":
+        break;
+      case "http://localhost:3000/gallery":
+        setTheme("#5c5c5c");
         break;
       default:
       // code block
@@ -74,7 +76,7 @@ export default function Navbar() {
           <Link
             to="/gallery"
             style={{ color: "#fff" }}
-            onClick={() => setTheme(3)}
+            onClick={() => setTheme("#5c5c5c")}
           >
             <i class="fas fa-images fa-2x"></i>
             {/* <h4>gallery</h4> */}
