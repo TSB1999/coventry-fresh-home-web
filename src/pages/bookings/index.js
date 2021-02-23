@@ -12,6 +12,8 @@ import "react-toastify/dist/ReactToastify.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
+import emailjs from "emailjs-com";
+
 toast.configure();
 
 export default function Index() {
@@ -19,9 +21,88 @@ export default function Index() {
 
   const [value, onChange] = useState(new Date());
 
+  // Garden Checkbox State
+  const [gardenCheckState, setGardenCheckState] = useState({
+    lawnmow: false,
+    gardenLitter: false,
+    gardenCare: false,
+    weeding: false,
+    trimming: false,
+    sidewalkWeeding: false,
+    drivewayWeeding: false,
+  });
+
+  // Cleaning Checkbox State
+  const [cleaningCheckState, setCleaningCheckState] = useState({
+    dish_wash: false,
+    vacuum: false,
+    mop_sweep: false,
+    bins: false,
+    surface_clean: false,
+    mirror_clean: false,
+    oven_clean: false,
+    fridge_clean: false,
+    cupboard_clean: false,
+    organizing: false,
+    fold_clothes: false,
+    window_clean: false,
+  });
+
+  // useEffect(() => {
+  //   console.log(value);
+  // }, [value]);
+
   useEffect(() => {
-    console.log(value);
-  }, [value]);
+    console.log(cleaningCheckState);
+  }, [cleaningCheckState]);
+
+  function sendGardeningEmail(e) {
+    e.preventDefault();
+    console.log(e.target, "vbreou");
+
+    emailjs
+      .sendForm(
+        "gmail",
+        // "template_ua349no", ==> ADD EMAIL TEMPLATE
+        e.target,
+        // gardenCheckState,
+        "user_9Sc8vdXTbOS9xDXaHCNvq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // loading done
+          // alert and scroll to top
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
+  function sendCleaningEmail(e) {
+    e.preventDefault();
+    console.log(e.target, "vbreo1u");
+
+    emailjs
+      .sendForm(
+        "gmail",
+        // "template_6j1arch", ==> ADD EMAIL TEMPLATE
+        e.target,
+        // gardenCheckState,
+        "user_9Sc8vdXTbOS9xDXaHCNvq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // loading done
+          // alert and scroll to top
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
 
   return (
     <div>
@@ -159,7 +240,7 @@ export default function Index() {
                   padding: "0 5rem 0 5rem",
                   // border: "0.35rem solid #979f8b",
                 }}
-                // onSubmit={sendGardeningEmail}
+                onSubmit={sendCleaningEmail}
               >
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <div style={{ flex: 3 }}>
@@ -282,6 +363,12 @@ export default function Index() {
                         }}
                       >
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              dish_wash: !cleaningCheckState["dish_wash"],
+                            })
+                          }
                           inline
                           label="Dish Washing"
                           type={"checkbox"}
@@ -289,6 +376,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              vacuum: !cleaningCheckState["vacuum"],
+                            })
+                          }
                           inline
                           label="Vacuumc Cleaning"
                           type={"checkbox"}
@@ -296,6 +389,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              mop_sweep: !cleaningCheckState["mop_sweep"],
+                            })
+                          }
                           inline
                           // disabled
                           label="Mopping & Sweeping"
@@ -305,6 +404,12 @@ export default function Index() {
                         />
 
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              bins: !cleaningCheckState["bins"],
+                            })
+                          }
                           inline
                           label="Emptying Bins"
                           type={"checkbox"}
@@ -312,6 +417,14 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              surface_clean: !cleaningCheckState[
+                                "surface_clean"
+                              ],
+                            })
+                          }
                           inline
                           label="Surface Cleaning"
                           type={"checkbox"}
@@ -319,6 +432,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              mirror_clean: !cleaningCheckState["mirror_clean"],
+                            })
+                          }
                           inline
                           label="Mirror Cleaning"
                           type={"checkbox"}
@@ -326,6 +445,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              oven_clean: !cleaningCheckState["oven_clean"],
+                            })
+                          }
                           inline
                           label="Oven Cleaning"
                           type={"checkbox"}
@@ -333,6 +458,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              fridge_clean: !cleaningCheckState["fridge_clean"],
+                            })
+                          }
                           inline
                           label="Fridge Cleaning"
                           type={"checkbox"}
@@ -340,6 +471,14 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              cupboard_clean: !cleaningCheckState[
+                                "cupboard_clean"
+                              ],
+                            })
+                          }
                           inline
                           label="Cupboard Cleaning"
                           type={"checkbox"}
@@ -347,6 +486,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              organizing: !cleaningCheckState["organizing"],
+                            })
+                          }
                           inline
                           label="Organizing"
                           type={"checkbox"}
@@ -354,6 +499,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              fold_clothes: !cleaningCheckState["fold_clothes"],
+                            })
+                          }
                           inline
                           label="Folding Clothes"
                           type={"checkbox"}
@@ -361,6 +512,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              window_clean: !cleaningCheckState["window_clean"],
+                            })
+                          }
                           inline
                           label="Window Clean"
                           type={"checkbox"}
@@ -369,6 +526,71 @@ export default function Index() {
                         />
                       </div>
                     </Form.Group>
+                    <input
+                      name="dish_wash"
+                      value={cleaningCheckState.dish_wash}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="vacuum"
+                      value={cleaningCheckState.vacuum}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="mop_sweep"
+                      value={cleaningCheckState.mop_sweep}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="bins"
+                      value={cleaningCheckState.bins}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="surface_clean"
+                      value={cleaningCheckState.surface_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="mirror_clean"
+                      value={cleaningCheckState.mirror_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="oven_clean"
+                      value={cleaningCheckState.oven_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="fridge_clean"
+                      value={cleaningCheckState.fridge_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="cupboard_clean"
+                      value={cleaningCheckState.cupboard_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="organizing"
+                      value={cleaningCheckState.organizing}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="fold_clothes"
+                      value={cleaningCheckState.fold_clothes}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="window_clean"
+                      value={cleaningCheckState.window_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="clean_date"
+                      value={JSON.stringify(value)}
+                      style={{ display: "none" }}
+                    />
                   </div>
                   <div
                     className=""
@@ -641,6 +863,12 @@ export default function Index() {
                         }}
                       >
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              dish_wash: !cleaningCheckState["dish_wash"],
+                            })
+                          }
                           inline
                           label="Dish Washing"
                           type={"checkbox"}
@@ -648,6 +876,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              vacuum: !cleaningCheckState["vacuum"],
+                            })
+                          }
                           inline
                           label="Vacuumc Cleaning"
                           type={"checkbox"}
@@ -655,6 +889,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              mop_sweep: !cleaningCheckState["mop_sweep"],
+                            })
+                          }
                           inline
                           // disabled
                           label="Mopping & Sweeping"
@@ -664,6 +904,12 @@ export default function Index() {
                         />
 
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              bins: !cleaningCheckState["bins"],
+                            })
+                          }
                           inline
                           label="Emptying Bins"
                           type={"checkbox"}
@@ -671,6 +917,14 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              surface_clean: !cleaningCheckState[
+                                "surface_clean"
+                              ],
+                            })
+                          }
                           inline
                           label="Surface Cleaning"
                           type={"checkbox"}
@@ -678,6 +932,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              mirror_clean: !cleaningCheckState["mirror_clean"],
+                            })
+                          }
                           inline
                           label="Mirror Cleaning"
                           type={"checkbox"}
@@ -685,6 +945,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              oven_clean: !cleaningCheckState["oven_clean"],
+                            })
+                          }
                           inline
                           label="Oven Cleaning"
                           type={"checkbox"}
@@ -692,6 +958,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              fridge_clean: !cleaningCheckState["fridge_clean"],
+                            })
+                          }
                           inline
                           label="Fridge Cleaning"
                           type={"checkbox"}
@@ -699,6 +971,14 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              cupboard_clean: !cleaningCheckState[
+                                "cupboard_clean"
+                              ],
+                            })
+                          }
                           inline
                           label="Cupboard Cleaning"
                           type={"checkbox"}
@@ -706,6 +986,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              organizing: !cleaningCheckState["organizing"],
+                            })
+                          }
                           inline
                           label="Organizing"
                           type={"checkbox"}
@@ -713,6 +999,12 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              fold_clothes: !cleaningCheckState["fold_clothes"],
+                            })
+                          }
                           inline
                           label="Folding Clothes"
                           type={"checkbox"}
@@ -720,14 +1012,226 @@ export default function Index() {
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setCleaningCheckState({
+                              ...cleaningCheckState,
+                              window_clean: !cleaningCheckState["window_clean"],
+                            })
+                          }
                           inline
                           label="Window Clean"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
+                        <Form.Check
+                          onChange={() =>
+                            setGardenCheckState(
+                              // gardenCheckState['lawnmow'] = !gardenCheckState['lawnmow']
+                              {
+                                ...gardenCheckState,
+                                lawnmow: !gardenCheckState["lawnmow"],
+                              }
+                            )
+                          }
+                          // onChange = {() => setLawnMow(!lawnMow)}
+                          inline
+                          label="Lawn Mowing"
+                          type={"checkbox"}
+                          id={`inline-${"checkbox"}-1`}
+                          style={{ color: "grey", fontSize: "0.9rem" }}
+                        />
+                        <Form.Check
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              gardenLitter: !gardenCheckState["gardenLitter"],
+                            })
+                          }
+                          inline
+                          label="Garden Litter"
+                          type={"checkbox"}
+                          id={`inline-${"checkbox"}-2`}
+                          style={{ color: "grey", fontSize: "0.9rem" }}
+                        />
+                        <Form.Check
+                          // onChange = {() => setGardenCare(!gardenCare)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              gardenCare: !gardenCheckState["gardenCare"],
+                            })
+                          }
+                          inline
+                          label="Garden Care"
+                          type={"checkbox"}
+                          id={`inline-${"checkbox"}-3`}
+                          style={{ color: "grey", fontSize: "0.9rem" }}
+                        />
+
+                        <Form.Check
+                          // onChange = {() => setWeeding(!weeding)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              weeding: !gardenCheckState["weeding"],
+                            })
+                          }
+                          inline
+                          label="Flower Bed / Plant Weeding"
+                          type={"checkbox"}
+                          id={`inline-${"checkbox"}-1`}
+                          style={{ color: "grey", fontSize: "0.9rem" }}
+                        />
+                        <Form.Check
+                          // onChange = {() => setTrimming(!trimming)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              trimming: !gardenCheckState["trimming"],
+                            })
+                          }
+                          inline
+                          label="Tree Branch / Bush Trimming"
+                          type={"checkbox"}
+                          id={`inline-${"checkbox"}-2`}
+                          style={{ color: "grey", fontSize: "0.9rem" }}
+                        />
+                        <Form.Check
+                          // onChange = {() => setSidewalkWeeding(!sidewalkWeeding)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              sidewalkWeeding: !gardenCheckState[
+                                "sidewalkWeeding"
+                              ],
+                            })
+                          }
+                          inline
+                          label="Sidewalk Weed Removal"
+                          type={"checkbox"}
+                          id={`inline-${"checkbox"}-2`}
+                          style={{ color: "grey", fontSize: "0.9rem" }}
+                        />
+                        <Form.Check
+                          // onChange = {() => setDrivewayWeeding(!drivewayWeeding)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              drivewayWeeding: !gardenCheckState[
+                                "drivewayWeeding"
+                              ],
+                            })
+                          }
+                          inline
+                          label="Driveway Weed Removal"
+                          type={"checkbox"}
+                          id={`inline-${"checkbox"}-2`}
+                          style={{ color: "grey", fontSize: "0.9rem" }}
+                        />
                       </div>
                     </Form.Group>
+
+                    <input
+                      name="dish_wash"
+                      value={cleaningCheckState.dish_wash}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="vacuum"
+                      value={cleaningCheckState.vacuum}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="mop_sweep"
+                      value={cleaningCheckState.mop_sweep}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="bins"
+                      value={cleaningCheckState.bins}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="surface_clean"
+                      value={cleaningCheckState.surface_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="mirror_clean"
+                      value={cleaningCheckState.mirror_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="oven_clean"
+                      value={cleaningCheckState.oven_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="fridge_clean"
+                      value={cleaningCheckState.fridge_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="cupboard_clean"
+                      value={cleaningCheckState.cupboard_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="organizing"
+                      value={cleaningCheckState.organizing}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="fold_clothes"
+                      value={cleaningCheckState.fold_clothes}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="window_clean"
+                      value={cleaningCheckState.window_clean}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="lawnmow"
+                      value={gardenCheckState.lawnmow}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="gardenLitter"
+                      value={gardenCheckState.gardenLitter}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="gardenCare"
+                      value={gardenCheckState.gardenCare}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="weeding"
+                      value={gardenCheckState.weeding}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="trimming"
+                      value={gardenCheckState.trimming}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="sidewalkWeeding"
+                      value={gardenCheckState.sidewalkWeeding}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="drivewayWeeding"
+                      value={gardenCheckState.drivewayWeeding}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="both_date"
+                      value={JSON.stringify(value)}
+                      style={{ display: "none" }}
+                    />
                   </div>
                   <div
                     className=""
@@ -875,7 +1379,7 @@ export default function Index() {
                   padding: "0 5rem 0 5rem",
                   // border: "0.35rem solid #979f8b",
                 }}
-                // onSubmit={sendGardeningEmail}
+                onSubmit={sendGardeningEmail}
               >
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <div style={{ flex: 3 }}>
@@ -998,93 +1502,152 @@ export default function Index() {
                         }}
                       >
                         <Form.Check
+                          onChange={() =>
+                            setGardenCheckState(
+                              // gardenCheckState['lawnmow'] = !gardenCheckState['lawnmow']
+                              {
+                                ...gardenCheckState,
+                                lawnmow: !gardenCheckState["lawnmow"],
+                              }
+                            )
+                          }
+                          // onChange = {() => setLawnMow(!lawnMow)}
                           inline
-                          label="Dish Washing"
+                          label="Lawn Mowing"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-1`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              gardenLitter: !gardenCheckState["gardenLitter"],
+                            })
+                          }
                           inline
-                          label="Vacuumc Cleaning"
+                          label="Garden Litter"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          // onChange = {() => setGardenCare(!gardenCare)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              gardenCare: !gardenCheckState["gardenCare"],
+                            })
+                          }
                           inline
-                          // disabled
-                          label="Mopping & Sweeping"
+                          label="Garden Care"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-3`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
 
                         <Form.Check
+                          // onChange = {() => setWeeding(!weeding)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              weeding: !gardenCheckState["weeding"],
+                            })
+                          }
                           inline
-                          label="Emptying Bins"
+                          label="Flower Bed / Plant Weeding"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-1`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          // onChange = {() => setTrimming(!trimming)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              trimming: !gardenCheckState["trimming"],
+                            })
+                          }
                           inline
-                          label="Surface Cleaning"
+                          label="Tree Branch / Bush Trimming"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          // onChange = {() => setSidewalkWeeding(!sidewalkWeeding)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              sidewalkWeeding: !gardenCheckState[
+                                "sidewalkWeeding"
+                              ],
+                            })
+                          }
                           inline
-                          label="Mirror Cleaning"
+                          label="Sidewalk Weed Removal"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                         <Form.Check
+                          // onChange = {() => setDrivewayWeeding(!drivewayWeeding)}
+                          onChange={() =>
+                            setGardenCheckState({
+                              ...gardenCheckState,
+                              drivewayWeeding: !gardenCheckState[
+                                "drivewayWeeding"
+                              ],
+                            })
+                          }
                           inline
-                          label="Oven Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-2`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          inline
-                          label="Fridge Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-2`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          inline
-                          label="Cupboard Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-2`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          inline
-                          label="Organizing"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-2`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          inline
-                          label="Folding Clothes"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-2`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          inline
-                          label="Window Clean"
+                          label="Driveway Weed Removal"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           style={{ color: "grey", fontSize: "0.9rem" }}
                         />
                       </div>
                     </Form.Group>
+                    <input
+                      name="lawnmow"
+                      value={gardenCheckState.lawnmow}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="gardenLitter"
+                      value={gardenCheckState.gardenLitter}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="gardenCare"
+                      value={gardenCheckState.gardenCare}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="weeding"
+                      value={gardenCheckState.weeding}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="trimming"
+                      value={gardenCheckState.trimming}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="sidewalkWeeding"
+                      value={gardenCheckState.sidewalkWeeding}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="drivewayWeeding"
+                      value={gardenCheckState.drivewayWeeding}
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      name="garden_date"
+                      value={JSON.stringify(value)}
+                      style={{ display: "none" }}
+                    />
                   </div>
                   <div
                     className=""
