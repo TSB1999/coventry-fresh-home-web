@@ -177,17 +177,13 @@ export default function Index() {
                   fontWeight: "bold",
                   textTransform: "uppercase",
                   backgroundColor: "#fff",
-                  opacity: 0.8,
+                  opacity: 0.95,
                   padding: "0 5rem 0 5rem",
                   border: "0.3rem solid #636c59",
                   borderRadius: "1rem",
                 }}
                 onSubmit={sendCleaningEmail}
               >
-                {/* <div className="form-header">
-                  <h1>HOME</h1>
-                  <h5>SUBMIT YOUR ENQUIRY</h5>
-                </div> */}
                 <Form.Group
                   controlId="exampleForm.ControlInput10"
                   style={{
@@ -198,7 +194,11 @@ export default function Index() {
                     // backgroundColor: "yellow",
                   }}
                 >
-                  <Form.Label style={{ marginRight: "2rem", marginTop : '0.5rem' }}>name</Form.Label>
+                  <Form.Label
+                    style={{ marginRight: "2rem", marginTop: "0.5rem" }}
+                  >
+                    name
+                  </Form.Label>
                   <Form.Control
                     type="text"
                     name="name1"
@@ -264,7 +264,7 @@ export default function Index() {
                     flexDirection: "column",
                     flex: 8,
                     // backgroundColor: "red",
-                    marginTop :'1%'
+                    marginTop: "1%",
                   }}
                 >
                   <div
@@ -587,289 +587,268 @@ export default function Index() {
               flex: 2,
             }}
           >
-            <div className="form-header">
+            {/* <div className="form-header">
               <h1>GARDENING</h1>
               <h5>SUBMIT YOUR ENQUIRY</h5>
-            </div>
+            </div> */}
 
             <div className="form-body" style={{ opacity: 1 }}>
               <Form
                 style={{
                   display: "flex",
                   flex: "1",
+                  width: "80%",
+                  margin: "auto",
                   flexDirection: "column",
                   color: "#636c59",
                   fontWeight: "bold",
                   textTransform: "uppercase",
                   backgroundColor: "#fff",
-                  opacity: 0.8,
+                  opacity: 0.95,
                   padding: "0 5rem 0 5rem",
+                  border: "0.3rem solid #636c59",
+                  borderRadius: "1rem",
                 }}
                 onSubmit={sendGardeningEmail}
               >
-                <div style={{ display: "flex", flexDirection: "row" }}>
-                  <div style={{ flex: 3 }}>
-                    <Form.Group
-                      controlId="exampleForm.ControlInput11"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        flex: 1,
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "2rem", paddingTop: "2%" }}
-                      >
-                        name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        name="name"
-                        // placeholder="David Keys"
-                        style={{
-                          color: "grey",
-                          fontWeight: "bold",
-                          textTransform: "uppercase",
-                        }}
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      controlId="exampleForm.ControlInput11"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-start",
-                        flex: 1,
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "2rem", paddingTop: "2%" }}
-                      >
-                        email
-                      </Form.Label>
-                      <Form.Control
-                        type="email"
-                        name="email"
-                        // placeholder="name@example.com"
-                        style={{
-                          color: "grey",
-                          fontWeight: "bold",
-                          textTransform: "uppercase",
-                        }}
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      controlId="exampleForm.ControlTextarea11"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-start",
-                        flex: 1,
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "2rem", paddingTop: "2%" }}
-                      >
-                        notes
-                      </Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        name="message"
-                        rows={3}
-                        // placeholder="Make your enquiry"
-                        style={{
-                          color: "grey",
-                          fontWeight: "bold",
-                          textTransform: "uppercase",
-                        }}
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      controlId="exampleForm.ControlSelect11"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        // alignItems: "center",
-                        // justifyContent: "center",
-                        flex: 8,
-                        // backgroundColor: "pink",
-                        // borderBottom: "1.5px solid grey",
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "1.6rem", paddingTop: "2%" }}
-                      >
-                        select
-                      </Form.Label>
-                      <div
-                        style={{
-                          flexDirection: "column",
-                          border: "solid 1px #c3ccc3",
-                          borderRadius: "5px",
-                          padding: "8px",
-                          width: "100%",
-                        }}
-                      >
-                        <Form.Check
-                          onChange={() =>
-                            setGardenCheckState(
-                              // gardenCheckState['lawnmow'] = !gardenCheckState['lawnmow']
-                              {
-                                ...gardenCheckState,
-                                lawnmow: !gardenCheckState["lawnmow"],
-                              }
-                            )
-                          }
-                          inline
-                          label="Lawn Mowing"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-111`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setGardenCheckState({
-                              ...gardenCheckState,
-                              gardenLitter: !gardenCheckState["gardenLitter"],
-                            })
-                          }
-                          inline
-                          label="Garden Litter"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-112`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setGardenCheckState({
-                              ...gardenCheckState,
-                              gardenCare: !gardenCheckState["gardenCare"],
-                            })
-                          }
-                          inline
-                          label="Garden Care"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-113`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-
-                        <Form.Check
-                          onChange={() =>
-                            setGardenCheckState({
-                              ...gardenCheckState,
-                              weeding: !gardenCheckState["weeding"],
-                            })
-                          }
-                          inline
-                          label="Flower Bed / Plant Weeding"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-114`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setGardenCheckState({
-                              ...gardenCheckState,
-                              trimming: !gardenCheckState["trimming"],
-                            })
-                          }
-                          inline
-                          label="Tree Branch / Bush Trimming"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-115`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setGardenCheckState({
-                              ...gardenCheckState,
-                              sidewalkWeeding: !gardenCheckState[
-                                "sidewalkWeeding"
-                              ],
-                            })
-                          }
-                          inline
-                          label="Sidewalk Weed Removal"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-116`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setGardenCheckState({
-                              ...gardenCheckState,
-                              drivewayWeeding: !gardenCheckState[
-                                "drivewayWeeding"
-                              ],
-                            })
-                          }
-                          inline
-                          label="Driveway Weed Removal"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-117`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                      </div>
-                    </Form.Group>
-                    <input
-                      name="lawnmow"
-                      value={gardenCheckState.lawnmow}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="gardenLitter"
-                      value={gardenCheckState.gardenLitter}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="gardenCare"
-                      value={gardenCheckState.gardenCare}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="weeding"
-                      value={gardenCheckState.weeding}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="trimming"
-                      value={gardenCheckState.trimming}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="sidewalkWeeding"
-                      value={gardenCheckState.sidewalkWeeding}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="drivewayWeeding"
-                      value={gardenCheckState.drivewayWeeding}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="garden_date"
-                      value={JSON.stringify(value)}
-                      style={{ display: "none" }}
-                    />
-                  </div>
-                  <div
-                    className=""
+                <Form.Group
+                  controlId="exampleForm.ControlInput11"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: 1,
+                    justifyContent: "center",
+                  }}
+                >
+                  <Form.Label
+                    style={{ marginRight: "2rem", marginTop: "0.5rem" }}
+                  >
+                    name
+                  </Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="name"
+                    // placeholder="David Keys"
                     style={{
-                      display: "flex",
-                      flex: 1,
-                      margin: "auto",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      color: "grey",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group
+                  controlId="exampleForm.ControlInput11"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    flex: 1,
+                  }}
+                >
+                  <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    // placeholder="name@example.com"
+                    style={{
+                      color: "grey",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group
+                  controlId="exampleForm.ControlTextarea11"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    flex: 1,
+                  }}
+                >
+                  <Form.Label style={{ marginRight: "2rem" }}>notes</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    name="message"
+                    rows={3}
+                    // placeholder="Make your enquiry"
+                    style={{
+                      color: "grey",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                </Form.Group>
+
+                <Calendar onChange={onChange} value={value} />
+
+                <Form.Group
+                  controlId="exampleForm.ControlSelect11"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: 8,
+                    // backgroundColor: "red",
+                    marginTop: "1%",
+                  }}
+                >
+                  <div
+                    style={{
+                      flexDirection: "column",
+                      // border: "solid 1px #c3ccc3",
+                      borderRadius: "5px",
+                      padding: "8px",
+                      width: "100%",
                     }}
                   >
-                    <Calendar
-                      onChange={onChange}
-                      value={value}
-                      style={{ flex: 1 }}
+                    <Form.Check
+                      onChange={() =>
+                        setGardenCheckState(
+                          // gardenCheckState['lawnmow'] = !gardenCheckState['lawnmow']
+                          {
+                            ...gardenCheckState,
+                            lawnmow: !gardenCheckState["lawnmow"],
+                          }
+                        )
+                      }
+                      inline
+                      label="Lawn Mowing"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-111`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setGardenCheckState({
+                          ...gardenCheckState,
+                          gardenLitter: !gardenCheckState["gardenLitter"],
+                        })
+                      }
+                      inline
+                      label="Garden Litter"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-112`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setGardenCheckState({
+                          ...gardenCheckState,
+                          gardenCare: !gardenCheckState["gardenCare"],
+                        })
+                      }
+                      inline
+                      label="Garden Care"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-113`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+
+                    <Form.Check
+                      onChange={() =>
+                        setGardenCheckState({
+                          ...gardenCheckState,
+                          weeding: !gardenCheckState["weeding"],
+                        })
+                      }
+                      inline
+                      label="Flower Bed / Plant Weeding"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-114`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setGardenCheckState({
+                          ...gardenCheckState,
+                          trimming: !gardenCheckState["trimming"],
+                        })
+                      }
+                      inline
+                      label="Tree Branch / Bush Trimming"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-115`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setGardenCheckState({
+                          ...gardenCheckState,
+                          sidewalkWeeding: !gardenCheckState["sidewalkWeeding"],
+                        })
+                      }
+                      inline
+                      label="Sidewalk Weed Removal"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-116`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setGardenCheckState({
+                          ...gardenCheckState,
+                          drivewayWeeding: !gardenCheckState["drivewayWeeding"],
+                        })
+                      }
+                      inline
+                      label="Driveway Weed Removal"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-117`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
                     />
                   </div>
-                </div>
+                </Form.Group>
+
+                <input
+                  name="lawnmow"
+                  value={gardenCheckState.lawnmow}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="gardenLitter"
+                  value={gardenCheckState.gardenLitter}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="gardenCare"
+                  value={gardenCheckState.gardenCare}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="weeding"
+                  value={gardenCheckState.weeding}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="trimming"
+                  value={gardenCheckState.trimming}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="sidewalkWeeding"
+                  value={gardenCheckState.sidewalkWeeding}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="drivewayWeeding"
+                  value={gardenCheckState.drivewayWeeding}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="garden_date"
+                  value={JSON.stringify(value)}
+                  style={{ display: "none" }}
+                />
+                <div
+                  className=""
+                  style={{
+                    display: "flex",
+                    flex: 1,
+                    margin: "auto",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                ></div>
                 <div className="form-footer">
                   <div className="button-wrapper">
                     <div className="left-button">
