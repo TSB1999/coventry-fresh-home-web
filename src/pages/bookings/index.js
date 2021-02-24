@@ -143,7 +143,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="screen gallery-cleaning" id="book-clean">
+      <div className="screen bookings-cleaning" id="book-clean">
         <div className="navbar-placeholder" />
         <div
           className="screen-container row"
@@ -568,7 +568,7 @@ export default function Index() {
 
       {/*  */}
 
-      <div className="screen gallery-gardening" id="book-gard">
+      <div className="screen bookings-gardening" id="book-gard">
         <div className="navbar-placeholder" />
         <div
           className="screen-container row"
