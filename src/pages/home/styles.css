@@ -4,7 +4,6 @@
 
 .navbar-placeholder {
   height: 10vh;
-  /* background-color: red; */
 }
 
 .screen-container {
@@ -12,7 +11,6 @@
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
   height: 90vh;
-  /* background-color: blue; */
 }
 
 .row {
@@ -34,9 +32,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  /* flex: 1.2; */
   margin-top: 3rem;
-  /* background-color: red; */
 }
 
 .landing-top > h1 {
@@ -50,8 +46,6 @@
   margin: 6rem 0 2rem 0rem;
   color: #636c59;
   text-shadow: 3px 3px #bfbab0;
-  /* background-color: red; */
-  /* padding: 2rem rem; */
 }
 
 .cleaning-button {
@@ -59,7 +53,6 @@
   padding: 0 1.5rem;
   grid-column: 2/3;
   grid-row: 3/4;
-  /* background-color: antiquewhite; */
   align-items: start;
   justify-content: flex-end;
   font-size: 1.1rem;
@@ -67,13 +60,11 @@
 
 .cleaning-button > div > .scroll-link > button {
   padding: 0.5rem 2rem;
-  /* margin-top: 1rem; */
   font-weight: bold;
   background-color: #fff;
   color: #636c59;
   border: none;
   font-size: 1.1rem;
-  /* margin-top: 0.7rem; */
 }
 
 .gardening-button {
@@ -81,7 +72,6 @@
   padding: 0 1.5rem;
   grid-column: 3/4;
   grid-row: 3/4;
-  /* background-color: yellow; */
   align-items: start;
   justify-content: flex-start;
 }
@@ -93,7 +83,6 @@
   color: white;
   border: none;
   font-size: 1.1rem;
-  /* margin-top: 0.7rem; */
 }
 
 .landing-bottom {
@@ -104,7 +93,6 @@
   background-image: url(./images/image-2.png);
   background-position: center;
   background-size: cover;
-  /* clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 0); */
   clip-path: polygon(100% 0, 100% 95%, 77% 100%, 0 85%, 0 0);
 }
 
@@ -127,26 +115,16 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* align-items: center; */
   justify-content: center;
-  /* background-color: #636c59; */
-  /* padding: 53.5rem; */
-  /* border-radius: 20px; */
-  /* box-shadow: 0.5rem 0.5rem grey; */
 }
 
 .garden-form {
-  /* align-items: center; */
-  /* background-color: yellow; */
-  /* margin: 0rem 4rem 0 4rem; */
   border-radius: 1rem;
-  /* box-shadow: 0.45rem 0.45rem #636c59; */
 }
 
 .garden-info {
   flex: 1;
   align-items: center;
-  /* background-color: yellow; */
   padding: 0rem 5rem 0 5rem;
   margin: 5rem 0rem 5rem 0rem;
 }
@@ -158,19 +136,14 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-top: 0.3rem solid #636c59;
-  border-left: 0.3rem solid #636c59;
-  border-right: 0.3rem solid #636c59;
   color: #636c59;
   opacity: 0.9;
 }
 
 .form-header > h1 {
-  /* text-shadow: 2px 2px white; */
   font-weight: bold;
 }
+
 .form-header > h5 {
   margin-top: 0px;
   color: grey;
@@ -178,11 +151,7 @@
 }
 
 .form-body {
-  /* display: flex; */
-  /* flex: 8; */
   opacity: 0.95;
-  border-left: 0.3rem solid #636c59;
-  border-right: 0.3rem solid #636c59;
 }
 
 .form-footer {
@@ -193,18 +162,13 @@
   background-color: #fff;
   padding: 1.3rem 2.3rem 1.3rem 2.3rem;
   opacity: 0.9;
-  /* border-left: 0.35rem solid #636c59;
-  border-right: 0.35rem solid #636c59;
-  border-bottom: 0.3rem solid #636c59; */
 }
 
 .button-wrapper {
-  /* background-color: #3ab34a; */
   display: flex;
   justify-content: center;
   flex: 1;
   flex-direction: row;
-  /* margin-top: 8vh; */
 }
 
 .button-wrapper > div {
@@ -212,7 +176,6 @@
   align-items: center;
   flex: 1;
   justify-content: center;
-  /* margin: 0 0 0 5px; */
 }
 
 .landing-right {
@@ -220,8 +183,6 @@
   flex-direction: column;
   justify-content: center;
   flex: 1.35;
-  /* background-color: red; */
-  /* border-left: 3px solid grey; */
 }
 
 .cleaning {
@@ -229,13 +190,11 @@
   background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
   background-position: 80% 87%;
   background-size: cover;
-  /* clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 0); */
   clip-path: polygon(100% 0, 100% 90%, 12% 100%, 0 95%, 0 0);
 }
 
 .form-info {
   align-items: center;
-  /* background-color: yellow; */
   padding: 0rem 5rem 0 5rem;
 }
 
@@ -253,5 +212,4 @@
   flex-direction: column;
   flex: 1;
   justify-content: center;
-  /* background-color: red */
 }

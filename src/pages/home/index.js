@@ -47,7 +47,6 @@ export default function Home() {
         "gmail",
         "template_ua349no",
         e.target,
-        // gardenCheckState,
         "user_9Sc8vdXTbOS9xDXaHCNvq"
       )
       .then(
@@ -71,7 +70,6 @@ export default function Home() {
         "gmail",
         "template_6j1arch",
         e.target,
-        // gardenCheckState,
         "user_9Sc8vdXTbOS9xDXaHCNvq"
       )
       .then(
@@ -121,9 +119,7 @@ export default function Home() {
                   spy={true}
                   smooth={true}
                   hashSpy={true}
-                  // offset={50}
                   duration={500}
-                  // delay={1000}
                   isDynamic={true}
                   ignoreCancelEvents={false}
                 >
@@ -141,11 +137,6 @@ export default function Home() {
           <div className="cleaning-left"></div>
           <div className="cleaning-right">
             <div className="garden-form">
-              <div className="form-header">
-                <h1>Cleaning</h1>
-                <h5>sumbit the form for your same day quote</h5>
-              </div>
-
               <div className="form-body">
                 <Form
                   style={{
@@ -154,27 +145,25 @@ export default function Home() {
                     flexDirection: "column",
                     color: "#636c59",
                     fontWeight: "bold",
-                    // fontSize: 18,
-                    // textShadow: "1.5px 1.5px #000",
-                    // textAlign: "center",
                     textTransform: "uppercase",
                     backgroundColor: "#fff",
                     opacity: 1,
-                    // borderBottom: "0.3rem solid #636c59",
-                    // borderRadius: "20px",
                     padding: "0 5rem 0 5rem",
-                    // border: "0.35rem solid #979f8b",
+                    border: "0.3rem solid #636c59",
+                    borderRadius: "1rem",
                   }}
                   onSubmit={(e) => sendCleaningEmail(e)}
                 >
+                  <div className="form-header">
+                    <h1>Cleaning</h1>
+                    <h5>sumbit the form for your same day quote</h5>
+                  </div>
                   <Form.Group
                     controlId="exampleForm.ControlInput1"
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       flex: 1,
-                      // backgroundColor: "red",
-                      // borderBottom: "1.5px solid #b6b6ad",
                       justifyContent: "center",
                     }}
                   >
@@ -186,13 +175,10 @@ export default function Home() {
                     <Form.Control
                       type="text"
                       name="name1"
-                      // placeholder="David Keys"
                       style={{
                         color: "grey",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        // fontSize: 12,
-                        // textAlign: "center",
                       }}
                     />
                   </Form.Group>
@@ -203,8 +189,6 @@ export default function Home() {
                       flexDirection: "column",
                       justifyContent: "flex-start",
                       flex: 1,
-                      // backgroundColor: "blue",
-                      // borderBottom: "1.5px solid #b6b6ad",
                     }}
                   >
                     <Form.Label
@@ -215,13 +199,10 @@ export default function Home() {
                     <Form.Control
                       type="email"
                       name="email1"
-                      // placeholder="name@example.com"
                       style={{
                         color: "grey",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        // fontSize: 12,
-                        // textAlign: "center",
                       }}
                     />
                   </Form.Group>
@@ -230,11 +211,8 @@ export default function Home() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      // alignItems: "center",
                       justifyContent: "flex-start",
-                      // backgroundColor: "red",
                       flex: 1,
-                      // borderBottom: "1.5px solid #b6b6ad",
                     }}
                   >
                     <Form.Label
@@ -246,13 +224,10 @@ export default function Home() {
                       as="textarea"
                       name="message1"
                       rows={3}
-                      // placeholder="Make your enquiry"
                       style={{
                         color: "grey",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        // fontSize: 12,
-                        // textAlign: "center",
                       }}
                     />
                   </Form.Group>
@@ -261,11 +236,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      // alignItems: "center",
-                      // justifyContent: "center",
                       flex: 8,
-                      // backgroundColor: "pink",
-                      // borderBottom: "1.5px solid grey",
                     }}
                   >
                     <Form.Label
@@ -275,10 +246,7 @@ export default function Home() {
                     </Form.Label>
                     <div
                       style={{
-                        // display: "flex",
                         flexDirection: "column",
-                        // textAlign: "center",
-                        // justifyContent: "flex-end",
                         border: "solid 1px #c3ccc3",
                         borderRadius: "5px",
                         padding: "8px",
@@ -516,9 +484,7 @@ export default function Home() {
                           spy={true}
                           smooth={true}
                           hashSpy={true}
-                          // offset={50}
                           duration={500}
-                          // delay={1000}
                           isDynamic={true}
                           ignoreCancelEvents={true}
                           style={{ width: "80%" }}
@@ -530,13 +496,11 @@ export default function Home() {
                               width: "100%",
                               fontWeight: "bold",
                               backgroundColor: "transparent",
-                              // borderColor: "#fff",
                               fontSize: 13,
                               color: "#636c59",
                               borderColor: "#636c59",
                               borderWidth: "2px",
                               borderRadius: "0",
-                              // textShadow: "2px 2px #000",
                             }}
                           >
                             BACK TO TOP
@@ -554,7 +518,6 @@ export default function Home() {
                             backgroundColor: "#636c59",
                             color: "#",
                             fontSize: 13,
-                            // borderColor: "#000",
                             borderWidth: "0px",
                             borderRadius: "0",
                           }}
@@ -576,11 +539,6 @@ export default function Home() {
         <div className="screen-container row">
           <div className="garden-left">
             <div className="garden-form">
-              <div className="form-header">
-                <h1>Gardening</h1>
-                <h5>sumbit the form for your same day quote</h5>
-              </div>
-
               <div className="form-body">
                 <Form
                   style={{
@@ -589,26 +547,25 @@ export default function Home() {
                     flexDirection: "column",
                     color: "#636c59",
                     fontWeight: "bold",
-                    // fontSize: 18,
-                    // textShadow: "1.5px 1.5px #000",
-                    // textAlign: "center",
                     textTransform: "uppercase",
                     backgroundColor: "#fff",
                     opacity: 1,
-                    // borderRadius: "20px",
                     padding: "0 5rem 0 5rem",
-                    // border: "0.35rem solid #979f8b",
+                    border: "0.3rem solid #636c59",
+                    borderRadius: "1rem",
                   }}
                   onSubmit={(e) => sendGardeningEmail(e)}
                 >
+                  <div className="form-header">
+                    <h1>Gardening</h1>
+                    <h5>sumbit the form for your same day quote</h5>
+                  </div>
                   <Form.Group
                     controlId="exampleForm.ControlInput2"
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       flex: 1,
-                      // backgroundColor: "red",
-                      // borderBottom: "1.5px solid #b6b6ad",
                       justifyContent: "center",
                     }}
                   >
@@ -620,13 +577,10 @@ export default function Home() {
                     <Form.Control
                       type="text"
                       name="name"
-                      // placeholder="David Keys"
                       style={{
                         color: "grey",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        // fontSize: 12,
-                        // textAlign: "center",
                       }}
                     />
                   </Form.Group>
@@ -637,8 +591,6 @@ export default function Home() {
                       flexDirection: "column",
                       justifyContent: "flex-start",
                       flex: 1,
-                      // backgroundColor: "blue",
-                      // borderBottom: "1.5px solid #b6b6ad",
                     }}
                   >
                     <Form.Label
@@ -649,13 +601,10 @@ export default function Home() {
                     <Form.Control
                       type="email"
                       name="email"
-                      // placeholder="name@example.com"
                       style={{
                         color: "grey",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        // fontSize: 12,
-                        // textAlign: "center",
                       }}
                     />
                   </Form.Group>
@@ -664,11 +613,8 @@ export default function Home() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      // alignItems: "center",
                       justifyContent: "flex-start",
-                      // backgroundColor: "red",
                       flex: 1,
-                      // borderBottom: "1.5px solid #b6b6ad",
                     }}
                   >
                     <Form.Label
@@ -680,13 +626,10 @@ export default function Home() {
                       as="textarea"
                       name="message"
                       rows={3}
-                      // placeholder="Make your enquiry"
                       style={{
                         color: "grey",
                         fontWeight: "bold",
                         textTransform: "uppercase",
-                        // fontSize: 12,
-                        // textAlign: "center",
                       }}
                     />
                   </Form.Group>
@@ -695,11 +638,7 @@ export default function Home() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      // alignItems: "center",
-                      // justifyContent: "center",
                       flex: 8,
-                      // backgroundColor: "pink",
-                      // borderBottom: "1.5px solid grey",
                     }}
                   >
                     <Form.Label
@@ -709,10 +648,7 @@ export default function Home() {
                     </Form.Label>
                     <div
                       style={{
-                        // display: "flex",
                         flexDirection: "column",
-                        // textAlign: "center",
-                        // justifyContent: "flex-end",
                         border: "solid 1px #c3ccc3",
                         borderRadius: "5px",
                         padding: "8px",
@@ -721,15 +657,11 @@ export default function Home() {
                     >
                       <Form.Check
                         onChange={() =>
-                          setGardenCheckState(
-                            // gardenCheckState['lawnmow'] = !gardenCheckState['lawnmow']
-                            {
-                              ...gardenCheckState,
-                              lawnmow: !gardenCheckState["lawnmow"],
-                            }
-                          )
+                          setGardenCheckState({
+                            ...gardenCheckState,
+                            lawnmow: !gardenCheckState["lawnmow"],
+                          })
                         }
-                        // onChange = {() => setLawnMow(!lawnMow)}
                         inline
                         label="Lawn Mowing"
                         type={"checkbox"}
@@ -750,7 +682,6 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                        // onChange = {() => setGardenCare(!gardenCare)}
                         onChange={() =>
                           setGardenCheckState({
                             ...gardenCheckState,
@@ -765,7 +696,6 @@ export default function Home() {
                       />
 
                       <Form.Check
-                        // onChange = {() => setWeeding(!weeding)}
                         onChange={() =>
                           setGardenCheckState({
                             ...gardenCheckState,
@@ -779,7 +709,6 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                        // onChange = {() => setTrimming(!trimming)}
                         onChange={() =>
                           setGardenCheckState({
                             ...gardenCheckState,
@@ -793,7 +722,6 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                        // onChange = {() => setSidewalkWeeding(!sidewalkWeeding)}
                         onChange={() =>
                           setGardenCheckState({
                             ...gardenCheckState,
@@ -809,7 +737,6 @@ export default function Home() {
                         style={{ color: "grey", fontSize: "0.9rem" }}
                       />
                       <Form.Check
-                        // onChange = {() => setDrivewayWeeding(!drivewayWeeding)}
                         onChange={() =>
                           setGardenCheckState({
                             ...gardenCheckState,
@@ -872,9 +799,7 @@ export default function Home() {
                           spy={true}
                           smooth={true}
                           hashSpy={true}
-                          // offset={50}
                           duration={500}
-                          // delay={1000}
                           isDynamic={true}
                           ignoreCancelEvents={true}
                           style={{ width: "80%" }}
@@ -886,13 +811,11 @@ export default function Home() {
                               width: "100%",
                               fontWeight: "bold",
                               backgroundColor: "transparent",
-                              // borderColor: "#fff",
                               fontSize: 13,
                               color: "#636c59",
                               borderColor: "#636c59",
                               borderWidth: "2px",
                               borderRadius: "0",
-                              // textShadow: "2px 2px #000",
                             }}
                           >
                             BACK TO TOP
@@ -902,7 +825,6 @@ export default function Home() {
 
                       <div className="right-button">
                         <button
-                          // type="submit"
                           class="btn btn-primary"
                           style={{
                             width: "100%",
@@ -910,7 +832,6 @@ export default function Home() {
                             backgroundColor: "#636c59",
                             color: "#",
                             fontSize: 13,
-                            // borderColor: "#000",
                             borderWidth: "0px",
                             borderRadius: "0",
                           }}
