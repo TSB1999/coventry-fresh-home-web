@@ -1,5 +1,5 @@
 .bookings-landing {
-  background-image: url(./images/valentina-locatelli-P8bsrm8KbM0-unsplash.jpg);
+  /* background-image: url(./images/thomas-heintz-0tgMnMIYQ9Y-unsplash.jpg); */
   background-position: center;
   background-size: cover;
   /* background-color: red; */
@@ -15,23 +15,45 @@
 .bookings-options-container {
   display: flex;
   flex: 1;
-  /* margin: -2vh -2vh; */
-  /* background-color: red; */
-  padding: 1rem;
+  margin: -2vh -2vh;
+  background-color: red;
+  /* padding: 1rem; */
 }
 
 .bookings-content {
   /* margin: 0vh 0vh 5vh 0vh; */
   /* background-color: yellow; */
   flex: 1;
-  display: grid;
-  /* grid-gap: 1rem; */
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  /* background-color: #292929; */
-  /* background-image: url(./images/bench-accounting-nvzvOPQW0gc-unsplash.jpg); */
-  /* mar: 2vh; */
-  /* margin-bottom: 2vh; */
+  display: flex;
+  /* grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr); */
+}
+
+.cleaning-panel {
+  background-color: red;
+  flex: 1;
+  transition: 1s;
+  background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  border-right: 0.6rem solid #fff;
+}
+
+.cleaning-panel:hover {
+  flex: 1.5;
+}
+
+.gardening-panel {
+  background-color: blue;
+  flex: 1;
+  transition: 1s;
+  background-image: url(./images/andrej-lisakov-zYUn4R37o_U-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.gardening-panel:hover {
+  flex: 1.5;
 }
 
 .bookings-header {
@@ -202,7 +224,7 @@
 }
 
 .gallery-cleaning {
-  background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
+  /* background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg); */
   background-position: center;
   background-size: cover;
   height: 100vh;

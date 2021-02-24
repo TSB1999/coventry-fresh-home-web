@@ -111,9 +111,8 @@ export default function Index() {
         <div className="screen-container column">
           <div className="bookings-options-container">
             <div className="bookings-content">
-              <h1 className="bookings-header">make a booking</h1>
               <Link
-                className="option-1"
+                className="cleaning-panel"
                 activeClass="active"
                 to="book-clean"
                 spy={true}
@@ -125,21 +124,9 @@ export default function Index() {
                 isDynamic={true}
                 ignoreCancelEvents={false}
               ></Link>
-              {/* <Link
-                className="option-2"
-                activeClass="active"
-                to="book-all"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                // offset={50}
-                duration={500}
-                // delay={1000}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              ></Link> */}
+              {/* <div className="gardening-panel"></div> */}
               <Link
-                className="option-3"
+                className="gardening-panel"
                 activeClass="active"
                 to="book-gard"
                 spy={true}
