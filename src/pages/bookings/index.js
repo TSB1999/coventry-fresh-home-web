@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+// import "react-calendar/dist/Calendar.css";
 
 import emailjs from "emailjs-com";
 
@@ -162,18 +162,16 @@ export default function Index() {
               // backgroundColor: "yellow",
               alignItems: "center",
               flex: 2,
+              order: 1,
             }}
           >
-            <div className="form-header">
-              <h1>HOME</h1>
-              <h5>SUBMIT YOUR ENQUIRY</h5>
-            </div>
-
             <div className="form-body" style={{ opacity: 1 }}>
               <Form
                 style={{
                   display: "flex",
                   flex: "1",
+                  width: "80%",
+                  margin: "auto",
                   flexDirection: "column",
                   color: "#636c59",
                   fontWeight: "bold",
@@ -181,358 +179,329 @@ export default function Index() {
                   backgroundColor: "#fff",
                   opacity: 0.8,
                   padding: "0 5rem 0 5rem",
+                  border: "0.3rem solid #636c59",
+                  borderRadius: "1rem",
                 }}
                 onSubmit={sendCleaningEmail}
               >
-                <div style={{ display: "flex", flexDirection: "row" }}>
-                  <div style={{ flex: 3 }}>
-                    <Form.Group
-                      controlId="exampleForm.ControlInput10"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        flex: 1,
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "2rem", paddingTop: "2%" }}
-                      >
-                        name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        name="name1"
-                        // placeholder="David Keys"
-                        style={{
-                          color: "grey",
-                          fontWeight: "bold",
-                          textTransform: "uppercase",
-                        }}
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      controlId="exampleForm.ControlInput10"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-start",
-                        flex: 1,
-                        // backgroundColor: "blue",
-                        // borderBottom: "1.5px solid #b6b6ad",
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "2rem", paddingTop: "2%" }}
-                      >
-                        email
-                      </Form.Label>
-                      <Form.Control
-                        type="email"
-                        name="email1"
-                        // placeholder="name@example.com"
-                        style={{
-                          color: "grey",
-                          fontWeight: "bold",
-                          textTransform: "uppercase",
-                        }}
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      controlId="exampleForm.ControlTextarea10"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-start",
-                        flex: 1,
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "2rem", paddingTop: "2%" }}
-                      >
-                        notes
-                      </Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        name="message1"
-                        rows={3}
-                        // placeholder="Make your enquiry"
-                        style={{
-                          color: "grey",
-                          fontWeight: "bold",
-                          textTransform: "uppercase",
-                        }}
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      controlId="exampleForm.ControlSelect10"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        flex: 8,
-                      }}
-                    >
-                      <Form.Label
-                        style={{ marginRight: "1.6rem", paddingTop: "2%" }}
-                      >
-                        select
-                      </Form.Label>
-                      <div
-                        style={{
-                          flexDirection: "column",
-                          border: "solid 1px #c3ccc3",
-                          borderRadius: "5px",
-                          padding: "8px",
-                          width: "100%",
-                        }}
-                      >
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              dish_wash: !cleaningCheckState["dish_wash"],
-                            })
-                          }
-                          inline
-                          label="Dish Washing"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-101`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              vacuum: !cleaningCheckState["vacuum"],
-                            })
-                          }
-                          inline
-                          label="Vacuumc Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-102`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              mop_sweep: !cleaningCheckState["mop_sweep"],
-                            })
-                          }
-                          inline
-                          // disabled
-                          label="Mopping & Sweeping"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-103`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              bins: !cleaningCheckState["bins"],
-                            })
-                          }
-                          inline
-                          label="Emptying Bins"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-104`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              surface_clean: !cleaningCheckState[
-                                "surface_clean"
-                              ],
-                            })
-                          }
-                          inline
-                          label="Surface Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-105`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              mirror_clean: !cleaningCheckState["mirror_clean"],
-                            })
-                          }
-                          inline
-                          label="Mirror Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-106`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              oven_clean: !cleaningCheckState["oven_clean"],
-                            })
-                          }
-                          inline
-                          label="Oven Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-107`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              fridge_clean: !cleaningCheckState["fridge_clean"],
-                            })
-                          }
-                          inline
-                          label="Fridge Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-108`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              cupboard_clean: !cleaningCheckState[
-                                "cupboard_clean"
-                              ],
-                            })
-                          }
-                          inline
-                          label="Cupboard Cleaning"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-109`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              organizing: !cleaningCheckState["organizing"],
-                            })
-                          }
-                          inline
-                          label="Organizing"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-110`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              fold_clothes: !cleaningCheckState["fold_clothes"],
-                            })
-                          }
-                          inline
-                          label="Folding Clothes"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-111`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                        <Form.Check
-                          onChange={() =>
-                            setCleaningCheckState({
-                              ...cleaningCheckState,
-                              window_clean: !cleaningCheckState["window_clean"],
-                            })
-                          }
-                          inline
-                          label="Window Clean"
-                          type={"checkbox"}
-                          id={`inline-${"checkbox"}-112`}
-                          style={{ color: "grey", fontSize: "0.9rem" }}
-                        />
-                      </div>
-                    </Form.Group>
-                    <input
-                      name="dish_wash"
-                      value={cleaningCheckState.dish_wash}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="vacuum"
-                      value={cleaningCheckState.vacuum}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="mop_sweep"
-                      value={cleaningCheckState.mop_sweep}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="bins"
-                      value={cleaningCheckState.bins}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="surface_clean"
-                      value={cleaningCheckState.surface_clean}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="mirror_clean"
-                      value={cleaningCheckState.mirror_clean}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="oven_clean"
-                      value={cleaningCheckState.oven_clean}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="fridge_clean"
-                      value={cleaningCheckState.fridge_clean}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="cupboard_clean"
-                      value={cleaningCheckState.cupboard_clean}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="organizing"
-                      value={cleaningCheckState.organizing}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="fold_clothes"
-                      value={cleaningCheckState.fold_clothes}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="window_clean"
-                      value={cleaningCheckState.window_clean}
-                      style={{ display: "none" }}
-                    />
-                    <input
-                      name="clean_date"
-                      value={JSON.stringify(value)}
-                      style={{ display: "none" }}
-                    />
-                  </div>
-                  <div
-                    className=""
+                <div className="form-header">
+                  <h1>HOME</h1>
+                  <h5>SUBMIT YOUR ENQUIRY</h5>
+                </div>
+                <Form.Group
+                  controlId="exampleForm.ControlInput10"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: 1,
+                    justifyContent: "center",
+                    // backgroundColor: "yellow",
+                  }}
+                >
+                  <Form.Label style={{ marginRight: "2rem" }}>name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="name1"
+                    // placeholder="David Keys"
                     style={{
-                      display: "flex",
-                      flex: 1,
-                      margin: "auto",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      color: "grey",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group
+                  controlId="exampleForm.ControlInput10"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    flex: 1,
+                    // backgroundColor: "blue",
+                    // borderBottom: "1.5px solid #b6b6ad",
+                  }}
+                >
+                  <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email1"
+                    // placeholder="name@example.com"
+                    style={{
+                      color: "grey",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group
+                  controlId="exampleForm.ControlTextarea10"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    flex: 1,
+                  }}
+                >
+                  <Form.Label style={{ marginRight: "2rem" }}>notes</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    name="message1"
+                    rows={3}
+                    // placeholder="Make your enquiry"
+                    style={{
+                      color: "grey",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group
+                  controlId="exampleForm.ControlSelect10"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: 8,
+                  }}
+                >
+                  <Form.Label style={{ marginRight: "1.6rem" }}>
+                    select
+                  </Form.Label>
+                  <div
+                    style={{
+                      flexDirection: "column",
+                      border: "solid 1px #c3ccc3",
+                      borderRadius: "5px",
+                      padding: "8px",
+                      width: "100%",
                     }}
                   >
-                    <Calendar
-                      onChange={onChange}
-                      value={value}
-                      style={{ flex: 1 }}
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          dish_wash: !cleaningCheckState["dish_wash"],
+                        })
+                      }
+                      inline
+                      label="Dish Washing"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-101`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          vacuum: !cleaningCheckState["vacuum"],
+                        })
+                      }
+                      inline
+                      label="Vacuumc Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-102`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          mop_sweep: !cleaningCheckState["mop_sweep"],
+                        })
+                      }
+                      inline
+                      // disabled
+                      label="Mopping & Sweeping"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-103`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          bins: !cleaningCheckState["bins"],
+                        })
+                      }
+                      inline
+                      label="Emptying Bins"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-104`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          surface_clean: !cleaningCheckState["surface_clean"],
+                        })
+                      }
+                      inline
+                      label="Surface Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-105`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          mirror_clean: !cleaningCheckState["mirror_clean"],
+                        })
+                      }
+                      inline
+                      label="Mirror Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-106`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          oven_clean: !cleaningCheckState["oven_clean"],
+                        })
+                      }
+                      inline
+                      label="Oven Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-107`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          fridge_clean: !cleaningCheckState["fridge_clean"],
+                        })
+                      }
+                      inline
+                      label="Fridge Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-108`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          cupboard_clean: !cleaningCheckState["cupboard_clean"],
+                        })
+                      }
+                      inline
+                      label="Cupboard Cleaning"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-109`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          organizing: !cleaningCheckState["organizing"],
+                        })
+                      }
+                      inline
+                      label="Organizing"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-110`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          fold_clothes: !cleaningCheckState["fold_clothes"],
+                        })
+                      }
+                      inline
+                      label="Folding Clothes"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-111`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
+                    />
+                    <Form.Check
+                      onChange={() =>
+                        setCleaningCheckState({
+                          ...cleaningCheckState,
+                          window_clean: !cleaningCheckState["window_clean"],
+                        })
+                      }
+                      inline
+                      label="Window Clean"
+                      type={"checkbox"}
+                      id={`inline-${"checkbox"}-112`}
+                      style={{ color: "grey", fontSize: "0.9rem" }}
                     />
                   </div>
-                </div>
+                </Form.Group>
+                <Calendar onChange={onChange} value={value} />
+                <input
+                  name="dish_wash"
+                  value={cleaningCheckState.dish_wash}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="vacuum"
+                  value={cleaningCheckState.vacuum}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="mop_sweep"
+                  value={cleaningCheckState.mop_sweep}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="bins"
+                  value={cleaningCheckState.bins}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="surface_clean"
+                  value={cleaningCheckState.surface_clean}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="mirror_clean"
+                  value={cleaningCheckState.mirror_clean}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="oven_clean"
+                  value={cleaningCheckState.oven_clean}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="fridge_clean"
+                  value={cleaningCheckState.fridge_clean}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="cupboard_clean"
+                  value={cleaningCheckState.cupboard_clean}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="organizing"
+                  value={cleaningCheckState.organizing}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="fold_clothes"
+                  value={cleaningCheckState.fold_clothes}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="window_clean"
+                  value={cleaningCheckState.window_clean}
+                  style={{ display: "none" }}
+                />
+                <input
+                  name="clean_date"
+                  value={JSON.stringify(value)}
+                  style={{ display: "none" }}
+                />
+
                 <div className="form-footer">
                   <div className="button-wrapper">
                     <div className="left-button">
