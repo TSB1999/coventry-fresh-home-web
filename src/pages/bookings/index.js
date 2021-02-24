@@ -184,10 +184,10 @@ export default function Index() {
                 }}
                 onSubmit={sendCleaningEmail}
               >
-                <div className="form-header">
+                {/* <div className="form-header">
                   <h1>HOME</h1>
                   <h5>SUBMIT YOUR ENQUIRY</h5>
-                </div>
+                </div> */}
                 <Form.Group
                   controlId="exampleForm.ControlInput10"
                   style={{
@@ -198,7 +198,7 @@ export default function Index() {
                     // backgroundColor: "yellow",
                   }}
                 >
-                  <Form.Label style={{ marginRight: "2rem" }}>name</Form.Label>
+                  <Form.Label style={{ marginRight: "2rem", marginTop : '0.5rem' }}>name</Form.Label>
                   <Form.Control
                     type="text"
                     name="name1"
@@ -255,23 +255,24 @@ export default function Index() {
                     }}
                   />
                 </Form.Group>
+                <Calendar onChange={onChange} value={value} />
+
                 <Form.Group
                   controlId="exampleForm.ControlSelect10"
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     flex: 8,
+                    // backgroundColor: "red",
+                    marginTop :'1%'
                   }}
                 >
-                  <Form.Label style={{ marginRight: "1.6rem" }}>
-                    select
-                  </Form.Label>
                   <div
                     style={{
                       flexDirection: "column",
-                      border: "solid 1px #c3ccc3",
+                      // border: "solid 1px #c3ccc3",
                       borderRadius: "5px",
-                      padding: "8px",
+                      // padding: "8px",
                       width: "100%",
                     }}
                   >
@@ -435,7 +436,6 @@ export default function Index() {
                     />
                   </div>
                 </Form.Group>
-                <Calendar onChange={onChange} value={value} />
                 <input
                   name="dish_wash"
                   value={cleaningCheckState.dish_wash}
