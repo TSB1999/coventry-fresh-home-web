@@ -1,5 +1,6 @@
 .screen {
   height: 100vh;
+  width: fit-content;
 }
 
 .navbar-placeholder {
