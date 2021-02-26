@@ -111,33 +111,41 @@ export default function Index() {
         <div className="screen-container column">
           <div className="bookings-options-container">
             <div className="bookings-content">
-              <Link
-                className="cleaning-panel"
-                activeClass="active"
-                to="book-clean"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                // offset={50}
-                duration={500}
-                // delay={1000}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              ></Link>
-              {/* <div className="gardening-panel"></div> */}
-              <Link
-                className="gardening-panel"
-                activeClass="active"
-                to="book-gard"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                // offset={50}
-                duration={500}
-                // delay={1000}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              ></Link>
+              <div style={{ flex: 2, display: "flex" }}>
+                <Link
+                  className="cleaning-panel"
+                  activeClass="active"
+                  to="book-clean"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  // offset={50}
+                  duration={500}
+                  // delay={1000}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                ></Link>
+                <Link
+                  className="gardening-panel"
+                  activeClass="active"
+                  to="book-gard"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  // offset={50}
+                  duration={500}
+                  // delay={1000}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                ></Link>
+              </div>
+              <div className="workflow">
+                <div className="step-1">step-1</div>
+                <div className="arrow-1">arrow</div>
+                <div className="step-2">step-2</div>
+                <div className="arrow-2">arrow</div>
+                <div className="step-3">step-3</div>
+              </div>
             </div>
           </div>
         </div>

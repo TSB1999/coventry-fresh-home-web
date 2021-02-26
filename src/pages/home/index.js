@@ -89,42 +89,47 @@ export default function Home() {
       <div className="screen landing" id="home-landing">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
+          {/* <div className="heading-background"></div> */}
           <div className="landing-top">
-            <h1>Domestic Cleaning and Gardening Services</h1>
-            <div className="cleaning-button">
-              <div style={{ padding: "0.2rem", backgroundColor: "#636c59" }}>
-                <Link
-                  className="scroll-link"
-                  activeClass="active"
-                  to="home-clean"
-                  spy={true}
-                  smooth={true}
-                  hashSpy={true}
-                  // offset={50}
-                  duration={500}
-                  // delay={1000}
-                  isDynamic={true}
-                  ignoreCancelEvents={false}
-                >
-                  <button>cleaning</button>
-                </Link>
+            <div className="background-header">
+              <h1 className="landing-title">
+                Domestic Cleaning and Gardening Services
+              </h1>
+              <div className="cleaning-button">
+                <div style={{ padding: "0.2rem", backgroundColor: "#292929" }}>
+                  <Link
+                    className="scroll-link"
+                    activeClass="active"
+                    to="home-clean"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    // offset={50}
+                    duration={500}
+                    // delay={1000}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                  >
+                    <button>cleaning</button>
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="gardening-button">
-              <div style={{ padding: "0.2rem", backgroundColor: "white" }}>
-                <Link
-                  className="scroll-link"
-                  activeClass="active"
-                  to="home-gard"
-                  spy={true}
-                  smooth={true}
-                  hashSpy={true}
-                  duration={500}
-                  isDynamic={true}
-                  ignoreCancelEvents={false}
-                >
-                  <button>gardening</button>
-                </Link>
+              <div className="gardening-button">
+                <div style={{ padding: "0.2rem", backgroundColor: "#bfbab0" }}>
+                  <Link
+                    className="scroll-link"
+                    activeClass="active"
+                    to="home-gard"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    duration={500}
+                    isDynamic={true}
+                    ignoreCancelEvents={false}
+                  >
+                    <button>gardening</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
