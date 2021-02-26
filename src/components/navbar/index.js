@@ -30,8 +30,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar-container" style={{ backgroundColor: theme }}>
-      <div className="left">
-        {/* <button onClick={doSumn}>sd</button> */}
+      <div className="main">
         <div>
           <SLink
             activeClass="active"
@@ -39,9 +38,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             hashSpy={true}
-            // offset={50}
             duration={500}
-            // delay={1000}
             isDynamic={true}
             ignoreCancelEvents={true}
             style={{ width: "80%" }}
@@ -51,17 +48,11 @@ export default function Navbar() {
               style={{ color: "#fff" }}
               onClick={() => setTheme("#636c59")}
             >
-              {/* <img
-              src={logo}
-              style={{ width: "5.5rem", backgroundColor: "red" }}
-            /> */}
               <i class="fas fa-home fa-2x"></i>
             </Link>
           </SLink>
-          {/* <h4>home</h4> */}
+          <h4 style={{ marginTop: "0.7rem" }}>home</h4>
         </div>
-      </div>
-      <div className="main">
         <div>
           <SLink
             activeClass="active"
@@ -69,9 +60,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             hashSpy={true}
-            // offset={50}
             duration={500}
-            // delay={1000}
             isDynamic={true}
             ignoreCancelEvents={true}
             style={{ width: "80%" }}
@@ -84,7 +73,7 @@ export default function Navbar() {
               <i class="fas fa-calendar-week fa-2x"></i>
             </Link>
           </SLink>
-          {/* <h4>enquiries</h4> */}
+          <h4 style={{ marginTop: "0.7rem" }}>enquiries</h4>
         </div>
         <div>
           <Link
@@ -95,6 +84,7 @@ export default function Navbar() {
             <i class="fas fa-images fa-2x"></i>
             {/* <h4>gallery</h4> */}
           </Link>
+          <h4 style={{ marginTop: "0.7rem" }}>gallery</h4>
         </div>
         <div>
           <Link
@@ -105,18 +95,7 @@ export default function Navbar() {
             <i class="fas fa-donate fa-2x"></i>
             {/* <h4>donate</h4> */}
           </Link>
-        </div>
-      </div>
-      <div className="right">
-        <div>
-          <Link
-            to="/contact"
-            style={{ color: "#fff" }}
-            onClick={() => setTheme(5)}
-          >
-            <i class="fas fa-info fa-2x"></i>
-            {/* <h4>info</h4> */}
-          </Link>
+          <h4 style={{ marginTop: "0.7rem" }}>donations</h4>
         </div>
       </div>
     </nav>
