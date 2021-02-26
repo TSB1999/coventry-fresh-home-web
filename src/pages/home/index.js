@@ -137,11 +137,11 @@ export default function Home() {
           <div className="cleaning-left"></div>
           <div className="cleaning-right">
             {/* <div className="garden-form"> */}
-            <div className="form-body">
+            {/* <div className="form-body"> */}
               <Form
                 style={{
                   display: "flex",
-                  flex: "1",
+                  // flex: "1",
                   flexDirection: "column",
                   color: "#636c59",
                   fontWeight: "bold",
@@ -202,7 +202,7 @@ export default function Home() {
                     }}
                   />
                 </Form.Group>
-                <Form.Group
+                {/* <Form.Group
                   controlId="exampleForm.ControlTextarea1"
                   style={{
                     display: "flex",
@@ -224,7 +224,7 @@ export default function Home() {
                       textTransform: "uppercase",
                     }}
                   />
-                </Form.Group>
+                </Form.Group> */}
                 <Form.Group
                   controlId="exampleForm.ControlSelect1"
                   style={{
@@ -521,7 +521,7 @@ export default function Home() {
                 </div>
               </Form>
               {/* </div> */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
@@ -530,12 +530,10 @@ export default function Home() {
         <div className="navbar-placeholder" />
         <div className="screen-container row">
           <div className="garden-left">
-            <div className="garden-form">
-              <div className="form-body">
                 <Form
                   style={{
                     display: "flex",
-                    flex: "1",
+                    // flex: "1",
                     flexDirection: "column",
                     color: "#636c59",
                     fontWeight: "bold",
@@ -600,7 +598,7 @@ export default function Home() {
                       }}
                     />
                   </Form.Group>
-                  <Form.Group
+                  {/* <Form.Group
                     controlId="exampleForm.ControlTextarea2"
                     style={{
                       display: "flex",
@@ -624,7 +622,7 @@ export default function Home() {
                         textTransform: "uppercase",
                       }}
                     />
-                  </Form.Group>
+                  </Form.Group> */}
                   <Form.Group
                     controlId="exampleForm.ControlSelect2"
                     style={{
@@ -835,10 +833,7 @@ export default function Home() {
                   </div>
                 </Form>
               </div>
-            </div>
-          </div>
           <div className="garden-right">
-            <div className="garden-info"></div>
           </div>
         </div>
       </div>

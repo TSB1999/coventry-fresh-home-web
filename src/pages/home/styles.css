@@ -94,7 +94,7 @@
   background-image: url(./images/image-2.png);
   background-position: center;
   background-size: cover;
-  clip-path: polygon(100% 0, 100% 95%, 77% 100%, 0 85%, 0 0);
+  /* clip-path: polygon(100% 0, 100% 95%, 77% 100%, 0 85%, 0 0); */
 }
 
 .garden-left {
@@ -143,6 +143,7 @@
 }
 
 .form-header > h1 {
+  font-size : 2rem;
   font-weight: bold;
 }
 
@@ -150,6 +151,7 @@
   margin-top: 0px;
   color: grey;
   font-weight: 550;
+  font-size : 1rem
 }
 
 .form-body {
@@ -192,7 +194,7 @@
   background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
   background-position: 80% 87%;
   background-size: cover;
-  clip-path: polygon(100% 0, 100% 90%, 12% 100%, 0 95%, 0 0);
+  /* clip-path: polygon(100% 0, 100% 90%, 12% 100%, 0 95%, 0 0); */
 }
 
 .form-info {
@@ -214,4 +216,19 @@
   flex-direction: column;
   flex: 1;
   justify-content: center;
+}
+
+@media (max-width: 1240px) {
+  .cleaning-right {
+    flex : 1
+  }
+  .cleaning-left {
+    flex : 0
+  }
+  .garden-right {
+    flex : 0
+  }
+  .garden-left {
+    flex : 1
+  }
 }
