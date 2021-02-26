@@ -4,14 +4,14 @@
 }
 
 .navbar-placeholder {
-  height: 10vh;
+  height: 9vh;
 }
 
 .screen-container {
   display: flex;
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
-  height: 90vh;
+  height: 91vh;
 }
 
 .row {
@@ -79,6 +79,7 @@
   background-color: #bfbab0;
   color: #636c59;
   border: none;
+  border-radius: 1rem;
   font-size: 1.1rem;
   transition: 1s;
 }
@@ -102,6 +103,7 @@
   background-color: #292929;
   color: #bfbab0;
   border: none;
+  border-radius: 1rem;
   font-size: 1.1rem;
   transition: 1s;
 }

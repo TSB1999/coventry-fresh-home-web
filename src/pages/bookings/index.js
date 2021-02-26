@@ -105,7 +105,7 @@ export default function Index() {
   }
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#3ab34a" }}>
       <div className="screen bookings-landing" id="book-land">
         <div className="navbar-placeholder" />
         <div className="screen-container column">
@@ -124,7 +124,30 @@ export default function Index() {
                   // delay={1000}
                   isDynamic={true}
                   ignoreCancelEvents={false}
-                ></Link>
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      backgroundColor: "#636c59",
+                      flex: 1,
+                      opacity: 0.7,
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <h1
+                      style={{
+                        fontSize: "3rem",
+                        fontWeight: "bold",
+                        color: "#3ab34a",
+                        textShadow: "0.2rem 0.2rem #000",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      home service bookings
+                    </h1>
+                  </div>
+                </Link>
                 <Link
                   className="gardening-panel"
                   activeClass="active"
@@ -137,14 +160,37 @@ export default function Index() {
                   // delay={1000}
                   isDynamic={true}
                   ignoreCancelEvents={false}
-                ></Link>
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      backgroundColor: "#636c59",
+                      flex: 1,
+                      opacity: 0.7,
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <h1
+                      style={{
+                        fontSize: "3rem",
+                        fontWeight: "bold",
+                        color: "#3ab34a",
+                        textShadow: "0.2rem 0.2rem #000",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      garden service bookings
+                    </h1>
+                  </div>
+                </Link>
               </div>
               <div className="workflow">
-                <div className="step-1">step-1</div>
+                {/* <div className="step-1">step-1</div>
                 <div className="arrow-1">arrow</div>
                 <div className="step-2">step-2</div>
                 <div className="arrow-2">arrow</div>
-                <div className="step-3">step-3</div>
+                <div className="step-3">step-3</div> */}
               </div>
             </div>
           </div>

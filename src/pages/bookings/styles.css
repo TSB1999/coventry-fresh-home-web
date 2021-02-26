@@ -32,12 +32,14 @@
 
 .cleaning-panel {
   /* background-color: red; */
+  display: flex;
+  /* padding: 2rem; */
   flex: 1;
   transition: 1s;
   background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  border-right: 0.6rem solid #fff;
+  border-right: 0.2rem solid #fff;
 }
 
 .cleaning-panel:hover {
@@ -45,10 +47,12 @@
 }
 
 .gardening-panel {
+  display: flex;
+  /* padding: 2rem; */
   background-color: blue;
   flex: 1;
   transition: 1s;
-  background-image: url(./images/andrej-lisakov-zYUn4R37o_U-unsplash.jpg);
+  background-image: url(./images/anna-earl-cTtE2FlIRoU-unsplash.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -249,11 +253,16 @@
   grid-template-rows: repeat(4, 1fr);
   flex: 1;
   transition: 1s;
+  background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-6-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #3ab34a;
 }
 
-.workflow:hover {
-  flex: 1.5;
-}
+/* .workflow:hover {
+  flex: 1;
+} */
 
 /* .gallery-gardening {
   background-image: url(./images/volha-flaxeco-jCPL0oxBhB0-unsplash.jpg);
