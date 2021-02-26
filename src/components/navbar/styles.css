@@ -126,3 +126,9 @@ i {
 i:hover {
   color: #3ab34a;
 }
+
+/* @media (max-width: 280px) {
+  i {
+    background-color: red;
+  }
+} */
