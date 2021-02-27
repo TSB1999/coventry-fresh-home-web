@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 
 import { Link } from "react-scroll";
+import Navbar from "../../components/navbar";
 
 // Kitchen
 import showcase_k1 from "./images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg";
@@ -40,12 +41,9 @@ import garden8 from "./images/gardens/unnamed.jpg";
 export default function index() {
   return (
     <div className="home-container">
-      <div className="screen gallery-landing">
-        <div className="navbar-placeholder" />
-        <div className="screen-container column">
-          <div className="gallery-header">
-            <h1>Our Work</h1>
-          </div>
+      <Navbar />
+      <div className="screen gallery-landing" style={{ height: "91vh" }}>
+        <div className="screen-container column" style={{ height: "91vh" }}>
           <div className="gallery-grid-container">
             <div className="showcase-grid">
               <Link
@@ -55,9 +53,7 @@ export default function index() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                // offset={50}
                 duration={500}
-                // delay={1000}
                 isDynamic={true}
                 ignoreCancelEvents={false}
               ></Link>
@@ -68,9 +64,7 @@ export default function index() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                // offset={50}
                 duration={500}
-                // delay={1000}
                 isDynamic={true}
                 ignoreCancelEvents={false}
               ></Link>
@@ -81,9 +75,7 @@ export default function index() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                // offset={50}
                 duration={500}
-                // delay={1000}
                 isDynamic={true}
                 ignoreCancelEvents={false}
               ></Link>
@@ -94,9 +86,7 @@ export default function index() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                // offset={50}
                 duration={500}
-                // delay={1000}
                 isDynamic={true}
                 ignoreCancelEvents={false}
               ></Link>
@@ -106,7 +96,6 @@ export default function index() {
       </div>
 
       <div className="screen gallery-gardening" id="gallery-gardening">
-        <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">
             <h2>Gardening</h2>
@@ -215,7 +204,6 @@ export default function index() {
       </div>
 
       <div className="screen gallery-kitchen" id="gallery-kitchen">
-        <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">
             <h2>Kitchens</h2>
@@ -270,61 +258,12 @@ export default function index() {
                   </h4>
                 </div>
               </div>
-              {/* <div className="gallery-item-wrapper five">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden5})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper six">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden6})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper seven">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden7})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper eight">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden8})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
       </div>
 
       <div className="screen gallery-bathroom" id="gallery-bathroom">
-        <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">
             <h2>Bathrooms</h2>
@@ -355,85 +294,12 @@ export default function index() {
                   </h4>
                 </div>
               </div>
-              {/* <div className="gallery-item-wrapper three">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden3})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper four">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden4})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper five">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden5})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper six">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden6})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper seven">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden7})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper eight">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden8})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
       </div>
 
       <div className="screen gallery-bedroom" id="gallery-bedroom">
-        <div className="navbar-placeholder" />
         <div className="screen-container column">
           <div className="gardening-header">
             <h2>Bedrooms</h2>
@@ -464,78 +330,6 @@ export default function index() {
                   </h4>
                 </div>
               </div>
-              {/* <div className="gallery-item-wrapper three">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden3})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper four">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden4})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper five">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden5})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper six">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden6})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper seven">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden7})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div>
-              <div className="gallery-item-wrapper eight">
-                <div
-                  className="item-img"
-                  style={{ backgroundImage: `url(${garden8})` }}
-                ></div>
-                <div className="item-content-wrapper">
-                  <h4>
-                    Aute labore ea cupidatat voluptate consectetur cillum tempor
-                    cupidatat reprehenderit in minim.
-                  </h4>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

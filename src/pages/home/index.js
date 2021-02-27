@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
+import Navbar from "../../components/navbar";
+
 import Form from "react-bootstrap/Form";
 
 import { Link } from "react-scroll";
@@ -85,9 +87,10 @@ export default function Home() {
   }
 
   return (
-    <div style={{ backgroundColor: "#636c59" }}>
-      <div className="screen landing" id="home-landing">
-        <div className="navbar-placeholder" />
+    <div id="home-landing" style={{ backgroundColor: "#636c59" }}>
+      <Navbar />
+      <div className="screen landing" style={{ height: "91vh" }}>
+        {/* <div className="navbar-placeholder" /> */}
         <div className="screen-container column">
           {/* <div className="heading-background"></div> */}
           <div className="landing-top">
@@ -149,7 +152,7 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="screen cleaning" id="home-clean">
-        <div className="navbar-placeholder" />
+        {/* <div className="navbar-placeholder" /> */}
         <div className="screen-container">
           <div className="cleaning-left"></div>
           <div className="cleaning-right">
@@ -542,7 +545,7 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="screen gardening" id="home-gard">
-        <div className="navbar-placeholder" />
+        {/* <div className="navbar-placeholder" /> */}
         <div className="screen-container row">
           <div className="garden-left">
             <Form

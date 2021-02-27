@@ -25,7 +25,7 @@ function App() {
       <FreshContext.Provider value={{ value, setValue }}>
         <Router>
           <ScrollToTop />
-          <Navbar />
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/bookings" component={Bookings} />

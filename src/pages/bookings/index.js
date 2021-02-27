@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 
+import Navbar from "../../components/navbar";
+
 import { Link } from "react-scroll";
 import Spinner from "react-bootstrap/Spinner";
 import Form from "react-bootstrap/Form";
@@ -10,7 +12,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Calendar from "react-calendar";
-// import "react-calendar/dist/Calendar.css";
 
 import emailjs from "emailjs-com";
 
@@ -105,10 +106,11 @@ export default function Index() {
   }
 
   return (
-    <div style={{ backgroundColor: "#3ab34a" }}>
-      <div className="screen bookings-landing" id="book-land">
-        <div className="navbar-placeholder" />
-        <div className="screen-container column">
+    <div id="book-land" style={{ backgroundColor: "#3ab34a" }}>
+      <Navbar />
+      <div className="screen bookings-landing" style={{ height: "91vh" }}>
+        {/* <div className="navbar-placeholder" /> */}
+        <div className="screen-container column" style={{ height: "91vh" }}>
           <div className="bookings-options-container">
             <div className="bookings-content">
               <div style={{ flex: 2, display: "flex" }}>
@@ -119,9 +121,7 @@ export default function Index() {
                   spy={true}
                   smooth={true}
                   hashSpy={true}
-                  // offset={50}
                   duration={500}
-                  // delay={1000}
                   isDynamic={true}
                   ignoreCancelEvents={false}
                 >
@@ -155,9 +155,7 @@ export default function Index() {
                   spy={true}
                   smooth={true}
                   hashSpy={true}
-                  // offset={50}
                   duration={500}
-                  // delay={1000}
                   isDynamic={true}
                   ignoreCancelEvents={false}
                 >
@@ -185,13 +183,7 @@ export default function Index() {
                   </div>
                 </Link>
               </div>
-              <div className="workflow">
-                {/* <div className="step-1">step-1</div>
-                <div className="arrow-1">arrow</div>
-                <div className="step-2">step-2</div>
-                <div className="arrow-2">arrow</div>
-                <div className="step-3">step-3</div> */}
-              </div>
+              <div className="workflow"></div>
             </div>
           </div>
         </div>
@@ -202,421 +194,369 @@ export default function Index() {
         <div
           className="screen-container row"
           style={{
-            // backgroundColor: "red",
             justifyContent: "center",
           }}
         >
-          {/* <div className="" style={{ flex: 1 }}>
-            edf
-          </div> */}
-          <div
-            className="garden-form"
+          <Form
             style={{
+              display: "flex",
+              flex: "1",
+              width: "80%",
               margin: "auto",
-              // backgroundColor: "yellow",
-              alignItems: "center",
-              flex: 2,
-              order: 1,
+              flexDirection: "column",
+              color: "#636c59",
+              fontWeight: "bold",
+              textTransform: "uppercase",
+              backgroundColor: "#fff",
+              opacity: 0.95,
+              padding: "0 5rem 0 5rem",
+              border: "0.3rem solid #636c59",
+              borderRadius: "1rem",
             }}
+            onSubmit={sendCleaningEmail}
           >
-            <div className="form-body" style={{ opacity: 1 }}>
-              <Form
+            <Form.Group
+              controlId="exampleForm.ControlInput10"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                flex: 1,
+                justifyContent: "center",
+              }}
+            >
+              <Form.Label style={{ marginRight: "2rem", marginTop: "0.5rem" }}>
+                name
+              </Form.Label>
+              <Form.Control
+                type="text"
+                name="name1"
+                // placeholder="David Keys"
                 style={{
-                  display: "flex",
-                  flex: "1",
-                  width: "80%",
-                  margin: "auto",
-                  flexDirection: "column",
-                  color: "#636c59",
+                  color: "grey",
                   fontWeight: "bold",
                   textTransform: "uppercase",
-                  backgroundColor: "#fff",
-                  opacity: 0.95,
-                  padding: "0 5rem 0 5rem",
-                  border: "0.3rem solid #636c59",
-                  borderRadius: "1rem",
                 }}
-                onSubmit={sendCleaningEmail}
+              />
+            </Form.Group>
+            <Form.Group
+              controlId="exampleForm.ControlInput10"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                flex: 1,
+              }}
+            >
+              <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
+              <Form.Control
+                type="email"
+                name="email1"
+                // placeholder="name@example.com"
+                style={{
+                  color: "grey",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                }}
+              />
+            </Form.Group>
+
+            <Calendar onChange={onChange} value={value} />
+
+            <Form.Group
+              controlId="exampleForm.ControlSelect10"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                flex: 8,
+                marginTop: "1%",
+              }}
+            >
+              <div
+                style={{
+                  flexDirection: "column",
+                  borderRadius: "5px",
+                  width: "100%",
+                }}
               >
-                <Form.Group
-                  controlId="exampleForm.ControlInput10"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 1,
-                    justifyContent: "center",
-                    // backgroundColor: "yellow",
-                  }}
-                >
-                  <Form.Label
-                    style={{ marginRight: "2rem", marginTop: "0.5rem" }}
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      dish_wash: !cleaningCheckState["dish_wash"],
+                    })
+                  }
+                  inline
+                  label="Dish Washing"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-101`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      vacuum: !cleaningCheckState["vacuum"],
+                    })
+                  }
+                  inline
+                  label="Vacuumc Cleaning"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-102`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      mop_sweep: !cleaningCheckState["mop_sweep"],
+                    })
+                  }
+                  inline
+                  // disabled
+                  label="Mopping & Sweeping"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-103`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      bins: !cleaningCheckState["bins"],
+                    })
+                  }
+                  inline
+                  label="Emptying Bins"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-104`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      surface_clean: !cleaningCheckState["surface_clean"],
+                    })
+                  }
+                  inline
+                  label="Surface Cleaning"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-105`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      mirror_clean: !cleaningCheckState["mirror_clean"],
+                    })
+                  }
+                  inline
+                  label="Mirror Cleaning"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-106`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      oven_clean: !cleaningCheckState["oven_clean"],
+                    })
+                  }
+                  inline
+                  label="Oven Cleaning"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-107`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      fridge_clean: !cleaningCheckState["fridge_clean"],
+                    })
+                  }
+                  inline
+                  label="Fridge Cleaning"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-108`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      cupboard_clean: !cleaningCheckState["cupboard_clean"],
+                    })
+                  }
+                  inline
+                  label="Cupboard Cleaning"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-109`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      organizing: !cleaningCheckState["organizing"],
+                    })
+                  }
+                  inline
+                  label="Organizing"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-110`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      fold_clothes: !cleaningCheckState["fold_clothes"],
+                    })
+                  }
+                  inline
+                  label="Folding Clothes"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-111`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setCleaningCheckState({
+                      ...cleaningCheckState,
+                      window_clean: !cleaningCheckState["window_clean"],
+                    })
+                  }
+                  inline
+                  label="Window Clean"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-112`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+              </div>
+            </Form.Group>
+            <input
+              name="dish_wash"
+              value={cleaningCheckState.dish_wash}
+              style={{ display: "none" }}
+            />
+            <input
+              name="vacuum"
+              value={cleaningCheckState.vacuum}
+              style={{ display: "none" }}
+            />
+            <input
+              name="mop_sweep"
+              value={cleaningCheckState.mop_sweep}
+              style={{ display: "none" }}
+            />
+            <input
+              name="bins"
+              value={cleaningCheckState.bins}
+              style={{ display: "none" }}
+            />
+            <input
+              name="surface_clean"
+              value={cleaningCheckState.surface_clean}
+              style={{ display: "none" }}
+            />
+            <input
+              name="mirror_clean"
+              value={cleaningCheckState.mirror_clean}
+              style={{ display: "none" }}
+            />
+            <input
+              name="oven_clean"
+              value={cleaningCheckState.oven_clean}
+              style={{ display: "none" }}
+            />
+            <input
+              name="fridge_clean"
+              value={cleaningCheckState.fridge_clean}
+              style={{ display: "none" }}
+            />
+            <input
+              name="cupboard_clean"
+              value={cleaningCheckState.cupboard_clean}
+              style={{ display: "none" }}
+            />
+            <input
+              name="organizing"
+              value={cleaningCheckState.organizing}
+              style={{ display: "none" }}
+            />
+            <input
+              name="fold_clothes"
+              value={cleaningCheckState.fold_clothes}
+              style={{ display: "none" }}
+            />
+            <input
+              name="window_clean"
+              value={cleaningCheckState.window_clean}
+              style={{ display: "none" }}
+            />
+            <input
+              name="clean_date"
+              value={JSON.stringify(value)}
+              style={{ display: "none" }}
+            />
+
+            <div className="form-footer">
+              <div className="button-wrapper">
+                <div className="left-button">
+                  <Link
+                    activeClass="active"
+                    to="book-land"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    duration={500}
+                    isDynamic={true}
+                    ignoreCancelEvents={true}
+                    style={{ width: "80%" }}
                   >
-                    name
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="name1"
-                    // placeholder="David Keys"
-                    style={{
-                      color: "grey",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                </Form.Group>
-                <Form.Group
-                  controlId="exampleForm.ControlInput10"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-start",
-                    flex: 1,
-                    // backgroundColor: "blue",
-                    // borderBottom: "1.5px solid #b6b6ad",
-                  }}
-                >
-                  <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email1"
-                    // placeholder="name@example.com"
-                    style={{
-                      color: "grey",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                </Form.Group>
-                <Form.Group
-                  controlId="exampleForm.ControlTextarea10"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-start",
-                    flex: 1,
-                  }}
-                >
-                  <Form.Label style={{ marginRight: "2rem" }}>notes</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    name="message1"
-                    rows={3}
-                    // placeholder="Make your enquiry"
-                    style={{
-                      color: "grey",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                </Form.Group>
-                <Calendar onChange={onChange} value={value} />
-
-                <Form.Group
-                  controlId="exampleForm.ControlSelect10"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 8,
-                    // backgroundColor: "red",
-                    marginTop: "1%",
-                  }}
-                >
-                  <div
-                    style={{
-                      flexDirection: "column",
-                      // border: "solid 1px #c3ccc3",
-                      borderRadius: "5px",
-                      // padding: "8px",
-                      width: "100%",
-                    }}
-                  >
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          dish_wash: !cleaningCheckState["dish_wash"],
-                        })
-                      }
-                      inline
-                      label="Dish Washing"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-101`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          vacuum: !cleaningCheckState["vacuum"],
-                        })
-                      }
-                      inline
-                      label="Vacuumc Cleaning"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-102`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          mop_sweep: !cleaningCheckState["mop_sweep"],
-                        })
-                      }
-                      inline
-                      // disabled
-                      label="Mopping & Sweeping"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-103`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          bins: !cleaningCheckState["bins"],
-                        })
-                      }
-                      inline
-                      label="Emptying Bins"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-104`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          surface_clean: !cleaningCheckState["surface_clean"],
-                        })
-                      }
-                      inline
-                      label="Surface Cleaning"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-105`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          mirror_clean: !cleaningCheckState["mirror_clean"],
-                        })
-                      }
-                      inline
-                      label="Mirror Cleaning"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-106`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          oven_clean: !cleaningCheckState["oven_clean"],
-                        })
-                      }
-                      inline
-                      label="Oven Cleaning"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-107`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          fridge_clean: !cleaningCheckState["fridge_clean"],
-                        })
-                      }
-                      inline
-                      label="Fridge Cleaning"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-108`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          cupboard_clean: !cleaningCheckState["cupboard_clean"],
-                        })
-                      }
-                      inline
-                      label="Cupboard Cleaning"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-109`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          organizing: !cleaningCheckState["organizing"],
-                        })
-                      }
-                      inline
-                      label="Organizing"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-110`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          fold_clothes: !cleaningCheckState["fold_clothes"],
-                        })
-                      }
-                      inline
-                      label="Folding Clothes"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-111`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setCleaningCheckState({
-                          ...cleaningCheckState,
-                          window_clean: !cleaningCheckState["window_clean"],
-                        })
-                      }
-                      inline
-                      label="Window Clean"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-112`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                  </div>
-                </Form.Group>
-                <input
-                  name="dish_wash"
-                  value={cleaningCheckState.dish_wash}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="vacuum"
-                  value={cleaningCheckState.vacuum}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="mop_sweep"
-                  value={cleaningCheckState.mop_sweep}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="bins"
-                  value={cleaningCheckState.bins}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="surface_clean"
-                  value={cleaningCheckState.surface_clean}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="mirror_clean"
-                  value={cleaningCheckState.mirror_clean}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="oven_clean"
-                  value={cleaningCheckState.oven_clean}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="fridge_clean"
-                  value={cleaningCheckState.fridge_clean}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="cupboard_clean"
-                  value={cleaningCheckState.cupboard_clean}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="organizing"
-                  value={cleaningCheckState.organizing}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="fold_clothes"
-                  value={cleaningCheckState.fold_clothes}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="window_clean"
-                  value={cleaningCheckState.window_clean}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="clean_date"
-                  value={JSON.stringify(value)}
-                  style={{ display: "none" }}
-                />
-
-                <div className="form-footer">
-                  <div className="button-wrapper">
-                    <div className="left-button">
-                      <Link
-                        activeClass="active"
-                        to="book-land"
-                        spy={true}
-                        smooth={true}
-                        hashSpy={true}
-                        // offset={50}
-                        duration={500}
-                        // delay={1000}
-                        isDynamic={true}
-                        ignoreCancelEvents={true}
-                        style={{ width: "80%" }}
-                      >
-                        <button
-                          type="submit"
-                          class="btn btn-primary"
-                          style={{
-                            width: "100%",
-                            fontWeight: "bold",
-                            backgroundColor: "transparent",
-                            fontSize: 13,
-                            color: "#636c59",
-                            borderColor: "#636c59",
-                            borderWidth: "2px",
-                            borderRadius: "0",
-                          }}
-                        >
-                          BACK TO TOP
-                        </button>
-                      </Link>
-                    </div>
-
-                    <div className="right-button">
-                      <button
-                        type="submit"
-                        class="btn btn-primary"
-                        style={{
-                          width: "100%",
-                          fontWeight: "bold",
-                          backgroundColor: "#636c59",
-                          color: "#",
-                          fontSize: 13,
-                          borderWidth: "0px",
-                          borderRadius: "0",
-                        }}
-                      >
-                        SUBMIT
-                      </button>
-                    </div>
-                  </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        backgroundColor: "transparent",
+                        fontSize: 13,
+                        color: "#636c59",
+                        borderColor: "#636c59",
+                        borderWidth: "2px",
+                        borderRadius: "0",
+                      }}
+                    >
+                      BACK TO TOP
+                    </button>
+                  </Link>
                 </div>
-              </Form>
-            </div>
-          </div>
 
-          {/* <div className="landing-right" style={{ backgroundColor: "yellow" }}>
-            <div className="garden-info"></div>
-          </div> */}
+                <div className="right-button">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style={{
+                      width: "100%",
+                      fontWeight: "bold",
+                      backgroundColor: "#636c59",
+                      color: "#",
+                      fontSize: 13,
+                      borderWidth: "0px",
+                      borderRadius: "0",
+                    }}
+                  >
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </Form>
         </div>
       </div>
 
@@ -630,340 +570,286 @@ export default function Index() {
             justifyContent: "center",
           }}
         >
-          {/* <div className="" style={{ flex: 1 }}>
-            edf
-          </div> */}
-          <div
-            className="garden-form"
+          <Form
             style={{
+              display: "flex",
+              flex: "1",
+              width: "80%",
               margin: "auto",
-              alignItems: "center",
-              flex: 2,
+              flexDirection: "column",
+              color: "#636c59",
+              fontWeight: "bold",
+              textTransform: "uppercase",
+              backgroundColor: "#fff",
+              opacity: 0.95,
+              padding: "0 5rem 0 5rem",
+              border: "0.3rem solid #636c59",
+              borderRadius: "1rem",
             }}
+            onSubmit={sendGardeningEmail}
           >
-            {/* <div className="form-header">
-              <h1>GARDENING</h1>
-              <h5>SUBMIT YOUR ENQUIRY</h5>
-            </div> */}
-
-            <div className="form-body" style={{ opacity: 1 }}>
-              <Form
+            <Form.Group
+              controlId="exampleForm.ControlInput11"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                flex: 1,
+                justifyContent: "center",
+              }}
+            >
+              <Form.Label style={{ marginRight: "2rem", marginTop: "0.5rem" }}>
+                name
+              </Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                // placeholder="David Keys"
                 style={{
-                  display: "flex",
-                  flex: "1",
-                  width: "80%",
-                  margin: "auto",
-                  flexDirection: "column",
-                  color: "#636c59",
+                  color: "grey",
                   fontWeight: "bold",
                   textTransform: "uppercase",
-                  backgroundColor: "#fff",
-                  opacity: 0.95,
-                  padding: "0 5rem 0 5rem",
-                  border: "0.3rem solid #636c59",
-                  borderRadius: "1rem",
                 }}
-                onSubmit={sendGardeningEmail}
+              />
+            </Form.Group>
+            <Form.Group
+              controlId="exampleForm.ControlInput11"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                flex: 1,
+              }}
+            >
+              <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                // placeholder="name@example.com"
+                style={{
+                  color: "grey",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                }}
+              />
+            </Form.Group>
+
+            <Calendar onChange={onChange} value={value} />
+
+            <Form.Group
+              controlId="exampleForm.ControlSelect11"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                flex: 8,
+                marginTop: "1%",
+              }}
+            >
+              <div
+                style={{
+                  flexDirection: "column",
+                  borderRadius: "5px",
+                  padding: "8px",
+                  width: "100%",
+                }}
               >
-                <Form.Group
-                  controlId="exampleForm.ControlInput11"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 1,
-                    justifyContent: "center",
-                  }}
-                >
-                  <Form.Label
-                    style={{ marginRight: "2rem", marginTop: "0.5rem" }}
+                <Form.Check
+                  onChange={() =>
+                    setGardenCheckState({
+                      ...gardenCheckState,
+                      lawnmow: !gardenCheckState["lawnmow"],
+                    })
+                  }
+                  inline
+                  label="Lawn Mowing"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-111`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setGardenCheckState({
+                      ...gardenCheckState,
+                      gardenLitter: !gardenCheckState["gardenLitter"],
+                    })
+                  }
+                  inline
+                  label="Garden Litter"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-112`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setGardenCheckState({
+                      ...gardenCheckState,
+                      gardenCare: !gardenCheckState["gardenCare"],
+                    })
+                  }
+                  inline
+                  label="Garden Care"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-113`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+
+                <Form.Check
+                  onChange={() =>
+                    setGardenCheckState({
+                      ...gardenCheckState,
+                      weeding: !gardenCheckState["weeding"],
+                    })
+                  }
+                  inline
+                  label="Flower Bed / Plant Weeding"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-114`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setGardenCheckState({
+                      ...gardenCheckState,
+                      trimming: !gardenCheckState["trimming"],
+                    })
+                  }
+                  inline
+                  label="Tree Branch / Bush Trimming"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-115`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setGardenCheckState({
+                      ...gardenCheckState,
+                      sidewalkWeeding: !gardenCheckState["sidewalkWeeding"],
+                    })
+                  }
+                  inline
+                  label="Sidewalk Weed Removal"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-116`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+                <Form.Check
+                  onChange={() =>
+                    setGardenCheckState({
+                      ...gardenCheckState,
+                      drivewayWeeding: !gardenCheckState["drivewayWeeding"],
+                    })
+                  }
+                  inline
+                  label="Driveway Weed Removal"
+                  type={"checkbox"}
+                  id={`inline-${"checkbox"}-117`}
+                  style={{ color: "grey", fontSize: "0.9rem" }}
+                />
+              </div>
+            </Form.Group>
+
+            <input
+              name="lawnmow"
+              value={gardenCheckState.lawnmow}
+              style={{ display: "none" }}
+            />
+            <input
+              name="gardenLitter"
+              value={gardenCheckState.gardenLitter}
+              style={{ display: "none" }}
+            />
+            <input
+              name="gardenCare"
+              value={gardenCheckState.gardenCare}
+              style={{ display: "none" }}
+            />
+            <input
+              name="weeding"
+              value={gardenCheckState.weeding}
+              style={{ display: "none" }}
+            />
+            <input
+              name="trimming"
+              value={gardenCheckState.trimming}
+              style={{ display: "none" }}
+            />
+            <input
+              name="sidewalkWeeding"
+              value={gardenCheckState.sidewalkWeeding}
+              style={{ display: "none" }}
+            />
+            <input
+              name="drivewayWeeding"
+              value={gardenCheckState.drivewayWeeding}
+              style={{ display: "none" }}
+            />
+            <input
+              name="garden_date"
+              value={JSON.stringify(value)}
+              style={{ display: "none" }}
+            />
+            <div
+              className=""
+              style={{
+                display: "flex",
+                flex: 1,
+                margin: "auto",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            ></div>
+            <div className="form-footer">
+              <div className="button-wrapper">
+                <div className="left-button">
+                  <Link
+                    activeClass="active"
+                    to="book-land"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    duration={500}
+                    isDynamic={true}
+                    ignoreCancelEvents={true}
+                    style={{ width: "80%" }}
                   >
-                    name
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="name"
-                    // placeholder="David Keys"
-                    style={{
-                      color: "grey",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                </Form.Group>
-                <Form.Group
-                  controlId="exampleForm.ControlInput11"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-start",
-                    flex: 1,
-                  }}
-                >
-                  <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    // placeholder="name@example.com"
-                    style={{
-                      color: "grey",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                </Form.Group>
-                <Form.Group
-                  controlId="exampleForm.ControlTextarea11"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-start",
-                    flex: 1,
-                  }}
-                >
-                  <Form.Label style={{ marginRight: "2rem" }}>notes</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    name="message"
-                    rows={3}
-                    // placeholder="Make your enquiry"
-                    style={{
-                      color: "grey",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                </Form.Group>
-
-                <Calendar onChange={onChange} value={value} />
-
-                <Form.Group
-                  controlId="exampleForm.ControlSelect11"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 8,
-                    // backgroundColor: "red",
-                    marginTop: "1%",
-                  }}
-                >
-                  <div
-                    style={{
-                      flexDirection: "column",
-                      // border: "solid 1px #c3ccc3",
-                      borderRadius: "5px",
-                      padding: "8px",
-                      width: "100%",
-                    }}
-                  >
-                    <Form.Check
-                      onChange={() =>
-                        setGardenCheckState(
-                          // gardenCheckState['lawnmow'] = !gardenCheckState['lawnmow']
-                          {
-                            ...gardenCheckState,
-                            lawnmow: !gardenCheckState["lawnmow"],
-                          }
-                        )
-                      }
-                      inline
-                      label="Lawn Mowing"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-111`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setGardenCheckState({
-                          ...gardenCheckState,
-                          gardenLitter: !gardenCheckState["gardenLitter"],
-                        })
-                      }
-                      inline
-                      label="Garden Litter"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-112`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setGardenCheckState({
-                          ...gardenCheckState,
-                          gardenCare: !gardenCheckState["gardenCare"],
-                        })
-                      }
-                      inline
-                      label="Garden Care"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-113`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-
-                    <Form.Check
-                      onChange={() =>
-                        setGardenCheckState({
-                          ...gardenCheckState,
-                          weeding: !gardenCheckState["weeding"],
-                        })
-                      }
-                      inline
-                      label="Flower Bed / Plant Weeding"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-114`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setGardenCheckState({
-                          ...gardenCheckState,
-                          trimming: !gardenCheckState["trimming"],
-                        })
-                      }
-                      inline
-                      label="Tree Branch / Bush Trimming"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-115`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setGardenCheckState({
-                          ...gardenCheckState,
-                          sidewalkWeeding: !gardenCheckState["sidewalkWeeding"],
-                        })
-                      }
-                      inline
-                      label="Sidewalk Weed Removal"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-116`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                    <Form.Check
-                      onChange={() =>
-                        setGardenCheckState({
-                          ...gardenCheckState,
-                          drivewayWeeding: !gardenCheckState["drivewayWeeding"],
-                        })
-                      }
-                      inline
-                      label="Driveway Weed Removal"
-                      type={"checkbox"}
-                      id={`inline-${"checkbox"}-117`}
-                      style={{ color: "grey", fontSize: "0.9rem" }}
-                    />
-                  </div>
-                </Form.Group>
-
-                <input
-                  name="lawnmow"
-                  value={gardenCheckState.lawnmow}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="gardenLitter"
-                  value={gardenCheckState.gardenLitter}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="gardenCare"
-                  value={gardenCheckState.gardenCare}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="weeding"
-                  value={gardenCheckState.weeding}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="trimming"
-                  value={gardenCheckState.trimming}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="sidewalkWeeding"
-                  value={gardenCheckState.sidewalkWeeding}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="drivewayWeeding"
-                  value={gardenCheckState.drivewayWeeding}
-                  style={{ display: "none" }}
-                />
-                <input
-                  name="garden_date"
-                  value={JSON.stringify(value)}
-                  style={{ display: "none" }}
-                />
-                <div
-                  className=""
-                  style={{
-                    display: "flex",
-                    flex: 1,
-                    margin: "auto",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                ></div>
-                <div className="form-footer">
-                  <div className="button-wrapper">
-                    <div className="left-button">
-                      <Link
-                        activeClass="active"
-                        to="book-land"
-                        spy={true}
-                        smooth={true}
-                        hashSpy={true}
-                        // offset={50}
-                        duration={500}
-                        // delay={1000}
-                        isDynamic={true}
-                        ignoreCancelEvents={true}
-                        style={{ width: "80%" }}
-                      >
-                        <button
-                          type="submit"
-                          class="btn btn-primary"
-                          style={{
-                            width: "100%",
-                            fontWeight: "bold",
-                            backgroundColor: "transparent",
-                            fontSize: 13,
-                            color: "#636c59",
-                            borderColor: "#636c59",
-                            borderWidth: "2px",
-                            borderRadius: "0",
-                          }}
-                        >
-                          BACK TO TOP
-                        </button>
-                      </Link>
-                    </div>
-
-                    <div className="right-button">
-                      <button
-                        type="submit"
-                        class="btn btn-primary"
-                        style={{
-                          width: "100%",
-                          fontWeight: "bold",
-                          backgroundColor: "#636c59",
-                          color: "#",
-                          fontSize: 13,
-                          // borderColor: "#000",
-                          borderWidth: "0px",
-                          borderRadius: "0",
-                        }}
-                      >
-                        SUBMIT
-                      </button>
-                    </div>
-                  </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        backgroundColor: "transparent",
+                        fontSize: 13,
+                        color: "#636c59",
+                        borderColor: "#636c59",
+                        borderWidth: "2px",
+                        borderRadius: "0",
+                      }}
+                    >
+                      BACK TO TOP
+                    </button>
+                  </Link>
                 </div>
-              </Form>
+
+                <div className="right-button">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style={{
+                      width: "100%",
+                      fontWeight: "bold",
+                      backgroundColor: "#636c59",
+                      color: "#",
+                      fontSize: 13,
+                      borderWidth: "0px",
+                      borderRadius: "0",
+                    }}
+                  >
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          {/* <div className="" style={{ flex: 1 }}>
-            edfw
-          </div> */}
+          </Form>
         </div>
       </div>
     </div>

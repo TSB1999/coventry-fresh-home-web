@@ -2,38 +2,22 @@
   /* background-image: url(./images/thomas-heintz-0tgMnMIYQ9Y-unsplash.jpg); */
   background-position: center;
   background-size: cover;
-  /* background-color: red; */
-}
-
-.screen-container-gallery {
-  display: flex;
-  /* margin: 0vh 2vh 0 2vh;
-  padding: 2vh 0 2vh 0; */
-  height: 90vh;
 }
 
 .bookings-options-container {
   display: flex;
   flex: 1;
   margin: -2vh -2vh;
-  /* background-color: red; */
-  /* padding: 1rem; */
 }
 
 .bookings-content {
-  /* margin: 0vh 0vh 5vh 0vh; */
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(7, 1fr); */
 }
 
 .cleaning-panel {
-  /* background-color: red; */
   display: flex;
-  /* padding: 2rem; */
   flex: 1;
   transition: 1s;
   background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
@@ -48,7 +32,6 @@
 
 .gardening-panel {
   display: flex;
-  /* padding: 2rem; */
   background-color: blue;
   flex: 1;
   transition: 1s;
@@ -62,19 +45,14 @@
 }
 
 .bookings-header {
-  /* background-color: red; */
   grid-column: 2/5;
   border-radius: 0.3rem;
-  /* padding-bottom: 0.6rem; */
-  /* font-size: 2rem; */
   justify-self: center;
   align-self: end;
   text-align: center;
-  /* padding-top: 1rem; */
   color: #fff;
   border-bottom: 2px solid #f9f9f9;
   text-shadow: 3px 3px #184739;
-  /* background-color: #184739; */
   padding: 0.5rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -91,7 +69,6 @@
   text-align: center;
   justify-self: center;
   align-self: center;
-  /* padding-bottom: 0.6rem; */
   background-color: #fff;
   opacity: 0.8;
   color: #018cc7;
@@ -106,7 +83,6 @@
   width: 30vw;
   height: 25vw;
   background-color: black;
-  /* margin: 4rem 4rem 0 0rem; */
   background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
   background-position: center;
   background-size: cover;
@@ -141,7 +117,6 @@
   align-self: center;
   width: 30vw;
   height: 25vw;
-  /* margin: 4rem 0 0 4rem; */
   background-color: pink;
   background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
   background-position: center;
@@ -155,30 +130,21 @@
 
 .workflow {
   display: flex;
-  /* flex: 1; */
-  /* display: grid; */
-  /* grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(4, 1fr);*/
   background-color: #636c59;
-  /* margin: -2vh -2vh; */
 
   grid-column: 1/6;
   grid-row: 5/6;
 }
 
 .arrow-1 {
-  /* display: flex; */
   margin: auto;
-  /* background-color: aquamarine; */
   grid-column: 3/4;
   grid-row: 2/4;
   color: grey;
 }
 
 .arrow-2 {
-  /* display: flex; */
   margin: auto;
-  /* background-color: aquamarine; */
   grid-column: 5/6;
   grid-row: 2/4;
   color: grey;
@@ -215,9 +181,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: white; */
-  /* border: 0.2rem solid grey; */
-  /* border-style: dashed; */
   border-radius: 0.1rem;
   height: 15vh;
   width: 200px;
@@ -244,7 +207,6 @@
   background-image: url(./images/todd-kent-178j8tJrNlc-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  /* background-color: red; */
 }
 
 .workflow {
@@ -259,17 +221,6 @@
   background-size: contain;
   background-color: #3ab34a;
 }
-
-/* .workflow:hover {
-  flex: 1;
-} */
-
-/* .gallery-gardening {
-  background-image: url(./images/volha-flaxeco-jCPL0oxBhB0-unsplash.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-} */
 
 /* CALENDAR */
 

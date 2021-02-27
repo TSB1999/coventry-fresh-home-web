@@ -15,13 +15,15 @@ export default function Navbar() {
     console.log(window.location.href);
     switch (window.location.href) {
       case "http://localhost:3000/#home-landing":
-        setTheme("#636c59");
+        // setTheme("#636c59");
+        setTheme("#184739");
         break;
       case "http://localhost:3000/bookings#book-land":
         setTheme("#184739");
         break;
       case "http://localhost:3000/gallery":
-        setTheme("#5c5c5c");
+        // setTheme("#5c5c5c");
+        setTheme("#184739");
         break;
       default:
       // code block
@@ -46,7 +48,8 @@ export default function Navbar() {
             <Link
               to="/"
               style={{ color: "#fff" }}
-              onClick={() => setTheme("#636c59")}
+              // onClick={() => setTheme("#636c59")}
+              onClick={() => setTheme("#184739")}
             >
               <i class="fas fa-home fa-2x"></i>
             </Link>
@@ -79,7 +82,8 @@ export default function Navbar() {
           <Link
             to="/gallery"
             style={{ color: "#fff" }}
-            onClick={() => setTheme("#5c5c5c")}
+            // onClick={() => setTheme("#5c5c5c")}
+            onClick={() => setTheme("#184739")}
           >
             <i class="fas fa-images fa-2x"></i>
             {/* <h4>gallery</h4> */}
