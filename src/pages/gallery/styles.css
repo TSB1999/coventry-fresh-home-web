@@ -10,32 +10,37 @@
 
 .gallery-landing {
   background-color: #edefea;
+}
+
+.gallery-landing-footer {
+  flex: 1;
+  background-color: #3ab34a;
+  background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-6-2.png);
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.6)),
-    url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg);
+  background-size: contain;
 }
 
 .gallery-bathroom {
-  background-color: #5c5d5c;
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
 
 .gallery-bedroom {
-  background-color: #5c5d5c;
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
 
 .gallery-kitchen {
-  background-color: #5c5d5c;
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
 
 .gallery-gardening {
-  background-color: #5c5d5c;
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
@@ -59,11 +64,11 @@
   border-bottom: 2px solid grey;
   margin: 0rem 20%;
 }
+
 .gallery-header > h1 {
   color: grey;
   padding: 0.5rem;
   border-bottom: 2px solid grey;
-
   text-shadow: 2px 2px #292929;
   text-transform: uppercase;
   font-weight: bold;
@@ -71,13 +76,13 @@
 
 .gallery-flex-container {
   display: flex;
-  flex: 1;
+  flex: 3;
 }
 
 .grid-column-1 {
   display: flex;
   flex: 1;
-  background-color: red;
+  background-color: #636c59;
   flex-direction: column;
   transition: 1s;
 }
@@ -87,9 +92,16 @@
 }
 
 .grid-column-1-1 {
+  display: flex;
   flex: 1;
-  background-color: purple;
+  background-color: #3ab34a;
   transition: 1s;
+  background-image: url(./images/soap-dispenser-2337697_640.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.3rem solid #fff;
 }
 
 .grid-column-1-1:hover {
@@ -97,10 +109,18 @@
 }
 
 .grid-column-1-2 {
+  display: flex;
   flex: 1;
-  background-color: green;
+  background-color: #3ab34a;
   transition: 1s;
+  background-image: url(./images/liana-mikah-WMcitUcSgEg-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.2rem solid #fff;
 }
+
 .grid-column-1-2:hover {
   flex: 3;
 }
@@ -108,7 +128,7 @@
 .grid-column-2 {
   display: flex;
   flex: 1;
-  background-color: blue;
+  background-color: #636c59;
   /* flex-direction: column; */
   transition: 1s;
 }
@@ -118,9 +138,16 @@
 }
 
 .grid-column-2-1 {
+  display: flex;
   flex: 1;
   background-color: yellow;
   transition: 1s;
+  background-image: url(./images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.2rem solid #fff;
 }
 
 .grid-column-2-1:hover {
@@ -128,9 +155,16 @@
 }
 
 .grid-column-2-2 {
+  display: flex;
   flex: 1;
   background-color: orange;
   transition: 1s;
+  background-image: url(./images/hunt-han-4QdIiHPLnfI-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.2rem solid #fff;
 }
 
 .grid-column-2-2:hover {
@@ -192,15 +226,17 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  border-bottom: 2px solid grey;
+  border-bottom: 0.2rem solid #fff;
   margin: 0rem 20%;
 }
 
 .gardening-header > h2 {
-  padding: 0.4rem;
-  border-bottom: 2px solid grey;
+  padding: 0.5rem;
+  border-bottom: 2px solid #fff;
   text-transform: uppercase;
-  color: grey;
+  color: #3ab34a;
+  background-color: #fff;
+  border-radius: 0.3rem;
 }
 
 .gallery-items-wrapper {
@@ -218,7 +254,7 @@
   position: relative;
   height: 280px;
   width: 100%;
-  border: 2px solid grey;
+  border: 2px solid #fff;
 }
 
 .item-img {

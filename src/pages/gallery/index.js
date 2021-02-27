@@ -5,30 +5,20 @@ import { Link } from "react-scroll";
 import Navbar from "../../components/navbar";
 
 // Kitchen
-import showcase_k1 from "./images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg";
 import kitchen1 from "./images/kitchens/IMG_1335.jpg";
 import kitchen2 from "./images/kitchens/IMG_1336.jpg";
 import kitchen3 from "./images/kitchens/IMG_1338.jpg";
 import kitchen4 from "./images/kitchens/IMG_1340.jpg";
 
 // Bathroom
-import showcase_b1 from "./images/john-cameron-_RKgdOuNzY0-unsplash.jpg";
-import showcase_b2 from "./images/pawel-czerwinski-FZAoIQ0vTqg-unsplash.jpg";
-import showcase_b3 from "./images/shawn-ang-dB_usTnVQJE-unsplash.jpg";
 import bathroom1 from "./images/bathrooms/IMG_1333.jpg";
 import bathroom2 from "./images/bathrooms/IMG_1334.jpg";
 
 // Bedroom
-import showcase_bd1 from "./images/12565.jpg";
-import showcase_bd2 from "./images/download.jpeg";
-import showcase_bd3 from "./images/download (1).jpeg";
 import bedroom1 from "./images/bedrooms/IMG_1337.jpg";
 import bedroom2 from "./images/bedrooms/bedroom2.jpg";
 
 // Garden
-import showcase_g1 from "./images/hunt-han-4QdIiHPLnfI-unsplash.jpg";
-import showcase_g2 from "./images/markus-spiske-sFydXGrt5OA-unsplash.jpg";
-import showcase_g3 from "./images/mio-ito-DaGIjXNl5oA-unsplash.jpg";
 import garden1 from "./images/gardens/gardem-4.jpg";
 import garden2 from "./images/gardens/garden-2.jpg";
 import garden3 from "./images/gardens/garden-4.jpg";
@@ -38,67 +28,176 @@ import garden6 from "./images/gardens/patio.jpg";
 import garden7 from "./images/gardens/patio2.jpg";
 import garden8 from "./images/gardens/unnamed.jpg";
 
-export default function index() {
+export default function Gallery() {
   return (
     <div className="home-container">
       <Navbar />
       <div className="screen gallery-landing" style={{ height: "91vh" }}>
-        <div className="screen-container column" style={{ height: "91vh" }}>
-          <div className="gallery-flex-container">
-            <div className="grid-column-1">
-              <div className="grid-column-1-1">s</div>
-              <div className="grid-column-1-2">s</div>
+        <div
+          className="screen-container column"
+          style={{
+            height: "91vh",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              margin: "-2vh",
+              flexDirection: "column",
+            }}
+          >
+            <div className="gallery-flex-container">
+              <div className="grid-column-1">
+                <Link
+                  className="grid-column-1-1"
+                  activeClass="active"
+                  to="gallery-bathroom"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={500}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      backgroundColor: "#636c59",
+                      flex: 1,
+                      opacity: 0.7,
+                      alignItems: "center",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <h1
+                      style={{
+                        fontSize: "3rem",
+                        fontWeight: "bold",
+                        color: "#3ab34a",
+                        textShadow: "0.2rem 0.2rem #000",
+                        textTransform: "uppercase",
+                        textAlign: "center",
+                        writingMode: "vertical-rl",
+                      }}
+                    >
+                      Bathrooms
+                    </h1>
+                  </div>
+                </Link>
+                <Link
+                  className="grid-column-1-2"
+                  activeClass="active"
+                  to="gallery-bedroom"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={500}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      backgroundColor: "#636c59",
+                      flex: 1,
+                      opacity: 0.7,
+                      alignItems: "center",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <h1
+                      style={{
+                        fontSize: "3rem",
+                        fontWeight: "bold",
+                        color: "#3ab34a",
+                        textShadow: "0.2rem 0.2rem #000",
+                        textTransform: "uppercase",
+                        textAlign: "center",
+                        writingMode: "vertical-rl",
+                      }}
+                    >
+                      Bedrooms
+                    </h1>
+                  </div>
+                </Link>
+              </div>
+              <div className="grid-column-2">
+                <Link
+                  className="grid-column-2-1"
+                  activeClass="active"
+                  to="gallery-kitchen"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={500}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      backgroundColor: "#636c59",
+                      flex: 1,
+                      opacity: 0.7,
+                      alignItems: "center",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <h1
+                      style={{
+                        fontSize: "3rem",
+                        fontWeight: "bold",
+                        color: "#3ab34a",
+                        textShadow: "0.2rem 0.2rem #000",
+                        textTransform: "uppercase",
+                        textAlign: "center",
+                        writingMode: "vertical-rl",
+                      }}
+                    >
+                      Kitchens
+                    </h1>
+                  </div>
+                </Link>
+                <Link
+                  className="grid-column-2-2"
+                  activeClass="active"
+                  to="gallery-gardening"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={500}
+                  isDynamic={true}
+                  ignoreCancelEvents={false}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      backgroundColor: "#636c59",
+                      flex: 1,
+                      opacity: 0.7,
+                      alignItems: "center",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <h1
+                      style={{
+                        fontSize: "3rem",
+                        fontWeight: "bold",
+                        color: "#3ab34a",
+                        textShadow: "0.2rem 0.2rem #000",
+                        textTransform: "uppercase",
+                        textAlign: "center",
+                        writingMode: "vertical-rl",
+                      }}
+                    >
+                      Gardens
+                    </h1>
+                  </div>
+                </Link>
+              </div>
             </div>
-            <div className="grid-column-2">
-              <div className="grid-column-2-1">s</div>
-              <div className="grid-column-2-2">s</div>
-            </div>
-            {/* <div className="showcase-grid">
-              <Link
-                className="bathroom"
-                activeClass="active"
-                to="gallery-bathroom"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              ></Link>
-              <Link
-                className="bedroom"
-                activeClass="active"
-                to="gallery-bedroom"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              ></Link>
-              <Link
-                className="kitchen"
-                activeClass="active"
-                to="gallery-kitchen"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              ></Link>
-              <Link
-                className="garden"
-                activeClass="active"
-                to="gallery-gardening"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              ></Link>
-            </div> */}
+            <div className="gallery-landing-footer"></div>
           </div>
         </div>
       </div>
