@@ -2,55 +2,45 @@
   height: 100vh;
 }
 
-/* .screen-container {
-  display: flex;
-  margin: 0vh 2vh 0 2vh;
-  padding: 2vh 0 2vh 0;
-  height: 85vh;
-  background-color: red;
-} */
-
 .misc-container {
   display: flex;
   flex: 4;
   align-items: center;
-  /* background-color: yellow; */
 }
 
 .gallery-landing {
   background-color: #edefea;
-  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+}
+
+.gallery-landing-footer {
+  flex: 1;
+  background-color: #3ab34a;
+  background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-6-2.png);
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  /* rgba(255, 255, 255, 1) */
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.6)),
-    url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg);
+  background-size: contain;
 }
 
 .gallery-bathroom {
-  background-color: #5c5d5c;
-  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
 
 .gallery-bedroom {
-  background-color: #5c5d5c;
-  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
 
 .gallery-kitchen {
-  background-color: #5c5d5c;
-  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
 
 .gallery-gardening {
-  background-color: #5c5d5c;
-  /* background-image: url(./images/kara-eads-WKfq1fm4gkU-unsplash.jpg); */
+  background-color: #3ab34a;
   background-position: center;
   background-size: cover;
 }
@@ -63,107 +53,168 @@
 .gallery-all {
   background-position: center;
   background-size: cover;
-  /* background-color: red; */
 }
 
 .gallery-header {
   display: flex;
   flex: 1;
-  /* background-color: red; */
   text-align: center;
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid grey;
   margin: 0rem 20%;
 }
-.gallery-header > h1 {
-  /* font-weight: 500; */
-  color: grey;
-  /* background-color: grey; */
-  padding: 0.5rem;
-  /* border-radius: 0.7rem; */
-  border-bottom: 2px solid grey;
 
+.gallery-header > h1 {
+  color: grey;
+  padding: 0.5rem;
+  border-bottom: 2px solid grey;
   text-shadow: 2px 2px #292929;
-  /* background-color: #184739; */
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.gallery-grid-container {
+.gallery-flex-container {
   display: flex;
-  flex: 7;
-  /* background-color: blue; */
+  flex: 3;
+}
+
+.grid-column-1 {
+  display: flex;
+  flex: 1;
+  background-color: #636c59;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.grid-column-1:hover {
+  flex: 2;
+}
+
+.grid-column-1-1 {
+  display: flex;
+  flex: 1;
+  background-color: #3ab34a;
+  transition: 1s;
+  background-image: url(./images/soap-dispenser-2337697_640.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.3rem solid #fff;
+}
+
+.grid-column-1-1:hover {
+  flex: 3;
+}
+
+.grid-column-1-2 {
+  display: flex;
+  flex: 1;
+  background-color: #3ab34a;
+  transition: 1s;
+  background-image: url(./images/liana-mikah-WMcitUcSgEg-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.2rem solid #fff;
+}
+
+.grid-column-1-2:hover {
+  flex: 3;
+}
+
+.grid-column-2 {
+  display: flex;
+  flex: 1;
+  background-color: #636c59;
+  /* flex-direction: column; */
+  transition: 1s;
+}
+
+.grid-column-2:hover {
+  flex: 2;
+}
+
+.grid-column-2-1 {
+  display: flex;
+  flex: 1;
+  background-color: yellow;
+  transition: 1s;
+  background-image: url(./images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.2rem solid #fff;
+}
+
+.grid-column-2-1:hover {
+  flex: 3;
+}
+
+.grid-column-2-2 {
+  display: flex;
+  flex: 1;
+  background-color: orange;
+  transition: 1s;
+  background-image: url(./images/hunt-han-4QdIiHPLnfI-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  border: 0.2rem solid #fff;
+}
+
+.grid-column-2-2:hover {
+  flex: 3;
 }
 
 .showcase-grid {
+  background-color: antiquewhite;
   flex: 1;
-  display: grid;
-  grid-gap: 20px;
-  padding: 1rem 5rem;
-  /* border: 5px solid aqua; */
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
   grid-gap: 0.3rem;
 }
 .bathroom {
   border-radius: 5px;
-  /* height: 135px; */
-  /* width: 135px; */
   background-image: url(./images/soap-dispenser-2337697_640.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border: none;
-  margin: 0.8rem;
-  /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
   opacity: 0.8;
 }
 .bedroom {
   display: block;
-  /* height: 135px; */
-  /* width: 135px; */
   border-radius: 5px;
-  /* margin: auto; */
   background-image: url(./images/liana-mikah-WMcitUcSgEg-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border: none;
-  margin: 0.8rem;
-  /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
   opacity: 0.8;
 }
 .kitchen {
-  /* height: 135px; */
-  /* width: 135px; */
   border-radius: 5px;
-  /* justify-self: end; */
   background-image: url(./images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border: none;
-  margin: 0.8rem;
-  /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
   opacity: 0.8;
 }
 .garden {
   border-radius: 0.5rem;
-  /* height: 135px; */
-  /* width: 135px; */
-
-  /* justify-self: end; */
   background-image: url(./images/hunt-han-4QdIiHPLnfI-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border: none;
-  margin: 0.8rem;
-  /* box-shadow: 7px 7px grey; */
   border: 2px solid grey;
   opacity: 0.8;
 }
@@ -175,16 +226,17 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  /* background-color: red; */
-  border-bottom: 2px solid grey;
+  border-bottom: 0.2rem solid #fff;
   margin: 0rem 20%;
 }
 
 .gardening-header > h2 {
-  padding: 0.4rem;
-  border-bottom: 2px solid grey;
+  padding: 0.5rem;
+  border-bottom: 2px solid #fff;
   text-transform: uppercase;
-  color: grey;
+  color: #3ab34a;
+  background-color: #fff;
+  border-radius: 0.3rem;
 }
 
 .gallery-items-wrapper {
@@ -194,8 +246,6 @@
   grid-gap: 0.5rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
-  /* background-color: crimson; */
 }
 
 .gallery-item-wrapper {
@@ -204,17 +254,13 @@
   position: relative;
   height: 280px;
   width: 100%;
-  /* border-radius: 15px; */
-  border: 2px solid grey;
-  /* box-shadow: 10px 10px #8cc540; */
-  /* animation: drop 1.3s ease; */
+  border: 2px solid #fff;
 }
 
 .item-img {
   display: flex;
   height: 350;
   width: 100%;
-  /* border-radius: 15px; */
   background-repeat: repeat-y;
   background-position: center;
   background-size: cover;
