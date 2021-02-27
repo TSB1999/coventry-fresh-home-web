@@ -44,8 +44,16 @@ export default function index() {
       <Navbar />
       <div className="screen gallery-landing" style={{ height: "91vh" }}>
         <div className="screen-container column" style={{ height: "91vh" }}>
-          <div className="gallery-grid-container">
-            <div className="showcase-grid">
+          <div className="gallery-flex-container">
+            <div className="grid-column-1">
+              <div className="grid-column-1-1">s</div>
+              <div className="grid-column-1-2">s</div>
+            </div>
+            <div className="grid-column-2">
+              <div className="grid-column-2-1">s</div>
+              <div className="grid-column-2-2">s</div>
+            </div>
+            {/* <div className="showcase-grid">
               <Link
                 className="bathroom"
                 activeClass="active"
@@ -90,7 +98,7 @@ export default function index() {
                 isDynamic={true}
                 ignoreCancelEvents={false}
               ></Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
