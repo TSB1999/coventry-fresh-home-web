@@ -26,7 +26,7 @@
   background-image: url(./images/hutomo-abrianto-X5BWooeO4Cw-unsplash.jpg);
   background-position: 50% 52%;
   background-size: cover;
-  clip-path: polygon(100% 0, 100% 95%, 62% 100%, 0 90%, 0 0);
+  /* clip-path: polygon(100% 0, 100% 95%, 62% 100%, 0 90%, 0 0); */
 }
 
 .landing-top {
@@ -58,10 +58,17 @@
   font-size: calc(1.8rem + 1.8vw);
   text-align: center;
   font-weight: 600;
-  line-height: 4.9rem;
+  /* line-height: 4.9rem; */
   margin: 0rem 0 2rem 0rem;
   color: #bfbab0;
   text-shadow: 0.2rem 0.2rem #000;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .cleaning-button {
@@ -72,6 +79,18 @@
   align-items: start;
   justify-content: flex-end;
   font-size: 1.1rem;
+}
+
+.button-offset-h {
+  padding: 0.2rem;
+  background-color: #292929;
+  border-radius: 1rem;
+}
+
+.button-offset-g {
+  padding: 0.2rem;
+  background-color: #bfbab0;
+  border-radius: 1rem;
 }
 
 .cleaning-button > div > .scroll-link > button {
@@ -257,5 +276,41 @@
   }
   .garden-left {
     flex: 1;
+  }
+}
+
+@media (max-width: 965px) {
+  .button-container {
+    flex-direction: column;
+  }
+  .cleaning-button {
+    padding: 0 0 0.5rem 0;
+  }
+  .background-header {
+    margin: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .background-header {
+    grid-column: 1/5;
+    border: none;
+  }
+  .landing-title {
+    font-size: calc(1.8rem + 1.8vw);
+    /* color: #636c59; */
+    text-shadow: none;
+  }
+  .button-offset-g {
+    padding: 0;
+  }
+  .button-offset-h {
+    padding: 0;
+  }
+  .cleaning-button > div > .scroll-link > button {
+    padding: 0.25rem 1.5rem;
+  }
+  .gardening-button > div > .scroll-link > button {
+    padding: 0.25rem 1.5rem;
   }
 }

@@ -90,36 +90,15 @@ export default function Home() {
     <div id="home-landing" style={{ backgroundColor: "#636c59" }}>
       <Navbar />
       <div className="screen landing" style={{ height: "91vh" }}>
-        {/* <div className="navbar-placeholder" /> */}
         <div className="screen-container column">
-          {/* <div className="heading-background"></div> */}
           <div className="landing-top">
             <div className="background-header">
-              <div className="">
-                <h1 className="landing-title">
-                  Domestic Cleaning and Gardening Services
-                </h1>
-              </div>
-              <div
-                style={{
-                  // backgroundColor: "red",
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  className="cleaning-button"
-                  // style={{ backgroundColor: "red" }}
-                >
-                  <div
-                    style={{
-                      padding: "0.2rem",
-                      backgroundColor: "#292929",
-                      borderRadius: "1rem",
-                    }}
-                  >
+              <h1 className="landing-title">
+                Domestic Cleaning and Gardening Services
+              </h1>
+              <div className="button-container">
+                <div className="cleaning-button">
+                  <div className="button-offset-h">
                     <Link
                       className="scroll-link"
                       activeClass="active"
@@ -138,17 +117,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div
-                  className="gardening-button"
-                  // style={{ backgroundColor: "blue" }}
-                >
-                  <div
-                    style={{
-                      padding: "0.2rem",
-                      backgroundColor: "#bfbab0",
-                      borderRadius: "1rem",
-                    }}
-                  >
+                <div className="gardening-button">
+                  <div className="button-offset-g">
                     <Link
                       className="scroll-link"
                       activeClass="active"
@@ -171,16 +141,12 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="screen cleaning" id="home-clean">
-        {/* <div className="navbar-placeholder" /> */}
         <div className="screen-container">
           <div className="cleaning-left"></div>
           <div className="cleaning-right">
-            {/* <div className="garden-form"> */}
-            {/* <div className="form-body"> */}
             <Form
               style={{
                 display: "flex",
-                // flex: "1",
                 flexDirection: "column",
                 color: "#636c59",
                 fontWeight: "bold",
@@ -241,29 +207,6 @@ export default function Home() {
                   }}
                 />
               </Form.Group>
-              {/* <Form.Group
-                  controlId="exampleForm.ControlTextarea1"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-start",
-                    flex: 1,
-                  }}
-                >
-                  <Form.Label style={{ marginRight: "2rem", paddingTop: "2%" }}>
-                    notes
-                  </Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    name="message1"
-                    rows={3}
-                    style={{
-                      color: "grey",
-                      fontWeight: "bold",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                </Form.Group> */}
               <Form.Group
                 controlId="exampleForm.ControlSelect1"
                 style={{
@@ -318,7 +261,6 @@ export default function Home() {
                       })
                     }
                     inline
-                    // disabled
                     label="Mopping & Sweeping"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-3`}
@@ -557,20 +499,16 @@ export default function Home() {
                 </div>
               </div>
             </Form>
-            {/* </div> */}
-            {/* </div> */}
           </div>
         </div>
       </div>
       {/*  */}
       <div className="screen gardening" id="home-gard">
-        {/* <div className="navbar-placeholder" /> */}
         <div className="screen-container row">
           <div className="garden-left">
             <Form
               style={{
                 display: "flex",
-                // flex: "1",
                 flexDirection: "column",
                 color: "#636c59",
                 fontWeight: "bold",
@@ -631,31 +569,7 @@ export default function Home() {
                   }}
                 />
               </Form.Group>
-              {/* <Form.Group
-                    controlId="exampleForm.ControlTextarea2"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "flex-start",
-                      flex: 1,
-                    }}
-                  >
-                    <Form.Label
-                      style={{ marginRight: "2rem", paddingTop: "2%" }}
-                    >
-                      notes
-                    </Form.Label>
-                    <Form.Control
-                      as="textarea"
-                      name="message"
-                      rows={3}
-                      style={{
-                        color: "grey",
-                        fontWeight: "bold",
-                        textTransform: "uppercase",
-                      }}
-                    />
-                  </Form.Group> */}
+
               <Form.Group
                 controlId="exampleForm.ControlSelect2"
                 style={{
