@@ -79,6 +79,7 @@ export default function Gallery() {
                         textTransform: "uppercase",
                         textAlign: "center",
                         writingMode: "vertical-rl",
+                        padding: "1rem",
                       }}
                     >
                       Bathrooms
@@ -115,6 +116,7 @@ export default function Gallery() {
                         textTransform: "uppercase",
                         textAlign: "center",
                         writingMode: "vertical-rl",
+                        padding: "1rem",
                       }}
                     >
                       Bedrooms
@@ -153,6 +155,7 @@ export default function Gallery() {
                         textTransform: "uppercase",
                         textAlign: "center",
                         writingMode: "vertical-rl",
+                        padding: "1rem",
                       }}
                     >
                       Kitchens
@@ -189,6 +192,7 @@ export default function Gallery() {
                         textTransform: "uppercase",
                         textAlign: "center",
                         writingMode: "vertical-rl",
+                        padding: "1rem",
                       }}
                     >
                       Gardens

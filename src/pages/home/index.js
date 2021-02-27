@@ -95,55 +95,74 @@ export default function Home() {
           {/* <div className="heading-background"></div> */}
           <div className="landing-top">
             <div className="background-header">
-              <h1 className="landing-title">
-                Domestic Cleaning and Gardening Services
-              </h1>
-              <div className="cleaning-button">
-                <div
-                  style={{
-                    padding: "0.2rem",
-                    backgroundColor: "#292929",
-                    borderRadius: "1rem",
-                  }}
-                >
-                  <Link
-                    className="scroll-link"
-                    activeClass="active"
-                    to="home-clean"
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                    // offset={50}
-                    duration={500}
-                    // delay={1000}
-                    isDynamic={true}
-                    ignoreCancelEvents={false}
-                  >
-                    <button>HOME</button>
-                  </Link>
-                </div>
+              <div className="">
+                <h1 className="landing-title">
+                  Domestic Cleaning and Gardening Services
+                </h1>
               </div>
-              <div className="gardening-button">
+              <div
+                style={{
+                  // backgroundColor: "red",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div
-                  style={{
-                    padding: "0.2rem",
-                    backgroundColor: "#bfbab0",
-                    borderRadius: "1rem",
-                  }}
+                  className="cleaning-button"
+                  // style={{ backgroundColor: "red" }}
                 >
-                  <Link
-                    className="scroll-link"
-                    activeClass="active"
-                    to="home-gard"
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                    duration={500}
-                    isDynamic={true}
-                    ignoreCancelEvents={false}
+                  <div
+                    style={{
+                      padding: "0.2rem",
+                      backgroundColor: "#292929",
+                      borderRadius: "1rem",
+                    }}
                   >
-                    <button>GARDEN</button>
-                  </Link>
+                    <Link
+                      className="scroll-link"
+                      activeClass="active"
+                      to="home-clean"
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
+                      // offset={50}
+                      duration={500}
+                      // delay={1000}
+                      isDynamic={true}
+                      ignoreCancelEvents={false}
+                    >
+                      <button>HOME</button>
+                    </Link>
+                  </div>
+                </div>
+
+                <div
+                  className="gardening-button"
+                  // style={{ backgroundColor: "blue" }}
+                >
+                  <div
+                    style={{
+                      padding: "0.2rem",
+                      backgroundColor: "#bfbab0",
+                      borderRadius: "1rem",
+                    }}
+                  >
+                    <Link
+                      className="scroll-link"
+                      activeClass="active"
+                      to="home-gard"
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
+                      duration={500}
+                      isDynamic={true}
+                      ignoreCancelEvents={false}
+                    >
+                      <button>GARDEN</button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
