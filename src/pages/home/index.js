@@ -474,7 +474,7 @@ export default function Home() {
                           borderRadius: "0",
                         }}
                       >
-                        BACK TO TOP
+                        HOME
                       </button>
                     </Link>
                   </div>
@@ -749,7 +749,7 @@ export default function Home() {
                           borderRadius: "0",
                         }}
                       >
-                        BACK TO TOP
+                        HOME
                       </button>
                     </Link>
                   </div>

@@ -81,7 +81,7 @@
 
 .grid-column-1 {
   display: flex;
-  flex: 1;
+  flex: 0.5;
   background-color: #636c59;
   flex-direction: column;
   transition: 1s;

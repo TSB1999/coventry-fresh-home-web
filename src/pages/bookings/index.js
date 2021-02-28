@@ -134,15 +134,7 @@ export default function Index() {
                       justifyContent: "center",
                     }}
                   >
-                    <h1
-                      style={{
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        color: "#3ab34a",
-                        textShadow: "0.2rem 0.2rem #000",
-                        textTransform: "uppercase",
-                      }}
-                    >
+                    <h1 className="bookings-panel-title">
                       home service bookings
                     </h1>
                   </div>
@@ -168,15 +160,7 @@ export default function Index() {
                       justifyContent: "center",
                     }}
                   >
-                    <h1
-                      style={{
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        color: "#3ab34a",
-                        textShadow: "0.2rem 0.2rem #000",
-                        textTransform: "uppercase",
-                      }}
-                    >
+                    <h1 className="bookings-panel-title">
                       garden service bookings
                     </h1>
                   </div>
@@ -531,7 +515,7 @@ export default function Index() {
                         borderRadius: "0",
                       }}
                     >
-                      BACK TO TOP
+                      HOME
                     </button>
                   </Link>
                 </div>
@@ -824,7 +808,7 @@ export default function Index() {
                         borderRadius: "0",
                       }}
                     >
-                      BACK TO TOP
+                      HOME
                     </button>
                   </Link>
                 </div>

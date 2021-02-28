@@ -198,6 +198,7 @@
   color: grey;
   font-weight: 550;
   font-size: 1rem;
+  text-align: center;
 }
 
 .form-body {
@@ -288,14 +289,12 @@
   }
   .background-header {
     margin: 0;
+    grid-column: 1/5;
+    border: none;
   }
 }
 
 @media (max-width: 560px) {
-  .background-header {
-    grid-column: 1/5;
-    border: none;
-  }
   .landing-title {
     font-size: calc(1.8rem + 1.8vw);
     /* color: #636c59; */

@@ -67,7 +67,7 @@ export default function Gallery() {
                       flex: 1,
                       opacity: 0.7,
                       alignItems: "center",
-                      justifyContent: "flex-end",
+                      justifyContent: "center",
                     }}
                   >
                     <h1
@@ -82,7 +82,7 @@ export default function Gallery() {
                         padding: "1rem",
                       }}
                     >
-                      Bathrooms
+                      {/* Bathrooms */}
                     </h1>
                   </div>
                 </Link>
@@ -104,7 +104,7 @@ export default function Gallery() {
                       flex: 1,
                       opacity: 0.7,
                       alignItems: "center",
-                      justifyContent: "flex-end",
+                      justifyContent: "center",
                     }}
                   >
                     <h1
@@ -119,7 +119,7 @@ export default function Gallery() {
                         padding: "1rem",
                       }}
                     >
-                      Bedrooms
+                      {/* Bedrooms */}
                     </h1>
                   </div>
                 </Link>
@@ -143,7 +143,7 @@ export default function Gallery() {
                       flex: 1,
                       opacity: 0.7,
                       alignItems: "center",
-                      justifyContent: "flex-end",
+                      justifyContent: "center",
                     }}
                   >
                     <h1
@@ -158,7 +158,7 @@ export default function Gallery() {
                         padding: "1rem",
                       }}
                     >
-                      Kitchens
+                      {/* Kitchens */}
                     </h1>
                   </div>
                 </Link>
@@ -180,7 +180,7 @@ export default function Gallery() {
                       flex: 1,
                       opacity: 0.7,
                       alignItems: "center",
-                      justifyContent: "flex-end",
+                      justifyContent: "center",
                     }}
                   >
                     <h1
@@ -195,7 +195,7 @@ export default function Gallery() {
                         padding: "1rem",
                       }}
                     >
-                      Gardens
+                      {/* Gardens */}
                     </h1>
                   </div>
                 </Link>
