@@ -4,44 +4,19 @@
   height: 9vh;
   width: 100%;
   background-color: #636c59;
-  /* position: fixed; */
-  /* z-index: 1000; */
-  /* top: 0; */
   opacity: 0.95;
-  /* border-bottom-left-radius: 0.8rem;
-    border-bottom-right-radius: 0.8rem; */
-  /* border-bottom: 0.2rem solid #ffffff; */
-  /* grid-template-columns: 2fr 3fr 2fr; */
   transition: 1s;
-}
-
-.left {
-  /* background-color: yellow; */
-  align-items: center;
-  justify-content: center;
-}
-
-.left > div > h4 {
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #fff;
-  /* background-color: #3ab34a; */
-  border-radius: 0.4rem;
-  /* padding: 0.4rem; */
-  text-transform: uppercase;
 }
 
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* background-color: blue; */
   padding-top: 0.5rem;
   align-items: center;
   justify-content: center;
 }
 
 .main > div {
-  /* padding-top: 1rem; */
   align-items: center;
   justify-self: center;
   text-align: center;
@@ -49,74 +24,27 @@
 }
 
 .main > div:nth-child(1) {
-  /* border-left: 0.3rem solid #fff;
-  border-right: 0.3rem solid #fff; */
   border-radius: 0.2rem;
 }
 
 .main > div:nth-child(2) {
-  /* border-left: 0.3rem solid #fff;
-  border-right: 0.3rem solid #fff; */
   border-radius: 0.2rem;
 }
 
 .main > div:nth-child(3) {
-  /* border-left: 0.3rem solid #fff;
-  border-right: 0.3rem solid #fff; */
   border-radius: 0.2rem;
 }
 
 .main > div > i {
   color: #fff;
-  /* margin-bottom: 0.6rem; */
 }
 
 .main > div > h4 {
   font-size: 0.85rem;
   font-weight: bold;
   color: #fff;
-  /* background-color: #3ab34a; */
   border-radius: 0.4rem;
-  /* padding: 0.4rem; */
   text-transform: uppercase;
-}
-
-.right {
-  /* background-color: red; */
-  align-items: center;
-  justify-content: center;
-}
-
-.right > div > i {
-  display: flex;
-  color: #3ab34a;
-  /* margin-bottom: 0.6rem; */
-  justify-content: center;
-}
-
-.right > div > h4 {
-  text-align: center;
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #3ab34a;
-  border-radius: 0.4rem;
-  padding: 0.4rem;
-  text-transform: uppercase;
-}
-
-.left {
-  flex: 1;
-  /* background-color: #3ab34a; */
-  /* padding: 30px; */
-  display: flex;
-}
-
-.right {
-  flex: 1;
-  /* background-color: red; */
-  /* padding: 30px; */
-  display: flex;
 }
 
 i {
@@ -127,8 +55,8 @@ i:hover {
   color: #3ab34a;
 }
 
-/* @media (max-width: 280px) {
-  i {
-    background-color: red;
+@media (max-height: 862px) {
+  .main > div > h4 {
+    display: none;
   }
-} */
+}
