@@ -282,7 +282,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Vacuumc Cleaning"
+                  label="Hoovering"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-102`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -296,7 +296,7 @@ export default function Index() {
                   }
                   inline
                   // disabled
-                  label="Mopping & Sweeping"
+                  label="Mop / Sweep"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-103`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -310,7 +310,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Emptying Bins"
+                  label="Bin Empty"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-104`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -323,7 +323,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Surface Cleaning"
+                  label="Surface Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-105`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -336,7 +336,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Mirror Cleaning"
+                  label="Mirror Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-106`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -349,7 +349,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Oven Cleaning"
+                  label="Oven Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-107`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -362,7 +362,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Fridge Cleaning"
+                  label="Fridge Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-108`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -375,7 +375,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Cupboard Cleaning"
+                  label="Cupboard Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-109`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
@@ -401,7 +401,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Folding Clothes"
+                  label="Clothe Folding"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-111`}
                   style={{ color: "grey", fontSize: "0.9rem" }}
