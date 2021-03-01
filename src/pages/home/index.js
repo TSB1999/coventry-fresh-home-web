@@ -4,9 +4,14 @@ import "./styles.css";
 import Navbar from "../../components/navbar";
 
 import Form from "react-bootstrap/Form";
+import Carousel from "react-bootstrap/Carousel";
 
 import { Link } from "react-scroll";
 import emailjs from "emailjs-com";
+
+import landing1 from "./images/cdc-cdfv65CldQQ-unsplash.jpg";
+import landing2 from "./images/cdc-wz3ijPHvL54-unsplash.jpg";
+import landing3 from "./images/anton-SnKfmC1I9fU-unsplash.jpg";
 
 export default function Home() {
   // Garden Checkbox State
@@ -87,52 +92,124 @@ export default function Home() {
   }
 
   return (
-    <div id="home-landing" style={{ backgroundColor: "#636c59" }}>
+    <div
+      id="home-landing"
+      style={{
+        backgroundColor: "#3ab34a",
+        overflow: "-moz-hidden-unscrollable",
+        overflow: "hidden",
+      }}
+    >
       <Navbar />
       <div className="first-screen landing">
         <div className="screen-container column">
-          <div className="landing-top">
-            <div className="background-header">
-              <h1 className="landing-title">
-                Domestic Cleaning and Gardening Services
-              </h1>
-              <div className="button-container">
-                <div className="cleaning-button">
-                  <div className="button-offset-h">
-                    <Link
-                      className="scroll-link"
-                      activeClass="active"
-                      to="home-clean"
-                      spy={true}
-                      smooth={true}
-                      hashSpy={true}
-                      // offset={50}
-                      duration={500}
-                      // delay={1000}
-                      isDynamic={true}
-                      ignoreCancelEvents={false}
-                    >
-                      <button>HOME</button>
-                    </Link>
-                  </div>
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              margin: "-2vh",
+              flexDirection: "column",
+            }}
+          >
+            <div
+              className="landing-top"
+              style={{
+                backgroundImage: `url(${landing1})`,
+                backgroundPosition: "50% 35%",
+                backgroundSize: "cover",
+              }}
+            >
+              <div className="landing-background">
+                <h1>Domestic Cleaning and Gardening Services</h1>
+              </div>
+            </div>
+            <div className="landing-bottom">
+              <div className="panel">
+                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
+                <div
+                  style={{
+                    flex: 1,
+                    backgroundColor: "green",
+                    textAlign: "center",
+                  }}
+                >
+                  Terrific Customer Service
                 </div>
-
-                <div className="gardening-button">
-                  <div className="button-offset-g">
-                    <Link
-                      className="scroll-link"
-                      activeClass="active"
-                      to="home-gard"
-                      spy={true}
-                      smooth={true}
-                      hashSpy={true}
-                      duration={500}
-                      isDynamic={true}
-                      ignoreCancelEvents={false}
-                    >
-                      <button>GARDEN</button>
-                    </Link>
-                  </div>
+                <div
+                  style={{
+                    flex: 2,
+                    backgroundColor: "yellow",
+                    textAlign: "center",
+                  }}
+                >
+                  Anim incididunt dolor qui consectetur dolor commodo id ullamco
+                  incididunt ullamco enim ullamco.
+                </div>
+              </div>
+              <div className="panel">
+                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
+                <div
+                  style={{
+                    flex: 1,
+                    backgroundColor: "green",
+                    textAlign: "center",
+                  }}
+                >
+                  Health & Safety Conscious
+                </div>
+                <div
+                  style={{
+                    flex: 2,
+                    backgroundColor: "yellow",
+                    textAlign: "center",
+                  }}
+                >
+                  Anim incididunt dolor qui consectetur dolor commodo id ullamco
+                  incididunt ullamco enim ullamco.
+                </div>
+              </div>
+              <div className="panel">
+                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
+                <div
+                  style={{
+                    flex: 1,
+                    backgroundColor: "green",
+                    textAlign: "center",
+                  }}
+                >
+                  Highly Reliable
+                </div>
+                <div
+                  style={{
+                    flex: 2,
+                    backgroundColor: "yellow",
+                    textAlign: "center",
+                  }}
+                >
+                  Anim incididunt dolor qui consectetur dolor commodo id ullamco
+                  incididunt ullamco enim ullamco.
+                </div>
+              </div>
+              <div className="panel">
+                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
+                <div
+                  style={{
+                    flex: 1,
+                    backgroundColor: "green",
+                    textAlign: "center",
+                  }}
+                >
+                  County to County
+                </div>
+                <div
+                  style={{
+                    flex: 2,
+                    backgroundColor: "yellow",
+                    textAlign: "center",
+                  }}
+                >
+                  Anim incididunt dolor qui consectetur dolor commodo id ullamco
+                  incididunt ullamco enim ullamco.
                 </div>
               </div>
             </div>
@@ -150,7 +227,7 @@ export default function Home() {
             >
               <div className="form-header">
                 <h1>Cleaning</h1>
-                <h5>sumbit the form for your same day quote</h5>
+                <h5></h5>
               </div>
               <Form.Group
                 controlId="exampleForm.ControlInput1"
@@ -420,8 +497,8 @@ export default function Home() {
                         fontWeight: "bold",
                         backgroundColor: "transparent",
                         fontSize: 13,
-                        color: "#636c59",
-                        borderColor: "#636c59",
+                        color: "#3ab34a",
+                        borderColor: "#3ab34a",
                         borderWidth: "2px",
                         borderRadius: "0",
                       }}
@@ -435,7 +512,7 @@ export default function Home() {
                     style={{
                       width: "100%",
                       fontWeight: "bold",
-                      backgroundColor: "#636c59",
+                      backgroundColor: "#3ab34a",
                       color: "#",
                       fontSize: 13,
                       borderWidth: "0px",

@@ -15,6 +15,7 @@
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
   height: 91vh;
+  /* background-color: blue; */
 }
 
 .row {
@@ -26,18 +27,77 @@
 }
 
 .landing {
-  background-image: url(./images/hutomo-abrianto-X5BWooeO4Cw-unsplash.jpg);
+  /* background-image: url(./images/hutomo-abrianto-X5BWooeO4Cw-unsplash.jpg); */
   background-position: 50% 52%;
   background-size: cover;
   /* clip-path: polygon(100% 0, 100% 95%, 62% 100%, 0 90%, 0 0); */
 }
 
 .landing-top {
+  flex: 2;
+  display: flex;
+  background-color: green;
+  transition: 1s;
+}
+
+.landing-background {
+  display: grid;
+  background-color: #636c59;
+  opacity: 0.7;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.landing-background > h1 {
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-items: flex-end;
+  font-size: calc(1.8rem + 1.8vw);
+  text-align: center;
+  font-weight: 600;
+  color: #3ab34a;
+  text-shadow: 0.17rem 0.17rem #292929;
+}
+
+.landing-top:hover {
+  flex: 2.5;
+}
+
+.panel {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #636c59;
+  flex: 1;
+  opacity: 0.7;
+  /* align-items: center; */
+  /* justify-content: center; */
+  transition: 1s;
+  /* border: 0.3rem solid #fff; */
+}
+
+.home-panel:hover {
+  flex: 2;
+}
+
+.garden-panel:hover {
+  flex: 2;
+}
+
+.landing-bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  margin-top: 3rem;
-  /* background-color: red; */
+  /* grid-template-rows: repeat(4, 1fr); */
+  flex: 1;
+  transition: 1s;
+  /* background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-6-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  background-color: #3ab34a;
 }
 
 .background-header {
@@ -155,15 +215,12 @@
   border-radius: 0;
 }
 
-.landing-bottom {
-  flex: 1;
-}
-
 .gardening {
-  background-image: url(./images/image-2.png);
-  background-position: center;
-  background-size: cover;
-  /* clip-path: polygon(100% 0, 100% 95%, 77% 100%, 0 85%, 0 0); */
+  background-color: #3ab34a;
+  /* background-image: url(./images/image-2.png); */
+  /* background-position: center;
+  background-size: cover; */
+  /* clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); */
 }
 
 .garden-left {
@@ -203,14 +260,14 @@
 .form-element {
   display: flex;
   flex-direction: column;
-  color: #636c59;
+  color: #3ab34a;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #fff;
+  background-color: #8bc343;
   opacity: 1;
   padding: 0 5rem 0 5rem;
-  border: 0.3rem solid #636c59;
-  border-radius: 1rem;
+  /* border: 0.3rem solid #636c59; */
+  border-radius: 0.5rem;
 }
 
 .form-group {
@@ -224,13 +281,15 @@
 }
 
 .form-control {
-  color: grey;
+  color: #3ab34a;
+  background-color: #8bc343;
+  border: 1px solid #3ab34a;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .form-checkbox-text {
-  color: grey;
+  color: #3ab34a;
   font-size: 0.9rem;
 }
 
@@ -240,34 +299,30 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  color: #636c59;
+  /* background-color: #fff; */
+  color: #fff;
   opacity: 0.9;
+  /* border-bottom: 0.2rem solid #3ab34a; */
 }
 
 .form-header > h1 {
   font-size: 2rem;
   font-weight: bold;
+  color: #3ab34a;
 }
 
 .form-header > h5 {
   margin-top: 0px;
-  color: grey;
+  color: #3ab34a;
   font-weight: 550;
   font-size: 1rem;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .form-body {
   opacity: 0.95;
 }
-/* 
-.form-footer {
-  display: flex;
-  flex: 1;
-  background-color: #fff;
-  opacity: 0.9;
-} */
 
 .button-wrapper {
   display: flex;
@@ -286,11 +341,11 @@
 }
 
 .cleaning {
-  background-color: blue;
-  background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
+  background-color: #8bc343;
+  /* background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
   background-position: 80% 87%;
-  background-size: cover;
-  /* clip-path: polygon(100% 0, 100% 90%, 12% 100%, 0 95%, 0 0); */
+  background-size: cover; */
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
 }
 
 .form-info {

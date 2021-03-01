@@ -153,13 +153,13 @@
   transition: 1s;
 }
 
-.workflow {
+/* .workflow {
   display: flex;
   background-color: #636c59;
 
   grid-column: 1/6;
   grid-row: 5/6;
-}
+} */
 
 .bookings-cleaning {
   background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
