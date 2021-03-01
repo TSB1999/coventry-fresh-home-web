@@ -154,38 +154,32 @@ export default function Home() {
               </div>
               <Form.Group
                 controlId="exampleForm.ControlInput1"
-                className = "form-group"
+                className="form-group"
               >
-                <Form.Label className="form-label">
-                  name
-                </Form.Label>
+                <Form.Label className="form-label">name</Form.Label>
                 <Form.Control
                   type="text"
                   name="name1"
-                  className = "form-control"
+                  className="form-control"
                 />
               </Form.Group>
               <Form.Group
                 controlId="exampleForm.ControlInput1"
-                className = "form-group"
+                className="form-group"
               >
-                <Form.Label className="form-label">
-                  email
-                </Form.Label>
+                <Form.Label className="form-label">email</Form.Label>
                 <Form.Control
                   type="email"
                   name="email1"
-                  className = "form-control"
+                  className="form-control"
                 />
               </Form.Group>
               <Form.Group
                 controlId="exampleForm.ControlSelect1"
-                style = {{display : 'flex', flexDirection : 'column'}}
+                style={{ display: "flex", flexDirection: "column" }}
               >
-                <Form.Label className="form-label">
-                  select
-                </Form.Label>
-                <div className = "checkbox-div">
+                <Form.Label className="form-label">select</Form.Label>
+                <div className="checkbox-div">
                   <Form.Check
                     onChange={() =>
                       setCleaningCheckState({
@@ -197,7 +191,7 @@ export default function Home() {
                     label="Dish Washing"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -210,7 +204,7 @@ export default function Home() {
                     label="Vacuumc Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -223,7 +217,7 @@ export default function Home() {
                     label="Mopping & Sweeping"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-3`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
 
                   <Form.Check
@@ -237,7 +231,7 @@ export default function Home() {
                     label="Emptying Bins"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -250,7 +244,7 @@ export default function Home() {
                     label="Surface Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -263,7 +257,7 @@ export default function Home() {
                     label="Mirror Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -276,7 +270,7 @@ export default function Home() {
                     label="Oven Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -289,7 +283,7 @@ export default function Home() {
                     label="Fridge Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -302,7 +296,7 @@ export default function Home() {
                     label="Cupboard Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -315,7 +309,7 @@ export default function Home() {
                     label="Organizing"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -328,7 +322,7 @@ export default function Home() {
                     label="Folding Clothes"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -341,7 +335,7 @@ export default function Home() {
                     label="Window Clean"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                 </div>
               </Form.Group>
@@ -470,41 +464,33 @@ export default function Home() {
               </div>
               <Form.Group
                 controlId="exampleForm.ControlInput2"
-                className = "form-group"
+                className="form-group"
               >
-                <Form.Label className="form-label">
-                  name
-                </Form.Label>
+                <Form.Label className="form-label">name</Form.Label>
                 <Form.Control
                   type="text"
                   name="name"
-                  className = "form-control"
+                  className="form-control"
                 />
               </Form.Group>
               <Form.Group
                 controlId="exampleForm.ControlInput2"
-                className = "form-group"
+                className="form-group"
               >
-                <Form.Label className="form-label">
-                  email
-                </Form.Label>
+                <Form.Label className="form-label">email</Form.Label>
                 <Form.Control
                   type="email"
                   name="email"
-                  className = "form-control"
+                  className="form-control"
                 />
               </Form.Group>
 
               <Form.Group
                 controlId="exampleForm.ControlSelect2"
-                style = {{display : 'flex', flexDirection : 'column'}}
+                style={{ display: "flex", flexDirection: "column" }}
               >
-                <Form.Label className="form-label">
-                  select
-                </Form.Label>
-                <div
-                className = "checkbox-div"
-                >
+                <Form.Label className="form-label">select</Form.Label>
+                <div className="checkbox-div">
                   <Form.Check
                     onChange={() =>
                       setGardenCheckState({
@@ -516,7 +502,7 @@ export default function Home() {
                     label="Lawn Mowing"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -529,7 +515,7 @@ export default function Home() {
                     label="Garden Litter"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -542,7 +528,7 @@ export default function Home() {
                     label="Garden Care"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-3`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
 
                   <Form.Check
@@ -556,7 +542,7 @@ export default function Home() {
                     label="Flower Bed / Plant Weeding"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -569,7 +555,7 @@ export default function Home() {
                     label="Tree Branch / Bush Trimming"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -582,7 +568,7 @@ export default function Home() {
                     label="Sidewalk Weed Removal"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -595,7 +581,7 @@ export default function Home() {
                     label="Driveway Weed Removal"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    className = "form-checkbox-text"
+                    className="form-checkbox-text"
                   />
                 </div>
               </Form.Group>

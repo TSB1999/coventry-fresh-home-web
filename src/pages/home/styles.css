@@ -50,7 +50,7 @@
   opacity: 0.6;
   margin-top: 5.5rem;
   padding: 2rem;
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
   border: 0.3rem solid #fff;
 }
 
@@ -87,13 +87,13 @@
 .button-offset-h {
   padding: 0.2rem;
   background-color: #292929;
-  border-radius: 1rem;
+  /* border-radius: 0.5rem; */
 }
 
 .button-offset-g {
   padding: 0.2rem;
   background-color: #bfbab0;
-  border-radius: 1rem;
+  /* border-radius: 0.5rem; */
 }
 
 .cleaning-button > div > .scroll-link > button {
@@ -102,7 +102,7 @@
   background-color: #bfbab0;
   color: #636c59;
   border: none;
-  border-radius: 1rem;
+  /* border-radius: 0.5rem; */
   font-size: 1.1rem;
   transition: 1s;
 }
@@ -126,7 +126,7 @@
   background-color: #292929;
   color: #bfbab0;
   border: none;
-  border-radius: 1rem;
+  /* border-radius: 0.5rem; */
   font-size: 1.1rem;
   transition: 1s;
 }
@@ -215,7 +215,7 @@
 
 .form-group {
   display: flex;
-  flex-Direction: column;
+  flex-direction: column;
 }
 
 .form-label {
@@ -224,13 +224,13 @@
 }
 
 .form-control {
-    color: grey;
-    font-weight: bold;
-    text-transform: uppercase;
+  color: grey;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .form-checkbox-text {
-  color: grey; 
+  color: grey;
   font-size: 0.9rem;
 }
 
@@ -339,7 +339,8 @@
   .background-header {
     margin: 0;
     grid-column: 1/5;
-    border: none;
+    /* border: 0.3rem solid #bfbab0; */
+    opacity: 0.8;
   }
 }
 
@@ -374,23 +375,39 @@
     font-size: 0.8rem;
   }
   .checkbox-div {
-    margin-left: 1.5rem
+    margin-left: 1.5rem;
   }
   .form-label {
-    font-size: 0.8rem
+    font-size: 0.8rem;
   }
   .form-control {
-    height : 2rem
+    height: 2rem;
   }
   .button-home-styles {
-    height : 2rem;
+    height: 2rem;
     font-size: 0.8rem;
   }
   .button-submit-styles {
-    height : 2rem;
+    height: 2rem;
     font-size: 0.8rem;
   }
+  .cleaning-button > div > .scroll-link > button {
+    font-size: 0.9rem;
+  }
+  .gardening-button > div > .scroll-link > button {
+    font-size: 0.9rem;
+  }
+  .button-offset-h {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
 
+  .button-offset-g {
+    padding: 0rem;
+    background-color: transparent;
+    border-radius: 0;
+  }
 }
 
 /* iphone 6/7/8 */
@@ -405,23 +422,23 @@
     font-size: 0.7rem;
   }
   .checkbox-div {
-    margin-left: 1.5rem
+    margin-left: 1.5rem;
   }
   .form-label {
-    font-size: 0.8rem
+    font-size: 0.8rem;
   }
   .form-control {
-    height : 1.6rem
+    height: 1.6rem;
   }
 }
 
 /* iphone 5/SE */
-@media (max-width :325px) {
+@media (max-width: 325px) {
   .form-header > h1 {
     font-size: 1.7rem;
-    margin-bottom : 1rem
+    margin-bottom: 1rem;
   }
   .form-header > h5 {
-    display: none 
+    display: none;
   }
 }
