@@ -108,8 +108,8 @@ export default function Index() {
   return (
     <div id="book-land" style={{ backgroundColor: "#3ab34a" }}>
       <Navbar />
-      <div className="screen bookings-landing" style={{ height: "91vh" }}>
-        <div className="screen-container column" style={{ height: "91vh" }}>
+      <div className="first-screen bookings-landing" >
+        <div className="screen-container column">
           <div className="bookings-options-container">
             <div className="bookings-content">
               <div style={{ flex: 2, display: "flex" }}>
@@ -172,57 +172,38 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="screen bookings-cleaning" id="book-clean">
-        {/* <div className="navbar-placeholder" /> */}
+      <div className="bookings-cleaning" id="book-clean">
         <div
           className="screen-container row"
           style={{
             justifyContent: "center",
           }}
         >
-          <Form className="form-element-bookings" onSubmit={sendCleaningEmail}>
+          <Form className="form-element-bookings"  onSubmit={sendCleaningEmail}>
             <Form.Group
               controlId="exampleForm.ControlInput10"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                flex: 1,
-                justifyContent: "center",
-              }}
+              className= "form-group space"
             >
-              <Form.Label style={{ marginRight: "2rem", marginTop: "0.5rem" }}>
+              <Form.Label className = "form-label">
                 name
               </Form.Label>
               <Form.Control
                 type="text"
                 name="name1"
                 // placeholder="David Keys"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className = "form-control"
               />
             </Form.Group>
             <Form.Group
               controlId="exampleForm.ControlInput10"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                flex: 1,
-              }}
+              className= "form-group"
             >
-              <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
+              <Form.Label className = "form-label">email</Form.Label>
               <Form.Control
                 type="email"
                 name="email1"
                 // placeholder="name@example.com"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className = "form-control"
               />
             </Form.Group>
 
@@ -231,19 +212,12 @@ export default function Index() {
             <Form.Group
               controlId="exampleForm.ControlSelect10"
               style={{
-                display: "flex",
-                flexDirection: "column",
-                flex: 8,
-                marginTop: "1%",
+                marginTop: "2%",
               }}
+              className= "form-group"
+
             >
-              <div
-                style={{
-                  flexDirection: "column",
-                  borderRadius: "5px",
-                  width: "100%",
-                }}
-              >
+              <div className = "checkbox-div">
                 <Form.Check
                   onChange={() =>
                     setCleaningCheckState({
@@ -252,10 +226,10 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Dish Washing"
+                  label="Dishes"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-101`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -268,7 +242,7 @@ export default function Index() {
                   label="Hoovering"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-102`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -282,7 +256,7 @@ export default function Index() {
                   label="Mop / Sweep"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-103`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
 
                 <Form.Check
@@ -296,7 +270,7 @@ export default function Index() {
                   label="Bin Empty"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-104`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -309,7 +283,7 @@ export default function Index() {
                   label="Surface Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-105`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -322,7 +296,7 @@ export default function Index() {
                   label="Mirror Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-106`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -335,7 +309,7 @@ export default function Index() {
                   label="Oven Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-107`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -348,7 +322,7 @@ export default function Index() {
                   label="Fridge Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-108`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -361,7 +335,7 @@ export default function Index() {
                   label="Cupboard Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-109`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -374,7 +348,7 @@ export default function Index() {
                   label="Organizing"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-110`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -387,7 +361,7 @@ export default function Index() {
                   label="Clothe Folding"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-111`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -400,7 +374,7 @@ export default function Index() {
                   label="Window Clean"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-112`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
               </div>
             </Form.Group>
@@ -470,7 +444,7 @@ export default function Index() {
               style={{ display: "none" }}
             />
 
-            <div className="form-footer">
+            {/* <div className="form-footer"> */}
               <div className="button-wrapper">
                 <Link
                   activeClass="active"
@@ -485,46 +459,26 @@ export default function Index() {
                 >
                   <button
                     type="submit"
-                    class="btn btn-primary"
-                    style={{
-                      width: "100%",
-                      fontWeight: "bold",
-                      backgroundColor: "transparent",
-                      fontSize: 13,
-                      color: "#636c59",
-                      borderColor: "#636c59",
-                      borderWidth: "2px",
-                      borderRadius: "0",
-                    }}
+                    class="btn btn-primary button-home-styles"
                   >
                     HOME
                   </button>
                 </Link>
 
                 <button
-                  class="btn btn-primary"
-                  style={{
-                    width: "100%",
-                    fontWeight: "bold",
-                    backgroundColor: "#636c59",
-                    color: "#",
-                    fontSize: 13,
-                    borderWidth: "0px",
-                    borderRadius: "0",
-                  }}
+                  class="btn btn-primary button-submit-styles"
                 >
                   SUBMIT
                 </button>
               </div>
-            </div>
+            {/* </div> */}
           </Form>
         </div>
       </div>
 
       {/*  */}
 
-      <div className="screen bookings-gardening" id="book-gard">
-        {/* <div className="navbar-placeholder" /> */}
+      <div className="bookings-gardening" id="book-gard">
         <div
           className="screen-container row"
           style={{
@@ -534,46 +488,28 @@ export default function Index() {
           <Form className="form-element-bookings" onSubmit={sendGardeningEmail}>
             <Form.Group
               controlId="exampleForm.ControlInput11"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                flex: 1,
-                justifyContent: "center",
-              }}
+              className = "form-group space"
             >
-              <Form.Label style={{ marginRight: "2rem", marginTop: "0.5rem" }}>
+              <Form.Label className="form-label">
                 name
               </Form.Label>
               <Form.Control
                 type="text"
                 name="name"
                 // placeholder="David Keys"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className="form-control"
               />
             </Form.Group>
             <Form.Group
               controlId="exampleForm.ControlInput11"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                flex: 1,
-              }}
+              className = "form-group"
             >
-              <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
+              <Form.Label className = "form-label">email</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
                 // placeholder="name@example.com"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className = "form-control"
               />
             </Form.Group>
 
@@ -582,20 +518,11 @@ export default function Index() {
             <Form.Group
               controlId="exampleForm.ControlSelect11"
               style={{
-                display: "flex",
-                flexDirection: "column",
-                flex: 8,
                 marginTop: "1%",
               }}
+              className = "form-group"
             >
-              <div
-                style={{
-                  flexDirection: "column",
-                  borderRadius: "5px",
-                  padding: "8px",
-                  width: "100%",
-                }}
-              >
+              <div className = "checkbox-div">
                 <Form.Check
                   onChange={() =>
                     setGardenCheckState({
@@ -607,8 +534,8 @@ export default function Index() {
                   label="Lawn Mowing"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-111`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
-                />
+                  className = "form-checkbox-text"
+/>
                 <Form.Check
                   onChange={() =>
                     setGardenCheckState({
@@ -620,7 +547,7 @@ export default function Index() {
                   label="Garden Litter"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-112`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -633,7 +560,7 @@ export default function Index() {
                   label="Garden Care"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-113`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
 
                 <Form.Check
@@ -644,10 +571,10 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Flower Bed / Plant Weeding"
+                  label="Flower Bed Weeding"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-114`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -657,10 +584,10 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Tree Branch / Bush Trimming"
+                  label="Branch / Bush Trimming"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-115`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -673,7 +600,7 @@ export default function Index() {
                   label="Sidewalk Weed Removal"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-116`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
                 <Form.Check
                   onChange={() =>
@@ -686,7 +613,7 @@ export default function Index() {
                   label="Driveway Weed Removal"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-117`}
-                  style={{ color: "grey", fontSize: "0.9rem" }}
+                  className = "form-checkbox-text"
                 />
               </div>
             </Form.Group>
@@ -731,17 +658,8 @@ export default function Index() {
               value={JSON.stringify(value)}
               style={{ display: "none" }}
             />
-            <div
-              className=""
-              style={{
-                display: "flex",
-                flex: 1,
-                margin: "auto",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            ></div>
-            <div className="form-footer">
+            
+            {/* <div className="form-footer"> */}
               <div className="button-wrapper">
                 <Link
                   activeClass="active"
@@ -787,7 +705,7 @@ export default function Index() {
                   SUBMIT
                 </button>
               </div>
-            </div>
+            {/* </div> */}
           </Form>
         </div>
       </div>

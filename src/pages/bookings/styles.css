@@ -376,8 +376,21 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .form-element-bookings {
     padding: 0 2rem 0 2rem;
   }
+  .space {
+    margin-top : 1rem
+  }
 }
+
+@media (max-width: 320px) {
+  .bookings-cleaning {
+    height : 135vh
+  }
+  .bookings-gardening {
+    height : 120vh
+  }
+}
+

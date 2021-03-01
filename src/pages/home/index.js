@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <div id="home-landing" style={{ backgroundColor: "#636c59" }}>
       <Navbar />
-      <div className="screen landing" style={{ height: "91vh" }}>
+      <div className="first-screen landing">
         <div className="screen-container column">
           <div className="landing-top">
             <div className="background-header">
@@ -154,68 +154,38 @@ export default function Home() {
               </div>
               <Form.Group
                 controlId="exampleForm.ControlInput1"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flex: 1,
-                  justifyContent: "center",
-                }}
+                className = "form-group"
               >
-                <Form.Label style={{ marginRight: "2rem", paddingTop: "2%" }}>
+                <Form.Label className="form-label">
                   name
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="name1"
-                  style={{
-                    color: "grey",
-                    fontWeight: "bold",
-                    textTransform: "uppercase",
-                  }}
+                  className = "form-control"
                 />
               </Form.Group>
               <Form.Group
                 controlId="exampleForm.ControlInput1"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  flex: 1,
-                }}
+                className = "form-group"
               >
-                <Form.Label style={{ marginRight: "2rem", paddingTop: "2%" }}>
+                <Form.Label className="form-label">
                   email
                 </Form.Label>
                 <Form.Control
                   type="email"
                   name="email1"
-                  style={{
-                    color: "grey",
-                    fontWeight: "bold",
-                    textTransform: "uppercase",
-                  }}
+                  className = "form-control"
                 />
               </Form.Group>
               <Form.Group
                 controlId="exampleForm.ControlSelect1"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flex: 8,
-                }}
+                style = {{display : 'flex', flexDirection : 'column'}}
               >
-                <Form.Label style={{ marginRight: "1.6rem", paddingTop: "2%" }}>
+                <Form.Label className="form-label">
                   select
                 </Form.Label>
-                <div
-                  style={{
-                    flexDirection: "column",
-                    border: "solid 1px #c3ccc3",
-                    borderRadius: "5px",
-                    padding: "8px",
-                    width: "100%",
-                  }}
-                >
+                <div className = "checkbox-div">
                   <Form.Check
                     onChange={() =>
                       setCleaningCheckState({
@@ -227,7 +197,7 @@ export default function Home() {
                     label="Dish Washing"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -240,7 +210,7 @@ export default function Home() {
                     label="Vacuumc Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -253,7 +223,7 @@ export default function Home() {
                     label="Mopping & Sweeping"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-3`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
 
                   <Form.Check
@@ -267,7 +237,7 @@ export default function Home() {
                     label="Emptying Bins"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -280,7 +250,7 @@ export default function Home() {
                     label="Surface Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -293,7 +263,7 @@ export default function Home() {
                     label="Mirror Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -306,7 +276,7 @@ export default function Home() {
                     label="Oven Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -319,7 +289,7 @@ export default function Home() {
                     label="Fridge Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -332,7 +302,7 @@ export default function Home() {
                     label="Cupboard Cleaning"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -345,7 +315,7 @@ export default function Home() {
                     label="Organizing"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -358,7 +328,7 @@ export default function Home() {
                     label="Folding Clothes"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -371,7 +341,7 @@ export default function Home() {
                     label="Window Clean"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                 </div>
               </Form.Group>
@@ -500,68 +470,40 @@ export default function Home() {
               </div>
               <Form.Group
                 controlId="exampleForm.ControlInput2"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flex: 1,
-                  justifyContent: "center",
-                }}
+                className = "form-group"
               >
-                <Form.Label style={{ marginRight: "2rem", paddingTop: "2%" }}>
+                <Form.Label className="form-label">
                   name
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="name"
-                  style={{
-                    color: "grey",
-                    fontWeight: "bold",
-                    textTransform: "uppercase",
-                  }}
+                  className = "form-control"
                 />
               </Form.Group>
               <Form.Group
                 controlId="exampleForm.ControlInput2"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  flex: 1,
-                }}
+                className = "form-group"
               >
-                <Form.Label style={{ marginRight: "2rem", paddingTop: "2%" }}>
+                <Form.Label className="form-label">
                   email
                 </Form.Label>
                 <Form.Control
                   type="email"
                   name="email"
-                  style={{
-                    color: "grey",
-                    fontWeight: "bold",
-                    textTransform: "uppercase",
-                  }}
+                  className = "form-control"
                 />
               </Form.Group>
 
               <Form.Group
                 controlId="exampleForm.ControlSelect2"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flex: 8,
-                }}
+                style = {{display : 'flex', flexDirection : 'column'}}
               >
-                <Form.Label style={{ marginRight: "1.6rem", paddingTop: "2%" }}>
+                <Form.Label className="form-label">
                   select
                 </Form.Label>
                 <div
-                  style={{
-                    flexDirection: "column",
-                    border: "solid 1px #c3ccc3",
-                    borderRadius: "5px",
-                    padding: "8px",
-                    width: "100%",
-                  }}
+                className = "checkbox-div"
                 >
                   <Form.Check
                     onChange={() =>
@@ -574,7 +516,7 @@ export default function Home() {
                     label="Lawn Mowing"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -587,7 +529,7 @@ export default function Home() {
                     label="Garden Litter"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -600,7 +542,7 @@ export default function Home() {
                     label="Garden Care"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-3`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
 
                   <Form.Check
@@ -614,7 +556,7 @@ export default function Home() {
                     label="Flower Bed / Plant Weeding"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-1`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -627,7 +569,7 @@ export default function Home() {
                     label="Tree Branch / Bush Trimming"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -640,7 +582,7 @@ export default function Home() {
                     label="Sidewalk Weed Removal"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                   <Form.Check
                     onChange={() =>
@@ -653,7 +595,7 @@ export default function Home() {
                     label="Driveway Weed Removal"
                     type={"checkbox"}
                     id={`inline-${"checkbox"}-2`}
-                    style={{ color: "grey", fontSize: "0.9rem" }}
+                    className = "form-checkbox-text"
                   />
                 </div>
               </Form.Group>
