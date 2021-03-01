@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <div id="home-landing" style={{ backgroundColor: "#636c59" }}>
       <Navbar />
-      <div className="screen landing" style={{ height: "91vh" }}>
+      <div className="first-screen landing">
         <div className="screen-container column">
           <div className="landing-top">
             <div className="background-header">

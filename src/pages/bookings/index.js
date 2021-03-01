@@ -108,8 +108,8 @@ export default function Index() {
   return (
     <div id="book-land" style={{ backgroundColor: "#3ab34a" }}>
       <Navbar />
-      <div className="screen bookings-landing" style={{ height: "91vh" }}>
-        <div className="screen-container column" style={{ height: "91vh" }}>
+      <div className="first-screen bookings-landing" >
+        <div className="screen-container column">
           <div className="bookings-options-container">
             <div className="bookings-content">
               <div style={{ flex: 2, display: "flex" }}>
@@ -172,7 +172,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="screen bookings-cleaning" id="book-clean">
+      <div className="bookings-cleaning" id="book-clean">
         <div
           className="screen-container row"
           style={{
@@ -478,7 +478,7 @@ export default function Index() {
 
       {/*  */}
 
-      <div className="screen bookings-gardening" id="book-gard">
+      <div className="bookings-gardening" id="book-gard">
         <div
           className="screen-container row"
           style={{

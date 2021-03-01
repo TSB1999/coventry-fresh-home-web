@@ -1,6 +1,9 @@
+.first-screen {
+  height: 91vh;
+}
+
 .screen {
   height: 100vh;
-  /* width: fit-content; */
 }
 
 .navbar-placeholder {
@@ -11,7 +14,7 @@
   display: flex;
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
-  height: 100vh;
+  height: 91vh;
 }
 
 .row {

@@ -384,3 +384,13 @@
     margin-top : 1rem
   }
 }
+
+@media (max-width: 320px) {
+  .bookings-cleaning {
+    height : 135vh
+  }
+  .bookings-gardening {
+    height : 120vh
+  }
+}
+
