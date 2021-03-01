@@ -180,24 +180,7 @@ export default function Index() {
             justifyContent: "center",
           }}
         >
-          <Form
-            style={{
-              display: "flex",
-              flex: "1",
-              width: "80%",
-              margin: "auto",
-              flexDirection: "column",
-              color: "#636c59",
-              fontWeight: "bold",
-              textTransform: "uppercase",
-              backgroundColor: "#fff",
-              opacity: 0.95,
-              padding: "0 5rem 0 5rem",
-              border: "0.3rem solid #636c59",
-              borderRadius: "1rem",
-            }}
-            onSubmit={sendCleaningEmail}
-          >
+          <Form className="form-element-bookings" onSubmit={sendCleaningEmail}>
             <Form.Group
               controlId="exampleForm.ControlInput10"
               style={{
@@ -489,54 +472,49 @@ export default function Index() {
 
             <div className="form-footer">
               <div className="button-wrapper">
-                <div className="left-button">
-                  <Link
-                    activeClass="active"
-                    to="book-land"
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                    duration={500}
-                    isDynamic={true}
-                    ignoreCancelEvents={true}
-                    style={{ width: "80%" }}
-                  >
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      style={{
-                        width: "100%",
-                        fontWeight: "bold",
-                        backgroundColor: "transparent",
-                        fontSize: 13,
-                        color: "#636c59",
-                        borderColor: "#636c59",
-                        borderWidth: "2px",
-                        borderRadius: "0",
-                      }}
-                    >
-                      HOME
-                    </button>
-                  </Link>
-                </div>
-
-                <div className="right-button">
+                <Link
+                  activeClass="active"
+                  to="home-landing"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={500}
+                  isDynamic={true}
+                  ignoreCancelEvents={true}
+                  style={{ width: "100%" }}
+                >
                   <button
                     type="submit"
                     class="btn btn-primary"
                     style={{
                       width: "100%",
                       fontWeight: "bold",
-                      backgroundColor: "#636c59",
-                      color: "#",
+                      backgroundColor: "transparent",
                       fontSize: 13,
-                      borderWidth: "0px",
+                      color: "#636c59",
+                      borderColor: "#636c59",
+                      borderWidth: "2px",
                       borderRadius: "0",
                     }}
                   >
-                    SUBMIT
+                    HOME
                   </button>
-                </div>
+                </Link>
+
+                <button
+                  class="btn btn-primary"
+                  style={{
+                    width: "100%",
+                    fontWeight: "bold",
+                    backgroundColor: "#636c59",
+                    color: "#",
+                    fontSize: 13,
+                    borderWidth: "0px",
+                    borderRadius: "0",
+                  }}
+                >
+                  SUBMIT
+                </button>
               </div>
             </div>
           </Form>
@@ -553,24 +531,7 @@ export default function Index() {
             justifyContent: "center",
           }}
         >
-          <Form
-            style={{
-              display: "flex",
-              flex: "1",
-              width: "80%",
-              margin: "auto",
-              flexDirection: "column",
-              color: "#636c59",
-              fontWeight: "bold",
-              textTransform: "uppercase",
-              backgroundColor: "#fff",
-              opacity: 0.95,
-              padding: "0 5rem 0 5rem",
-              border: "0.3rem solid #636c59",
-              borderRadius: "1rem",
-            }}
-            onSubmit={sendGardeningEmail}
-          >
+          <Form className="form-element-bookings" onSubmit={sendGardeningEmail}>
             <Form.Group
               controlId="exampleForm.ControlInput11"
               style={{
@@ -782,54 +743,49 @@ export default function Index() {
             ></div>
             <div className="form-footer">
               <div className="button-wrapper">
-                <div className="left-button">
-                  <Link
-                    activeClass="active"
-                    to="book-land"
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                    duration={500}
-                    isDynamic={true}
-                    ignoreCancelEvents={true}
-                    style={{ width: "80%" }}
-                  >
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      style={{
-                        width: "100%",
-                        fontWeight: "bold",
-                        backgroundColor: "transparent",
-                        fontSize: 13,
-                        color: "#636c59",
-                        borderColor: "#636c59",
-                        borderWidth: "2px",
-                        borderRadius: "0",
-                      }}
-                    >
-                      HOME
-                    </button>
-                  </Link>
-                </div>
-
-                <div className="right-button">
+                <Link
+                  activeClass="active"
+                  to="home-landing"
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={500}
+                  isDynamic={true}
+                  ignoreCancelEvents={true}
+                  style={{ width: "100%" }}
+                >
                   <button
                     type="submit"
                     class="btn btn-primary"
                     style={{
                       width: "100%",
                       fontWeight: "bold",
-                      backgroundColor: "#636c59",
-                      color: "#",
+                      backgroundColor: "transparent",
                       fontSize: 13,
-                      borderWidth: "0px",
+                      color: "#636c59",
+                      borderColor: "#636c59",
+                      borderWidth: "2px",
                       borderRadius: "0",
                     }}
                   >
-                    SUBMIT
+                    HOME
                   </button>
-                </div>
+                </Link>
+
+                <button
+                  class="btn btn-primary"
+                  style={{
+                    width: "100%",
+                    fontWeight: "bold",
+                    backgroundColor: "#636c59",
+                    color: "#",
+                    fontSize: 13,
+                    borderWidth: "0px",
+                    borderRadius: "0",
+                  }}
+                >
+                  SUBMIT
+                </button>
               </div>
             </div>
           </Form>

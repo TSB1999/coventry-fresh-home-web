@@ -145,18 +145,7 @@ export default function Home() {
           <div className="cleaning-left"></div>
           <div className="cleaning-right">
             <Form
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                color: "#636c59",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-                backgroundColor: "#fff",
-                opacity: 1,
-                padding: "0 5rem 0 5rem",
-                border: "0.3rem solid #636c59",
-                borderRadius: "1rem",
-              }}
+              className="form-element"
               onSubmit={(e) => sendCleaningEmail(e)}
             >
               <div className="form-header">
@@ -448,54 +437,49 @@ export default function Home() {
               />
               <div className="form-footer">
                 <div className="button-wrapper">
-                  <div className="left-button">
-                    <Link
-                      activeClass="active"
-                      to="home-landing"
-                      spy={true}
-                      smooth={true}
-                      hashSpy={true}
-                      duration={500}
-                      isDynamic={true}
-                      ignoreCancelEvents={true}
-                      style={{ width: "80%" }}
-                    >
-                      <button
-                        type="submit"
-                        class="btn btn-primary"
-                        style={{
-                          width: "100%",
-                          fontWeight: "bold",
-                          backgroundColor: "transparent",
-                          fontSize: 13,
-                          color: "#636c59",
-                          borderColor: "#636c59",
-                          borderWidth: "2px",
-                          borderRadius: "0",
-                        }}
-                      >
-                        HOME
-                      </button>
-                    </Link>
-                  </div>
-
-                  <div className="right-button">
+                  <Link
+                    activeClass="active"
+                    to="home-landing"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    duration={500}
+                    isDynamic={true}
+                    ignoreCancelEvents={true}
+                    style={{ width: "100%" }}
+                  >
                     <button
                       type="submit"
                       class="btn btn-primary"
                       style={{
                         width: "100%",
                         fontWeight: "bold",
-                        backgroundColor: "#636c59",
-                        color: "#",
+                        backgroundColor: "transparent",
                         fontSize: 13,
-                        borderWidth: "0px",
+                        color: "#636c59",
+                        borderColor: "#636c59",
+                        borderWidth: "2px",
                         borderRadius: "0",
                       }}
                     >
-                      SUBMIT
+                      HOME
                     </button>
-                  </div>
+                  </Link>
+
+                  <button
+                    class="btn btn-primary"
+                    style={{
+                      width: "100%",
+                      fontWeight: "bold",
+                      backgroundColor: "#636c59",
+                      color: "#",
+                      fontSize: 13,
+                      borderWidth: "0px",
+                      borderRadius: "0",
+                    }}
+                  >
+                    SUBMIT
+                  </button>
                 </div>
               </div>
             </Form>
@@ -507,18 +491,7 @@ export default function Home() {
         <div className="screen-container row">
           <div className="garden-left">
             <Form
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                color: "#636c59",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-                backgroundColor: "#fff",
-                opacity: 1,
-                padding: "0 5rem 0 5rem",
-                border: "0.3rem solid #636c59",
-                borderRadius: "1rem",
-              }}
+              className="form-element"
               onSubmit={(e) => sendGardeningEmail(e)}
             >
               <div className="form-header">
@@ -721,55 +694,54 @@ export default function Home() {
                 style={{ display: "none" }}
               />
 
-              <div className="form-footer">
+              <div
+                className="form-footer"
+                // style={{ backgroundColor: "yellow" }}
+              >
                 <div className="button-wrapper">
-                  <div className="left-button">
-                    <Link
-                      activeClass="active"
-                      to="home-landing"
-                      spy={true}
-                      smooth={true}
-                      hashSpy={true}
-                      duration={500}
-                      isDynamic={true}
-                      ignoreCancelEvents={true}
-                      style={{ width: "80%" }}
-                    >
-                      <button
-                        type="submit"
-                        class="btn btn-primary"
-                        style={{
-                          width: "100%",
-                          fontWeight: "bold",
-                          backgroundColor: "transparent",
-                          fontSize: 13,
-                          color: "#636c59",
-                          borderColor: "#636c59",
-                          borderWidth: "2px",
-                          borderRadius: "0",
-                        }}
-                      >
-                        HOME
-                      </button>
-                    </Link>
-                  </div>
-
-                  <div className="right-button">
+                  <Link
+                    activeClass="active"
+                    to="home-landing"
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    duration={500}
+                    isDynamic={true}
+                    ignoreCancelEvents={true}
+                    style={{ width: "100%" }}
+                  >
                     <button
+                      type="submit"
                       class="btn btn-primary"
                       style={{
                         width: "100%",
                         fontWeight: "bold",
-                        backgroundColor: "#636c59",
-                        color: "#",
+                        backgroundColor: "transparent",
                         fontSize: 13,
-                        borderWidth: "0px",
+                        color: "#636c59",
+                        borderColor: "#636c59",
+                        borderWidth: "2px",
                         borderRadius: "0",
                       }}
                     >
-                      SUBMIT
+                      HOME
                     </button>
-                  </div>
+                  </Link>
+
+                  <button
+                    class="btn btn-primary"
+                    style={{
+                      width: "100%",
+                      fontWeight: "bold",
+                      backgroundColor: "#636c59",
+                      color: "#",
+                      fontSize: 13,
+                      borderWidth: "0px",
+                      borderRadius: "0",
+                    }}
+                  >
+                    SUBMIT
+                  </button>
                 </div>
               </div>
             </Form>
