@@ -92,11 +92,11 @@ export default function Navbar() {
         </div>
         <div>
           <Link
-            to="/payment"
+            to="/contact"
             style={{ color: "#fff" }}
             onClick={() => setTheme(4)}
           >
-            <i class="fas fa-donate fa-2x"></i>
+            <i class="fas fa-info fa-2x"></i>
             {/* <h4>donate</h4> */}
           </Link>
           <h4 style={{ marginTop: "0.7rem" }}>donations</h4>
