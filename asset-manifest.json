@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "//coventry-fresh-home-web/static/css/main.15af7e2a.chunk.css",
+    "main.js": "//coventry-fresh-home-web/static/js/main.81f25c72.chunk.js",
+    "main.js.map": "//coventry-fresh-home-web/static/js/main.81f25c72.chunk.js.map",
+    "runtime-main.js": "//coventry-fresh-home-web/static/js/runtime-main.afed1534.js",
+    "runtime-main.js.map": "//coventry-fresh-home-web/static/js/runtime-main.afed1534.js.map",
+    "static/css/2.83342f34.chunk.css": "//coventry-fresh-home-web/static/css/2.83342f34.chunk.css",
+    "static/js/2.f6e39e8d.chunk.js": "//coventry-fresh-home-web/static/js/2.f6e39e8d.chunk.js",
+    "static/js/2.f6e39e8d.chunk.js.map": "//coventry-fresh-home-web/static/js/2.f6e39e8d.chunk.js.map",
+    "static/js/3.2d3dff31.chunk.js": "//coventry-fresh-home-web/static/js/3.2d3dff31.chunk.js",
+    "static/js/3.2d3dff31.chunk.js.map": "//coventry-fresh-home-web/static/js/3.2d3dff31.chunk.js.map",
+    "index.html": "//coventry-fresh-home-web/index.html",
+    "static/css/2.83342f34.chunk.css.map": "//coventry-fresh-home-web/static/css/2.83342f34.chunk.css.map",
+    "static/css/main.15af7e2a.chunk.css.map": "//coventry-fresh-home-web/static/css/main.15af7e2a.chunk.css.map",
+    "static/js/2.f6e39e8d.chunk.js.LICENSE.txt": "//coventry-fresh-home-web/static/js/2.f6e39e8d.chunk.js.LICENSE.txt",
+    "static/media/400dpiLogo2.61ab011b.jpeg": "//coventry-fresh-home-web/static/media/400dpiLogo2.61ab011b.jpeg",
+    "static/media/styles.css": "//coventry-fresh-home-web/static/media/todd-kent-178j8tJrNlc-unsplash.3457528d.jpg",
+    "static/media/IMG_1333.1942b792.jpg": "//coventry-fresh-home-web/static/media/IMG_1333.1942b792.jpg",
+    "static/media/IMG_1334.26fdacd7.jpg": "//coventry-fresh-home-web/static/media/IMG_1334.26fdacd7.jpg",
+    "static/media/IMG_1335.1f3425a5.jpg": "//coventry-fresh-home-web/static/media/IMG_1335.1f3425a5.jpg",
+    "static/media/IMG_1336.ab7eae1c.jpg": "//coventry-fresh-home-web/static/media/IMG_1336.ab7eae1c.jpg",
+    "static/media/IMG_1337.de9857bf.jpg": "//coventry-fresh-home-web/static/media/IMG_1337.de9857bf.jpg",
+    "static/media/IMG_1338.62e30e05.jpg": "//coventry-fresh-home-web/static/media/IMG_1338.62e30e05.jpg",
+    "static/media/IMG_1340.3fb68686.jpg": "//coventry-fresh-home-web/static/media/IMG_1340.3fb68686.jpg",
+    "static/media/bedroom2.9e185460.jpg": "//coventry-fresh-home-web/static/media/bedroom2.9e185460.jpg",
+    "static/media/gardem-4.215c6c90.jpg": "//coventry-fresh-home-web/static/media/gardem-4.215c6c90.jpg",
+    "static/media/garden-2.4f54f28a.jpg": "//coventry-fresh-home-web/static/media/garden-2.4f54f28a.jpg",
+    "static/media/garden-4.cd06e1e0.jpg": "//coventry-fresh-home-web/static/media/garden-4.cd06e1e0.jpg",
+    "static/media/garden-5.4f54f28a.jpg": "//coventry-fresh-home-web/static/media/garden-5.4f54f28a.jpg",
+    "static/media/garden-lawn.994eaa2c.jpg": "//coventry-fresh-home-web/static/media/garden-lawn.994eaa2c.jpg",
+    "static/media/patio.256b6aad.jpg": "//coventry-fresh-home-web/static/media/patio.256b6aad.jpg",
+    "static/media/patio2.39493032.jpg": "//coventry-fresh-home-web/static/media/patio2.39493032.jpg",
+    "static/media/unnamed.a5ed725b.jpg": "//coventry-fresh-home-web/static/media/unnamed.a5ed725b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.afed1534.js",
+    "static/css/2.83342f34.chunk.css",
+    "static/js/2.f6e39e8d.chunk.js",
+    "static/css/main.15af7e2a.chunk.css",
+    "static/js/main.81f25c72.chunk.js"
+  ]
+}
