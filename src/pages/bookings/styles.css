@@ -380,4 +380,7 @@
   .form-element-bookings {
     padding: 0 2rem 0 2rem;
   }
+  .space {
+    margin-top : 1rem
+  }
 }

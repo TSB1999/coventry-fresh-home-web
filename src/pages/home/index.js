@@ -491,11 +491,7 @@ export default function Home() {
                 <Form.Control
                   type="email"
                   name="email"
-                  style={{
-                    color: "grey",
-                    fontWeight: "bold",
-                    textTransform: "uppercase",
-                  }}
+                  className = "form-control"
                 />
               </Form.Group>
 

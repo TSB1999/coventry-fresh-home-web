@@ -132,6 +132,26 @@
   padding: 0.7rem 2.5rem;
 }
 
+.button-home-styles {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 13;
+  color: #636c59;
+  border-color: #636c59;
+  border-width: 2px;
+  border-radius: 0;
+}
+
+.button-submit-styles {
+  width: 100%;
+  font-weight: bold;
+  background-color: #636c59;
+  font-size: 13;
+  border-width: 0px;
+  border-radius: 0;
+}
+
 .landing-bottom {
   flex: 1;
 }
@@ -238,29 +258,21 @@
 .form-body {
   opacity: 0.95;
 }
-
+/* 
 .form-footer {
   display: flex;
   flex: 1;
-  /* border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem; */
   background-color: #fff;
-  padding: 0rem 2.3rem 1.3rem 2.3rem;
   opacity: 0.9;
-}
+} */
 
 .button-wrapper {
   display: flex;
   justify-content: center;
   flex: 1;
   flex-direction: row;
-}
-
-.button-wrapper > div {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  justify-content: center;
+  /* background-color: black; */
+  margin-bottom: 0.4rem;
 }
 
 .landing-right {
@@ -355,6 +367,27 @@
   .form-element {
     padding: 0 2rem 0 2rem;
   }
+  .form-checkbox-text {
+    font-size: 0.8rem;
+  }
+  .checkbox-div {
+    margin-left: 1.5rem
+  }
+  .form-label {
+    font-size: 0.8rem
+  }
+  .form-control {
+    height : 2rem
+  }
+  .button-home-styles {
+    height : 2rem;
+    font-size: 0.8rem;
+  }
+  .button-submit-styles {
+    height : 2rem;
+    font-size: 0.8rem;
+  }
+
 }
 
 /* iphone 6/7/8 */

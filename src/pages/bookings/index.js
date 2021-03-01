@@ -173,17 +173,16 @@ export default function Index() {
       </div>
 
       <div className="screen bookings-cleaning" id="book-clean">
-        {/* <div className="navbar-placeholder" /> */}
         <div
           className="screen-container row"
           style={{
             justifyContent: "center",
           }}
         >
-          <Form className="form-element-bookings" onSubmit={sendCleaningEmail}>
+          <Form className="form-element-bookings"  onSubmit={sendCleaningEmail}>
             <Form.Group
               controlId="exampleForm.ControlInput10"
-              className= "form-group"
+              className= "form-group space"
             >
               <Form.Label className = "form-label">
                 name
@@ -192,11 +191,7 @@ export default function Index() {
                 type="text"
                 name="name1"
                 // placeholder="David Keys"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className = "form-control"
               />
             </Form.Group>
             <Form.Group
@@ -208,11 +203,7 @@ export default function Index() {
                 type="email"
                 name="email1"
                 // placeholder="name@example.com"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className = "form-control"
               />
             </Form.Group>
 
@@ -221,7 +212,7 @@ export default function Index() {
             <Form.Group
               controlId="exampleForm.ControlSelect10"
               style={{
-                marginTop: "1%",
+                marginTop: "2%",
               }}
               className= "form-group"
 
@@ -235,7 +226,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Dish Washing"
+                  label="Dishes"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-101`}
                   className = "form-checkbox-text"
@@ -453,8 +444,8 @@ export default function Index() {
               style={{ display: "none" }}
             />
 
-            <div className="form-footer">
-            <div className="button-wrapper">
+            {/* <div className="form-footer"> */}
+              <div className="button-wrapper">
                 <Link
                   activeClass="active"
                   to="home-landing"
@@ -468,38 +459,19 @@ export default function Index() {
                 >
                   <button
                     type="submit"
-                    class="btn btn-primary"
-                    style={{
-                      width: "100%",
-                      fontWeight: "bold",
-                      backgroundColor: "transparent",
-                      fontSize: 13,
-                      color: "#636c59",
-                      borderColor: "#636c59",
-                      borderWidth: "2px",
-                      borderRadius: "0",
-                    }}
+                    class="btn btn-primary button-home-styles"
                   >
                     HOME
                   </button>
                 </Link>
 
                 <button
-                  class="btn btn-primary"
-                  style={{
-                    width: "100%",
-                    fontWeight: "bold",
-                    backgroundColor: "#636c59",
-                    color: "#",
-                    fontSize: 13,
-                    borderWidth: "0px",
-                    borderRadius: "0",
-                  }}
+                  class="btn btn-primary button-submit-styles"
                 >
                   SUBMIT
                 </button>
               </div>
-            </div>
+            {/* </div> */}
           </Form>
         </div>
       </div>
@@ -507,7 +479,6 @@ export default function Index() {
       {/*  */}
 
       <div className="screen bookings-gardening" id="book-gard">
-        {/* <div className="navbar-placeholder" /> */}
         <div
           className="screen-container row"
           style={{
@@ -517,36 +488,28 @@ export default function Index() {
           <Form className="form-element-bookings" onSubmit={sendGardeningEmail}>
             <Form.Group
               controlId="exampleForm.ControlInput11"
-              className = "form-group"
+              className = "form-group space"
             >
-              <Form.Label style={{ marginRight: "2rem", marginTop: "0.5rem" }}>
+              <Form.Label className="form-label">
                 name
               </Form.Label>
               <Form.Control
                 type="text"
                 name="name"
                 // placeholder="David Keys"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className="form-control"
               />
             </Form.Group>
             <Form.Group
               controlId="exampleForm.ControlInput11"
               className = "form-group"
             >
-              <Form.Label style={{ marginRight: "2rem" }}>email</Form.Label>
+              <Form.Label className = "form-label">email</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
                 // placeholder="name@example.com"
-                style={{
-                  color: "grey",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
+                className = "form-control"
               />
             </Form.Group>
 
@@ -608,7 +571,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Flower Bed / Plant Weeding"
+                  label="Flower Bed Weeding"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-114`}
                   className = "form-checkbox-text"
@@ -621,7 +584,7 @@ export default function Index() {
                     })
                   }
                   inline
-                  label="Tree Branch / Bush Trimming"
+                  label="Branch / Bush Trimming"
                   type={"checkbox"}
                   id={`inline-${"checkbox"}-115`}
                   className = "form-checkbox-text"
@@ -695,17 +658,8 @@ export default function Index() {
               value={JSON.stringify(value)}
               style={{ display: "none" }}
             />
-            <div
-              className=""
-              style={{
-                display: "flex",
-                flex: 1,
-                margin: "auto",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            ></div>
-            <div className="form-footer">
+            
+            {/* <div className="form-footer"> */}
               <div className="button-wrapper">
                 <Link
                   activeClass="active"
@@ -751,7 +705,7 @@ export default function Index() {
                   SUBMIT
                 </button>
               </div>
-            </div>
+            {/* </div> */}
           </Form>
         </div>
       </div>
