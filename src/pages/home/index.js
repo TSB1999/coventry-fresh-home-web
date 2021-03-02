@@ -136,34 +136,62 @@ export default function Home() {
                       marginTop: "2rem",
                     }}
                   >
-                    <button
-                      className="landing-button"
-                      style={{
-                        // textShadow: "0.05rem 0.05rem #292929",
-                        borderTopLeftRadius: "0.3rem",
-                        borderBottomLeftRadius: "0.3rem",
-                        borderLeft: "0.17rem solid #292929",
-                        borderTop: "0.17rem solid #292929",
-                        borderBottom: "0.17rem solid #292929",
-                      }}
+                    <Link
+                      className="scroll-link"
+                      activeClass="active"
+                      to="home-clean"
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
+                      // offset={50}
+                      duration={500}
+                      // delay={1000}
+                      isDynamic={true}
+                      ignoreCancelEvents={false}
                     >
-                      cleaning
-                    </button>
-                    <button
-                      className="landing-button"
-                      style={{
-                        backgroundColor: "#8bc343",
-                        color: "#3ab34a",
-                        // textShadow: "0.05rem 0.05rem #292929",
-                        borderTopRightRadius: "0.3rem",
-                        borderBottomRightRadius: "0.3rem",
-                        borderRight: "0.17rem solid #292929",
-                        borderTop: "0.17rem solid #292929",
-                        borderBottom: "0.17rem solid #292929",
-                      }}
+                      <button
+                        className="landing-button"
+                        style={{
+                          // textShadow: "0.05rem 0.05rem #292929",
+                          borderTopLeftRadius: "0.3rem",
+                          borderBottomLeftRadius: "0.3rem",
+                          borderLeft: "0.17rem solid #292929",
+                          borderTop: "0.17rem solid #292929",
+                          borderBottom: "0.17rem solid #292929",
+                        }}
+                      >
+                        cleaning
+                      </button>
+                    </Link>
+                    <Link
+                      className="scroll-link"
+                      activeClass="active"
+                      to="home-gard"
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
+                      // offset={50}
+                      duration={500}
+                      // delay={1000}
+                      isDynamic={true}
+                      ignoreCancelEvents={false}
                     >
-                      garden
-                    </button>
+                      <button
+                        className="landing-button"
+                        style={{
+                          backgroundColor: "#8bc343",
+                          color: "#3ab34a",
+                          // textShadow: "0.05rem 0.05rem #292929",
+                          borderTopRightRadius: "0.3rem",
+                          borderBottomRightRadius: "0.3rem",
+                          borderRight: "0.17rem solid #292929",
+                          borderTop: "0.17rem solid #292929",
+                          borderBottom: "0.17rem solid #292929",
+                        }}
+                      >
+                        garden
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
