@@ -155,9 +155,9 @@ export default function Home() {
                           // textShadow: "0.05rem 0.05rem #292929",
                           borderTopLeftRadius: "0.3rem",
                           borderBottomLeftRadius: "0.3rem",
-                          borderLeft: "0.17rem solid #292929",
-                          borderTop: "0.17rem solid #292929",
-                          borderBottom: "0.17rem solid #292929",
+                          borderLeft: "0.17rem solid #fff",
+                          borderTop: "0.17rem solid #fff",
+                          borderBottom: "0.17rem solid #fff",
                         }}
                       >
                         cleaning
@@ -181,12 +181,13 @@ export default function Home() {
                         style={{
                           backgroundColor: "#8bc343",
                           color: "#3ab34a",
-                          // textShadow: "0.05rem 0.05rem #292929",
+                          // textShadow: "0.05rem 0.05rem #fff",
                           borderTopRightRadius: "0.3rem",
                           borderBottomRightRadius: "0.3rem",
-                          borderRight: "0.17rem solid #292929",
-                          borderTop: "0.17rem solid #292929",
-                          borderBottom: "0.17rem solid #292929",
+                          borderRight: "0.17rem solid #fff",
+                          borderTop: "0.17rem solid #fff",
+                          borderBottom: "0.17rem solid #fff",
+                          borderLeft: "0.17rem solid #fff",
                         }}
                       >
                         garden
@@ -263,7 +264,7 @@ export default function Home() {
         </div>
       </div>
       {/*  */}
-      <div className="screen about" id="home-clean">
+      <div className="screen about">
         <div className="screen-container">
           <div
             style={{

@@ -64,7 +64,7 @@ export default function Navbar() {
           <Link to="/contact" style={{ color: "#fff" }}>
             <i class="fas fa-info fa-2x"></i>
           </Link>
-          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>donations</h4>
+          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>info</h4>
         </div>
       </div>
     </nav>
