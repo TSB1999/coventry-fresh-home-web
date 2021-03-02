@@ -101,8 +101,6 @@ export default function Home() {
       id="home-landing"
       style={{
         backgroundColor: "#3ab34a",
-        overflow: "-moz-hidden-unscrollable",
-        overflow: "hidden",
       }}
     >
       <Navbar />

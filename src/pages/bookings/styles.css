@@ -5,9 +5,14 @@
 }
 
 .bookings-options-container {
+  /* display: flex; */
+  /* flex: 1; */
+  /* margin: 0vh 0vh; */
+  background-color: red;
+
   display: flex;
   flex: 1;
-  margin: -2vh -2vh;
+  margin: -2vh;
 }
 
 .bookings-content {
