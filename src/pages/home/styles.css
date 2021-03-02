@@ -270,16 +270,20 @@
 .garden-left {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  order: 1;
+  flex: 1.3;
+  /* order: 1; */
   justify-content: center;
+  background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .garden-right {
   display: flex;
   flex-direction: column;
-  flex: 1.35;
-  order: 0;
+  flex: 1;
+  /* order: 0; */
   justify-content: center;
+  background-color: #8bc343;
 }
 
 .landing-left {
@@ -312,6 +316,10 @@
   padding: 0 5rem 0 5rem;
   /* border: 0.3rem solid #636c59; */
   border-radius: 0.5rem;
+}
+
+.checkbox-div {
+  margin-bottom: 0.8rem;
 }
 
 .form-group {
@@ -403,7 +411,10 @@
   flex-direction: column;
   flex: 1.3;
   justify-content: center;
-  background: red;
+  background-color: red;
+  background-image: url(./images/anton-SnKfmC1I9fU-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .cleaning-right {
@@ -421,10 +432,10 @@
   .cleaning-left {
     flex: 0;
   }
-  .garden-right {
+  .garden-left {
     flex: 0;
   }
-  .garden-left {
+  .garden-right {
     flex: 1;
   }
 }

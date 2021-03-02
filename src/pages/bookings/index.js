@@ -109,7 +109,7 @@ export default function Index() {
     <div id="book-land" style={{ backgroundColor: "#3ab34a" }}>
       <Navbar />
       <div className="first-screen bookings-landing">
-        <div className="screen-container column">
+        <div className="screen-container column" style={{ height: "91vh" }}>
           <div className="bookings-options-container">
             <div className="bookings-content">
               <div style={{ flex: 2, display: "flex" }}>
