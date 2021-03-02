@@ -259,8 +259,12 @@
   border-radius: 0;
 }
 
+.about {
+  background-color: #8bc343;
+}
+
 .gardening {
-  background-color: #3ab34a;
+  background-color: #8bc343;
 }
 
 .garden-left {
@@ -381,7 +385,7 @@
 }
 
 .cleaning {
-  background-color: #8bc343;
+  background-color: #3ab34a;
   /* background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
   background-position: 80% 87%;
   background-size: cover; */
@@ -394,15 +398,16 @@
 }
 
 .cleaning-left {
-  order: 1;
+  /* order: 1; */
   display: flex;
   flex-direction: column;
   flex: 1.3;
   justify-content: center;
+  background: red;
 }
 
 .cleaning-right {
-  order: 0;
+  /* order: 0; */
   display: flex;
   flex-direction: column;
   flex: 1;
