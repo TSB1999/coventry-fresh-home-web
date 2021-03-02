@@ -119,7 +119,10 @@ export default function Home() {
             <div
               className="landing-top"
               style={{
-                backgroundImage: `url(${landing1})`,
+                background: `linear-gradient(
+                  rgba(0,0,0,0.5),
+                  rgba(99, 108, 89, 0.8) ) ,
+                  url(${landing1})`,
                 backgroundPosition: "50% 35%",
                 backgroundSize: "cover",
               }}
@@ -131,7 +134,6 @@ export default function Home() {
                   <div
                     style={{
                       display: "flex",
-                      // backgroundColor: "green",
                       justifyContent: "center",
                       marginTop: "2rem",
                     }}
@@ -142,7 +144,6 @@ export default function Home() {
                         textShadow: "0.05rem 0.05rem #292929",
                         borderTopLeftRadius: "0.3rem",
                         borderBottomLeftRadius: "0.3rem",
-                        // border: "0.3rem solid #8bc343",
                         borderLeft: "0.3rem solid #8bc343",
                         borderTop: "0.3rem solid #8bc343",
                         borderBottom: "0.3rem solid #8bc343",
@@ -176,9 +177,7 @@ export default function Home() {
                   style={{
                     backgroundImage: `url(${customer_service})`,
                   }}
-                >
-                  e
-                </div>
+                ></div>
                 <div className="panel__body">
                   <h4>Terrific Customer Service</h4>
                 </div>
@@ -193,9 +192,7 @@ export default function Home() {
                   style={{
                     backgroundImage: `url(${health_safety})`,
                   }}
-                >
-                  e
-                </div>
+                ></div>
                 <div className="panel__body">
                   <h4>Health & Safety Conscious</h4>
                 </div>
@@ -210,9 +207,7 @@ export default function Home() {
                   style={{
                     backgroundImage: `url(${reliable})`,
                   }}
-                >
-                  e
-                </div>
+                ></div>
                 <div className="panel__body">
                   <h4>Highly Reliable</h4>
                 </div>
@@ -228,9 +223,7 @@ export default function Home() {
                     backgroundImage: `url(${diligence})`,
                     backgroundPosition: "50% 20%",
                   }}
-                >
-                  e
-                </div>
+                ></div>
                 <div className="panel__body">
                   <h4>Diligent in Work</h4>
                 </div>
@@ -240,6 +233,90 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      {/*  */}
+      <div className="screen cleaning" id="home-clean">
+        <div className="screen-container">
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              margin: "-2vh",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "#3ab34a",
+                flex: 1,
+                display: "grid",
+                gridTemplateRows: "repeat(2, 1fr)",
+                padding: "1rem",
+              }}
+            >
+              <div className="panel">
+                <div
+                  className="panel__header"
+                  style={{
+                    backgroundImage: `url(${landing3})`,
+                    backgroundPosition: "50% 20%",
+                  }}
+                ></div>
+                <div className="panel__body">
+                  <h4>CLEANING</h4>
+                </div>
+                <div className="panel__footer">
+                  <button
+                    className="landing-button"
+                    style={{
+                      backgroundColor: "#8bc343",
+                      color: "#3ab34a",
+                      // height: "auto",
+                      textShadow: "0.05rem 0.05rem #292929",
+                      borderTopRightRadius: "0.3rem",
+                      borderBottomRightRadius: "0.3rem",
+                      borderRight: "0.3rem solid #3ab34a",
+                      borderTop: "0.3rem solid #3ab34a",
+                      borderBottom: "0.3rem solid #3ab34a",
+                    }}
+                  >
+                    Enquire
+                  </button>
+                </div>
+              </div>
+
+              <div className="panel">
+                <div
+                  className="panel__header"
+                  style={{
+                    backgroundImage: `url(${landing2})`,
+                    backgroundPosition: "50% 20%",
+                  }}
+                ></div>
+                <div className="panel__body">
+                  <h4>GARDENING</h4>
+                </div>
+                <div className="panel__footer">
+                  <button
+                    className="landing-button"
+                    style={{
+                      backgroundColor: "#8bc343",
+                      color: "#3ab34a",
+                      textShadow: "0.05rem 0.05rem #292929",
+                      borderTopRightRadius: "0.3rem",
+                      borderBottomRightRadius: "0.3rem",
+                      borderRight: "0.3rem solid #3ab34a",
+                      borderTop: "0.3rem solid #3ab34a",
+                      borderBottom: "0.3rem solid #3ab34a",
+                    }}
+                  >
+                    Enquirie
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div style={{ backgroundColor: "#8bc343", flex: 5 }}></div>
           </div>
         </div>
       </div>

@@ -43,8 +43,6 @@
 .landing-background {
   flex: 1;
   display: grid;
-  background-color: #636c59;
-  opacity: 0.7;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1.1fr 1fr 0.2fr;
 }
@@ -98,13 +96,16 @@
 
 .panel__header {
   flex: 4;
-  background-color: red;
+  /* background-color: red; */
   background-position: center;
   background-size: cover;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0.15rem 0.15rem #292929;
 }
 
 .panel__body {
+  margin-top: 0.8rem;
+  /* background-color: red; */
   color: whitesmoke;
   display: flex;
   flex: 1;
@@ -135,20 +136,15 @@
 .landing-bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(4, 1fr); */
   flex: 1;
   transition: 1s;
-  /* background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-6-2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain; */
   background-color: #3ab34a;
+  border-top: 0.2rem solid #8bc343;
 }
 
 .background-header {
   display: flex;
   flex-direction: column;
-  /* flex: 1; */
   grid-column: 2/4;
   grid-row: 1/4;
   background-color: #636c59;
@@ -166,7 +162,6 @@
   font-size: calc(1.8rem + 1.8vw);
   text-align: center;
   font-weight: 600;
-  /* line-height: 4.9rem; */
   margin: 0rem 0 2rem 0rem;
   color: #bfbab0;
   text-shadow: 0.2rem 0.2rem #000;
@@ -192,13 +187,11 @@
 .button-offset-h {
   padding: 0.2rem;
   background-color: #292929;
-  /* border-radius: 0.5rem; */
 }
 
 .button-offset-g {
   padding: 0.2rem;
   background-color: #bfbab0;
-  /* border-radius: 0.5rem; */
 }
 
 .cleaning-button > div > .scroll-link > button {
@@ -207,7 +200,6 @@
   background-color: #bfbab0;
   color: #636c59;
   border: none;
-  /* border-radius: 0.5rem; */
   font-size: 1.1rem;
   transition: 1s;
 }
@@ -231,7 +223,6 @@
   background-color: #292929;
   color: #bfbab0;
   border: none;
-  /* border-radius: 0.5rem; */
   font-size: 1.1rem;
   transition: 1s;
 }
@@ -262,10 +253,6 @@
 
 .gardening {
   background-color: #3ab34a;
-  /* background-image: url(./images/image-2.png); */
-  /* background-position: center;
-  background-size: cover; */
-  /* clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); */
 }
 
 .garden-left {
@@ -390,7 +377,7 @@
   /* background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
   background-position: 80% 87%;
   background-size: cover; */
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  /* clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%); */
 }
 
 .form-info {

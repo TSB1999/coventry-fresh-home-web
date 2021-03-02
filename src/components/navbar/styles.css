@@ -11,6 +11,8 @@
   );
   opacity: 0.95;
   transition: 1s;
+  /* box-shadow: 0.2rem 0.2rem black; */
+  border-bottom: 0.2rem solid #8bc343;
 }
 
 .main {
