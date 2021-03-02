@@ -127,9 +127,7 @@ export default function Index() {
                   <div
                     style={{
                       display: "flex",
-                      backgroundColor: "#636c59",
                       flex: 1,
-                      opacity: 0.7,
                       alignItems: "center",
                       justifyContent: "center",
                     }}
@@ -153,9 +151,9 @@ export default function Index() {
                   <div
                     style={{
                       display: "flex",
-                      backgroundColor: "#636c59",
+                      // backgroundColor: "#636c59",
                       flex: 1,
-                      opacity: 0.7,
+                      // opacity: 0.7,
                       alignItems: "center",
                       justifyContent: "center",
                     }}

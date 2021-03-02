@@ -139,12 +139,12 @@ export default function Home() {
                     <button
                       className="landing-button"
                       style={{
-                        textShadow: "0.05rem 0.05rem #292929",
+                        // textShadow: "0.05rem 0.05rem #292929",
                         borderTopLeftRadius: "0.3rem",
                         borderBottomLeftRadius: "0.3rem",
-                        borderLeft: "0.3rem solid #8bc343",
-                        borderTop: "0.3rem solid #8bc343",
-                        borderBottom: "0.3rem solid #8bc343",
+                        borderLeft: "0.17rem solid #292929",
+                        borderTop: "0.17rem solid #292929",
+                        borderBottom: "0.17rem solid #292929",
                       }}
                     >
                       cleaning
@@ -154,12 +154,12 @@ export default function Home() {
                       style={{
                         backgroundColor: "#8bc343",
                         color: "#3ab34a",
-                        textShadow: "0.05rem 0.05rem #292929",
+                        // textShadow: "0.05rem 0.05rem #292929",
                         borderTopRightRadius: "0.3rem",
                         borderBottomRightRadius: "0.3rem",
-                        borderRight: "0.3rem solid #3ab34a",
-                        borderTop: "0.3rem solid #3ab34a",
-                        borderBottom: "0.3rem solid #3ab34a",
+                        borderRight: "0.17rem solid #292929",
+                        borderTop: "0.17rem solid #292929",
+                        borderBottom: "0.17rem solid #292929",
                       }}
                     >
                       garden
@@ -251,6 +251,7 @@ export default function Home() {
                 display: "grid",
                 gridTemplateRows: "repeat(2, 1fr)",
                 padding: "1rem",
+                // borderRight: "0.3rem solid white",
               }}
             >
               <div className="panel">
@@ -259,6 +260,7 @@ export default function Home() {
                   style={{
                     backgroundImage: `url(${landing3})`,
                     backgroundPosition: "50% 20%",
+                    borderRadius: "2rem",
                   }}
                 ></div>
                 <div className="panel__body">
@@ -290,6 +292,7 @@ export default function Home() {
                   style={{
                     backgroundImage: `url(${landing2})`,
                     backgroundPosition: "50% 20%",
+                    borderRadius: "2rem",
                   }}
                 ></div>
                 <div className="panel__body">
@@ -314,7 +317,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div style={{ backgroundColor: "transparent", flex: 5 }}></div>
+            <div className="big-green"></div>
           </div>
         </div>
       </div>
@@ -329,14 +332,6 @@ export default function Home() {
               flexDirection: "column",
             }}
           >
-            <div
-              className="workflow"
-              style={{
-                flex: 0.7,
-                backgroundColor: "#3ab34a",
-                padding: "1rem",
-              }}
-            ></div>
             <div
               style={{
                 display: "flex",
@@ -654,6 +649,14 @@ export default function Home() {
                 </Form>
               </div>
             </div>
+            <div
+              className="workflow"
+              style={{
+                flex: 0.7,
+                backgroundColor: "#8bc343",
+                padding: "1rem",
+              }}
+            ></div>
           </div>
         </div>
       </div>
@@ -668,14 +671,6 @@ export default function Home() {
               flexDirection: "column",
             }}
           >
-            <div
-              className="workflow"
-              style={{
-                flex: 0.7,
-                backgroundColor: "#3ab34a",
-                padding: "1rem",
-              }}
-            ></div>
             <div
               style={{
                 display: "flex",
@@ -911,6 +906,14 @@ export default function Home() {
                 </Form>
               </div>
             </div>
+            <div
+              className="workflow"
+              style={{
+                flex: 0.7,
+                backgroundColor: "#3ab34a",
+                padding: "1rem",
+              }}
+            ></div>
           </div>
         </div>
       </div>

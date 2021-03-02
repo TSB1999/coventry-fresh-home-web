@@ -25,10 +25,11 @@
   display: flex;
   flex: 1;
   transition: 1s;
-  background-image: url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
+  border-right: 0.2rem solid #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(99, 108, 89, 0.8)),
+    url(./images/grass-america-4YCueV54nxU-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  border-right: 0.2rem solid #fff;
 }
 
 .cleaning-panel:hover {
@@ -40,7 +41,8 @@
   background-color: blue;
   flex: 1;
   transition: 1s;
-  background-image: url(./images/anna-earl-cTtE2FlIRoU-unsplash.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(99, 108, 89, 0.8)),
+    url(./images/anna-earl-cTtE2FlIRoU-unsplash.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -51,11 +53,11 @@
 
 .bookings-panel-title {
   font-size: 3rem;
-  font-weight: bold;
   color: #3ab34a;
-  text-shadow: 0.2rem 0.2rem #000;
   text-transform: uppercase;
   text-align: center;
+  font-weight: 900;
+  text-shadow: 0.17rem 0.17rem #292929;
 }
 
 .bookings-header {
