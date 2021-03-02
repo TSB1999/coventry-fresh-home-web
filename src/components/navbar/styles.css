@@ -3,7 +3,12 @@
   justify-content: center;
   height: 9vh;
   width: 100%;
-  background-color: #636c59;
+  background: rgb(58, 179, 74);
+  background: linear-gradient(
+    186deg,
+    rgba(58, 179, 74, 1) 0%,
+    rgba(139, 195, 67, 1) 100%
+  );
   opacity: 0.95;
   transition: 1s;
 }
@@ -52,7 +57,7 @@ i {
 }
 
 i:hover {
-  color: #3ab34a;
+  color: #8bc343;
 }
 
 @media (max-height: 862px) {

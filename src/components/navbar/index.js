@@ -11,25 +11,6 @@ export default function Navbar() {
 
   const [theme, setTheme] = useState(1);
 
-  useEffect(() => {
-    console.log(window.location.href);
-    switch (window.location.href) {
-      case "http://localhost:3000/#home-landing":
-        // setTheme("#636c59");
-        setTheme("#184739");
-        break;
-      case "http://localhost:3000/bookings#book-land":
-        setTheme("#184739");
-        break;
-      case "http://localhost:3000/gallery":
-        // setTheme("#5c5c5c");
-        setTheme("#184739");
-        break;
-      default:
-      // code block
-    }
-  }, [theme]);
-
   return (
     <nav className="navbar-container" style={{ backgroundColor: theme }}>
       <div className="main">
@@ -45,16 +26,11 @@ export default function Navbar() {
             ignoreCancelEvents={true}
             style={{ width: "80%" }}
           >
-            <Link
-              to="/"
-              style={{ color: "#fff" }}
-              // onClick={() => setTheme("#636c59")}
-              onClick={() => setTheme("#184739")}
-            >
+            <Link to="/" style={{ color: "#fff" }}>
               <i class="fas fa-home fa-2x"></i>
             </Link>
           </SLink>
-          <h4 style={{ marginTop: "0.7rem" }}>home</h4>
+          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>home</h4>
         </div>
         <div>
           <SLink
@@ -76,30 +52,19 @@ export default function Navbar() {
               <i class="fas fa-calendar-week fa-2x"></i>
             </Link>
           </SLink>
-          <h4 style={{ marginTop: "0.7rem" }}>enquiries</h4>
+          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>enquiries</h4>
         </div>
         <div>
-          <Link
-            to="/gallery"
-            style={{ color: "#fff" }}
-            // onClick={() => setTheme("#5c5c5c")}
-            onClick={() => setTheme("#184739")}
-          >
+          <Link to="/gallery" style={{ color: "#fff" }}>
             <i class="fas fa-images fa-2x"></i>
-            {/* <h4>gallery</h4> */}
           </Link>
-          <h4 style={{ marginTop: "0.7rem" }}>gallery</h4>
+          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>gallery</h4>
         </div>
         <div>
-          <Link
-            to="/contact"
-            style={{ color: "#fff" }}
-            onClick={() => setTheme(4)}
-          >
+          <Link to="/contact" style={{ color: "#fff" }}>
             <i class="fas fa-info fa-2x"></i>
-            {/* <h4>donate</h4> */}
           </Link>
-          <h4 style={{ marginTop: "0.7rem" }}>donations</h4>
+          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>donations</h4>
         </div>
       </div>
     </nav>

@@ -13,6 +13,11 @@ import landing1 from "./images/cdc-cdfv65CldQQ-unsplash.jpg";
 import landing2 from "./images/cdc-wz3ijPHvL54-unsplash.jpg";
 import landing3 from "./images/anton-SnKfmC1I9fU-unsplash.jpg";
 
+import customer_service from "./images/image.png";
+import health_safety from "./images/mika-baumeister-uz_T7h8ds04-unsplash.jpg";
+import reliable from "./images/cytonn-photography-n95VMLxqM2I-unsplash.jpg";
+import diligence from "./images/austrian-national-library-t5qnrCVkUz8-unsplash.jpg";
+
 export default function Home() {
   // Garden Checkbox State
   const [gardenCheckState, setGardenCheckState] = useState({
@@ -120,94 +125,116 @@ export default function Home() {
               }}
             >
               <div className="landing-background">
-                <h1>Domestic Cleaning and Gardening Services</h1>
+                <div className="landing-title-container">
+                  <h1>Domestic Cleaning and Gardening Services</h1>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      // backgroundColor: "green",
+                      justifyContent: "center",
+                      marginTop: "2rem",
+                    }}
+                  >
+                    <button
+                      className="landing-button"
+                      style={{
+                        textShadow: "0.05rem 0.05rem #292929",
+                        borderTopLeftRadius: "0.3rem",
+                        borderBottomLeftRadius: "0.3rem",
+                        // border: "0.3rem solid #8bc343",
+                        borderLeft: "0.3rem solid #8bc343",
+                        borderTop: "0.3rem solid #8bc343",
+                        borderBottom: "0.3rem solid #8bc343",
+                      }}
+                    >
+                      cleaning
+                    </button>
+                    <button
+                      className="landing-button"
+                      style={{
+                        backgroundColor: "#8bc343",
+                        color: "#3ab34a",
+                        textShadow: "0.05rem 0.05rem #292929",
+                        borderTopRightRadius: "0.3rem",
+                        borderBottomRightRadius: "0.3rem",
+                        borderRight: "0.3rem solid #3ab34a",
+                        borderTop: "0.3rem solid #3ab34a",
+                        borderBottom: "0.3rem solid #3ab34a",
+                      }}
+                    >
+                      garden
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="landing-bottom">
               <div className="panel">
-                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
                 <div
+                  className="panel__header"
                   style={{
-                    flex: 1,
-                    backgroundColor: "green",
-                    textAlign: "center",
+                    backgroundImage: `url(${customer_service})`,
                   }}
                 >
-                  Terrific Customer Service
+                  e
                 </div>
-                <div
-                  style={{
-                    flex: 2,
-                    backgroundColor: "yellow",
-                    textAlign: "center",
-                  }}
-                >
+                <div className="panel__body">
+                  <h4>Terrific Customer Service</h4>
+                </div>
+                <div className="panel__footer">
                   Anim incididunt dolor qui consectetur dolor commodo id ullamco
                   incididunt ullamco enim ullamco.
                 </div>
               </div>
               <div className="panel">
-                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
                 <div
+                  className="panel__header"
                   style={{
-                    flex: 1,
-                    backgroundColor: "green",
-                    textAlign: "center",
+                    backgroundImage: `url(${health_safety})`,
                   }}
                 >
-                  Health & Safety Conscious
+                  e
                 </div>
-                <div
-                  style={{
-                    flex: 2,
-                    backgroundColor: "yellow",
-                    textAlign: "center",
-                  }}
-                >
+                <div className="panel__body">
+                  <h4>Health & Safety Conscious</h4>
+                </div>
+                <div className="panel__footer">
                   Anim incididunt dolor qui consectetur dolor commodo id ullamco
                   incididunt ullamco enim ullamco.
                 </div>
               </div>
               <div className="panel">
-                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
                 <div
+                  className="panel__header"
                   style={{
-                    flex: 1,
-                    backgroundColor: "green",
-                    textAlign: "center",
+                    backgroundImage: `url(${reliable})`,
                   }}
                 >
-                  Highly Reliable
+                  e
                 </div>
-                <div
-                  style={{
-                    flex: 2,
-                    backgroundColor: "yellow",
-                    textAlign: "center",
-                  }}
-                >
+                <div className="panel__body">
+                  <h4>Highly Reliable</h4>
+                </div>
+                <div className="panel__footer">
                   Anim incididunt dolor qui consectetur dolor commodo id ullamco
                   incididunt ullamco enim ullamco.
                 </div>
               </div>
               <div className="panel">
-                <div style={{ flex: 4, backgroundColor: "red" }}>e</div>
                 <div
+                  className="panel__header"
                   style={{
-                    flex: 1,
-                    backgroundColor: "green",
-                    textAlign: "center",
+                    backgroundImage: `url(${diligence})`,
+                    backgroundPosition: "50% 20%",
                   }}
                 >
-                  County to County
+                  e
                 </div>
-                <div
-                  style={{
-                    flex: 2,
-                    backgroundColor: "yellow",
-                    textAlign: "center",
-                  }}
-                >
+                <div className="panel__body">
+                  <h4>Diligent in Work</h4>
+                </div>
+                <div className="panel__footer">
                   Anim incididunt dolor qui consectetur dolor commodo id ullamco
                   incididunt ullamco enim ullamco.
                 </div>
