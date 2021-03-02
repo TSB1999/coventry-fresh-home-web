@@ -10,11 +10,19 @@
   height: 9vh;
 }
 
-.screen-container {
+.first-screen-container {
   display: flex;
   margin: 0vh 2vh 0 2vh;
   padding: 2vh 0 2vh 0;
   height: 91vh;
+  /* background-color: blue; */
+}
+
+.screen-container {
+  display: flex;
+  margin: 0vh 2vh 0 2vh;
+  padding: 2vh 0 2vh 0;
+  height: 100vh;
   /* background-color: blue; */
 }
 

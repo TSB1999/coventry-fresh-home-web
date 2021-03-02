@@ -107,7 +107,7 @@ export default function Home() {
     >
       <Navbar />
       <div className="first-screen landing">
-        <div className="screen-container column">
+        <div className="first-screen-container column">
           <div
             style={{
               display: "flex",
@@ -281,7 +281,7 @@ export default function Home() {
                       borderBottom: "0.3rem solid #3ab34a",
                     }}
                   >
-                    Enquire
+                    Get Quote
                   </button>
                 </div>
               </div>
@@ -311,17 +311,21 @@ export default function Home() {
                       borderBottom: "0.3rem solid #3ab34a",
                     }}
                   >
-                    Enquirie
+                    Get Quote
                   </button>
                 </div>
               </div>
             </div>
-            <div style={{ backgroundColor: "#8bc343", flex: 5 }}></div>
+            <div style={{ backgroundColor: "transparent", flex: 5 }}></div>
           </div>
         </div>
       </div>
       {/*  */}
-      <div className="screen cleaning" id="home-clean">
+      <div
+        className="screen cleaning"
+        id="home-clean"
+        style={{ backgroundColor: "red" }}
+      >
         <div className="screen-container">
           <div className="cleaning-left"></div>
           <div className="cleaning-right">
