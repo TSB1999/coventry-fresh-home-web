@@ -694,7 +694,7 @@ export default function Home() {
                 >
                   <div className="form-header">
                     <h1>Gardening</h1>
-                    <h5>sumbit the form for your same day quote</h5>
+                    {/* <h5>sumbit the form for your same day quote</h5> */}
                   </div>
                   <Form.Group
                     controlId="exampleForm.ControlInput2"
@@ -884,8 +884,8 @@ export default function Home() {
                             fontWeight: "bold",
                             backgroundColor: "transparent",
                             fontSize: 13,
-                            color: "#636c59",
-                            borderColor: "#636c59",
+                            color: "#3ab34a",
+                            borderColor: "#3ab34a",
                             borderWidth: "2px",
                             borderRadius: "0",
                           }}
@@ -899,7 +899,7 @@ export default function Home() {
                         style={{
                           width: "100%",
                           fontWeight: "bold",
-                          backgroundColor: "#636c59",
+                          backgroundColor: "#3ab34a",
                           color: "#",
                           fontSize: 13,
                           borderWidth: "0px",
