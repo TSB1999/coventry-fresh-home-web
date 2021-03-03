@@ -946,7 +946,7 @@ export default function Home() {
                 </Form>
                 </div>
                 <div
-                  className = "cleaning-right-right"
+                  className = "garden-right-right"
                 >
                   
                 </div>
