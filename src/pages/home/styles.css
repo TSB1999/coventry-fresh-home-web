@@ -75,7 +75,7 @@
   height: 2.6rem;
   /* padding: 0.2rem; */
   background-color: #3ab34a;
-  color: #8bc343;
+  color: #fff;
   font-weight: 800;
   font-size: 1rem;
   border: none;
@@ -125,10 +125,12 @@
 
 .panel__body > h4 {
   font-weight: 900;
+  text-shadow : 0.05rem 0.05rem #292929;
 }
 
 .panel__footer {
   color: #8bc343;
+  text-shadow : 0.05rem 0.05rem grey;
   flex: 2;
   text-align: center;
   font-weight: 900;
@@ -288,9 +290,9 @@
   background-size: cover;
   border-top-right-radius: 3rem;
   /* border-bottom-right-radius: 3rem; */
-  border-top: 0.2rem solid #fff;
-  border-right: 0.2rem solid #fff;
-  /* border-bottom: 0.2rem solid #fff; */
+  border-top: 0.3rem solid #3ab34a;
+  border-right: 0.3rem solid #3ab34a;
+  /* border-bottom: 0.2rem solid #3ab34a; */
 }
 .garden-right {
   display: flex;
@@ -299,6 +301,19 @@
   /* order: 0; */
   justify-content: center;
   background-color: #8bc343;
+}
+
+.garden-right-right {
+  flex: 1;
+  /* background-color: red; */
+  border-top-left-radius: 3rem;
+  /* border-bottom-left-radius: 3rem; */
+  border-top: 0.3rem solid #3ab34a;
+  border-left: 0.3rem solid #3ab34a;
+  /* border-bottom: 0.2rem solid #3ab34a; */
+  background-image: url(./images/markus-spiske-sFydXGrt5OA-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .landing-left {
@@ -438,9 +453,9 @@
   background-image: url(./images/anton-SnKfmC1I9fU-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  border-top: 0.2rem solid #fff;
-  border-right: 0.2rem solid #fff;
-  border-bottom: 0.2rem solid #fff;
+  border-top: 0.3rem solid #3ab34a;
+  border-right: 0.3rem solid #3ab34a;
+  border-bottom: 0.3rem solid #3ab34a;
 }
 
 .cleaning-right {
@@ -456,27 +471,16 @@
   /* background-color: red; */
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
-  border-top: 0.2rem solid #fff;
-  border-left: 0.2rem solid #fff;
-  border-bottom: 0.2rem solid #fff;
+  border-top: 0.3rem solid #fff;
+  border-left: 0.3rem solid #fff;
+  border-bottom: 0.3rem solid #fff;
   background-image: url(./images/austrian-national-library-t5qnrCVkUz8-unsplash.jpg);
   background-position: center;
   background-size: cover;
   
 }
 
-.garden-right-right {
-  flex: 1;
-  /* background-color: red; */
-  border-top-left-radius: 3rem;
-  /* border-bottom-left-radius: 3rem; */
-  border-top: 0.2rem solid #fff;
-  border-left: 0.2rem solid #fff;
-  /* border-bottom: 0.2rem solid #fff; */
-  background-image: url(./images/markus-spiske-sFydXGrt5OA-unsplash.jpg);
-  background-position: center;
-  background-size: cover;
-}
+
 
 @media (max-width: 1240px) {
   .cleaning-right {
@@ -494,11 +498,18 @@
   .garden-right {
     flex: 1;
   }
+  .garden-right-right{ 
+    display : none
+  }
   .big-green {
+    border-top-left-radius: 0rem;
     border-bottom-left-radius: 0rem;
   }
   .form-element {
     margin: 0;
+  }
+  .landing-bottom {
+    display : none;
   }
 }
 

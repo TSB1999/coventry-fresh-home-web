@@ -152,7 +152,7 @@ export default function Home() {
                       <button
                         className="landing-button"
                         style={{
-                          // textShadow: "0.05rem 0.05rem #292929",
+                          textShadow: "0.1rem 0.1rem #292929",
                           borderTopLeftRadius: "0.3rem",
                           borderBottomLeftRadius: "0.3rem",
                           borderLeft: "0.17rem solid #fff",
@@ -180,8 +180,8 @@ export default function Home() {
                         className="landing-button"
                         style={{
                           backgroundColor: "#8bc343",
-                          color: "#3ab34a",
-                          // textShadow: "0.05rem 0.05rem #fff",
+                          color: "#fff",
+                          textShadow: "0.1rem 0.1rem #292929",
                           borderTopRightRadius: "0.3rem",
                           borderBottomRightRadius: "0.3rem",
                           borderRight: "0.17rem solid #fff",
