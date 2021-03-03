@@ -6,7 +6,7 @@
 .contact-column-1 {
   display: flex;
   flex: 0.5;
-  background-color: #8cc540;
+  background-color: #3ab34a;
   flex-direction: column;
   transition: 1s;
 }
@@ -31,7 +31,7 @@
   background-size: cover;
   border-right: 0.2rem solid #fff;
   border-bottom: 0.1rem solid #fff;
-  border-top-left-radius: 1rem;
+  /* border-top-left-radius: 1rem; */
 }
 
 /* .contact-column-1-1:hover {
@@ -102,8 +102,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  /* border-top-right-radius: 1rem; */
+  /* border-bottom-right-radius: 1rem; */
 }
 
 /* .contact-column-2-2:hover {
@@ -114,7 +114,7 @@
   display: flex;
   flex: 1;
   background-color: #3ab34a;
-  background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-8.png);
+  background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-10.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
