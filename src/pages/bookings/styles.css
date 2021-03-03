@@ -100,12 +100,13 @@
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  background: rgb(58, 179, 74);
+  /* background: rgb(58, 179, 74);
   background: linear-gradient(
     186deg,
     rgba(58, 179, 74, 1) 0%,
     rgba(139, 195, 67, 1) 100%
-  );
+  ); */
+  background : transparent;
   opacity: 1;
   padding: 0 5rem 0 5rem;
   border-radius: 1rem;

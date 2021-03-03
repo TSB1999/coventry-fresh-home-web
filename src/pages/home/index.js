@@ -370,7 +370,7 @@ export default function Home() {
                     onSubmit={(e) => sendCleaningEmail(e)}
                   >
                     <div className="form-header">
-                      <h1>Cleaning</h1>
+                      <h1>Cleaning Quote</h1>
                       <h5></h5>
                     </div>
                     <Form.Group
@@ -719,7 +719,7 @@ export default function Home() {
                   onSubmit={(e) => sendGardeningEmail(e)}
                 >
                   <div className="form-header">
-                    <h1>Gardening</h1>
+                    <h1>Gardening Quote</h1>
                     {/* <h5>sumbit the form for your same day quote</h5> */}
                   </div>
                   <Form.Group

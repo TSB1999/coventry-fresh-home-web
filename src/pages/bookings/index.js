@@ -193,7 +193,13 @@ export default function Index() {
                 flexDirection: "row",
               }}
             >
-              <div className="cleaning-left"></div>
+              <div
+                className="cleaning-left"
+                style={{
+                  borderRadius: "0",
+                  borderTop : 'none'
+                }}
+              ></div>
               <div className="cleaning-right">
                 <div
                   className="screen-container row"
@@ -203,6 +209,7 @@ export default function Index() {
                 >
                   <Form
                     className="form-element-bookings"
+                    style = {{borderRadius : '0'}}
                     onSubmit={sendCleaningEmail}
                   >
                     <Form.Group
@@ -529,7 +536,7 @@ export default function Index() {
                 flexDirection: "row",
               }}
             >
-              <div className="garden-left"></div>
+              <div className="garden-left" style = {{borderRadius : "0", borderTop : 'none'}}></div>
               <div className="garden-right">
                 <div
                   className="screen-container row"
@@ -539,6 +546,7 @@ export default function Index() {
                 >
                   <Form
                     className="form-element-bookings"
+                    style = {{borderRadius : '0', background : 'transparent'}}
                     onSubmit={sendGardeningEmail}
                   >
                     <Form.Group
@@ -732,16 +740,12 @@ export default function Index() {
                         <button
                           type="submit"
                           class="btn btn-primary button-home-styles"
-                          
                         >
                           HOME
                         </button>
                       </Link>
 
-                      <button
-                        class="btn btn-primary button-submit-styles"
-                        
-                      >
+                      <button class="btn btn-primary button-submit-styles">
                         SUBMIT
                       </button>
                     </div>
