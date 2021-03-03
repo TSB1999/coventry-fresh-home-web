@@ -274,14 +274,7 @@ export default function Home() {
             }}
           >
             <div
-              style={{
-                backgroundColor: "#3ab34a",
-                flex: 1,
-                display: "grid",
-                gridTemplateRows: "repeat(2, 1fr)",
-                padding: "1rem",
-                // borderRight: "0.3rem solid white",
-              }}
+              className="side-panel"
             >
               <div className="panel">
                 <div
