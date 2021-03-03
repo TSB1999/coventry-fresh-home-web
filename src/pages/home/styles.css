@@ -322,13 +322,19 @@
 .form-element {
   display: flex;
   flex-direction: column;
-  color: #3ab34a;
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #8bc343;
+  background: rgb(58, 179, 74);
+  background: linear-gradient(
+    186deg,
+    rgba(58, 179, 74, 1) 0%,
+    rgba(139, 195, 67, 1) 100%
+  );
   opacity: 1;
   padding: 0 5rem 0 5rem;
-  /* border: 0.3rem solid #636c59; */
+  margin: 0 10rem;
+  /* border: 0.3rem solid #636c59;/ */
   border-radius: 0.5rem;
 }
 
@@ -348,7 +354,7 @@
 
 .form-control {
   color: #3ab34a;
-  background-color: #8bc343;
+  background-color: #fff;
   border: 1px solid #3ab34a;
   font-weight: bold;
   text-transform: uppercase;
@@ -374,7 +380,7 @@
 .form-header > h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #3ab34a;
+  color: #fff;
 }
 
 .form-header > h5 {
@@ -459,6 +465,9 @@
   }
   .big-green {
     border-bottom-left-radius: 0rem;
+  }
+  .form-element {
+    margin: 0;
   }
 }
 
