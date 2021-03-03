@@ -252,9 +252,9 @@
   width: 100%;
   font-weight: bold;
   background-color: transparent;
+  color: #3ab34a;
+  border-color: #3ab34a;
   font-size: 13;
-  color: #636c59;
-  border-color: #636c59;
   border-width: 2px;
   border-radius: 0;
 }
@@ -262,7 +262,8 @@
 .button-submit-styles {
   width: 100%;
   font-weight: bold;
-  background-color: #636c59;
+  background-color: #3ab34a;
+  color : #fff;
   font-size: 13;
   border-width: 0px;
   border-radius: 0;
@@ -361,7 +362,7 @@
 }
 
 .form-checkbox-text {
-  color: #3ab34a;
+  color: #fff;
   font-size: 0.9rem;
 }
 

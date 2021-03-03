@@ -731,33 +731,16 @@ export default function Index() {
                       >
                         <button
                           type="submit"
-                          class="btn btn-primary"
-                          style={{
-                            width: "100%",
-                            fontWeight: "bold",
-                            backgroundColor: "transparent",
-                            fontSize: 13,
-                            color: "#636c59",
-                            borderColor: "#636c59",
-                            borderWidth: "2px",
-                            borderRadius: "0",
-                          }}
+                          class="btn btn-primary button-home-styles"
+                          
                         >
                           HOME
                         </button>
                       </Link>
 
                       <button
-                        class="btn btn-primary"
-                        style={{
-                          width: "100%",
-                          fontWeight: "bold",
-                          backgroundColor: "#636c59",
-                          color: "#",
-                          fontSize: 13,
-                          borderWidth: "0px",
-                          borderRadius: "0",
-                        }}
+                        class="btn btn-primary button-submit-styles"
+                        
                       >
                         SUBMIT
                       </button>

@@ -97,13 +97,17 @@
   width: 80%;
   margin: auto;
   flex-direction: column;
-  color: #636c59;
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #fff;
-  opacity: 0.95;
+  background: rgb(58, 179, 74);
+  background: linear-gradient(
+    186deg,
+    rgba(58, 179, 74, 1) 0%,
+    rgba(139, 195, 67, 1) 100%
+  );
+  opacity: 1;
   padding: 0 5rem 0 5rem;
-  border: 0.3rem solid #636c59;
   border-radius: 1rem;
 }
 
