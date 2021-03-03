@@ -11,12 +11,16 @@
   transition: 1s;
 }
 
-.contact-column-1:hover {
+/* .contact-column-1:hover {
   flex: 2;
-}
+} */
 
 .contact-column-1-1 {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* align-items: center; */
+  /* justify-content: center; */
   flex: 1;
   background-color: #3ab34a;
   transition: 1s;
@@ -30,12 +34,14 @@
   border-top-left-radius: 1rem;
 }
 
-.contact-column-1-1:hover {
+/* .contact-column-1-1:hover {
   flex: 3;
-}
+} */
 
 .contact-column-1-2 {
-  display: flex;
+  display: grid;
+  /* align-items: center;
+  justify-content: center; */
   flex: 1;
   background-color: #3ab34a;
   transition: 1s;
@@ -49,9 +55,9 @@
   border-bottom-left-radius: 1rem;
 }
 
-.contact-column-1-2:hover {
+/* .contact-column-1-2:hover {
   flex: 3;
-}
+} */
 
 .contact-column-2 {
   display: flex;
@@ -60,12 +66,14 @@
   transition: 1s;
 }
 
-.contact-column-2:hover {
+/* .contact-column-2:hover {
   flex: 2;
-}
+} */
 
 .contact-column-2-1 {
-  display: flex;
+  display: grid;
+  /* align-items: center;
+  justify-content: center; */
   flex: 1;
   background-color: yellow;
   transition: 1s;
@@ -76,15 +84,16 @@
   background-position: center;
   background-size: cover;
   border-right: 0.2rem solid #fff;
-  
 }
 
-.contact-column-2-1:hover {
+/* .contact-column-2-1:hover {
   flex: 3;
-}
+} */
 
 .contact-column-2-2 {
-  display: flex;
+  display: grid;
+  /* align-items: center;
+  justify-content: center; */
   flex: 1;
   background-color: orange;
   transition: 1s;
@@ -97,6 +106,16 @@
   border-bottom-right-radius: 1rem;
 }
 
-.contact-column-2-2:hover {
+/* .contact-column-2-2:hover {
   flex: 3;
+} */
+
+.contact-landing-footer {
+  display: flex;
+  flex: 1;
+  background-color: #3ab34a;
+  background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-8.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

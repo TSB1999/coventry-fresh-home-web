@@ -25,7 +25,10 @@ export default function index() {
             }}
           >
             <div className="contact-flex-container">
-              <div className="contact-column-1" style={{padding : '10vh 0 10vh 10vh'}}>
+              <div
+                className="contact-column-1"
+                style={{ padding: "10vh 0 10vh 10vh" }}
+              >
                 <div
                   className="contact-column-1-1"
                   activeClass="active"
@@ -37,21 +40,20 @@ export default function index() {
                   isDynamic={true}
                   ignoreCancelEvents={false}
                 >
-                  
-                    <h1
-                      style={{
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        color: "#3ab34a",
-                        textShadow: "0.2rem 0.2rem #000",
-                        textTransform: "uppercase",
-                        textAlign: "center",
-                        writingMode: "vertical-rl",
-                        padding: "1rem",
-                      }}
-                    >
-                      {/* Bathrooms */}
-                    </h1>
+                  <h1
+                    style={{
+                      fontSize: "3rem",
+                      fontWeight: "bold",
+                      color: "#3ab34a",
+                      textShadow: "0.2rem 0.2rem #000",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                      writingMode: "vertical-rl",
+                      padding: "1rem",
+                    }}
+                  >
+                    {/* Bathrooms */}
+                  </h1>
                 </div>
                 <div
                   className="contact-column-1-2"
@@ -64,24 +66,26 @@ export default function index() {
                   isDynamic={true}
                   ignoreCancelEvents={false}
                 >
-                  
-                    <h1
-                      style={{
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        color: "#3ab34a",
-                        textShadow: "0.2rem 0.2rem #000",
-                        textTransform: "uppercase",
-                        textAlign: "center",
-                        writingMode: "vertical-rl",
-                        padding: "1rem",
-                      }}
-                    >
-                      {/* Bedrooms */}
-                    </h1>
+                  <h1
+                    style={{
+                      fontSize: "3rem",
+                      fontWeight: "bold",
+                      color: "#3ab34a",
+                      textShadow: "0.2rem 0.2rem #000",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                      writingMode: "vertical-rl",
+                      padding: "1rem",
+                    }}
+                  >
+                    {/* Bedrooms */}
+                  </h1>
                 </div>
               </div>
-              <div className="contact-column-2" style={{padding : '10vh 10vh 10vh 0vh'}}>
+              <div
+                className="contact-column-2"
+                style={{ padding: "10vh 10vh 10vh 0vh" }}
+              >
                 <div
                   className="contact-column-2-1"
                   activeClass="active"
@@ -93,21 +97,20 @@ export default function index() {
                   isDynamic={true}
                   ignoreCancelEvents={false}
                 >
-                  
-                    <h1
-                      style={{
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        color: "#3ab34a",
-                        textShadow: "0.2rem 0.2rem #000",
-                        textTransform: "uppercase",
-                        textAlign: "center",
-                        writingMode: "vertical-rl",
-                        padding: "1rem",
-                      }}
-                    >
-                      {/* Kitchens */}
-                    </h1>
+                  <h1
+                    style={{
+                      fontSize: "3rem",
+                      fontWeight: "bold",
+                      color: "#3ab34a",
+                      textShadow: "0.2rem 0.2rem #000",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                      writingMode: "vertical-rl",
+                      padding: "1rem",
+                    }}
+                  >
+                    {/* Kitchens */}
+                  </h1>
                 </div>
                 <div
                   className="contact-column-2-2"
@@ -120,25 +123,24 @@ export default function index() {
                   isDynamic={true}
                   ignoreCancelEvents={false}
                 >
-                  
-                    <h1
-                      style={{
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        color: "#3ab34a",
-                        textShadow: "0.2rem 0.2rem #000",
-                        textTransform: "uppercase",
-                        textAlign: "center",
-                        writingMode: "vertical-rl",
-                        padding: "1rem",
-                      }}
-                    >
-                      {/* Gardens */}
-                    </h1>
+                  <h1
+                    style={{
+                      fontSize: "3rem",
+                      fontWeight: "bold",
+                      color: "#3ab34a",
+                      textShadow: "0.2rem 0.2rem #000",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                      writingMode: "vertical-rl",
+                      padding: "1rem",
+                    }}
+                  >
+                    {/* Gardens */}
+                  </h1>
                 </div>
               </div>
             </div>
-            <div className="gallery-landing-footer"></div>
+            <div className="contact-landing-footer"></div>
           </div>
         </div>
       </div>
