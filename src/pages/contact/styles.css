@@ -1,89 +1,102 @@
-.contact-screen-wrapper {
-  /* font-family: "Satisfy"; */
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url(./images/anton-SnKfmC1I9fU-unsplash.jpg);
+.contact-flex-container {
+  display: flex;
+  flex: 2;
+}
+
+.contact-column-1 {
+  display: flex;
+  flex: 0.5;
+  background-color: #8cc540;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.contact-column-1:hover {
+  flex: 2;
+}
+
+.contact-column-1-1 {
+  display: flex;
+  flex: 1;
+  background-color: #3ab34a;
+  transition: 1s;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 179, 74, 0.6)),
+    url(./images/nathan-dumlao-IQzbxZnQjGM-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  display: flex;
-  /* background-color: #84D78F;
-  background-blend-mode: hard-light; */
+  border-right: 0.2rem solid #fff;
+  border-bottom: 0.1rem solid #fff;
+  border-top-left-radius: 1rem;
 }
 
-.contact-items-wrapper {
+.contact-column-1-1:hover {
+  flex: 3;
+}
+
+.contact-column-1-2 {
+  display: flex;
   flex: 1;
-  /* background-color: crimson; */
-  margin-top: 15vh;
-  display: grid;
-  grid-template-areas:
-    ". . . . ."
-    ". . . . ."
-    ". . . . ."
-    ". . . . ."
-    ". . . . ."
-    ". . . . ."
-    ". . . . container"
-    ". . . . .";
-  padding: 20px 40px 0 0;
+  background-color: #3ab34a;
+  transition: 1s;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 179, 74, 0.6)),
+    url(./images/stephen-phillips-hostreviews-co-uk-3Mhgvrk4tjM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-right: 0.2rem solid #fff;
+  border-top: 0.1rem solid #fff;
+  border-bottom-left-radius: 1rem;
 }
 
-.contact-container {
-  background-color: #fff;
-  grid-area: container;
-  border-radius: 15px;
-  opacity: 0.8;
+.contact-column-1-2:hover {
+  flex: 3;
+}
+
+.contact-column-2 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 8px 8px grey;
-  animation: drop 1.3s ease;
-  padding : 20px
-}
-
-.contact-header {
-  align-items: center;
-  /* background-color: hotpink; */
-}
-
-/* .contact-header h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-} */
-
-.contact-description {
   flex: 1;
-  /* background-color: indianred; */
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
+  background-color: #8cc540;
+  transition: 1s;
 }
 
-.contact-description i {
-  color: #3ab34a;
-  text-shadow: 1px 1.5px #8cc540;
+.contact-column-2:hover {
+  flex: 2;
 }
 
-.contact-description h5 {
-  color: #3ab34a;
-  text-shadow: 1px 1.5px #8cc540;
-  font-size: 18px;
-  font-weight: 550;
-  text-transform: uppercase;
-  /* font-style: italic; */
-}
-
-/* .content h2 {
-  color : grey
-} */
-
-.box {
-  width: 80%;
-  height: 90%;
-  /* background-color: indigo; */
-  border-radius: 10px;
+.contact-column-2-1 {
   display: flex;
-  align-items: center;
-  margin: 10px;
+  flex: 1;
+  background-color: yellow;
+  transition: 1s;
+  /* background-image: url(./images/quino-al-8gWEAAXJjtI-unsplash.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 179, 74, 0.6)),
+    url(./images/quino-al-8gWEAAXJjtI-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-right: 0.2rem solid #fff;
+  
+}
+
+.contact-column-2-1:hover {
+  flex: 3;
+}
+
+.contact-column-2-2 {
+  display: flex;
+  flex: 1;
+  background-color: orange;
+  transition: 1s;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 179, 74, 0.6)),
+    url(./images/sangga-rima-roman-selia-bD_X4g_S_HU-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.contact-column-2-2:hover {
+  flex: 3;
 }

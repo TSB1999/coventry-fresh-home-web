@@ -207,7 +207,7 @@ export default function Gallery() {
       </div>
 
       <div className="screen gallery-gardening" id="gallery-gardening">
-        <div className="screen-container column">
+        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
           <div className="gardening-header">
             <h2>Gardening</h2>
           </div>
@@ -315,7 +315,7 @@ export default function Gallery() {
       </div>
 
       <div className="screen gallery-kitchen" id="gallery-kitchen">
-        <div className="screen-container column">
+        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
           <div className="gardening-header">
             <h2>Kitchens</h2>
           </div>
@@ -375,7 +375,7 @@ export default function Gallery() {
       </div>
 
       <div className="screen gallery-bathroom" id="gallery-bathroom">
-        <div className="screen-container column">
+        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
           <div className="gardening-header">
             <h2>Bathrooms</h2>
           </div>
@@ -411,7 +411,7 @@ export default function Gallery() {
       </div>
 
       <div className="screen gallery-bedroom" id="gallery-bedroom">
-        <div className="screen-container column">
+        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
           <div className="gardening-header">
             <h2>Bedrooms</h2>
           </div>
