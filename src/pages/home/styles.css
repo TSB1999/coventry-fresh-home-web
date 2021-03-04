@@ -290,7 +290,7 @@
 .garden-left {
   display: flex;
   flex-direction: column;
-  flex: 0.4;
+  flex: 0.5;
   /* order: 1; */
   justify-content: center;
   background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
@@ -312,7 +312,7 @@
 }
 
 .garden-right-right {
-  flex: 1;
+  flex: 2;
   /* background-color: red; */
   border-top-left-radius: 3rem;
   /* border-bottom-left-radius: 3rem; */
@@ -405,7 +405,12 @@
 .form-header > h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  background-color: #fff;
+  color: #8bc343;
+  padding: 0.35rem;
+  border-radius: 0.2rem;
+
+  text-transform: lowercase;
 }
 
 .form-header > h5 {
@@ -454,7 +459,7 @@
   /* order: 1; */
   display: flex;
   flex-direction: column;
-  flex: 0.4;
+  flex: 0.5;
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
   justify-content: center;
@@ -476,7 +481,7 @@
 }
 
 .cleaning-right-right {
-  flex: 1;
+  flex: 2;
   /* background-color: red; */
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
@@ -486,6 +491,19 @@
   background-image: url(./images/austrian-national-library-t5qnrCVkUz8-unsplash.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.footer-banner {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  flex: 1;
+  transition: 1s;
+  background-image: url(./images/Circular\ Cutaways\ Tumblr\ Banner-11.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #3ab34a;
 }
 
 @media (max-width: 1240px) {
@@ -535,7 +553,20 @@
     /* border: 0.3rem solid #bfbab0; */
     opacity: 0.8;
   }
-  
+  .form-header > h1 {
+    /* font-size: 2rem; */
+    /* font-weight: bold; */
+    color: #fff;
+
+    /* font-size: 2rem; */
+    font-weight: bold;
+    background-color: transparent;
+    /* color: #8bc343; */
+    padding: 0rem;
+    border-radius: 0rem;
+
+    text-transform: uppercase;
+  }
 }
 
 /* half desktop */

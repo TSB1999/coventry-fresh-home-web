@@ -24,16 +24,7 @@ export default function index() {
               flexDirection: "row",
             }}
           >
-            <div
-              style={{
-                flex: 1,
-                display: "grid",
-                // gridTemplateColumns: "repeat(auto-fit, minmax(2rem, 1fr))",
-                gridTemplateRows: "repeat(auto-fit, minmax(2rem, 1fr))",
-                gridGap: "1px",
-                backgroundColor: "#8cc540",
-              }}
-            >
+            <div className="left-side">
               <div className="contact-panel">
                 <h2>
                   <i class="fas fa-envelope-open-text fa-3x"></i>
@@ -59,7 +50,7 @@ export default function index() {
                 <h5>The Midlands</h5>
               </div>
             </div>
-            <div style={{ display: "flex", flex: 4, flexDirection: "column" }}>
+            <div className="right-side">
               <div className="contact-flex-container">
                 <div
                   className="contact-column-1"

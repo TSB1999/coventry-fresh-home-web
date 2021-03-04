@@ -197,7 +197,7 @@ export default function Index() {
                 className="cleaning-left"
                 style={{
                   borderRadius: "0",
-                  borderTop : 'none'
+                  borderTop: "none",
                 }}
               ></div>
               <div className="cleaning-right">
@@ -209,7 +209,7 @@ export default function Index() {
                 >
                   <Form
                     className="form-element-bookings"
-                    style = {{borderRadius : '0'}}
+                    style={{ borderRadius: "0" }}
                     onSubmit={sendCleaningEmail}
                   >
                     <Form.Group
@@ -493,12 +493,33 @@ export default function Index() {
                         <button
                           type="submit"
                           class="btn btn-primary button-home-styles"
+                          style={{
+                            displaywidth: "100%",
+                            fontWeight: "bold",
+                            backgroundColor: "transparent",
+                            fontSize: 13,
+                            color: "#fff",
+                            borderColor: "#fff",
+                            borderWidth: "2px",
+                            border: "0.17rem solid #fff",
+                          }}
                         >
                           HOME
                         </button>
                       </Link>
 
-                      <button class="btn btn-primary button-submit-styles">
+                      <button
+                        class="btn btn-primary button-submit-styles"
+                        style={{
+                          width: "100%",
+                          fontWeight: "bold",
+                          backgroundColor: "#fff",
+                          color: "#8bc343",
+                          fontSize: 13,
+                          borderWidth: "0px",
+                          border: "0.17rem solid #fff",
+                        }}
+                      >
                         SUBMIT
                       </button>
                     </div>
@@ -536,7 +557,10 @@ export default function Index() {
                 flexDirection: "row",
               }}
             >
-              <div className="garden-left" style = {{borderRadius : "0", borderTop : 'none'}}></div>
+              <div
+                className="garden-left"
+                style={{ borderRadius: "0", borderTop: "none" }}
+              ></div>
               <div className="garden-right">
                 <div
                   className="screen-container row"
@@ -546,7 +570,7 @@ export default function Index() {
                 >
                   <Form
                     className="form-element-bookings"
-                    style = {{borderRadius : '0', background : 'transparent'}}
+                    style={{ borderRadius: "0", background: "transparent" }}
                     onSubmit={sendGardeningEmail}
                   >
                     <Form.Group
@@ -740,12 +764,33 @@ export default function Index() {
                         <button
                           type="submit"
                           class="btn btn-primary button-home-styles"
+                          style={{
+                            width: "100%",
+                            fontWeight: "bold",
+                            backgroundColor: "transparent",
+                            fontSize: 13,
+                            color: "#fff",
+                            borderColor: "#fff",
+                            borderWidth: "2px",
+                            border: "0.17rem solid #fff",
+                          }}
                         >
-                          HOME
+                          BACK
                         </button>
                       </Link>
 
-                      <button class="btn btn-primary button-submit-styles">
+                      <button
+                        class="btn btn-primary button-submit-styles"
+                        style={{
+                          width: "100%",
+                          fontWeight: "bold",
+                          backgroundColor: "#fff",
+                          color: "#8bc343",
+                          fontSize: 13,
+                          borderWidth: "0px",
+                          border: "0.17rem solid #fff",
+                        }}
+                      >
                         SUBMIT
                       </button>
                     </div>
@@ -756,6 +801,15 @@ export default function Index() {
             </div>
           </div>
         </div>
+
+        <div
+          className=""
+          style={{
+            flex: 1,
+            backgroundColor: "#3ab34a",
+            padding: "1rem",
+          }}
+        ></div>
       </div>
     </div>
   );
