@@ -52,7 +52,7 @@ export default function Navbar() {
               <i class="fas fa-calendar-week fa-2x"></i>
             </Link>
           </SLink>
-          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>enquiries</h4>
+          <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>bookings</h4>
         </div>
         <div>
           <Link to="/gallery" style={{ color: "#fff" }}>

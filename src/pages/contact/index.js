@@ -9,98 +9,57 @@ export default function index() {
     <div>
       <Navbar />
 
-      <div
-        className="screen gallery-landing"
-        style={{ height: "91vh", backgroundColor: "#3ab34a" }}
-      >
+      <div className="screen gallery-landing" style={{ height: "91vh" }}>
         <div
           className="screen-container column"
           style={{
             height: "91vh",
-            flexDirection: "row",
-            // backgroundColor: "purple",
           }}
         >
           <div
             style={{
+              display: "flex",
               flex: 1,
-              display: "grid",
-              backgroundColor: "#3ab34a",
+              margin: "-2vh",
+              flexDirection: "row",
             }}
           >
             <div
               style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                flex: 1,
+                display: "grid",
+                // gridTemplateColumns: "repeat(auto-fit, minmax(2rem, 1fr))",
+                gridTemplateRows: "repeat(auto-fit, minmax(2rem, 1fr))",
+                gridGap: "1px",
+                backgroundColor: "#8cc540",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  flex: 1,
-                  // backgroundColor: "red",
-                  justifyContent: "center",
-                }}
-              >
-                <i class="fab fa-instagram fa-2x"></i>
-              </div>
-              <div style={{ flex: 5 }}>
-                <h5>coventryfreshhome</h5>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  flex: 1,
-                  // backgroundColor: "red",
-                  justifyContent: "center",
-                }}
-              >
-                <i class="fas fa-envelope-open-text fa-2x"></i>
-              </div>
-              <div style={{ flex: 5 }}>
+              <div className="contact-panel">
+                <h2>
+                  <i class="fas fa-envelope-open-text fa-3x"></i>
+                </h2>
                 <h5>coventryfreshhome@gmail.com</h5>
               </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  flex: 1,
-                  // backgroundColor: "red",
-                  justifyContent: "center",
-                }}
-              >
-                <i class="fas fa-phone fa-2x"></i>
-              </div>
-              <div style={{ flex: 5 }}>
+              <div className="contact-panel">
+                <h2>
+                  <i class="fas fa-phone fa-3x"></i>
+                </h2>
                 <h5>+44 (0) 737 987 5115</h5>
               </div>
+              <div className="contact-panel">
+                <h2>
+                  <i class="fab fa-instagram fa-3x"></i>
+                </h2>
+                <h5>coventryfreshhome</h5>
+              </div>
+              <div className="contact-panel">
+                <h2>
+                  <i class="fas fa-map-marker-alt fa-3x"></i>
+                </h2>
+                <h5>The Midlands</h5>
+              </div>
             </div>
-          </div>
-          <div style={{ display: "flex", flex: 4 }}>
-            <div
-              style={{
-                display: "flex",
-                flex: 1,
-                margin: "-2vh",
-                flexDirection: "column",
-              }}
-            >
+            <div style={{ display: "flex", flex: 4, flexDirection: "column" }}>
               <div className="contact-flex-container">
                 <div
                   className="contact-column-1"
