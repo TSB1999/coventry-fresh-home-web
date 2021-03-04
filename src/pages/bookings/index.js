@@ -212,6 +212,10 @@ export default function Index() {
                     style={{ borderRadius: "0" }}
                     onSubmit={sendCleaningEmail}
                   >
+                    <div className="form-header">
+                      <h1>Cleaning</h1>
+                      <h5>sumbit the form for your same day quote</h5>
+                    </div>
                     <Form.Group
                       controlId="exampleForm.ControlInput10"
                       className="form-group space"
@@ -573,6 +577,10 @@ export default function Index() {
                     style={{ borderRadius: "0", background: "transparent" }}
                     onSubmit={sendGardeningEmail}
                   >
+                    <div className="form-header">
+                      <h1>Gardening</h1>
+                      <h5>sumbit the form for your same day quote</h5>
+                    </div>
                     <Form.Group
                       controlId="exampleForm.ControlInput11"
                       className="form-group space"

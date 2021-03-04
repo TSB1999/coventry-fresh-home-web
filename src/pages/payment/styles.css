@@ -1,0 +1,9 @@
+.payment-container {
+  /* display: flex; */
+  /* flex: 1; */
+  /* margin: 0vh 0vh; */
+  background-color: #8bc343;
+  display: flex;
+  flex: 1;
+  margin: -2vh;
+}
