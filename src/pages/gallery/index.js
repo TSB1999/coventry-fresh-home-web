@@ -30,7 +30,7 @@ import garden8 from "./images/gardens/unnamed.jpg";
 
 export default function Gallery() {
   return (
-    <div className="home-container">
+    <div className="home-container" id="gallery-landing">
       <Navbar />
       <div className="screen gallery-landing" style={{ height: "91vh" }}>
         <div
@@ -207,7 +207,10 @@ export default function Gallery() {
       </div>
 
       <div className="screen gallery-gardening" id="gallery-gardening">
-        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
+        <div
+          className="screen-container column"
+          style={{ borderBottom: "0.15rem solid green" }}
+        >
           <div className="gardening-header">
             <h2>Gardening</h2>
           </div>
@@ -311,11 +314,100 @@ export default function Gallery() {
               </div>
             </div>
           </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <Link
+              activeClass="active"
+              to="gallery-landing"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                disabled
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#fff",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                UP
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="gallery-landing"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                TOP
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="gallery-kitchen"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                KITCHENS
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="screen gallery-kitchen" id="gallery-kitchen">
-        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
+        <div
+          className="screen-container column"
+          style={{ borderBottom: "0.15rem solid green" }}
+        >
           <div className="gardening-header">
             <h2>Kitchens</h2>
           </div>
@@ -371,11 +463,99 @@ export default function Gallery() {
               </div>
             </div>
           </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <Link
+              activeClass="active"
+              to="gallery-gardening"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                GARDENS
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="gallery-landing"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                TOP
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="gallery-bathroom"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                BATHROOMS
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="screen gallery-bathroom" id="gallery-bathroom">
-        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
+        <div
+          className="screen-container column"
+          style={{ borderBottom: "0.15rem solid green" }}
+        >
           <div className="gardening-header">
             <h2>Bathrooms</h2>
           </div>
@@ -407,11 +587,99 @@ export default function Gallery() {
               </div>
             </div>
           </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <Link
+              activeClass="active"
+              to="gallery-kitchen"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                KITCHENS
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="gallery-landing"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                TOP
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="gallery-bedroom"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                BEDROOMS
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="screen gallery-bedroom" id="gallery-bedroom">
-        <div className="screen-container column" style = {{borderBottom: "0.15rem solid green"}}>
+        <div
+          className="screen-container column"
+          style={{ borderBottom: "0.15rem solid green" }}
+        >
           <div className="gardening-header">
             <h2>Bedrooms</h2>
           </div>
@@ -442,6 +710,92 @@ export default function Gallery() {
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <Link
+              activeClass="active"
+              to="gallery-bathroom"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                BATHROOMS
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="gallery-landing"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#3ab34a",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                TOP
+              </button>
+            </Link>
+            <Link
+              activeClass="active"
+              to="home-landing"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={true}
+              style={{ width: "100%" }}
+            >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                disabled
+                style={{
+                  width: "100%",
+                  fontWeight: "bold",
+                  backgroundColor: "#fff",
+                  fontSize: 13,
+                  color: "#fff",
+                  border: "0.17rem solid #3ab34a",
+                }}
+              >
+                DOWN
+              </button>
+            </Link>
           </div>
         </div>
       </div>

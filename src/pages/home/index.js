@@ -153,7 +153,9 @@ export default function Home() {
                         className="landing-button"
                         style={{
                           textShadow: "0.1rem 0.1rem #292929",
-                          borderRadius: "0.3rem",
+                          // borderRadius: "0.3rem",
+                          borderTopLeftRadius: "0.3rem",
+                          borderBottomLeftRadius: "0.3rem",
                           border: "0.17rem  solid #fff",
                         }}
                       >
@@ -179,7 +181,7 @@ export default function Home() {
                           backgroundColor: "#fff",
                           color: "#292929",
                           // textShadow: "0.1rem 0.1rem #292929",
-                          borderRadius: "0.3rem",
+                          // borderRadius: "0.3rem",
                           border: "0.17rem  solid #fff",
                         }}
                       >
@@ -205,7 +207,9 @@ export default function Home() {
                           backgroundColor: "#8bc343",
                           color: "#fff",
                           textShadow: "0.1rem 0.1rem #292929",
-                          borderRadius: "0.3rem",
+                          // borderRadius: "0.3rem",
+                          borderTopRightRadius: "0.3rem",
+                          borderBottomRightRadius: "0.3rem",
                           border: "0.17rem  solid #fff",
                         }}
                       >
@@ -666,6 +670,7 @@ export default function Home() {
                               borderColor: "#fff",
                               borderWidth: "2px",
                               border: "0.17rem solid #fff",
+                              borderRadius: "0",
                             }}
                           >
                             BACK
@@ -682,6 +687,7 @@ export default function Home() {
                             fontSize: 13,
                             borderWidth: "0px",
                             border: "0.17rem solid #fff",
+                            borderRadius: "0",
                           }}
                         >
                           SUBMIT
@@ -927,6 +933,7 @@ export default function Home() {
                               borderColor: "#fff",
                               borderWidth: "2px",
                               border: "0.17rem solid #fff",
+                              borderRadius: "0",
                             }}
                           >
                             BACK
@@ -943,6 +950,7 @@ export default function Home() {
                             fontSize: 13,
                             borderWidth: "0px",
                             border: "0.17rem solid #fff",
+                            borderRadius: "0",
                           }}
                         >
                           SUBMIT

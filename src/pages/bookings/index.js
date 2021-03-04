@@ -481,7 +481,7 @@ export default function Index() {
                     <div className="button-wrapper">
                       <Link
                         activeClass="active"
-                        to="home-landing"
+                        to="book-land"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
@@ -504,7 +504,7 @@ export default function Index() {
                             border: "0.17rem solid #fff",
                           }}
                         >
-                          HOME
+                          BACK
                         </button>
                       </Link>
 
@@ -752,7 +752,7 @@ export default function Index() {
                     <div className="button-wrapper">
                       <Link
                         activeClass="active"
-                        to="home-landing"
+                        to="book-land"
                         spy={true}
                         smooth={true}
                         hashSpy={true}
