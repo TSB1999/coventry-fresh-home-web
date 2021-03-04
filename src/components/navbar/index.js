@@ -62,7 +62,7 @@ export default function Navbar() {
         </div>
         <div>
           <Link to="/contact" style={{ color: "#fff" }}>
-            <i class="fas fa-info fa-2x"></i>
+            <i class="fas fa-info-circle fa-2x"></i>
           </Link>
           <h4 style={{ marginTop: "0.7rem", fontWeight: 900 }}>info</h4>
         </div>

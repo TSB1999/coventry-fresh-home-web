@@ -163,7 +163,7 @@ export default function Home() {
                       </button>
                     </Link>
                     <Link
-                      className="scroll-link"
+                      className="scroll-link info-button"
                       activeClass="active"
                       to="info-page"
                       spy={true}
@@ -385,14 +385,14 @@ export default function Home() {
             >
               <div className="cleaning-left"></div>
               <div className="cleaning-right" style={{ flexDirection: "row" }}>
-                <div style={{ display: "flex", flex: 2, alignItems: "center" }}>
+                <div className="right-inner-wrapper">
                   <Form
                     className="form-element"
                     onSubmit={(e) => sendCleaningEmail(e)}
                   >
                     <div className="form-header">
-                      <h1>Same Day Quote</h1>
-                      <h5></h5>
+                      <h1>Cleaning</h1>
+                      <h5>sumbit the form for your same day quote</h5>
                     </div>
                     <Form.Group
                       controlId="exampleForm.ControlInput1"
@@ -420,7 +420,12 @@ export default function Home() {
                       controlId="exampleForm.ControlSelect1"
                       style={{ display: "flex", flexDirection: "column" }}
                     >
-                      <Form.Label className="form-label">select</Form.Label>
+                      <Form.Label
+                        className="form-label select-display"
+                        style={{ color: "#8bc343" }}
+                      >
+                        select
+                      </Form.Label>
                       <div className="checkbox-div">
                         <Form.Check
                           onChange={() =>
@@ -700,14 +705,7 @@ export default function Home() {
                 <div className="cleaning-right-right"></div>
               </div>
             </div>
-            <div
-              className="workflow"
-              style={{
-                flex: 0.7,
-                backgroundColor: "#8bc343",
-                padding: "1rem",
-              }}
-            ></div>
+            <div className="workflow workflow-bk"></div>
           </div>
         </div>
       </div>
@@ -732,14 +730,14 @@ export default function Home() {
             >
               <div className="garden-left"></div>
               <div className="garden-right" style={{ flexDirection: "row" }}>
-                <div style={{ display: "flex", flex: 2, alignItems: "center" }}>
+                <div className="right-inner-wrapper">
                   <Form
                     className="form-element"
                     onSubmit={(e) => sendGardeningEmail(e)}
                   >
                     <div className="form-header">
-                      <h1>Same Day Quote</h1>
-                      {/* <h5>sumbit the form for your same day quote</h5> */}
+                      <h1>Gardening</h1>
+                      <h5>sumbit the form for your same day quote</h5>
                     </div>
                     <Form.Group
                       controlId="exampleForm.ControlInput2"
@@ -768,7 +766,9 @@ export default function Home() {
                       controlId="exampleForm.ControlSelect2"
                       style={{ display: "flex", flexDirection: "column" }}
                     >
-                      <Form.Label className="form-label">select</Form.Label>
+                      <Form.Label className="form-label select-display">
+                        select
+                      </Form.Label>
                       <div className="checkbox-div">
                         <Form.Check
                           onChange={() =>

@@ -283,6 +283,12 @@
   padding: 1rem;
 }
 
+.workflow-bk {
+  flex: 0.7;
+  background-color: #8bc343;
+  padding: 1rem;
+}
+
 .gardening {
   background-color: #8bc343;
 }
@@ -296,9 +302,9 @@
   background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  border-top-right-radius: 3rem;
+  /* border-top-right-radius: 3rem; */
   /* border-bottom-right-radius: 3rem; */
-  border-top: 0.3rem solid #3ab34a;
+  /* border-top: 0.3rem solid #3ab34a; */
   border-right: 0.3rem solid #3ab34a;
   /* border-bottom: 0.2rem solid #3ab34a; */
 }
@@ -314,9 +320,9 @@
 .garden-right-right {
   flex: 2;
   /* background-color: red; */
-  border-top-left-radius: 3rem;
+  /* border-top-left-radius: 3rem; */
   /* border-bottom-left-radius: 3rem; */
-  border-top: 0.3rem solid #3ab34a;
+  /* border-top: 0.3rem solid #3ab34a; */
   border-left: 0.3rem solid #3ab34a;
   /* border-bottom: 0.2rem solid #3ab34a; */
   background-image: url(./images/markus-spiske-sFydXGrt5OA-unsplash.jpg);
@@ -345,16 +351,12 @@
 
 .form-element {
   display: flex;
+  height: 100%;
+  /* align-items: center; */
+  justify-content: center;
   flex-direction: column;
   color: #fff;
   font-weight: bold;
-  text-transform: uppercase;
-  /* background: rgb(58, 179, 74);
-  background: linear-gradient(
-    186deg,
-    rgba(58, 179, 74, 1) 0%,
-    rgba(139, 195, 67, 1) 100%
-  ); */
   background: transparent;
   opacity: 1;
   padding: 0 5rem 0 5rem;
@@ -365,11 +367,16 @@
 
 .checkbox-div {
   margin-bottom: 0.8rem;
+  /* background-color: red; */
+  padding-left: 3.5rem;
+  /* border: 1px solid #3ab34a; */
+  /* border-radius: 5px; */
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  /* background-color: purple; */
 }
 
 .form-label {
@@ -393,13 +400,13 @@
 .form-header {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 0.5;
   align-items: center;
   justify-content: center;
-  /* background-color: #fff; */
+  /* background-color: yellow; */
   color: #fff;
   opacity: 0.9;
-  /* border-bottom: 0.2rem solid #3ab34a; */
+  border-bottom: 0.15rem solid #fff;
 }
 
 .form-header > h1 {
@@ -410,16 +417,17 @@
   padding: 0.35rem;
   border-radius: 0.2rem;
 
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 .form-header > h5 {
   margin-top: 0px;
-  color: #3ab34a;
+  color: whitesmoke;
   font-weight: 550;
   font-size: 1rem;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: lowercase;
+  font-weight: bold;
 }
 
 .form-body {
@@ -461,7 +469,7 @@
   flex-direction: column;
   flex: 0.5;
   border-top-right-radius: 3rem;
-  border-bottom-right-radius: 3rem;
+  /* border-bottom-right-radius: 3rem; */
   justify-content: center;
   background-color: red;
   background-image: url(./images/anton-SnKfmC1I9fU-unsplash.jpg);
@@ -469,7 +477,7 @@
   background-size: cover;
   border-top: 0.3rem solid #3ab34a;
   border-right: 0.3rem solid #3ab34a;
-  border-bottom: 0.3rem solid #3ab34a;
+  /* border-bottom: 0.3rem solid #3ab34a; */
 }
 
 .cleaning-right {
@@ -480,14 +488,20 @@
   justify-content: center;
 }
 
+.right-inner-wrapper {
+  display: flex;
+  flex: 2;
+  align-items: flex-start;
+}
+
 .cleaning-right-right {
   flex: 2;
   /* background-color: red; */
   border-top-left-radius: 3rem;
-  border-bottom-left-radius: 3rem;
+  /* border-bottom-left-radius: 3rem; */
   border-top: 0.3rem solid #fff;
   border-left: 0.3rem solid #fff;
-  border-bottom: 0.3rem solid #fff;
+  /* border-bottom: 0.3rem solid #fff; */
   background-image: url(./images/austrian-national-library-t5qnrCVkUz8-unsplash.jpg);
   background-position: center;
   background-size: cover;
@@ -560,10 +574,10 @@
 
     /* font-size: 2rem; */
     font-weight: bold;
-    background-color: transparent;
-    /* color: #8bc343; */
-    padding: 0rem;
-    border-radius: 0rem;
+    /* background-color: transparent; */
+    color: #8bc343;
+    /* padding: 0rem; */
+    /* border-radius: 0rem; */
 
     text-transform: uppercase;
   }
@@ -596,11 +610,17 @@
   .form-element {
     padding: 0 2rem 0 2rem;
   }
+  .form-header {
+    margin-bottom: 1.5rem;
+  }
+  /* .form-header > h5 {
+    color: #8bc343;
+  } */
   .form-checkbox-text {
     font-size: 0.8rem;
   }
   .checkbox-div {
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
   }
   .form-label {
     font-size: 0.8rem;
@@ -627,11 +647,39 @@
     background-color: transparent;
     border-radius: 0;
   }
-
   .button-offset-g {
     padding: 0rem;
     background-color: transparent;
     border-radius: 0;
+  }
+  .right-inner-wrapper {
+    align-items: unset;
+  }
+  .info-button {
+    display: none;
+  }
+  .cleaning {
+    background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg);
+    background-position: 80% 87%;
+    background-size: cover;
+    /* clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%); */
+  }
+  .gardening {
+    background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg);
+    background-position: 80% 87%;
+    background-size: cover;
+    /* clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%); */
+  }
+  .select-display {
+    display: none;
+  }
+  .cleaning-left {
+    border-top: none;
+    border-right: none;
+  }
+  .garden-left {
+    border-top: none;
+    border-right: none;
   }
 }
 
@@ -647,7 +695,7 @@
     font-size: 0.7rem;
   }
   .checkbox-div {
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
   }
   .form-label {
     font-size: 0.8rem;

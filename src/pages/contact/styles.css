@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1px;
-  border-bottom: 0.1rem solid #3ab34a;
+  border-bottom: 0.15rem solid #3ab34a;
 }
 
 .contact-panel > h2 {
@@ -20,7 +20,7 @@
   text-shadow: 0.2rem 0.2rem #3ab34a;
 }
 .contact-panel > h2 > i:hover {
-  color: black;
+  color: #292929;
 }
 
 .contact-panel > h5 {
@@ -167,14 +167,14 @@
     flex: 0;
   }
   .contact-column-1-1 {
-    border-bottom: 0.1rem solid #3ab34a;
-    border-right: 0.2rem solid #3ab34a;
+    border-bottom: 0rem solid #3ab34a;
+    border-right: 0rem solid #3ab34a;
   }
   .contact-column-1-2 {
-    border-right: 0.2rem solid #3ab34a;
-    border-top: 0.1rem solid #3ab34a;
+    border-right: 0rem solid #3ab34a;
+    border-top: 0rem solid #3ab34a;
   }
   .contact-column-2-1 {
-    border-right: 0.2rem solid #3ab34a;
+    border-right: 0rem solid #3ab34a;
   }
 }
