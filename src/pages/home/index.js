@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar";
 
 import Form from "react-bootstrap/Form";
 import Carousel from "react-bootstrap/Carousel";
+import Spinner from "react-bootstrap/Spinner";
 
 import { Link } from "react-scroll";
 import emailjs from "emailjs-com";
@@ -46,6 +47,9 @@ export default function Home() {
     window_clean: false,
   });
 
+  const [cleanLoading, setCleanLoading] = useState(false);
+  const [gardenLoading, setGardenLoading] = useState(false);
+
   useEffect(() => {
     console.log(cleaningCheckState);
   }, [cleaningCheckState]);
@@ -53,7 +57,7 @@ export default function Home() {
   function sendGardeningEmail(e) {
     e.preventDefault();
     console.log(e.target, "vbreou");
-
+    setGardenLoading(true);
     emailjs
       .sendForm(
         "gmail",
@@ -64,7 +68,7 @@ export default function Home() {
       .then(
         (result) => {
           console.log(result.text);
-          // loading done
+          setGardenLoading(false);
           // alert and scroll to top
         },
         (error) => {
@@ -76,7 +80,7 @@ export default function Home() {
   function sendCleaningEmail(e) {
     e.preventDefault();
     console.log(e.target, "vbreo1u");
-
+    setCleanLoading(true);
     emailjs
       .sendForm(
         "gmail",
@@ -87,7 +91,7 @@ export default function Home() {
       .then(
         (result) => {
           console.log(result.text);
-          // loading done
+          setCleanLoading(false);
           // alert and scroll to top
         },
         (error) => {
@@ -226,6 +230,7 @@ export default function Home() {
                   className="panel__header"
                   style={{
                     backgroundImage: `url(${customer_service})`,
+                    backgroundColor: "teal",
                   }}
                 ></div>
                 <div className="panel__body">
@@ -241,6 +246,7 @@ export default function Home() {
                   className="panel__header"
                   style={{
                     backgroundImage: `url(${health_safety})`,
+                    backgroundColor: "green",
                   }}
                 ></div>
                 <div className="panel__body">
@@ -256,6 +262,7 @@ export default function Home() {
                   className="panel__header"
                   style={{
                     backgroundImage: `url(${reliable})`,
+                    backgroundColor: "orange",
                   }}
                 ></div>
                 <div className="panel__body">
@@ -272,6 +279,7 @@ export default function Home() {
                   style={{
                     backgroundImage: `url(${diligence})`,
                     backgroundPosition: "50% 20%",
+                    backgroundColor: "blue",
                   }}
                 ></div>
                 <div className="panel__body">
@@ -702,7 +710,12 @@ export default function Home() {
                             borderRadius: "0",
                           }}
                         >
-                          SUBMIT
+                          {cleanLoading && (
+                            <Spinner animation="border" role="status" style = {{height : '1rem', width : '1rem'}}>
+                              <span className="sr-only">Loading...</span>
+                            </Spinner>
+                          )}
+                          {!cleanLoading && <text>SUBMIT</text>}
                         </button>
                       </div>
                     </div>
@@ -968,7 +981,12 @@ export default function Home() {
                             borderRadius: "0",
                           }}
                         >
-                          SUBMIT
+                          {gardenLoading && (
+                            <Spinner animation="border" role="status" style = {{height : '1rem', width : '1rem'}}>
+                              <span className="sr-only">Loading...</span>
+                            </Spinner>
+                          )}
+                          {!gardenLoading && <text>SUBMIT</text>}
                         </button>
                       </div>
                     </div>
