@@ -3,7 +3,10 @@ import "./styles.css";
 
 import Navbar from "../../components/navbar";
 
+import * as Scroll from "react-scroll";
 import { Link } from "react-scroll";
+import emailjs from "emailjs-com";
+
 import Spinner from "react-bootstrap/Spinner";
 import Form from "react-bootstrap/Form";
 import StripeCheckout from "react-stripe-checkout";
@@ -12,8 +15,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Calendar from "react-calendar";
-
-import emailjs from "emailjs-com";
 
 toast.configure();
 
@@ -49,9 +50,8 @@ export default function Index() {
     window_clean: false,
   });
 
-  // useEffect(() => {
-  //   console.log(value);
-  // }, [value]);
+  const [cleanLoading, setCleanLoading] = useState(false);
+  const [gardenLoading, setGardenLoading] = useState(false);
 
   useEffect(() => {
     console.log(cleaningCheckState);
@@ -60,7 +60,7 @@ export default function Index() {
   function sendGardeningEmail(e) {
     e.preventDefault();
     console.log(e.target, "vbreou");
-
+    setGardenLoading(true);
     emailjs
       .sendForm(
         "gmail",
@@ -72,8 +72,8 @@ export default function Index() {
       .then(
         (result) => {
           console.log(result.text);
-          // loading done
-          // alert and scroll to top
+          setGardenLoading(false);
+          Scroll.animateScroll.scrollToTop();
         },
         (error) => {
           console.log(error.text);
@@ -84,7 +84,7 @@ export default function Index() {
   function sendCleaningEmail(e) {
     e.preventDefault();
     console.log(e.target, "vbreo1u");
-
+    setCleanLoading(true);
     emailjs
       .sendForm(
         "gmail",
@@ -96,8 +96,8 @@ export default function Index() {
       .then(
         (result) => {
           console.log(result.text);
-          // loading done
-          // alert and scroll to top
+          setCleanLoading(false);
+          Scroll.animateScroll.scrollToTop();
         },
         (error) => {
           console.log(error.text);
@@ -528,7 +528,16 @@ export default function Index() {
                           border: "0.17rem solid #fff",
                         }}
                       >
-                        SUBMIT
+                        {cleanLoading && (
+                          <Spinner
+                            animation="border"
+                            role="status"
+                            style={{ height: "1rem", width: "1rem" }}
+                          >
+                            <span className="sr-only">Loading...</span>
+                          </Spinner>
+                        )}
+                        {!cleanLoading && <text>SUBMIT</text>}
                       </button>
                     </div>
                     {/* </div> */}
@@ -803,7 +812,16 @@ export default function Index() {
                           border: "0.17rem solid #fff",
                         }}
                       >
-                        SUBMIT
+                        {gardenLoading && (
+                          <Spinner
+                            animation="border"
+                            role="status"
+                            style={{ height: "1rem", width: "1rem" }}
+                          >
+                            <span className="sr-only">Loading...</span>
+                          </Spinner>
+                        )}
+                        {!gardenLoading && <text>SUBMIT</text>}
                       </button>
                     </div>
                     {/* </div> */}

@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Carousel from "react-bootstrap/Carousel";
 import Spinner from "react-bootstrap/Spinner";
 
+import * as Scroll from "react-scroll";
 import { Link } from "react-scroll";
 import emailjs from "emailjs-com";
 
@@ -69,6 +70,7 @@ export default function Home() {
         (result) => {
           console.log(result.text);
           setGardenLoading(false);
+          Scroll.animateScroll.scrollToTop();
           // alert and scroll to top
         },
         (error) => {
@@ -711,7 +713,11 @@ export default function Home() {
                           }}
                         >
                           {cleanLoading && (
-                            <Spinner animation="border" role="status" style = {{height : '1rem', width : '1rem'}}>
+                            <Spinner
+                              animation="border"
+                              role="status"
+                              style={{ height: "1rem", width: "1rem" }}
+                            >
                               <span className="sr-only">Loading...</span>
                             </Spinner>
                           )}
@@ -982,7 +988,11 @@ export default function Home() {
                           }}
                         >
                           {gardenLoading && (
-                            <Spinner animation="border" role="status" style = {{height : '1rem', width : '1rem'}}>
+                            <Spinner
+                              animation="border"
+                              role="status"
+                              style={{ height: "1rem", width: "1rem" }}
+                            >
                               <span className="sr-only">Loading...</span>
                             </Spinner>
                           )}
