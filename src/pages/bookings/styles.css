@@ -1,3 +1,53 @@
+.bookings-garden-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* order: 0; */
+  justify-content: center;
+
+  background: rgb(58, 179, 74);
+  background: linear-gradient(
+    to bottom,
+    #3ab34a,
+    #4db648,
+    #5eb946,
+    #6cbc45,
+    #7abf44,
+    #7abf44,
+    #7abf44,
+    #7abf44,
+    #6cbc45,
+    #5eb946,
+    #4db648,
+    #3ab34a
+  );
+}
+
+.bookings-cleaning-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* order: 0; */
+  justify-content: center;
+
+  background: rgb(58, 179, 74);
+  background: linear-gradient(
+    to bottom,
+    #3ab34a,
+    #4db648,
+    #5eb946,
+    #6cbc45,
+    #7abf44,
+    #7abf44,
+    #7abf44,
+    #7abf44,
+    #6cbc45,
+    #5eb946,
+    #4db648,
+    #3ab34a
+  );
+}
+
 .bookings-landing {
   /* background-image: url(./images/thomas-heintz-0tgMnMIYQ9Y-unsplash.jpg); */
   background-position: center;
@@ -5,9 +55,6 @@
 }
 
 .bookings-options-container {
-  /* display: flex; */
-  /* flex: 1; */
-  /* margin: 0vh 0vh; */
   background-color: red;
 
   display: flex;
@@ -19,6 +66,21 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+.cleaning-bookings {
+  background-color: #3ab34a;
+  /* background-image: url(./images/samantha-gades-BlIhVfXbi9s-unsplash.jpeg);
+  background-position: 80% 87%;
+  background-size: cover; */
+  /* clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%); */
+}
+
+.gardening-bookings {
+  /* background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg);
+  background-position: 80% 87%;
+  background-size: cover; */
+  /* clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%); */
 }
 
 .cleaning-panel {
@@ -100,12 +162,6 @@
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  /* background: rgb(58, 179, 74);
-  background: linear-gradient(
-    186deg,
-    rgba(58, 179, 74, 1) 0%,
-    rgba(139, 195, 67, 1) 100%
-  ); */
   background: transparent;
   opacity: 1;
   padding: 0 5rem 0 5rem;
@@ -181,7 +237,7 @@
 }
 
 .bookings-gardening {
-  background-image: url(./images/andrej-lisakov-zYUn4R37o_U-unsplash.jpg);
+  /* background-image: url(./images/andrej-lisakov-zYUn4R37o_U-unsplash.jpg); */
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -335,6 +391,7 @@
   }
 }
 
+/* iphone plus */
 @media (max-width: 420px) {
   .form-element-bookings {
     padding: 0 2rem 0 2rem;
@@ -342,13 +399,20 @@
   .space {
     margin-top: 1rem;
   }
+  .bookings-cleaning {
+    /* bookings-form */
+    height: 113vh;
+  }
+  .bookings-gardening {
+    height: 113vh;
+  }
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .bookings-cleaning {
     height: 135vh;
   }
   .bookings-gardening {
     height: 120vh;
   }
-}
+} */

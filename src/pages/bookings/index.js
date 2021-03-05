@@ -189,18 +189,20 @@ export default function Index() {
               style={{
                 display: "flex",
                 flex: 2,
-                backgroundColor: "#8bc343",
+                backgroundColor: "#3ab34a",
                 flexDirection: "row",
               }}
             >
               <div
                 className="cleaning-left"
                 style={{
-                  borderRadius: "0",
+                  // borderRadius: "0",
+                  borderTopRightRadius: "3rem",
+                  borderBottomRightRadius: "0",
                   borderTop: "none",
                 }}
               ></div>
-              <div className="cleaning-right">
+              <div className="bookings-cleaning-right">
                 <div
                   className="screen-container row"
                   style={{
@@ -209,7 +211,9 @@ export default function Index() {
                 >
                   <Form
                     className="form-element-bookings"
-                    style={{ borderRadius: "0" }}
+                    style={{
+                      borderRadius: "0",
+                    }}
                     onSubmit={sendCleaningEmail}
                   >
                     <div className="form-header">
@@ -218,7 +222,7 @@ export default function Index() {
                     </div>
                     <Form.Group
                       controlId="exampleForm.ControlInput10"
-                      className="form-group space"
+                      className="form-group"
                     >
                       <Form.Label className="form-label">name</Form.Label>
                       <Form.Control
@@ -565,7 +569,7 @@ export default function Index() {
                 className="garden-left"
                 style={{ borderRadius: "0", borderTop: "none" }}
               ></div>
-              <div className="garden-right">
+              <div className="bookings-garden-right">
                 <div
                   className="screen-container row"
                   style={{
@@ -809,15 +813,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-
-        <div
-          className=""
-          style={{
-            flex: 1,
-            backgroundColor: "#3ab34a",
-            padding: "1rem",
-          }}
-        ></div>
       </div>
     </div>
   );

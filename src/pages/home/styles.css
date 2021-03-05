@@ -290,7 +290,7 @@
 }
 
 .gardening {
-  background-color: #8bc343;
+  /* background-color: #8bc343; */
 }
 
 .garden-left {
@@ -302,7 +302,7 @@
   background-image: url(./images/cdc-wz3ijPHvL54-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  /* border-top-right-radius: 3rem; */
+  border-top-right-radius: 3rem;
   /* border-bottom-right-radius: 3rem; */
   /* border-top: 0.3rem solid #3ab34a; */
   border-right: 0.3rem solid #3ab34a;
@@ -320,7 +320,7 @@
 .garden-right-right {
   flex: 2;
   /* background-color: red; */
-  /* border-top-left-radius: 3rem; */
+  border-top-left-radius: 3rem;
   /* border-bottom-left-radius: 3rem; */
   /* border-top: 0.3rem solid #3ab34a; */
   border-left: 0.3rem solid #3ab34a;
@@ -360,15 +360,16 @@
   background: transparent;
   opacity: 1;
   padding: 0 5rem 0 5rem;
-  margin: 0 2rem;
+  /* margin: 0 2rem; */
   /* border: 0.3rem solid #636c59;/ */
   border-radius: 0.5rem;
+  /* border: 2px solid black; */
 }
 
 .checkbox-div {
   margin-bottom: 0.8rem;
   /* background-color: red; */
-  padding-left: 3.5rem;
+  padding-left: 2rem;
   /* border: 1px solid #3ab34a; */
   /* border-radius: 5px; */
 }
@@ -382,6 +383,10 @@
 .form-label {
   margin-right: 2rem;
   padding-top: 2%;
+}
+
+.select-display {
+  display: none;
 }
 
 .form-control {
@@ -469,7 +474,7 @@
   flex-direction: column;
   flex: 0.5;
   border-top-right-radius: 3rem;
-  /* border-bottom-right-radius: 3rem; */
+  border-bottom-right-radius: 3rem;
   justify-content: center;
   background-color: red;
   background-image: url(./images/anton-SnKfmC1I9fU-unsplash.jpg);
@@ -498,10 +503,10 @@
   flex: 2;
   /* background-color: red; */
   border-top-left-radius: 3rem;
-  /* border-bottom-left-radius: 3rem; */
+  border-bottom-left-radius: 3rem;
   border-top: 0.3rem solid #fff;
   border-left: 0.3rem solid #fff;
-  /* border-bottom: 0.3rem solid #fff; */
+  border-bottom: 0.3rem solid #fff;
   background-image: url(./images/austrian-national-library-t5qnrCVkUz8-unsplash.jpg);
   background-position: center;
   background-size: cover;
@@ -603,6 +608,10 @@
   .gardening-button > div > .scroll-link > button {
     padding: 0.25rem 1.5rem;
   }
+  .form-element {
+    /* padding: 0 1rem 0 1rem; */
+    /* margin: 0 0rem; */
+  }
 }
 
 /* iphone plus */
@@ -620,7 +629,7 @@
     font-size: 0.8rem;
   }
   .checkbox-div {
-    /* margin-left: 1.5rem; */
+    padding-left: 0;
   }
   .form-label {
     font-size: 0.8rem;
@@ -681,6 +690,16 @@
     border-top: none;
     border-right: none;
   }
+  /* .cleaning-right {
+    background-image: url(./images/clay-banks-cEzMOp5FtV4-unsplash.jpg);
+    background-position: 80% 87%;
+    background-size: cover;
+  }
+  .garden-right {
+    background-image: url(./images/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg);
+    background-position: 80% 87%;
+    background-size: cover;
+  } */
 }
 
 /* iphone 6/7/8 */

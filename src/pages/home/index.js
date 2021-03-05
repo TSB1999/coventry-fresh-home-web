@@ -380,11 +380,21 @@ export default function Home() {
                 display: "flex",
                 flex: 2,
                 backgroundColor: "#8bc343",
+                background:
+                  "linear-gradient(180deg, rgba(139,195,67,1) 0%, rgba(58,179,74,1) 93%)",
                 flexDirection: "row",
               }}
             >
               <div className="cleaning-left"></div>
-              <div className="cleaning-right" style={{ flexDirection: "row" }}>
+              <div
+                className="cleaning-right"
+                style={{
+                  flexDirection: "row",
+                  background: "rgb(139,195,67)",
+                  background:
+                    "linear-gradient(180deg, rgba(139,195,67,1) 0%, rgba(58,179,74,1) 93%)",
+                }}
+              >
                 <div className="right-inner-wrapper">
                   <Form
                     className="form-element"
@@ -420,10 +430,7 @@ export default function Home() {
                       controlId="exampleForm.ControlSelect1"
                       style={{ display: "flex", flexDirection: "column" }}
                     >
-                      <Form.Label
-                        className="form-label select-display"
-                        style={{ color: "#8bc343" }}
-                      >
+                      <Form.Label className="form-label select-display">
                         select
                       </Form.Label>
                       <div className="checkbox-div">
@@ -435,7 +442,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Dish Washing"
+                          label="Dishes"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-1`}
                           className="form-checkbox-text"
@@ -448,7 +455,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Vacuumc Cleaning"
+                          label="Hoovering"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           className="form-checkbox-text"
@@ -461,7 +468,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Mopping & Sweeping"
+                          label="Mop / Sweep "
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-3`}
                           className="form-checkbox-text"
@@ -475,7 +482,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Emptying Bins"
+                          label="Bin empty"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-1`}
                           className="form-checkbox-text"
@@ -490,7 +497,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Surface Cleaning"
+                          label="Surface Clean"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           className="form-checkbox-text"
@@ -503,7 +510,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Mirror Cleaning"
+                          label="Mirror Clean"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           className="form-checkbox-text"
@@ -516,7 +523,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Oven Cleaning"
+                          label="Oven Clean"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           className="form-checkbox-text"
@@ -529,7 +536,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Fridge Cleaning"
+                          label="Fridge Clean"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           className="form-checkbox-text"
@@ -544,7 +551,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Cupboard Cleaning"
+                          label="Cupboard Clean"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           className="form-checkbox-text"
@@ -570,7 +577,7 @@ export default function Home() {
                             })
                           }
                           inline
-                          label="Folding Clothes"
+                          label="Clothe Folding"
                           type={"checkbox"}
                           id={`inline-${"checkbox"}-2`}
                           className="form-checkbox-text"
@@ -724,12 +731,20 @@ export default function Home() {
               style={{
                 display: "flex",
                 flex: 2,
-                backgroundColor: "#8bc343",
+                backgroundColor: "transparent",
                 flexDirection: "row",
               }}
             >
               <div className="garden-left"></div>
-              <div className="garden-right" style={{ flexDirection: "row" }}>
+              <div
+                className="garden-right"
+                style={{
+                  flexDirection: "row",
+                  background: "rgba(58,179,74,1)",
+                  background:
+                    "linear-gradient(180deg, rgba(58,179,74,1) 0%, rgba(139,195,67,1) 93%)",
+                }}
+              >
                 <div className="right-inner-wrapper">
                   <Form
                     className="form-element"
