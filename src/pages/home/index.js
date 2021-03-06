@@ -71,7 +71,6 @@ export default function Home() {
           console.log(result.text);
           setGardenLoading(false);
           Scroll.animateScroll.scrollToTop();
-          // alert and scroll to top
         },
         (error) => {
           console.log(error.text);
@@ -94,7 +93,7 @@ export default function Home() {
         (result) => {
           console.log(result.text);
           setCleanLoading(false);
-          // alert and scroll to top
+          Scroll.animateScroll.scrollToTop();
         },
         (error) => {
           console.log(error.text);

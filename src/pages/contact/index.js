@@ -35,7 +35,11 @@ export default function index() {
                 <h2>
                   <i class="fas fa-phone fa-3x"></i>
                 </h2>
-                <h5>+44 (0) 737 987 5115</h5>
+                <h5 href="tel:123-456-7890">
+                  <a href="tel:07379875115" style={{ color: "#fff" }}>
+                    +44 (0) 737 987 5115
+                  </a>
+                </h5>
               </div>
               <div className="contact-panel">
                 <h2>
