@@ -76,6 +76,7 @@ export default function Index() {
           Scroll.animateScroll.scrollToTop();
         },
         (error) => {
+          setGardenLoading(false);
           console.log(error.text);
         }
       );
@@ -97,9 +98,11 @@ export default function Index() {
         (result) => {
           console.log(result.text);
           setCleanLoading(false);
+          toast("Success! We'll e-mail you soon!", { type: "success" });
           Scroll.animateScroll.scrollToTop();
         },
         (error) => {
+          toast("Something went wrong... Try again", { type: "error" });
           console.log(error.text);
         }
       );

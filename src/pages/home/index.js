@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Navbar from "../../components/navbar";
 
 import Form from "react-bootstrap/Form";
@@ -70,10 +73,13 @@ export default function Home() {
         (result) => {
           console.log(result.text);
           setGardenLoading(false);
+          toast("Success! We'll be back today with a quote", { type: "success" });
           Scroll.animateScroll.scrollToTop();
         },
         (error) => {
           console.log(error.text);
+          setGardenLoading(false);
+          toast("Something went wrong... Try again", { type: "error" });
         }
       );
   }
@@ -93,10 +99,13 @@ export default function Home() {
         (result) => {
           console.log(result.text);
           setCleanLoading(false);
+          toast("Success! We'll be back today with a quote", { type: "success" });
           Scroll.animateScroll.scrollToTop();
         },
         (error) => {
           console.log(error.text);
+          setCleanLoading(false);
+          toast("Something went wrong... Try again", { type: "error" });
         }
       );
   }

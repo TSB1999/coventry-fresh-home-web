@@ -9,6 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "../../components/navbar";
 
+import Spinner from "react-bootstrap/Spinner";
+
 const Cryptr = require("cryptr");
 const cryptr = new Cryptr("myTotalySecretKey");
 
@@ -17,6 +19,7 @@ export default function Payment() {
   const [code, setCode] = useState("");
   const [quote, setQuote] = useState({});
   const [priceData, setPriceData] = useState({});
+  const [loading, setLoading] = useState(false);
   const [url, setUrl] = useState("");
 
   useEffect(() => {
@@ -43,7 +46,7 @@ export default function Payment() {
   }
 
   async function handleToken(token, product) {
-    // setLoading(true);
+    setLoading(true);
     console.log("start");
     const response = await axios.post(
       "https://j3m2f.sse.codesandbox.io/checkout",
@@ -54,10 +57,12 @@ export default function Payment() {
     );
     const { status } = response.data;
     if (status === "success") {
-      //   setLoading(false);
-      toast("Success! Check email for details", { type: "success" });
+      setLoading(false);
+      toast("Success! Payment Recieved - We'll email you soon", {
+        type: "success",
+      });
     } else {
-      //   setLoading(false);
+      setLoading(false); // Here if you want to use it
       toast("Something went wrong", { type: "error" });
     }
   }
@@ -160,6 +165,7 @@ export default function Payment() {
                         gridColumn: "2/5",
                         gridRow: "2/3",
                         textAlign: "right",
+                        color : '#3ab34a',
                       }}
                     >
                       {quote.name || "--"}
@@ -182,6 +188,7 @@ export default function Payment() {
                         gridColumn: "2/5",
                         gridRow: "3/4",
                         textAlign: "right",
+                        color : '#3ab34a',
                       }}
                     >
                       {quote.package || "--"}
@@ -203,11 +210,12 @@ export default function Payment() {
                         gridColumn: "2/5",
                         gridRow: "4/5",
                         textAlign: "right",
+                        color : '#3ab34a',
                       }}
                     >
                       {quote.price || "--"}
                     </h1>
-                    {quote.price && (
+                    {quote.price && !loading && (
                       <StripeCheckout
                         stripeKey="pk_test_51I6mKCDfXHQFQVOullPWJg7eYcVE87dBsMUsLNNWUz0h9JxVEGXgNpEwVhlkEwOxZx7c82ga81J6mxm53FWP2G2a00LjjoGjtb"
                         token={(token) => {
@@ -224,6 +232,16 @@ export default function Payment() {
                           gridColumn: "1/5",
                         }}
                       />
+                    )}
+
+                    {loading && (
+                      <Spinner
+                        animation="border"
+                        role="status"
+                        style={{ height: "1rem", width: "1rem", color : "#3ab34a"}}
+                      >
+                        <span className="sr-only">Loading...</span>
+                      </Spinner>
                     )}
                   </div>
                 </div>
