@@ -73,7 +73,9 @@ export default function Home() {
         (result) => {
           console.log(result.text);
           setGardenLoading(false);
-          toast("Success! We'll be back today with a quote", { type: "success" });
+          toast("Success! We'll be back today with a quote", {
+            type: "success",
+          });
           Scroll.animateScroll.scrollToTop();
         },
         (error) => {
@@ -99,7 +101,9 @@ export default function Home() {
         (result) => {
           console.log(result.text);
           setCleanLoading(false);
-          toast("Success! We'll be back today with a quote", { type: "success" });
+          toast("Success! We'll be back today with a quote", {
+            type: "success",
+          });
           Scroll.animateScroll.scrollToTop();
         },
         (error) => {
@@ -378,7 +382,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="big-green"></div>
+            <div className="big-green">
+              <div className="poster-info">
+
+              </div>
+              <div className="poster" />
+            </div>
           </div>
         </div>
       </div>
